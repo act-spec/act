@@ -73,7 +73,7 @@ export default withAct(
 
 Full pattern: [`examples/nextjs-marketing`](./examples/nextjs-marketing).
 
-### VitePress (coming in v0.2)
+### VitePress
 
 ```bash
 pnpm add @act-spec/plugin-vitepress
@@ -89,7 +89,7 @@ export default defineConfig({
 });
 ```
 
-Full pattern: `examples/vitepress-docs` (coming in v0.2).
+Full pattern: [`examples/vitepress-docs`](./examples/vitepress-docs).
 
 After the build runs, the following appear at the site root:
 
@@ -113,7 +113,9 @@ Bootstrap a new project from any of the bundled examples:
 
 ```bash
 npm create act-app@latest astro-docs
-# or: docusaurus-docs, nextjs-marketing, eleventy-blog, hybrid-static-runtime-mcp
+# or: docusaurus-docs, nextjs-marketing, eleventy-blog, ecommerce-catalog,
+#     nextjs-saas-runtime, hybrid-static-runtime-mcp, vitepress-docs,
+#     starlight-docs, wordpress-blog, notion-knowledge-base
 ```
 
 The bootstrapper copies the example into a new directory, rewrites `workspace:*` dependencies to the latest published versions of `@act-spec/*`, strips monorepo-only fields, and prints the next steps. Pass `--install` to auto-run the package manager. See [`examples/`](./examples) for the full gallery.
@@ -150,14 +152,14 @@ Each example is a real, runnable site that ACT plugs into. Pick the one closest 
 | [ecommerce-catalog](./examples/ecommerce-catalog) | Programmatic adapter | 500-SKU product catalog generated directly from a database/API — no markdown, no CMS. |
 | [nextjs-saas-runtime](./examples/nextjs-saas-runtime) | Next.js runtime | Multi-tenant B2B SaaS workspace serving ACT live, with per-tenant identity scoping. |
 | [hybrid-static-runtime-mcp](./examples/hybrid-static-runtime-mcp) | CLI + Next.js runtime + MCP | Marketing site (static) + app (runtime) + an MCP bridge serving both to AI agents. |
-| vitepress-docs *(coming in v0.2)* | VitePress | Docs site, plugin-vitepress. |
-| wordpress-blog *(coming in v0.2)* | WordPress (REST API) | Blog sourced from WP via adapter-wordpress. |
-| notion-knowledge-base *(coming in v0.2)* | Notion API | Knowledge base sourced from Notion via adapter-notion. |
-| starlight-docs *(coming in v0.2)* | Astro Starlight | Minimal Starlight starter (the act-spec.org website is itself a Starlight + ACT site). |
+| [vitepress-docs](./examples/vitepress-docs) | VitePress 1.x | Docs site, plugin-vitepress, with a second locale. |
+| [wordpress-blog](./examples/wordpress-blog) | WordPress (REST API) | Blog sourced from a baked WP REST fixture via adapter-wordpress. |
+| [notion-knowledge-base](./examples/notion-knowledge-base) | Notion API | Knowledge base sourced from a Notion API fixture via adapter-notion. |
+| [starlight-docs](./examples/starlight-docs) | Astro Starlight | Minimal Starlight starter (the act-spec.org website is itself a Starlight + ACT site). |
 
 ## Packages
 
-ACT ships as a focused set of TypeScript packages — grouped by purpose below. Use the ones you need; ignore the rest. A Go reference implementation ships alongside the TS one and shares the same conformance fixtures — see [`go/`](./go) (coming in v0.2).
+ACT ships as a focused set of TypeScript packages — grouped by purpose below. Use the ones you need; ignore the rest. A Go reference implementation ships alongside the TS one and shares the same conformance fixtures — see [`go/`](./go).
 
 **Core**:
 
@@ -180,8 +182,8 @@ ACT ships as a focused set of TypeScript packages — grouped by purpose below. 
 - [`@act-spec/adapter-i18n`](./packages/adapter-i18n) — next-intl / react-intl / i18next
 - [`@act-spec/adapter-programmatic`](./packages/adapter-programmatic) — your database, API, or anywhere else
 - [`@act-spec/adapter-framework`](./packages/adapter-framework) — shared adapter contract + helpers
-- `@act-spec/adapter-wordpress` *(coming in v0.2)* — WordPress REST API
-- `@act-spec/adapter-notion` *(coming in v0.2)* — Notion API
+- [`@act-spec/adapter-wordpress`](./packages/adapter-wordpress) — WordPress REST API
+- [`@act-spec/adapter-notion`](./packages/adapter-notion) — Notion API
 
 **Generators / framework plugins** — drop into your existing build:
 
@@ -192,7 +194,7 @@ ACT ships as a focused set of TypeScript packages — grouped by purpose below. 
 - [`@act-spec/plugin-nuxt`](./packages/plugin-nuxt) — Nuxt module
 - [`@act-spec/plugin-remix`](./packages/plugin-remix) — Remix static export
 - [`@act-spec/plugin-eleventy`](./packages/plugin-eleventy) — Eleventy plugin
-- `@act-spec/plugin-vitepress` *(coming in v0.2)* — VitePress plugin
+- [`@act-spec/plugin-vitepress`](./packages/plugin-vitepress) — VitePress plugin
 
 **Runtime SDK** — serve ACT live from your app instead of pre-building:
 
@@ -211,7 +213,7 @@ ACT ships as a focused set of TypeScript packages — grouped by purpose below. 
 **Tooling**:
 
 - [`@act-spec/mcp-bridge`](./packages/mcp-bridge) — expose any ACT site as an MCP server (self-host pattern)
-- `@act-spec/mcp-server` *(coming in v0.2)* — universal MCP server: point at any ACT URL and serve it to any MCP-capable agent
+- [`@act-spec/mcp-server`](./packages/mcp-server) — universal MCP server: point at any ACT URL and serve it to any MCP-capable agent
 - [Hosted validator SPA](./apps/validator-web) — drop a manifest into a browser, get a report
 
 ## The spec

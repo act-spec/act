@@ -220,7 +220,3 @@ unknown values under open enums, and unknown capability keys).
 | Date | Version | Change |
 |---|---|---|
 | 2026-05-03 | 0.2.0 | Initial spec drafted by BDFL |
-
----
-
-**Sources:** prd/000-INDEX.md, prd/000-template.md, prd/000-decisions-needed.md, prd/000-gaps-and-resolutions.md, prd/000-governance.md, prd/108-versioning-policy.md
