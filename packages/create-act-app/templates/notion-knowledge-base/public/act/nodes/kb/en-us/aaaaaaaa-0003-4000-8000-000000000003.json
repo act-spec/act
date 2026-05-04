@@ -1,0 +1,50 @@
+{
+  "act_version": "0.1",
+  "id": "kb/en-us/aaaaaaaa-0003-4000-8000-000000000003",
+  "type": "article",
+  "title": "Troubleshooting common errors",
+  "etag": "s256:_UGBEeTtVs0J9LCQ3lxMMV",
+  "summary": "Recipes for the five errors that most often page the on-call rotation.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "plain",
+      "text": "Top five incidents",
+      "level": 2
+    },
+    {
+      "type": "prose",
+      "format": "plain",
+      "text": "These five errors account for roughly 80% of the on-call pages over the past quarter; the remediation is short in each case."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "- DB connection pool exhausted -> restart the worker pool.\n- Stale CDN cache -> purge the affected path."
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "text": "ops cdn purge --path /api/v1/items"
+    }
+  ],
+  "tokens": {
+    "summary": 12,
+    "body": 49
+  },
+  "parent": "kb/11111111-1111-4111-8111-111111111111",
+  "tags": [
+    "support",
+    "oncall"
+  ],
+  "updated_at": "2026-04-28T10:20:00.000Z",
+  "metadata": {
+    "locale": "en-US",
+    "source": {
+      "adapter": "act-notion",
+      "source_id": "aaaaaaaa-0003-4000-8000-000000000003",
+      "human_url": "https://www.notion.so/acme/troubleshooting-aaaaaaaa00034000800000000000003"
+    }
+  }
+}

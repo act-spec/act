@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    // Starlight ships its `schema` entry as a `.ts` file (see
+    // `@astrojs/starlight/package.json` exports). Under `nodenext`
+    // module resolution the editor / `tsc` follows the import into
+    // `node_modules/@astrojs/starlight/schema.ts` and trips on
+    // extension-less relative imports inside Starlight's source.
+    // Bundler-style resolution matches what Astro + Vite actually
+    // run, and is what Starlight expects in consumer projects.
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": false,
+    "jsx": "preserve",
+    "types": ["astro/client", "node"]
+  },
+  "include": ["src/**/*", "conformance.ts", "astro.config.mjs"],
+  "exclude": ["dist", "node_modules"]
+}

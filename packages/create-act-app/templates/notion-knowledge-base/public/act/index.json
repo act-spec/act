@@ -1,0 +1,104 @@
+{
+  "act_version": "0.1",
+  "nodes": [
+    {
+      "id": "kb/11111111-1111-4111-8111-111111111111",
+      "type": "collection",
+      "title": "Acme Knowledge Base",
+      "summary": "Internal handbook covering onboarding, deployment, troubleshooting, and policy. Mirrored from Notion to ACT for AI-agent consumption.",
+      "tokens": {
+        "summary": 16
+      },
+      "etag": "s256:I4GsRF_Awe0mXEgX_k4YQB",
+      "children": [
+        "kb/en-us/aaaaaaaa-0001-4000-8000-000000000001",
+        "kb/en-us/aaaaaaaa-0002-4000-8000-000000000002",
+        "kb/en-us/aaaaaaaa-0003-4000-8000-000000000003",
+        "kb/en-us/aaaaaaaa-0004-4000-8000-000000000004",
+        "kb/es-es/aaaaaaaa-0005-4000-8000-000000000005"
+      ],
+      "updated_at": "2026-04-30T12:00:00.000Z"
+    },
+    {
+      "id": "kb/en-us/aaaaaaaa-0001-4000-8000-000000000001",
+      "type": "article",
+      "title": "Onboarding checklist",
+      "summary": "Day-one and week-one tasks for every new engineer joining the platform team.",
+      "tokens": {
+        "summary": 12
+      },
+      "etag": "s256:h867D8ADBK_I2bbnzgHOlP",
+      "parent": "kb/11111111-1111-4111-8111-111111111111",
+      "tags": [
+        "onboarding",
+        "people-ops"
+      ],
+      "updated_at": "2026-04-21T17:30:00.000Z"
+    },
+    {
+      "id": "kb/en-us/aaaaaaaa-0002-4000-8000-000000000002",
+      "type": "article",
+      "title": "Production deploy runbook",
+      "summary": "Step-by-step procedure for releasing the API service to production, including rollback.",
+      "tokens": {
+        "summary": 11
+      },
+      "etag": "s256:Kl83RnEwG68xMsJWT-E1qV",
+      "parent": "kb/11111111-1111-4111-8111-111111111111",
+      "tags": [
+        "deploy",
+        "runbook"
+      ],
+      "updated_at": "2026-04-25T14:00:00.000Z"
+    },
+    {
+      "id": "kb/en-us/aaaaaaaa-0003-4000-8000-000000000003",
+      "type": "article",
+      "title": "Troubleshooting common errors",
+      "summary": "Recipes for the five errors that most often page the on-call rotation.",
+      "tokens": {
+        "summary": 12
+      },
+      "etag": "s256:_UGBEeTtVs0J9LCQ3lxMMV",
+      "parent": "kb/11111111-1111-4111-8111-111111111111",
+      "tags": [
+        "support",
+        "oncall"
+      ],
+      "updated_at": "2026-04-28T10:20:00.000Z"
+    },
+    {
+      "id": "kb/en-us/aaaaaaaa-0004-4000-8000-000000000004",
+      "type": "article",
+      "title": "Security and access policy",
+      "summary": "How we handle credentials, secrets, and least-privilege access across services.",
+      "tokens": {
+        "summary": 10
+      },
+      "etag": "s256:V5Tdl1AzYbjCZEWZ89Skc-",
+      "parent": "kb/11111111-1111-4111-8111-111111111111",
+      "tags": [
+        "security",
+        "policy"
+      ],
+      "updated_at": "2026-04-15T09:10:00.000Z"
+    },
+    {
+      "id": "kb/es-es/aaaaaaaa-0005-4000-8000-000000000005",
+      "type": "article",
+      "title": "Lista de incorporación",
+      "summary": "Tareas de la primera semana para cada ingeniero que se incorpora al equipo de plataforma.",
+      "tokens": {
+        "summary": 15
+      },
+      "etag": "s256:J3kfe2EzJ0VpFZ-5FHPGal",
+      "parent": "kb/11111111-1111-4111-8111-111111111111",
+      "tags": [
+        "onboarding",
+        "people-ops"
+      ],
+      "updated_at": "2026-04-22T18:55:00.000Z"
+    }
+  ],
+  "etag": "s256:grwEHEHJftAWjs33vpDQYu"
+}

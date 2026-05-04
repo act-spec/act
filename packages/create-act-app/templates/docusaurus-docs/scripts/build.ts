@@ -260,7 +260,7 @@ async function main(): Promise<void> {
     ],
   };
 
-  console.log(`PRD-701 build — siteDir=${exampleRoot}`);
+  console.log(`docusaurus-docs build — siteDir=${exampleRoot}`);
   console.log(`  outDir=${buildDir}`);
   console.log(`  target=${cfg.conformanceTarget}`);
   console.log(`  adapters=${cfg.adapters.length} (markdown + sidebar synthesizer)`);
@@ -276,7 +276,7 @@ async function main(): Promise<void> {
   const outcome = await runPipeline({ config: cfg, logger });
 
   console.log(
-    `PRD-701 pipeline — ${outcome.nodes.length} nodes; ${outcome.subtrees.size} subtrees; achieved=${outcome.achieved}; warnings=${outcome.warnings.length}`,
+    `docusaurus-docs pipeline — ${outcome.nodes.length} nodes; ${outcome.subtrees.size} subtrees; achieved=${outcome.achieved}; warnings=${outcome.warnings.length}`,
   );
 
   const report = await emitFiles({
@@ -289,17 +289,17 @@ async function main(): Promise<void> {
   verifyCapabilityBacking(outcome.capabilities, report.files);
 
   console.log(
-    `PRD-701 build — ${report.files.length} files written; warnings=${report.warnings.length}; errors=${report.errors.length}`,
+    `docusaurus-docs build — ${report.files.length} files written; warnings=${report.warnings.length}; errors=${report.errors.length}`,
   );
 
   if (report.errors.length > 0) {
-    console.error('PRD-701 build — pipeline reported errors:');
+    console.error('docusaurus-docs build — pipeline reported errors:');
     for (const e of report.errors) console.error(`  - ${JSON.stringify(e)}`);
     process.exit(1);
   }
 
   for (const w of report.warnings) {
-    console.warn(`PRD-701 build warning: ${w}`);
+    console.warn(`docusaurus-docs build warning: ${w}`);
   }
 }
 

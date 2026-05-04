@@ -128,7 +128,7 @@ async function main(): Promise<void> {
   });
 
   console.log(
-    `PRD-702 conformance — ${nodeFiles.length} node files, ${subtreeFiles.length} subtree files.`,
+    `nextjs-marketing conformance — ${nodeFiles.length} node files, ${subtreeFiles.length} subtree files.`,
   );
   console.log(`  declared:  ${report.declared.level ?? '<unknown>'} / ${report.declared.delivery ?? '<unknown>'}`);
   console.log(`  achieved:  ${report.achieved.level ?? '<none>'} / ${report.achieved.delivery ?? '<unknown>'}`);
@@ -147,7 +147,7 @@ async function main(): Promise<void> {
   if (report.declared.level !== 'strict') {
     failed += 1;
     console.error(
-      `FAIL: declared.level is "${report.declared.level}", expected "strict" (PRD-702-R3 / R4).`,
+      `FAIL: declared.level is "${report.declared.level}", expected "strict" ( / R4).`,
     );
   }
 
@@ -155,7 +155,7 @@ async function main(): Promise<void> {
   if (report.achieved.level !== 'strict') {
     failed += 1;
     console.error(
-      `FAIL: achieved.level is "${report.achieved.level}", expected "strict" (PRD-702-R20-c).`,
+      `FAIL: achieved.level is "${report.achieved.level}", expected "strict" (-c).`,
     );
   }
 
@@ -175,11 +175,11 @@ async function main(): Promise<void> {
   if (fallbackNodes.length === 0) {
     failed += 1;
     console.error(
-      `FAIL: no node has metadata.translation_status === "fallback" (PRD-702-R8).`,
+      `FAIL: no node has metadata.translation_status === "fallback".`,
     );
   } else {
     console.log(
-      `  fallback nodes: ${fallbackNodes.length} (PRD-702-R8 satisfied; e.g., ${String(fallbackNodes[0]?.['id'])})`,
+      `  fallback nodes: ${fallbackNodes.length} ( satisfied; e.g., ${String(fallbackNodes[0]?.['id'])})`,
     );
     // Spot-check fallback_from is set on the same nodes.
     const missingFallbackFrom = fallbackNodes.filter((n) => {
@@ -189,7 +189,7 @@ async function main(): Promise<void> {
     if (missingFallbackFrom.length > 0) {
       failed += 1;
       console.error(
-        `FAIL: ${missingFallbackFrom.length} fallback node(s) missing metadata.fallback_from (PRD-702-R8 / PRD-104-R10).`,
+        `FAIL: ${missingFallbackFrom.length} fallback node(s) missing metadata.fallback_from.`,
       );
     }
   }
@@ -202,11 +202,11 @@ async function main(): Promise<void> {
   if (dualContrib.length === 0) {
     failed += 1;
     console.error(
-      `FAIL: no node has metadata.source.contributors === ["act-contentful", "act-i18n"] (PRD-702-R17 + A1 dedupe evidence).`,
+      `FAIL: no node has metadata.source.contributors === ["act-contentful", "act-i18n"] ( + A1 dedupe evidence).`,
     );
   } else {
     console.log(
-      `  dual-contributor nodes: ${dualContrib.length} (PRD-702-R17 satisfied; e.g., ${String(dualContrib[0]?.['id'])})`,
+      `  dual-contributor nodes: ${dualContrib.length} ( satisfied; e.g., ${String(dualContrib[0]?.['id'])})`,
     );
   }
 
@@ -267,7 +267,7 @@ async function main(): Promise<void> {
   if (sidecar['conformanceAchieved'] !== 'strict') {
     failed += 1;
     console.error(
-      `FAIL: build report at ${sidecarPath} reports conformanceAchieved="${String(sidecar['conformanceAchieved'])}", expected "strict" (PRD-702-R16).`,
+      `FAIL: build report at ${sidecarPath} reports conformanceAchieved="${String(sidecar['conformanceAchieved'])}", expected "strict".`,
     );
   } else {
     console.log(`  build report sidecar: present, conformanceAchieved=strict.`);
@@ -280,7 +280,7 @@ async function main(): Promise<void> {
   if (nodeFiles.length < 16) {
     failed += 1;
     console.error(
-      `FAIL: corpus has ${nodeFiles.length} nodes; PRD-702 multi-locale fan-out requires at least 16.`,
+      `FAIL: corpus has ${nodeFiles.length} nodes; nextjs-marketing multi-locale fan-out requires at least 16.`,
     );
   }
 
@@ -288,7 +288,7 @@ async function main(): Promise<void> {
   if (subtreeFiles.length === 0) {
     failed += 1;
     console.error(
-      `FAIL: no subtree files emitted under ${subtreesDir} (PRD-702-R12).`,
+      `FAIL: no subtree files emitted under ${subtreesDir}.`,
     );
   }
 
@@ -304,20 +304,20 @@ async function main(): Promise<void> {
   if (reactExtractedBlocks.length === 0) {
     failed += 1;
     console.error(
-      `FAIL: no block carries metadata.extracted_via === "component-contract" (PRD-702-R19).`,
+      `FAIL: no block carries metadata.extracted_via === "component-contract".`,
     );
   } else {
     console.log(
-      `  component-contract blocks: ${reactExtractedBlocks.length} (PRD-702-R19 satisfied).`,
+      `  component-contract blocks: ${reactExtractedBlocks.length} ( satisfied).`,
     );
   }
 
   if (failed > 0) {
-    console.error(`\nPRD-702 conformance: FAILED (${failed} check(s)).`);
+    console.error(`\nnextjs-marketing conformance: FAILED (${failed} check(s)).`);
     process.exit(1);
   }
   console.log(
-    `\nPRD-702 conformance: OK — gaps: 0; declared.level: strict; achieved.level: strict; delivery: static; A1 dedupe: clean; PRD-702-R8 / R17 / R19 satisfied.`,
+    `\nnextjs-marketing conformance: OK — gaps: 0; declared.level: strict; achieved.level: strict; delivery: static; A1 dedupe: clean; / R17 / R19 satisfied.`,
   );
 }
 

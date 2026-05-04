@@ -203,10 +203,10 @@ async function runTranscript(baseUrl: string): Promise<boolean> {
 // ---------------------------------------------------------------------------
 
 async function main(): Promise<void> {
-  console.log('PRD-706 probe — Layer 1 (two-principal harness, in-process)');
+  console.log('hybrid-static-runtime-mcp probe — Layer 1 (two-principal harness, in-process)');
   const layer1Ok = await runHarness();
 
-  console.log('PRD-706 probe — Layer 2 (HTTP transcript on /app)');
+  console.log('hybrid-static-runtime-mcp probe — Layer 2 (HTTP transcript on /app)');
   const { server, baseUrl } = await startServer(0);
   let layer2Ok: boolean;
   try {
@@ -230,11 +230,11 @@ async function main(): Promise<void> {
 
   if (!layer1Ok || layer2Ok === false || securityGateFailed) {
     console.error(
-      `\nPRD-706 probe: FAILED${layer1Ok ? '' : ' (Layer 1)'}${layer2Ok ? '' : ' (Layer 2)'}${securityGateFailed ? ' (security gate)' : ''}`,
+      `\nhybrid-static-runtime-mcp probe: FAILED${layer1Ok ? '' : ' (Layer 1)'}${layer2Ok ? '' : ' (Layer 2)'}${securityGateFailed ? ' (security gate)' : ''}`,
     );
     process.exit(1);
   }
-  console.log('\nPRD-706 probe: OK — security gate green; harness + transcript pass.');
+  console.log('\nhybrid-static-runtime-mcp probe: OK — security gate green; harness + transcript pass.');
 }
 
 main().catch((err: unknown) => {

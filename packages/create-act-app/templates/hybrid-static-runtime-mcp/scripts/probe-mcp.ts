@@ -101,7 +101,7 @@ const identityBridge: IdentityBridge = {
 };
 
 async function main(): Promise<void> {
-  console.log('PRD-706 MCP enumeration probe:');
+  console.log('hybrid-static-runtime-mcp MCP enumeration probe:');
 
   const marketingStatic = await loadMarketingStaticSource();
 
@@ -198,7 +198,7 @@ async function main(): Promise<void> {
   // ReadResource handler shape via the `mcpServer` instance. For the
   // probe-level assertion we use `runtime.resolveIndex` directly with a
   // tenant-scoped context (mirroring the bridge's per-mount index reader).
-  console.log('\nPRD-706-R20 step 6 — authenticated MCP-side read (tenant A):');
+  console.log('\nStep 6 — authenticated MCP-side read (tenant A):');
   const tenantANodes = listTenantNodes(PROBE_FIXTURE.principalA.tenantId);
   if (tenantANodes.length === 0) {
     console.log('  [FAIL] tenant-A has no nodes; fixture seed is wrong');
@@ -214,19 +214,19 @@ async function main(): Promise<void> {
   // (PRD-706-R20 step 5 / PRD-602-R14). We construct a URI for tenant-A's
   // node and assert the bridge's read path returns the not-found mapping
   // when invoked with the synthetic anonymous context.
-  console.log('\nPRD-706-R20 step 5 — anonymous MCP read of app node:');
+  console.log('\nStep 5 — anonymous MCP read of app node:');
   const anonAppUri = buildResourceUri(MCP_HOST, '/app', 'doc/acme-roadmap-2026');
   console.log(`  anon URI: ${anonAppUri}`);
-  console.log('  bridge collapses anonymous app reads to RESOURCE_NOT_FOUND per PRD-602-R14 (verified at construction time:');
+  console.log('  bridge collapses anonymous app reads to RESOURCE_NOT_FOUND (verified at construction time:');
   console.log(`    runtime.resolveNode under {anonymous, single} returns auth_required → bridge maps to AUTHENTICATION_REQUIRED).`);
 
   await bridge.dispose();
 
   if (!allOk) {
-    console.error('\nPRD-706 MCP probe: FAILED');
+    console.error('\nhybrid-static-runtime-mcp MCP probe: FAILED');
     process.exit(1);
   }
-  console.log('\nPRD-706 MCP probe: OK — enumeration matches expected union; per-mount manifests surfaced; auth boundary verified.');
+  console.log('\nhybrid-static-runtime-mcp MCP probe: OK — enumeration matches expected union; per-mount manifests surfaced; auth boundary verified.');
 }
 
 main().catch((err: unknown) => {

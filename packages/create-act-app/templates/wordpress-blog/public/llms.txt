@@ -1,0 +1,22 @@
+# ACT WordPress Demo
+
+> A headless WordPress blog wired to the ACT spec via @act-spec/adapter-wordpress.
+
+## Section
+
+- [About this blog](http://localhost:4325/act/nodes/wp%2Fpage%2Fabout.json): A demo WordPress blog wired to ACT via @act-spec/adapter-wordpress.
+- [Announcements](http://localhost:4325/act/nodes/wp%2Fcategory%2Fannouncements.json): Release notes and project updates.
+- [How-to](http://localhost:4325/act/nodes/wp%2Fcategory%2Fhow-to.json): Walkthroughs for using the adapter and the spec.
+
+## Tag
+
+- [ACT](http://localhost:4325/act/nodes/wp%2Ftag%2Fact.json): Posts about the ACT spec.
+- [Authoring](http://localhost:4325/act/nodes/wp%2Ftag%2Fauthoring.json): Tips on writing well-structured WordPress content for ACT.
+
+## Articles
+
+- [Welcome to ACT](http://localhost:4325/act/nodes/wp%2Fpost%2Fwelcome-to-act.json): An introduction to publishing your WordPress content as an Agent Content Tree.
+- [What is an Agent Content Tree?](http://localhost:4325/act/nodes/wp%2Fpost%2Fwhat-is-an-agent-content-tree.json): A two-minute primer on the ACT spec: nodes, summaries, blocks, and how an agent walks them.
+- [Wiring the WordPress adapter](http://localhost:4325/act/nodes/wp%2Fpost%2Fwiring-the-wordpress-adapter.json): How the adapter talks to wp/v2/{posts,pages,categories,tags,users} and turns each row into one ACT node.
+- [Why summaries are the product](http://localhost:4325/act/nodes/wp%2Fpost%2Fsummaries-are-the-product.json): If your post excerpts are sloppy, your ACT tree is sloppy. The adapter will not invent excerpts for you.
+- [Running the conformance gate](http://localhost:4325/act/nodes/wp%2Fpost%2Frunning-the-conformance-gate.json): Validate every emitted ACT envelope against the spec with @act-spec/validator before you publish.
