@@ -168,7 +168,7 @@ describe('PRD-600-R33: request budget caps the walk', () => {
 });
 
 describe('PRD-600-R9: HTTP ETag header byte-equality with envelope etag', () => {
-  it('emits a gap citing PRD-103-R10 when the ETag header has a W/ weak prefix', async () => {
+  it('accepts a W/ weak-prefixed ETag header when the stripped value matches the envelope etag', async () => {
     const goodEtag = 's256:abc1230000000000000000';
     const fetcher = makeFetcher({
       'https://e.test/.well-known/act.json': { body: MANIFEST_CORE_STATIC },
@@ -181,7 +181,8 @@ describe('PRD-600-R9: HTTP ETag header byte-equality with envelope etag', () => 
       },
     });
     const r = await validateSite('https://e.test', { fetch: fetcher });
-    expect(findGap(r.gaps, 'PRD-103-R10')).toBeDefined();
+    expect(findGap(r.gaps, 'PRD-103-R10')).toBeUndefined();
+    expect(findGap(r.gaps, 'PRD-103-R5')).toBeUndefined();
   });
 
   it('emits a gap citing PRD-103-R5 when ETag header value does not match envelope etag', async () => {

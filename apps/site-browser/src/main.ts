@@ -411,6 +411,22 @@ async function fetchRootSubtree(root: HTMLElement): Promise<void> {
       recordStubChildren(handle.rootId, nodeOutcome.node.children);
       state.expandedIds.add(handle.rootId);
     }
+  } else {
+    // Neither subtree nor root node exists — fall back to the flat index so
+    // the tree can still be seeded (common on static sites with no "root" id).
+    const indexOutcome = await loadIndexLazy(handle);
+    if (indexOutcome.error) {
+      state.walkErrors.push(indexOutcome.error);
+    } else if (indexOutcome.entries.length > 0) {
+      // Index loaded fine; the subtree/node 404s are expected — clear them.
+      state.walkErrors = state.walkErrors.filter(
+        (e) => e.scope !== 'subtree' && e.scope !== 'node',
+      );
+      for (const entry of indexOutcome.entries) {
+        recordTreeNode(entry, false);
+        if (Array.isArray(entry.children)) recordStubChildren(entry.id, entry.children);
+      }
+    }
   }
   rerenderSiteView(root);
 }

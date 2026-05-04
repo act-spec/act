@@ -243,21 +243,13 @@ export async function validateSite(
             warnings.push(...nodeRes.warnings);
             const envelopeEtag = (nodeBody as { etag?: unknown }).etag;
             if (typeof headerEtag === 'string' && typeof envelopeEtag === 'string') {
-              if (/^W\//.test(headerEtag)) {
+              const stripped = headerEtag.replace(/^W\//, '').replace(/^"|"$/g, '');
+              if (stripped !== envelopeEtag) {
                 gaps.push({
                   level: 'core',
-                  requirement: 'PRD-103-R10',
-                  missing: `node ${id}: ETag header carries weak prefix W/.`,
+                  requirement: 'PRD-103-R5',
+                  missing: `node ${id}: HTTP ETag header (${headerEtag}) ≠ envelope etag (${envelopeEtag}).`,
                 });
-              } else {
-                const stripped = headerEtag.replace(/^"|"$/g, '');
-                if (stripped !== envelopeEtag) {
-                  gaps.push({
-                    level: 'core',
-                    requirement: 'PRD-103-R5',
-                    missing: `node ${id}: HTTP ETag header (${headerEtag}) ≠ envelope etag (${envelopeEtag}).`,
-                  });
-                }
               }
             }
             nodesSampled += 1;
