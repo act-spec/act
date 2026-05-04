@@ -1,0 +1,368 @@
+# Acme
+
+---
+title: About Acme
+url: https://acme.example.com/en-US/landing/about
+type: landing
+locale: en-US
+summary: Founded to make agent-content interchange a default.
+---
+
+Acme builds the open standard for agent content trees.
+
+<!-- component: marketing:hero -->
+
+<!-- component: marketing:testimonial -->
+
+
+---
+title: Contact
+url: https://acme.example.com/en-US/landing/contact
+type: landing
+locale: en-US
+summary: Talk to sales, support, or community.
+---
+
+Reach out via the channels below.
+
+<!-- component: marketing:hero -->
+
+<!-- component: marketing:cta -->
+
+
+---
+title: Data Processing Addendum
+url: https://acme.example.com/en-US/landing/dpa
+type: landing
+locale: en-US
+summary: "Acme's data-processing terms for enterprise customers."
+---
+
+This addendum supplements the master services agreement.
+
+<!-- component: marketing:hero -->
+
+
+---
+title: Features
+url: https://acme.example.com/en-US/landing/features
+type: landing
+locale: en-US
+summary: Everything you need to build with ACT.
+---
+
+From source adapters to runtime SDKs, ACT covers the full producer surface.
+
+<!-- component: marketing:hero -->
+
+<!-- component: marketing:feature-grid -->
+
+<!-- component: marketing:cta -->
+
+
+---
+title: Pricing
+url: https://acme.example.com/en-US/landing/pricing
+type: landing
+locale: en-US
+summary: Simple, transparent pricing tiers and FAQ.
+---
+
+Pick a plan that fits your team — Starter, Pro, or Enterprise.
+
+<!-- component: marketing:hero -->
+
+<!-- component: marketing:pricing-table -->
+
+<!-- component: marketing:faq -->
+
+<!-- component: marketing:cta -->
+
+
+---
+title: Privacy Policy
+url: https://acme.example.com/en-US/landing/privacy
+type: landing
+locale: en-US
+summary: How Acme handles personal data.
+---
+
+We collect the minimum required to operate the service.
+
+<!-- component: marketing:hero -->
+
+
+---
+title: Sobre Acme
+url: https://acme.example.com/es-ES/landing/about
+type: landing
+locale: es-ES
+summary: Fundada para hacer del intercambio de contenidos de agentes una opción por defecto.
+---
+
+Acme builds the open standard for agent content trees.
+
+<!-- component: marketing:hero -->
+
+<!-- component: marketing:testimonial -->
+
+
+---
+title: Contacto
+url: https://acme.example.com/es-ES/landing/contact
+type: landing
+locale: es-ES
+summary: Contacta con ventas, soporte o la comunidad.
+---
+
+Reach out via the channels below.
+
+<!-- component: marketing:hero -->
+
+<!-- component: marketing:cta -->
+
+
+---
+title: Data Processing Addendum
+url: https://acme.example.com/es-ES/landing/dpa
+type: landing
+locale: es-ES
+summary: "Acme's data-processing terms for enterprise customers."
+---
+
+This addendum supplements the master services agreement.
+
+<!-- component: marketing:hero -->
+
+
+---
+title: Funciones
+url: https://acme.example.com/es-ES/landing/features
+type: landing
+locale: es-ES
+summary: Todo lo que necesitas para construir con ACT.
+---
+
+From source adapters to runtime SDKs, ACT covers the full producer surface.
+
+<!-- component: marketing:hero -->
+
+<!-- component: marketing:feature-grid -->
+
+<!-- component: marketing:cta -->
+
+
+---
+title: Precios
+url: https://acme.example.com/es-ES/landing/pricing
+type: landing
+locale: es-ES
+summary: Precios simples y transparentes.
+---
+
+Pick a plan that fits your team — Starter, Pro, or Enterprise.
+
+<!-- component: marketing:hero -->
+
+<!-- component: marketing:pricing-table -->
+
+<!-- component: marketing:faq -->
+
+<!-- component: marketing:cta -->
+
+
+---
+title: Política de privacidad
+url: https://acme.example.com/es-ES/landing/privacy
+type: landing
+locale: es-ES
+summary: Cómo Acme maneja los datos personales.
+---
+
+We collect the minimum required to operate the service.
+
+<!-- component: marketing:hero -->
+
+
+---
+title: Über Acme
+url: https://acme.example.com/de-DE/landing/about
+type: landing
+locale: de-DE
+summary: Gegründet, um Agenten-Inhaltsaustausch zur Standardoption zu machen.
+---
+
+Acme builds the open standard for agent content trees.
+
+<!-- component: marketing:hero -->
+
+<!-- component: marketing:testimonial -->
+
+
+---
+title: Kontakt
+url: https://acme.example.com/de-DE/landing/contact
+type: landing
+locale: de-DE
+summary: Sprechen Sie mit Vertrieb, Support oder Community.
+---
+
+Reach out via the channels below.
+
+<!-- component: marketing:hero -->
+
+<!-- component: marketing:cta -->
+
+
+---
+title: Data Processing Addendum
+url: https://acme.example.com/de-DE/landing/dpa
+type: landing
+locale: de-DE
+summary: "Acme's data-processing terms for enterprise customers."
+---
+
+This addendum supplements the master services agreement.
+
+<!-- component: marketing:hero -->
+
+
+---
+title: Funktionen
+url: https://acme.example.com/de-DE/landing/features
+type: landing
+locale: de-DE
+summary: Alles, was Sie für ACT brauchen.
+---
+
+From source adapters to runtime SDKs, ACT covers the full producer surface.
+
+<!-- component: marketing:hero -->
+
+<!-- component: marketing:feature-grid -->
+
+<!-- component: marketing:cta -->
+
+
+---
+title: Preise
+url: https://acme.example.com/de-DE/landing/pricing
+type: landing
+locale: de-DE
+summary: Einfache, transparente Preise.
+---
+
+Pick a plan that fits your team — Starter, Pro, or Enterprise.
+
+<!-- component: marketing:hero -->
+
+<!-- component: marketing:pricing-table -->
+
+<!-- component: marketing:faq -->
+
+<!-- component: marketing:cta -->
+
+
+---
+title: Datenschutzerklärung
+url: https://acme.example.com/de-DE/landing/privacy
+type: landing
+locale: de-DE
+summary: Wie Acme mit personenbezogenen Daten umgeht.
+---
+
+We collect the minimum required to operate the service.
+
+<!-- component: marketing:hero -->
+
+
+---
+title: Acme について
+url: https://acme.example.com/ja-JP/landing/about
+type: landing
+locale: ja-JP
+summary: エージェント・コンテンツ交換を標準にするために設立。
+---
+
+Acme builds the open standard for agent content trees.
+
+<!-- component: marketing:hero -->
+
+<!-- component: marketing:testimonial -->
+
+
+---
+title: お問い合わせ
+url: https://acme.example.com/ja-JP/landing/contact
+type: landing
+locale: ja-JP
+summary: 営業、サポート、コミュニティへのお問い合わせ。
+---
+
+Reach out via the channels below.
+
+<!-- component: marketing:hero -->
+
+<!-- component: marketing:cta -->
+
+
+---
+title: Data Processing Addendum
+url: https://acme.example.com/ja-JP/landing/dpa
+type: landing
+locale: ja-JP
+summary: "Acme's data-processing terms for enterprise customers."
+---
+
+This addendum supplements the master services agreement.
+
+<!-- component: marketing:hero -->
+
+
+---
+title: 機能
+url: https://acme.example.com/ja-JP/landing/features
+type: landing
+locale: ja-JP
+summary: ACT で構築するために必要なすべて。
+---
+
+From source adapters to runtime SDKs, ACT covers the full producer surface.
+
+<!-- component: marketing:hero -->
+
+<!-- component: marketing:feature-grid -->
+
+<!-- component: marketing:cta -->
+
+
+---
+title: 料金
+url: https://acme.example.com/ja-JP/landing/pricing
+type: landing
+locale: ja-JP
+summary: シンプルで透明性のある料金体系。
+---
+
+Pick a plan that fits your team — Starter, Pro, or Enterprise.
+
+<!-- component: marketing:hero -->
+
+<!-- component: marketing:pricing-table -->
+
+<!-- component: marketing:faq -->
+
+<!-- component: marketing:cta -->
+
+
+---
+title: プライバシーポリシー
+url: https://acme.example.com/ja-JP/landing/privacy
+type: landing
+locale: ja-JP
+summary: Acme が個人データを扱う方法。
+---
+
+We collect the minimum required to operate the service.
+
+<!-- component: marketing:hero -->
