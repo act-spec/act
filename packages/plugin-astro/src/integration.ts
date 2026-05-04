@@ -39,6 +39,8 @@ export interface ActAstroOptions {
   site?: GeneratorConfig['site'];
   /** PRD-401-R19. */
   urlTemplates?: GeneratorConfig['urlTemplates'];
+  /** PRD-400-R10. Explicit tree entry-point id emitted as root_id in the manifest. */
+  rootId?: string;
   /** PRD-400-R26. */
   failOnExtractionError?: boolean;
   /** PRD-400-R22. */
@@ -187,6 +189,7 @@ export function resolveConfig(
     adapters,
     site,
     ...(options.urlTemplates !== undefined ? { urlTemplates: options.urlTemplates } : {}),
+    ...(options.rootId !== undefined ? { rootId: options.rootId } : {}),
     ...(options.failOnExtractionError !== undefined
       ? { failOnExtractionError: options.failOnExtractionError }
       : {}),

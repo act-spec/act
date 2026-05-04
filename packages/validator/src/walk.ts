@@ -208,6 +208,22 @@ export async function validateSite(
         gaps.push(...idxResult.gaps);
         warnings.push(...idxResult.warnings);
 
+        // PRD-400-R10: root_id must refer to a node that exists in the index.
+        const manifestRootId = (manifest as { root_id?: unknown }).root_id;
+        if (typeof manifestRootId === 'string') {
+          const indexNodes = Array.isArray((idxBody as { nodes?: unknown[] }).nodes)
+            ? (idxBody as { nodes: { id?: unknown }[] }).nodes
+            : [];
+          const rootInIndex = indexNodes.some((n) => n.id === manifestRootId);
+          if (!rootInIndex) {
+            gaps.push({
+              level: 'core',
+              requirement: 'PRD-400-R10',
+              missing: `manifest root_id "${manifestRootId}" not found in index.`,
+            });
+          }
+        }
+
         const sampleSize = opts.sample === 'all' ? Infinity : opts.sample ?? 16;
         const nodes = Array.isArray((idxBody as { nodes?: unknown[] }).nodes)
           ? ((idxBody as { nodes: unknown[] }).nodes)
@@ -243,21 +259,13 @@ export async function validateSite(
             warnings.push(...nodeRes.warnings);
             const envelopeEtag = (nodeBody as { etag?: unknown }).etag;
             if (typeof headerEtag === 'string' && typeof envelopeEtag === 'string') {
-              if (/^W\//.test(headerEtag)) {
+              const stripped = headerEtag.replace(/^W\//, '').replace(/^"|"$/g, '');
+              if (stripped !== envelopeEtag) {
                 gaps.push({
                   level: 'core',
-                  requirement: 'PRD-103-R10',
-                  missing: `node ${id}: ETag header carries weak prefix W/.`,
+                  requirement: 'PRD-103-R5',
+                  missing: `node ${id}: HTTP ETag header (${headerEtag}) ≠ envelope etag (${envelopeEtag}).`,
                 });
-              } else {
-                const stripped = headerEtag.replace(/^"|"$/g, '');
-                if (stripped !== envelopeEtag) {
-                  gaps.push({
-                    level: 'core',
-                    requirement: 'PRD-103-R5',
-                    missing: `node ${id}: HTTP ETag header (${headerEtag}) ≠ envelope etag (${envelopeEtag}).`,
-                  });
-                }
               }
             }
             nodesSampled += 1;

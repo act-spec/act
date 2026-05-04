@@ -90,6 +90,13 @@ export default defineConfig({
           autogenerate: { directory: 'spec/v0.2' },
         },
         {
+          label: 'Tools',
+          items: [
+            { label: 'Validator', link: '/validator/' },
+            { label: 'Site Browser', link: '/browser/' },
+          ],
+        },
+        {
           label: 'Project',
           items: [
             { label: 'Blog', link: '/blog/' },
@@ -105,6 +112,7 @@ export default defineConfig({
     act({
       level: 'standard',
       site: { name: 'ACT — Agent Content Tree' },
+      rootId: 'index',
       urlTemplates: {
         indexUrl: '/act/index.json',
         nodeUrlTemplate: '/act/nodes/{id}.json',

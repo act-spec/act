@@ -80,6 +80,13 @@ export interface GeneratorConfig {
   /** PRD-400-R20. */
   generator?: string;
   /**
+   * PRD-400-R10 — explicit tree entry point. When set, this id is always
+   * emitted as `root_id` in the manifest regardless of graph shape. When
+   * omitted, the pipeline auto-detects a single parentless node; if the
+   * graph has multiple roots (flat content) no `root_id` is emitted.
+   */
+  rootId?: string;
+  /**
    * PRD-400-R13 — depth used when fanning out a subtree from a root node.
    * Default 3. Examples with deep graphs (e.g., a catalog with categories +
    * many products) can lower this to 1–2 to keep the root subtree small;
@@ -506,17 +513,22 @@ export async function runPipeline(input: PipelineRun): Promise<PipelineOutcome> 
   };
   const achieved = inferAchievedLevel(observed);
 
-  // PRD-400-R10 — manifest. Advertise root_id when the graph has exactly
-  // one parentless node so agents can find the entry point without
-  // scanning the flat index.
+  // PRD-400-R10 — manifest root_id. Prefer an explicit config override;
+  // fall back to auto-detecting the single parentless node. When the graph
+  // has multiple roots and no explicit id is configured, omit root_id.
   const graphRoots = nodes.filter((n) => n.parent === undefined || n.parent === null);
+  const explicitRootId = typeof config.rootId === 'string' && config.rootId.length > 0
+    ? config.rootId
+    : undefined;
+  const autoRootId = graphRoots.length === 1 ? graphRoots[0]!.id : undefined;
+  const resolvedRootId = explicitRootId ?? autoRootId;
   const manifest = buildManifest({
     config,
     adapterCapabilities: runs.map((r) => r.capabilities),
     achieved,
     generatedAt: new Date().toISOString(),
     nodeCount: nodes.length,
-    ...(graphRoots.length === 1 ? { rootId: graphRoots[0]!.id } : {}),
+    ...(resolvedRootId !== undefined ? { rootId: resolvedRootId } : {}),
   });
   const manifestResult = validateManifest(manifest);
   for (const g of manifestResult.gaps) errors.push(`manifest: ${g.requirement} ${g.missing}`);
