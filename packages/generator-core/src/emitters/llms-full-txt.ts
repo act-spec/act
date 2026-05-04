@@ -103,7 +103,7 @@ function escapeFrontmatterValue(s: string): string {
   //     so `https://...` is a valid plain scalar.
   //   - a `#` *preceded* by whitespace starts a comment; safer to quote
   //     when present.
-  if (/[\n"'\\\[\]\{\}]/.test(s)) {
+  if (/[\n"'\\[\]{}]/.test(s)) {
     return '"' + s.replace(/\\/g, '\\\\').replace(/"/g, '\\"') + '"';
   }
   if (/:\s/.test(s)) {
@@ -118,36 +118,36 @@ function escapeFrontmatterValue(s: string): string {
 /** Render a single content block to markdown. */
 export function renderBlockToMarkdown(block: NodeSchema.ContentBlock): string {
   const b = block as Record<string, unknown>;
-  const type = String(b['type'] ?? 'unknown');
+  const type = typeof b['type'] === 'string' ? b['type'] : 'unknown';
 
   if (type === 'markdown') {
-    const text = typeof b['text'] === 'string' ? (b['text'] as string) : '';
+    const text = typeof b['text'] === 'string' ? (b['text']) : '';
     return text;
   }
   if (type === 'prose') {
-    const text = typeof b['text'] === 'string' ? (b['text'] as string) : '';
+    const text = typeof b['text'] === 'string' ? (b['text']) : '';
     return text;
   }
   if (type === 'heading') {
     const level = Math.max(1, Math.min(6, Number(b['level'] ?? 2) || 2));
-    const text = typeof b['text'] === 'string' ? (b['text'] as string) : '';
+    const text = typeof b['text'] === 'string' ? (b['text']) : '';
     return `${'#'.repeat(level)} ${text}`;
   }
   if (type === 'code') {
-    const lang = typeof b['language'] === 'string' ? (b['language'] as string) : '';
-    const text = typeof b['text'] === 'string' ? (b['text'] as string) : '';
-    const filename = typeof b['filename'] === 'string' ? (b['filename'] as string) : '';
+    const lang = typeof b['language'] === 'string' ? (b['language']) : '';
+    const text = typeof b['text'] === 'string' ? (b['text']) : '';
+    const filename = typeof b['filename'] === 'string' ? (b['filename']) : '';
     const head = filename.length > 0 ? `\`\`\`${lang} title="${filename}"` : `\`\`\`${lang}`;
     return `${head}\n${text}\n\`\`\``;
   }
   if (type === 'data') {
-    const fmt = typeof b['format'] === 'string' ? (b['format'] as string) : '';
-    const text = typeof b['text'] === 'string' ? (b['text'] as string) : '';
+    const fmt = typeof b['format'] === 'string' ? (b['format']) : '';
+    const text = typeof b['text'] === 'string' ? (b['text']) : '';
     return `\`\`\`${fmt}\n${text}\n\`\`\``;
   }
   if (type === 'callout') {
-    const level = typeof b['level'] === 'string' ? (b['level'] as string) : 'info';
-    const text = typeof b['text'] === 'string' ? (b['text'] as string) : '';
+    const level = typeof b['level'] === 'string' ? (b['level']) : 'info';
+    const text = typeof b['text'] === 'string' ? (b['text']) : '';
     const lines = text.split('\n').map((ln) => `> ${ln}`);
     return `> [${level.toUpperCase()}]\n${lines.join('\n')}`;
   }

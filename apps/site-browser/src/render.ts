@@ -443,7 +443,7 @@ function buildProgressiveRows(
     if (!node) return;
     rows.push({ node, depth });
     if (!expandedIds.has(id)) return;
-    const childIds = Array.isArray(node.children) && node.children.length > 0
+    const childIds = node.children !== undefined && node.children.length > 0
       ? [...node.children].sort((a, b) => a.localeCompare(b))
       : [];
     for (const cid of childIds) visit(cid, depth + 1);
@@ -479,7 +479,7 @@ export function renderProgressiveTree(
   if (nodes.size === 0) {
     return '<p class="muted">Manifest loaded but no nodes discovered yet.</p>';
   }
-  const { selectedId, expandedIds, gapCounts = new Map(), walkPath } = options;
+  const { selectedId, expandedIds, gapCounts = new Map<string, number>(), walkPath } = options;
   const walkSet = new Set(walkPath ?? []);
   const rows = buildProgressiveRows(nodes, rootId, expandedIds);
   const items = rows

@@ -78,7 +78,7 @@ function titleCase(s: string): string {
 }
 
 function headingForType(type: string): string {
-  if (TYPE_HEADINGS[type] !== undefined) return TYPE_HEADINGS[type]!;
+  if (TYPE_HEADINGS[type] !== undefined) return TYPE_HEADINGS[type];
   return titleCase(type);
 }
 

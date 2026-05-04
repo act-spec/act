@@ -41,8 +41,8 @@ function makeFetch(fx: Fixture): typeof globalThis.fetch {
     ],
   };
 
-  return async (input: RequestInfo | URL): Promise<Response> => {
-    const u = typeof input === 'string' ? input : input.toString();
+  return async (input) => {
+    const u = typeof input === 'string' ? input : input instanceof URL ? input.href : input.url;
     if (u.endsWith('/.well-known/act.json')) {
       if (fx.manifestStatus !== undefined) {
         return new Response(fx.manifestText ?? 'not found', {

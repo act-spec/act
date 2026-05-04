@@ -419,8 +419,9 @@ describe('PRD-400 generator pipeline', () => {
     // Wrap enumerate to capture ctx.
     const wrapped: Adapter<unknown> = {
       ...probeAdapter,
-      async *enumerate(ctx) {
+      enumerate(ctx) {
         observedOrigin = ctx.siteOrigin;
+        return [];
       },
     };
     await runPipeline({
@@ -440,8 +441,9 @@ describe('PRD-400 generator pipeline', () => {
       async init() {
         return { level: 'core' };
       },
-      async *enumerate(ctx) {
+      enumerate(ctx) {
         observedOrigin = ctx.siteOrigin;
+        return [];
       },
       async transform() {
         return null;
