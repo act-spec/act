@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/runtime-next",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "PRD-501 Next.js runtime SDK for the ACT (Agent Content Tree) v0.1 reference implementation. App Router route handlers + middleware for the discovery hand-off Link header. Consumes @act-spec/runtime-core (PRD-500).",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",
@@ -23,7 +23,10 @@
       "default": "./dist/mount.js"
     }
   },
-  "files": ["dist", "src"],
+  "files": [
+    "dist",
+    "src"
+  ],
   "publishConfig": {
     "access": "public"
   },

@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/component-angular",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "PRD-303 Angular binding for the ACT (Agent Content Tree) v0.1 component contract (PRD-300). Implements the three Angular declaration patterns (component static-field `static act = {...}`, service-based `ActContractService.register({...})`, and the page-level boundary structural directive `*actSection=\"contract\"` plus the `<act-section>` component form), an `ActCollectorService` provided component-locally for SSR-walk extraction, the canonical SSR-walk strategy via `@angular/platform-server.renderApplication` waiting for `ApplicationRef.isStable`, the variant replay loop with a fresh `ApplicationRef` + `EnvironmentInjector` per variant, the placeholder emission contract (truncated and secret-redacted error messages, captured via Angular's `ErrorHandler` provider), the Angular 17+ peer-dependency floor, and the `BindingCapabilities` const with values pinned per PRD-303-R20 + A15 truthfulness posture. Bridges Angular component trees to the framework-agnostic `NodeDraft` shape from `@act-spec/component-contract`.",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",

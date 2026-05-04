@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/adapter-sanity",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "PRD-203 Sanity adapter for the ACT (Agent Content Tree) v0.1 reference implementation. Consumes Sanity Content Lake (GROQ + Portable Text) and emits PRD-100/PRD-102 envelopes; supports content-type / field mapping, Portable Text → block conversion, reference resolution with cycle detection, locale fan-out, and Sanity transaction-ID delta. Implements the PRD-200 framework contract.",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",
@@ -18,7 +18,11 @@
       "default": "./dist/index.js"
     }
   },
-  "files": ["dist", "src", "schema"],
+  "files": [
+    "dist",
+    "src",
+    "schema"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -48,8 +52,12 @@
     "@sanity/client": "^6.22.0"
   },
   "peerDependenciesMeta": {
-    "@portabletext/types": { "optional": true },
-    "@sanity/client": { "optional": true }
+    "@portabletext/types": {
+      "optional": true
+    },
+    "@sanity/client": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@portabletext/types": "^2.0.13",

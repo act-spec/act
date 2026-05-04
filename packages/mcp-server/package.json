@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/mcp-server",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "Universal MCP server for any ACT-emitting site. Point at a URL; expose ACT tools to any MCP-capable agent.",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",
@@ -22,7 +22,11 @@
       "default": "./dist/index.js"
     }
   },
-  "files": ["dist", "src", "bin"],
+  "files": [
+    "dist",
+    "src",
+    "bin"
+  ],
   "publishConfig": {
     "access": "public"
   },

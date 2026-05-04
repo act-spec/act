@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/adapter-notion",
-  "version": "0.2.0",
+  "version": "0.2.0-rc.1",
   "description": "Notion adapter for ACT (Agent Content Tree). Consumes the Notion API (databases.query, pages.retrieve, blocks.children.list) and emits ACT envelopes against the shared adapter framework. Supports database-as-branch / page-as-leaf mapping, block-tree to prose conversion, and per-page locale extraction from a configurable Notion property.",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",
@@ -18,7 +18,10 @@
       "default": "./dist/index.js"
     }
   },
-  "files": ["dist", "src"],
+  "files": [
+    "dist",
+    "src"
+  ],
   "publishConfig": {
     "access": "public"
   },

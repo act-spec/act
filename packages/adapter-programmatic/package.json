@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/adapter-programmatic",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "PRD-208 programmatic adapter (escape hatch) for the ACT (Agent Content Tree) v0.1 reference implementation. A factory that wraps user-supplied enumerate/transform into a fully PRD-200-conformant adapter, with pre-emit PRD-100 + PRD-102 schema validation, mutation/re-entry guards, source attribution, and capability sampling.",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",
@@ -18,7 +18,10 @@
       "default": "./dist/index.js"
     }
   },
-  "files": ["dist", "src"],
+  "files": [
+    "dist",
+    "src"
+  ],
   "publishConfig": {
     "access": "public"
   },

@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/validator",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "PRD-600 conformance validator for the ACT (Agent Content Tree) v0.1 wire format. Library + CLI + hosted SPA.",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",

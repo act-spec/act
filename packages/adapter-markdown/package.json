@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/adapter-markdown",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "PRD-201 markdown adapter for the ACT (Agent Content Tree) v0.1 reference implementation.",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",
@@ -18,7 +18,10 @@
       "default": "./dist/index.js"
     }
   },
-  "files": ["dist", "src"],
+  "files": [
+    "dist",
+    "src"
+  ],
   "publishConfig": {
     "access": "public"
   },

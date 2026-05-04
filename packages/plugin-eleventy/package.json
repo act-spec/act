@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/plugin-eleventy",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "PRD-408 Eleventy plugin for the ACT (Agent Content Tree) v0.1 reference implementation. Wraps the PRD-400 generator pipeline against Eleventy 2.0+ via the addPlugin API and the eleventy.after build hook.",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",

@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/plugin-nuxt",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "PRD-407 Nuxt module for the ACT (Agent Content Tree) v0.1 reference implementation. Wraps the PRD-400 generator pipeline against Nuxt 3+ static export (`nuxt generate`).",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",

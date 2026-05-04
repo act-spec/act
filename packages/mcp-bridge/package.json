@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/mcp-bridge",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "PRD-602 ACT-MCP bridge for the ACT (Agent Content Tree) v0.1 reference implementation. Wraps a PRD-500 ActRuntime (or a multi-mount BridgeConfig.mounts array per amendment A4) and exposes ACT nodes as MCP 1.0 resources under the canonical act:// URI scheme. Single-source and multi-mount construction (runtime + static walker mixes) per PRD-602-R3 / R5 / R6 / R10 / R11 / R24.",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",
@@ -18,7 +18,10 @@
       "default": "./dist/index.js"
     }
   },
-  "files": ["dist", "src"],
+  "files": [
+    "dist",
+    "src"
+  ],
   "publishConfig": {
     "access": "public"
   },

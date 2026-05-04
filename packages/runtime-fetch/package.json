@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/runtime-fetch",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "PRD-505 generic WHATWG-fetch handler for the ACT (Agent Content Tree) v0.1 reference implementation. Single-function adapter — `createActFetchHandler(opts) => (req: Request) => Promise<Response | null>` — portable across Cloudflare Workers, Deno Deploy, Bun, Vercel Edge, Hono, Service Workers, and Node 20+. Consumes @act-spec/runtime-core (PRD-500).",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",
@@ -18,7 +18,10 @@
       "default": "./dist/index.js"
     }
   },
-  "files": ["dist", "src"],
+  "files": [
+    "dist",
+    "src"
+  ],
   "publishConfig": {
     "access": "public"
   },
