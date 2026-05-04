@@ -44,17 +44,69 @@ async function rmrf(target) {
   await fs.rm(target, { recursive: true, force: true });
 }
 
-async function copyDir(src, dst) {
+/**
+ * Sentinel timestamp written into ACT envelopes that are copied into the
+ * tracked templates snapshot. The pipeline stamps each envelope's
+ * `generated_at` with the wall-clock build time, which makes the snapshot
+ * non-reproducible across rebuilds and breaks the templates-drift CI
+ * guard. We only need an *example* generated_at for the scaffold-time
+ * preview; users get their own real timestamp on their first build.
+ */
+const TEMPLATE_GENERATED_AT_SENTINEL = '1970-01-01T00:00:00.000Z';
+
+/**
+ * Files we know contain a `generated_at` field that the pipeline stamps
+ * with `Date.now()`. Normalize each one's `generated_at` to the sentinel
+ * so the templates snapshot is byte-deterministic across hosts and runs.
+ */
+function shouldNormalizeGeneratedAt(relPath) {
+  const p = relPath.replaceAll('\\', '/');
+  return (
+    p === '.well-known/act.json' ||
+    p.endsWith('/.well-known/act.json') ||
+    p === 'static/.well-known/act.json' ||
+    p === 'public/.well-known/act.json' ||
+    p.endsWith('static/act/index.json') ||
+    p.endsWith('public/act/index.json')
+  );
+}
+
+async function copyJsonNormalized(src, dst) {
+  const raw = await fs.readFile(src, 'utf8');
+  let body;
+  try {
+    body = JSON.parse(raw);
+  } catch {
+    // not JSON or malformed — fall back to byte-copy
+    await fs.copyFile(src, dst);
+    return;
+  }
+  if (body && typeof body === 'object' && 'generated_at' in body) {
+    body.generated_at = TEMPLATE_GENERATED_AT_SENTINEL;
+  }
+  // Preserve the source's compaction style: pretty-printed if the original
+  // had a trailing newline + indent, minified otherwise. The pipeline emits
+  // minified JSON for envelopes; keep that.
+  const out = raw.startsWith('{\n') ? JSON.stringify(body, null, 2) : JSON.stringify(body);
+  await fs.writeFile(dst, out, 'utf8');
+}
+
+async function copyDir(src, dst, relRoot = '') {
   await fs.mkdir(dst, { recursive: true });
   const entries = await fs.readdir(src, { withFileTypes: true });
   for (const entry of entries) {
     if (EXCLUDED_NAMES.has(entry.name)) continue;
     const s = path.join(src, entry.name);
     const d = path.join(dst, entry.name);
+    const rel = relRoot ? `${relRoot}/${entry.name}` : entry.name;
     if (entry.isDirectory()) {
-      await copyDir(s, d);
+      await copyDir(s, d, rel);
     } else if (entry.isFile()) {
-      await fs.copyFile(s, d);
+      if (shouldNormalizeGeneratedAt(rel)) {
+        await copyJsonNormalized(s, d);
+      } else {
+        await fs.copyFile(s, d);
+      }
     }
     // symlinks intentionally skipped — examples shouldn't ship any
   }

@@ -5,7 +5,7 @@
     "description": "Internal handbook backed by Notion, mirrored to ACT (Agent Content Tree) for AI-agent consumption.",
     "canonical_url": "http://localhost:8083"
   },
-  "generated_at": "2026-05-04T12:32:01.909Z",
+  "generated_at": "1970-01-01T00:00:00.000Z",
   "generator": "@act-spec/example-notion-knowledge-base@0.2.0",
   "index_url": "/act/index.json",
   "node_url_template": "/act/nodes/{id}.json",

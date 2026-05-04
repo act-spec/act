@@ -4,7 +4,7 @@
     "name": "Acme",
     "canonical_url": "https://acme.example.com/"
   },
-  "generated_at": "2026-05-04T12:32:06.922Z",
+  "generated_at": "1970-01-01T00:00:00.000Z",
   "generator": "@act-spec/example-nextjs-marketing@0.0.0",
   "index_url": "/act/index.json",
   "node_url_template": "/act/nodes/{id}.json",
