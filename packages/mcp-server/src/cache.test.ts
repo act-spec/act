@@ -17,7 +17,7 @@ describe('ServerCache', () => {
   });
 
   it('partitions node entries by site URL', () => {
-    let now = 0;
+    const now = 0;
     const cache = new ServerCache({ now: () => now });
     cache.setNode('https://a.example/', 'n1', { id: 'n1', site: 'a' });
     cache.setNode('https://b.example/', 'n1', { id: 'n1', site: 'b' });
@@ -26,7 +26,7 @@ describe('ServerCache', () => {
   });
 
   it('evicts the oldest entry once max is reached (LRU)', () => {
-    let now = 0;
+    const now = 0;
     const cache = new ServerCache({ maxEntries: 2, now: () => now });
     cache.setManifest('a', 1);
     cache.setManifest('b', 2);
