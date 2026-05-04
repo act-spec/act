@@ -199,6 +199,24 @@ describe('PRD-600-R9: HTTP ETag header byte-equality with envelope etag', () => 
     const r = await validateSite('https://e.test', { fetch: fetcher });
     expect(findGap(r.gaps, 'PRD-103-R5')).toBeDefined();
   });
+
+  it('emits no gap when the HTTP ETag is a platform-format (non-ACT) ETag that cannot match', async () => {
+    // GitHub Pages and similar static hosts serve opaque hex ETags like
+    // "69f90513-13ad". These are not ACT ETags and must not be compared
+    // to the envelope's s256: etag.
+    const fetcher = makeFetcher({
+      'https://e.test/.well-known/act.json': { body: MANIFEST_CORE_STATIC },
+      'https://e.test/act/index.json': {
+        body: { act_version: '0.1', nodes: [INDEX_TWO_NODES.nodes[0]] },
+      },
+      'https://e.test/act/n/aa.json': {
+        body: nodeBody('aa', 's256:abc1230000000000000000'),
+        headers: { etag: '"69f90513-13ad"' },
+      },
+    });
+    const r = await validateSite('https://e.test', { fetch: fetcher });
+    expect(findGap(r.gaps, 'PRD-103-R5')).toBeUndefined();
+  });
 });
 
 describe('PRD-400-R10: root_id must be present in the index', () => {

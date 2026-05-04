@@ -35,6 +35,9 @@ const APP_HTML = `
       <h1>ACT Validator</h1>
       <p class="muted">Hosted reference validator for the ACT (Agent Content Tree) v0.1 wire format.</p>
     </div>
+    <nav class="tools-nav" aria-label="ACT tools">
+      <a class="tools-nav__btn" href="https://act-spec.org">act-spec.org</a>
+    </nav>
   </header>
 
   <aside class="cors-notice" aria-label="CORS limitation">
