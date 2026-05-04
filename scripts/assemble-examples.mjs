@@ -27,22 +27,38 @@ const repoRoot = path.resolve(here, '..');
 
 // Single source of truth for which examples ship to GitHub Pages.
 // `dist` is the example-relative folder containing `.well-known/act.json`
-// after `pnpm conformance` runs.
+// after `pnpm conformance` runs. `humanUrlStrategy` is forwarded to
+// `rebase-act-output.mjs` and selects how each node's `source.human_url`
+// is rewritten to point at the deployed location:
+//
+//   `prefix`             — replace the placeholder origin with the public
+//                          origin + sub-path. Fits frameworks that emit
+//                          `<id>/index.html` (Astro, Starlight, Eleventy).
+//   `prefix-strip-slash` — same, then strip the trailing `/`. Fits
+//                          frameworks that emit `<id>.html` and serve via
+//                          extension-less URLs (VitePress with cleanUrls
+//                          on GitHub Pages).
+//   `drop`               — strip `human_url` entirely. Fits examples that
+//                          only emit ACT artefacts and have no companion
+//                          HTML pages on disk; otherwise the site
+//                          browser's HTML budget feature 404s.
 //
 // Hybrid / runtime examples (`hybrid-static-runtime-mcp`,
 // `nextjs-saas-runtime`) are intentionally omitted — they require a live
 // Node process at request time and can't be served by GitHub Pages.
 export const EXAMPLES = [
-  { slug: 'astro-docs', dist: 'dist' },
-  { slug: 'docusaurus-docs', dist: 'static' },
-  { slug: 'ecommerce-catalog', dist: 'public' },
-  { slug: 'eleventy-blog', dist: '_site' },
-  { slug: 'nextjs-marketing', dist: 'public' },
-  { slug: 'notion-knowledge-base', dist: 'public' },
-  { slug: 'starlight-docs', dist: 'dist' },
-  { slug: 'vitepress-docs', dist: 'docs/.vitepress/dist' },
-  { slug: 'wordpress-blog', dist: 'public' },
+  { slug: 'astro-docs', dist: 'dist', humanUrlStrategy: 'prefix' },
+  { slug: 'docusaurus-docs', dist: 'static', humanUrlStrategy: 'drop' },
+  { slug: 'ecommerce-catalog', dist: 'public', humanUrlStrategy: 'drop' },
+  { slug: 'eleventy-blog', dist: '_site', humanUrlStrategy: 'prefix' },
+  { slug: 'nextjs-marketing', dist: 'public', humanUrlStrategy: 'drop' },
+  { slug: 'notion-knowledge-base', dist: 'public', humanUrlStrategy: 'drop' },
+  { slug: 'starlight-docs', dist: 'dist', humanUrlStrategy: 'prefix' },
+  { slug: 'vitepress-docs', dist: 'docs/.vitepress/dist', humanUrlStrategy: 'prefix-strip-slash' },
+  { slug: 'wordpress-blog', dist: 'public', humanUrlStrategy: 'drop' },
 ];
+
+const PUBLIC_ORIGIN = process.env.ACT_PAGES_ORIGIN ?? 'https://act-spec.org';
 
 async function copyDir(src, dest) {
   await fs.mkdir(dest, { recursive: true });
@@ -96,7 +112,15 @@ async function main() {
     const prefix = `/examples/${ex.slug}`;
     const rebase = spawnSync(
       'node',
-      [path.join('scripts', 'rebase-act-output.mjs'), dest, prefix],
+      [
+        path.join('scripts', 'rebase-act-output.mjs'),
+        dest,
+        prefix,
+        '--strategy',
+        ex.humanUrlStrategy,
+        '--public-origin',
+        PUBLIC_ORIGIN,
+      ],
       { cwd: repoRoot, stdio: 'inherit' },
     );
     if (rebase.status !== 0) {

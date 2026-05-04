@@ -4,12 +4,34 @@ interface Props {
   name: string;
   stack: string;
   href: string;
+  liveHref?: string;
+  browserHref?: string;
 }
-const { name, stack, href } = Astro.props;
+const { name, stack, href, liveHref, browserHref } = Astro.props;
 ---
 
 <article class="example-card">
   <span class="stack">{stack}</span>
   <h3><a href={href}>{name}</a></h3>
   <p><slot /></p>
+  {(liveHref || browserHref) && (
+    <p class="live-links">
+      {liveHref && <a href={liveHref}>Live site →</a>}
+      {browserHref && <a href={browserHref}>Open in site browser →</a>}
+    </p>
+  )}
 </article>
+
+<style>
+  .live-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+  }
+  .live-links a {
+    text-decoration: none;
+    font-weight: 600;
+  }
+</style>

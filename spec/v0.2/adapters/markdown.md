@@ -15,6 +15,15 @@ last-updated: 2026-05-03
 > their prose payload, so this document also pins the body-to-block
 > mapping shared across adapters.
 
+> **Live examples.** Most deployed examples exercise this adapter:
+> [astro-docs](/examples/astro-docs/),
+> [eleventy-blog](/examples/eleventy-blog/),
+> [starlight-docs](/examples/starlight-docs/),
+> [vitepress-docs](/examples/vitepress-docs/), and
+> [docusaurus-docs](/examples/docusaurus-docs/) all source their content
+> from `.md` files via this adapter. Pick any of them in the
+> [site browser](/browser/) to see the emitted ACT tree.
+
 ## Status
 
 This is a **first-party reference adapter** distributed as

@@ -15,6 +15,14 @@ last-updated: 2026-05-03
 > locales. A faithful implementation reaches Standard out of the box
 > and Strict when locales and `marketing:*` mappings are configured.
 
+> **Live example.** A built copy of the
+> [`wordpress-blog`](https://github.com/act-spec/act/tree/main/examples/wordpress-blog)
+> example (sourced from a recorded REST fixture) is deployed at
+> [`/examples/wordpress-blog/`](/examples/wordpress-blog/).
+> Open it in the
+> [site browser](/browser/?site=%2Fexamples%2Fwordpress-blog%2F.well-known%2Fact.json)
+> to walk the post / category tree.
+
 ## Status
 
 This is a **first-party reference adapter** distributed as

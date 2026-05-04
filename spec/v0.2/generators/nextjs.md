@@ -16,6 +16,13 @@ last-updated: 2026-05-03
 > covers runtime. This document defines both shapes and the App Router
 > vs Pages Router differences.
 
+> **Live example.** A built copy of the
+> [`nextjs-marketing`](https://github.com/act-spec/act/tree/main/examples/nextjs-marketing)
+> example is deployed at [`/examples/nextjs-marketing/`](/examples/nextjs-marketing/).
+> Open it in the
+> [site browser](/browser/?site=%2Fexamples%2Fnextjs-marketing%2F.well-known%2Fact.json)
+> to walk the marketing-site corpus.
+
 ## Overview
 
 Next.js has two reachable delivery profiles for ACT:

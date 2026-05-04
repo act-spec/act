@@ -38,6 +38,13 @@ A working Astro site needs no other ACT configuration to reach
 **Core** conformance. Standard and Strict are reachable additively
 (see [Conformance](#conformance) below).
 
+> **Live example.** A built copy of the
+> [`astro-docs`](https://github.com/act-spec/act/tree/main/examples/astro-docs)
+> example is deployed at [`/examples/astro-docs/`](/examples/astro-docs/).
+> Open it in the
+> [site browser](/browser/?site=%2Fexamples%2Fastro-docs%2F.well-known%2Fact.json)
+> to walk its tree and see ACT-vs-HTML payload sizes side-by-side.
+
 The integration composes with two upstream pieces of the Astro
 ecosystem in particular:
 

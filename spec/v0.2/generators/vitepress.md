@@ -16,6 +16,13 @@ last-updated: 2026-05-03
 > consumed (`transformPageData` and `buildEnd`), the VitePress-specific
 > sidebar-derived hierarchy, and the build-output contract.
 
+> **Live example.** A built copy of the
+> [`vitepress-docs`](https://github.com/act-spec/act/tree/main/examples/vitepress-docs)
+> example is deployed at [`/examples/vitepress-docs/`](/examples/vitepress-docs/).
+> Open it in the
+> [site browser](/browser/?site=%2Fexamples%2Fvitepress-docs%2F.well-known%2Fact.json)
+> to walk its multi-locale tree.
+
 ## Overview
 
 VitePress is the Vue ecosystem's de facto static documentation
