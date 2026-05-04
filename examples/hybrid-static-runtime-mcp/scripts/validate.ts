@@ -144,7 +144,7 @@ async function main(): Promise<void> {
   const { server, baseUrl } = await startServer(0);
   let allPassed = true;
   try {
-    console.log('PRD-706 validator gate:');
+    console.log('hybrid-static-runtime-mcp validator gate:');
     const parent = await validateParentManifest(baseUrl);
     if (!parent.passed) allPassed = false;
 
@@ -157,10 +157,10 @@ async function main(): Promise<void> {
     if (!app.passed) allPassed = false;
 
     if (!allPassed) {
-      console.error('\nPRD-706 conformance: FAILED.');
+      console.error('\nhybrid-static-runtime-mcp conformance: FAILED.');
       process.exit(1);
     }
-    console.log('\nPRD-706 conformance: OK — parent + marketing(plus) + app(standard) green.');
+    console.log('\nhybrid-static-runtime-mcp conformance: OK — parent + marketing(plus) + app(standard) green.');
   } finally {
     await new Promise<void>((resolve, reject) => server.close((err) => (err ? reject(err) : resolve())));
   }

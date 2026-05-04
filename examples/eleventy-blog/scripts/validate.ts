@@ -101,7 +101,7 @@ async function main(): Promise<void> {
   const subtreeIds = subtrees.map((s) => String(s['root']));
 
   console.log(
-    `PRD-707 conformance — ${nodeFiles.length} node files, ${subtreeFiles.length} subtree files.`,
+    `eleventy-blog conformance — ${nodeFiles.length} node files, ${subtreeFiles.length} subtree files.`,
   );
   console.log(`  declared:  ${report.declared.level ?? '<unknown>'} / ${report.declared.delivery ?? '<unknown>'}`);
   console.log(`  achieved:  ${report.achieved.level ?? '<none>'} / ${report.achieved.delivery ?? '<unknown>'}`);
@@ -120,7 +120,7 @@ async function main(): Promise<void> {
   if (report.declared.level !== 'standard') {
     failed += 1;
     console.error(
-      `FAIL: declared.level is "${report.declared.level}", expected "standard" (PRD-707-R11).`,
+      `FAIL: declared.level is "${report.declared.level}", expected "standard".`,
     );
   }
 
@@ -128,7 +128,7 @@ async function main(): Promise<void> {
   if (report.achieved.level !== 'standard') {
     failed += 1;
     console.error(
-      `FAIL: achieved.level is "${report.achieved.level}", expected "standard" (PRD-707-R15).`,
+      `FAIL: achieved.level is "${report.achieved.level}", expected "standard".`,
     );
   }
 
@@ -136,7 +136,7 @@ async function main(): Promise<void> {
   if (report.declared.delivery !== 'static' || report.achieved.delivery !== 'static') {
     failed += 1;
     console.error(
-      `FAIL: delivery profile is not "static" (declared=${report.declared.delivery ?? '<unknown>'}, achieved=${report.achieved.delivery ?? '<unknown>'}; PRD-707-R12).`,
+      `FAIL: delivery profile is not "static" (declared=${report.declared.delivery ?? '<unknown>'}, achieved=${report.achieved.delivery ?? '<unknown>'};).`,
     );
   }
 
@@ -144,7 +144,7 @@ async function main(): Promise<void> {
   if (!subtreeIds.includes(SYNTHETIC_PARENT_ID)) {
     failed += 1;
     console.error(
-      `FAIL: synthetic subtree for id "${SYNTHETIC_PARENT_ID}" is absent (PRD-707-R6 / R12). Subtree IDs: ${JSON.stringify(subtreeIds)}.`,
+      `FAIL: synthetic subtree for id "${SYNTHETIC_PARENT_ID}" is absent ( / R12). Subtree IDs: ${JSON.stringify(subtreeIds)}.`,
     );
   }
 
@@ -152,7 +152,7 @@ async function main(): Promise<void> {
   if (nodeFiles.length < 30 || nodeFiles.length > 100) {
     failed += 1;
     console.error(
-      `FAIL: corpus has ${nodeFiles.length} nodes; PRD-707-R3 envelope is 30-100.`,
+      `FAIL: corpus has ${nodeFiles.length} nodes; envelope is 30-100.`,
     );
   }
 
@@ -160,22 +160,22 @@ async function main(): Promise<void> {
   if (indexIds.includes(DRAFT_ID)) {
     failed += 1;
     console.error(
-      `FAIL: draft post "${DRAFT_ID}" leaked into act/index.json (PRD-707-R7).`,
+      `FAIL: draft post "${DRAFT_ID}" leaked into act/index.json.`,
     );
   }
   if (nodeIds.includes(DRAFT_ID)) {
     failed += 1;
     console.error(
-      `FAIL: draft post "${DRAFT_ID}" leaked into act/nodes/ (PRD-707-R7).`,
+      `FAIL: draft post "${DRAFT_ID}" leaked into act/nodes/.`,
     );
   }
 
   if (failed > 0) {
-    console.error(`\nPRD-707 conformance: FAILED (${failed} check(s)).`);
+    console.error(`\neleventy-blog conformance: FAILED (${failed} check(s)).`);
     process.exit(1);
   }
   console.log(
-    `\nPRD-707 conformance: OK — gaps: 0; declared.level: standard; achieved.level: standard; delivery: static; synthetic posts subtree: present; draft excluded.`,
+    `\neleventy-blog conformance: OK — gaps: 0; declared.level: standard; achieved.level: standard; delivery: static; synthetic posts subtree: present; draft excluded.`,
   );
 }
 

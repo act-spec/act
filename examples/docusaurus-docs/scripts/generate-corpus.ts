@@ -730,10 +730,10 @@ async function main(): Promise<void> {
   const sourceCount = allDocs.length;
   const totalEstimate = sourceCount + categoryCount;
   console.log(
-    `PRD-701 corpus generated: ${sourceCount} markdown files, ${categoryCount} sidebar categories.`,
+    `docusaurus-docs corpus generated: ${sourceCount} markdown files, ${categoryCount} sidebar categories.`,
   );
   console.log(`  Estimated total ACT nodes (sources + synthesized): ${totalEstimate}`);
-  console.log(`  PRD-701-R3 envelope: 200 ≤ ${totalEstimate} ≤ 500 ${
+  console.log(`  envelope: 200 ≤ ${totalEstimate} ≤ 500 ${
     totalEstimate >= 200 && totalEstimate <= 500 ? 'OK' : 'OUT-OF-ENVELOPE'
   }`);
 }

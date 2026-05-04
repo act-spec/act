@@ -266,10 +266,10 @@ async function runTranscript(baseUrl: string): Promise<boolean> {
 // ---------------------------------------------------------------------------
 
 async function main(): Promise<void> {
-  console.log('PRD-705 probe — Layer 1 (two-principal harness, in-process)');
+  console.log('nextjs-saas-runtime probe — Layer 1 (two-principal harness, in-process)');
   const layer1Ok = await runHarness();
 
-  console.log('PRD-705 probe — Layer 2 (PRD-705-R18 HTTP transcript)');
+  console.log('nextjs-saas-runtime probe — Layer 2 ( HTTP transcript)');
   const { server, baseUrl } = await startServer(0);
   let layer2Ok: boolean;
   try {
@@ -297,11 +297,11 @@ async function main(): Promise<void> {
     const layer1Note = layer1Ok ? '' : ' (Layer 1 harness failed)';
     const layer2Note = layer2Ok ? '' : ' (Layer 2 transcript reported failures)';
     const gateNote = securityGateFailed ? ' (security gate failed)' : '';
-    console.error(`\nPRD-705 probe: FAILED${layer1Note}${layer2Note}${gateNote}`);
+    console.error(`\nnextjs-saas-runtime probe: FAILED${layer1Note}${layer2Note}${gateNote}`);
     // PRD-705-R20: failure of any cross-tenant probe is a release blocker.
     process.exit(1);
   }
-  console.log('\nPRD-705 probe: OK — security gate green; harness + transcript pass.');
+  console.log('\nnextjs-saas-runtime probe: OK — security gate green; harness + transcript pass.');
 }
 
 main().catch((err: unknown) => {

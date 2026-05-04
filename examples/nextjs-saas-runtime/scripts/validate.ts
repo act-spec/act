@@ -36,7 +36,7 @@ async function main(): Promise<void> {
     });
 
     console.log(
-      `PRD-705 conformance — ${report.walk_summary?.nodes_sampled ?? 0} nodes sampled.`,
+      `nextjs-saas-runtime conformance — ${report.walk_summary?.nodes_sampled ?? 0} nodes sampled.`,
     );
     console.log(`  declared:  ${report.declared.level ?? '<unknown>'} / ${report.declared.delivery ?? '<unknown>'}`);
     console.log(`  achieved:  ${report.achieved.level ?? '<none>'} / ${report.achieved.delivery ?? '<unknown>'}`);
@@ -51,25 +51,25 @@ async function main(): Promise<void> {
     }
     if (report.declared.level !== 'standard') {
       failed += 1;
-      console.error(`FAIL: declared.level is "${report.declared.level}", expected "standard" (PRD-705-R2).`);
+      console.error(`FAIL: declared.level is "${report.declared.level}", expected "standard".`);
     }
     if (report.achieved.level !== 'standard') {
       failed += 1;
-      console.error(`FAIL: achieved.level is "${report.achieved.level}", expected "standard" (PRD-705-R19).`);
+      console.error(`FAIL: achieved.level is "${report.achieved.level}", expected "standard".`);
     }
     if (report.declared.delivery !== 'runtime' || report.achieved.delivery !== 'runtime') {
       failed += 1;
       console.error(
-        `FAIL: delivery profile is not "runtime" (declared=${report.declared.delivery ?? '<unknown>'}, achieved=${report.achieved.delivery ?? '<unknown>'}; PRD-705-R5).`,
+        `FAIL: delivery profile is not "runtime" (declared=${report.declared.delivery ?? '<unknown>'}, achieved=${report.achieved.delivery ?? '<unknown>'};).`,
       );
     }
 
     if (failed > 0) {
-      console.error(`\nPRD-705 conformance: FAILED (${failed} check(s)).`);
+      console.error(`\nnextjs-saas-runtime conformance: FAILED (${failed} check(s)).`);
       process.exit(1);
     }
     console.log(
-      `\nPRD-705 conformance: OK — gaps: 0; declared.level: standard; achieved.level: standard; delivery: runtime.`,
+      `\nnextjs-saas-runtime conformance: OK — gaps: 0; declared.level: standard; achieved.level: standard; delivery: runtime.`,
     );
   } finally {
     await new Promise<void>((resolve, reject) => server.close((err) => (err ? reject(err) : resolve())));
