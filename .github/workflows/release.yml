@@ -6,11 +6,8 @@ name: Release
 # For stable 0.2.0: trigger with dist-tag=latest, or re-enable the
 # push trigger below and set dist-tag default to latest.
 #
-# After rc.1 ships, switch to OIDC trusted publishing:
-#   1. Run `npm trust github @act-spec/<pkg> --file release.yml --repo act-spec/act`
-#      for every public package.
-#   2. Remove NPM_TOKEN from the env block and from GitHub Secrets.
-#   3. The id-token: write permission below already covers provenance.
+# OIDC trusted publishing is configured — no NPM_TOKEN needed.
+# To add a new package: run scripts/setup-npm-trusted-publishers.sh
 on:
   workflow_dispatch:
     inputs:
@@ -57,5 +54,3 @@ jobs:
           version: pnpm changeset:version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
