@@ -17,6 +17,7 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+const base = (import.meta.env.BASE_URL ?? '/').replace(/\/+$/, '');
 ---
 
 <html lang="en-US">
@@ -30,6 +31,6 @@ const { Content } = await entry.render();
     <p><em>{entry.data.summary}</em></p>
     <Content />
     <hr />
-    <p><a href="/">← Tinybox home</a></p>
+    <p><a href={`${base}/`}>← Tinybox home</a></p>
   </body>
 </html>

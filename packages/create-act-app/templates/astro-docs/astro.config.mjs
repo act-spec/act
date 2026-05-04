@@ -13,8 +13,16 @@ import { createMarkdownAdapter } from '@act-spec/adapter-markdown';
 const here = path.dirname(fileURLToPath(import.meta.url));
 const contentDir = path.join(here, 'src', 'content', 'docs');
 
+// Honor ACT_PAGES_BASE so the same example builds locally with `/` (for
+// conformance + dev) and under `/examples/astro-docs/` for the hosted
+// deploy. The ACT plugin writes to `dist/.well-known/` and `dist/act/`
+// regardless of `base`, so the local walkStatic gate still works when
+// the env var is unset.
+const PAGES_BASE = process.env.ACT_PAGES_BASE ?? '/';
+
 export default defineConfig({
   site: 'https://example.com',
+  base: PAGES_BASE,
   output: 'static',
   integrations: [
     act({
