@@ -32,15 +32,13 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Generate @act-spec/core types from schemas/
         run: pnpm -F @act-spec/core codegen
-      - name: Build @act-spec/core
-        run: pnpm -F @act-spec/core build
+      - name: Build all packages
+        run: pnpm -r --filter "./packages/*" run build
       - name: Typecheck
         run: pnpm -r typecheck
       - name: Lint
         run: pnpm -r lint
       - name: Test
         run: pnpm -r test
-      - name: Build
-        run: pnpm -r --filter "./packages/*" run build
       - name: Conformance gate (per-package)
         run: pnpm -r conformance
