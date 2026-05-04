@@ -16,3 +16,18 @@ The site exists to exercise the full PRD-408 pipeline against a
 realistic blog corpus: permalink-aware draft filtering, the
 source-of-truth-is-markdown rule, the no-bindings invariant, and the
 Standard-band subtree emission for the synthetic chronological parent.
+
+## Recent posts
+
+<ul class="post-list">
+{%- for post in collections.post | reverse -%}
+  {%- if loop.index0 < 10 -%}
+  <li>
+    <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+    <small>— {{ post.data.date | isoDate }}</small>
+  </li>
+  {%- endif -%}
+{%- endfor -%}
+</ul>
+
+<p><a href="{{ '/posts/' | url }}">All posts →</a></p>

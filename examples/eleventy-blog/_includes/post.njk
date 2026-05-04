@@ -1,0 +1,8 @@
+---
+layout: base.njk
+---
+{# Per-post layout — wraps the markdown body with prev / next links so #}
+{# an agent (or reader) can walk the chronological feed sequentially. #}
+{{ content | safe }}
+<hr>
+<p><a href="{{ '/posts/' | url }}">← All posts</a></p>
