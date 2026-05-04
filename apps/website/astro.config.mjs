@@ -112,6 +112,7 @@ export default defineConfig({
     act({
       level: 'standard',
       site: { name: 'ACT — Agent Content Tree' },
+      rootId: 'index',
       urlTemplates: {
         indexUrl: '/act/index.json',
         nodeUrlTemplate: '/act/nodes/{id}.json',

@@ -208,6 +208,22 @@ export async function validateSite(
         gaps.push(...idxResult.gaps);
         warnings.push(...idxResult.warnings);
 
+        // PRD-400-R10: root_id must refer to a node that exists in the index.
+        const manifestRootId = (manifest as { root_id?: unknown }).root_id;
+        if (typeof manifestRootId === 'string') {
+          const indexNodes = Array.isArray((idxBody as { nodes?: unknown[] }).nodes)
+            ? (idxBody as { nodes: { id?: unknown }[] }).nodes
+            : [];
+          const rootInIndex = indexNodes.some((n) => n.id === manifestRootId);
+          if (!rootInIndex) {
+            gaps.push({
+              level: 'core',
+              requirement: 'PRD-400-R10',
+              missing: `manifest root_id "${manifestRootId}" not found in index.`,
+            });
+          }
+        }
+
         const sampleSize = opts.sample === 'all' ? Infinity : opts.sample ?? 16;
         const nodes = Array.isArray((idxBody as { nodes?: unknown[] }).nodes)
           ? ((idxBody as { nodes: unknown[] }).nodes)

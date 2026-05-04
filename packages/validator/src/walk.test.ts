@@ -201,6 +201,43 @@ describe('PRD-600-R9: HTTP ETag header byte-equality with envelope etag', () => 
   });
 });
 
+describe('PRD-400-R10: root_id must be present in the index', () => {
+  it('emits a gap when root_id does not appear in the index', async () => {
+    const manifest = { ...MANIFEST_CORE_STATIC, root_id: 'nonexistent' };
+    const fetcher = makeFetcher({
+      'https://e.test/.well-known/act.json': { body: manifest },
+      'https://e.test/act/index.json': { body: INDEX_TWO_NODES },
+      'https://e.test/act/n/aa.json': { body: nodeBody('aa', 's256:abc1230000000000000000') },
+      'https://e.test/act/n/bb.json': { body: nodeBody('bb', 's256:def4560000000000000000') },
+    });
+    const r = await validateSite('https://e.test', { fetch: fetcher });
+    expect(findGap(r.gaps, 'PRD-400-R10')).toBeDefined();
+  });
+
+  it('emits no gap when root_id matches a node in the index', async () => {
+    const manifest = { ...MANIFEST_CORE_STATIC, root_id: 'aa' };
+    const fetcher = makeFetcher({
+      'https://e.test/.well-known/act.json': { body: manifest },
+      'https://e.test/act/index.json': { body: INDEX_TWO_NODES },
+      'https://e.test/act/n/aa.json': { body: nodeBody('aa', 's256:abc1230000000000000000') },
+      'https://e.test/act/n/bb.json': { body: nodeBody('bb', 's256:def4560000000000000000') },
+    });
+    const r = await validateSite('https://e.test', { fetch: fetcher });
+    expect(findGap(r.gaps, 'PRD-400-R10')).toBeUndefined();
+  });
+
+  it('emits no gap when root_id is absent', async () => {
+    const fetcher = makeFetcher({
+      'https://e.test/.well-known/act.json': { body: MANIFEST_CORE_STATIC },
+      'https://e.test/act/index.json': { body: INDEX_TWO_NODES },
+      'https://e.test/act/n/aa.json': { body: nodeBody('aa', 's256:abc1230000000000000000') },
+      'https://e.test/act/n/bb.json': { body: nodeBody('bb', 's256:def4560000000000000000') },
+    });
+    const r = await validateSite('https://e.test', { fetch: fetcher });
+    expect(findGap(r.gaps, 'PRD-400-R10')).toBeUndefined();
+  });
+});
+
 describe('PRD-600-R19: declared > achieved produces a citing gap', () => {
   it('declared:plus + missing search_url_template still gets a band-level gap on every declared-but-not-achieved level', async () => {
     const manifestPlus = {
