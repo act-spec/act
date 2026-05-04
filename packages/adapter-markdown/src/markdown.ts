@@ -793,6 +793,12 @@ export async function transformOne(
         ? cfg.idStrategy.namespace
         : `${cfg.idStrategy.namespace}/${baseDefault}`;
   }
+  // True when the source file collapses to the site root (top-level
+  // `index.md` / `index.mdx` with no namespace). Used below so the
+  // default `human_url` resolves to `${siteOrigin}/` instead of the
+  // synthetic `${siteOrigin}/index/`, which doesn't exist on any
+  // mainstream static-site framework.
+  const isRootIndex = baseDefault.length === 0;
   if (baseDefault.length === 0) baseDefault = 'index';
   const id = typeof fm.data['id'] === 'string' ? fm.data['id'] : baseDefault;
   if (!validateId(id)) {
@@ -868,6 +874,8 @@ export async function transformOne(
 
   // PRD-100 source.human_url — when caller supplies a permalink resolver use
   // it; otherwise default to `${siteOrigin}/${id}/` when origin is known.
+  // Top-level `index.md` collapses to the site root (`${siteOrigin}/`)
+  // because no mainstream static-site framework serves it at `/index/`.
   // Returning `undefined` opts the node out of human_url emission.
   const humanUrl = ((): string | undefined => {
     if (typeof cfg.humanUrlFor === 'function') {
@@ -877,6 +885,7 @@ export async function transformOne(
       });
     }
     if (typeof ctx.siteOrigin === 'string' && ctx.siteOrigin.length > 0) {
+      if (isRootIndex) return `${ctx.siteOrigin}/`;
       return `${ctx.siteOrigin}/${id}/`;
     }
     return undefined;
