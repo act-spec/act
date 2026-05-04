@@ -20,6 +20,7 @@ import { initBrowserSchemas, bundledSchemaCount } from './schemas-bundle.js';
 import { looksLikeUrl } from './detect.js';
 import { validatePaste, validateUrl } from './validate.js';
 import { renderError, renderPasteResult, renderUrlReport } from './render.js';
+import { ACT_EXAMPLES, exampleManifestUrl } from './examples.js';
 
 // Build-time constants (Vite `define` in vite.config.ts).
 declare const __VALIDATOR_WEB_BUILD_SHA__: string;
@@ -39,6 +40,16 @@ const APP_HTML = `
       <a class="tools-nav__btn" href="https://act-spec.org">act-spec.org</a>
     </nav>
   </header>
+
+  <section class="examples-bar" aria-label="Example sites">
+    <span class="examples-bar__label">Try an example:</span>
+    <div class="examples-bar__btns">
+      ${ACT_EXAMPLES.map(
+        (ex) =>
+          `<button type="button" class="example-btn" data-example="${ex.slug}" title="${ex.description}">${ex.slug}</button>`,
+      ).join('')}
+    </div>
+  </section>
 
   <aside class="cors-notice" aria-label="CORS limitation">
     <strong>Heads up:</strong> this validator runs entirely in your browser.
@@ -136,6 +147,39 @@ function mount(): void {
   wirePasteForm(root);
   wireFileForm(root);
   wireOutputDelegation(root);
+  wireExampleButtons(root);
+}
+
+function wireExampleButtons(root: HTMLElement): void {
+  for (const btn of root.querySelectorAll<HTMLButtonElement>('.example-btn')) {
+    btn.addEventListener('click', () => {
+      const slug = btn.dataset['example'];
+      if (!slug) return;
+      const url = exampleManifestUrl(slug);
+      // Resolve to an absolute URL so paste/url validation paths agree on
+      // origin handling — `validateUrl` uses `new URL(value)` internally.
+      const absolute = new URL(url, window.location.href).toString();
+      setMode(root, 'url');
+      const input = root.querySelector<HTMLInputElement>('#url-input');
+      if (input) input.value = absolute;
+      showLoading(root, `Fetching ${absolute} …`);
+      void (async () => {
+        try {
+          const outcome = await validateUrl(absolute);
+          showOutput(
+            root,
+            renderUrlReport({
+              report: outcome.report,
+              corsBlocked: outcome.corsBlocked === true,
+            }),
+          );
+        } catch (err) {
+          const msg = err instanceof Error ? err.message : String(err);
+          showOutput(root, renderError(`Validation failed: ${msg}`));
+        }
+      })();
+    });
+  }
 }
 
 function setMode(root: HTMLElement, mode: 'url' | 'paste' | 'file'): void {

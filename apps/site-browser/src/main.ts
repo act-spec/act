@@ -44,6 +44,7 @@ import {
 } from './render.js';
 import { readUrlState, writeUrlState } from './url-state.js';
 import { wireDragAndDrop } from './dnd.js';
+import { ACT_EXAMPLES, exampleManifestUrl } from './examples.js';
 
 declare const __SITE_BROWSER_BUILD_SHA__: string;
 declare const __SITE_BROWSER_BUILD_TIMESTAMP__: string;
@@ -120,6 +121,16 @@ const APP_HTML = `
     </nav>
   </header>
 
+  <section class="examples-bar" aria-label="Example sites">
+    <span class="examples-bar__label">Try an example:</span>
+    <div class="examples-bar__btns">
+      ${ACT_EXAMPLES.map(
+        (ex) =>
+          `<button type="button" class="example-btn" data-example="${ex.slug}" title="${ex.description}">${ex.slug}</button>`,
+      ).join('')}
+    </div>
+  </section>
+
   <aside class="cors-notice" aria-label="CORS limitation">
     <strong>Heads up:</strong> this browser runs entirely in your browser.
     URL fetches are subject to CORS — many production origins will refuse them
@@ -168,6 +179,7 @@ function mount(): void {
   showOutput(root, renderInitial());
   wireUrlForm(root);
   wireOutputDelegation(root);
+  wireExampleButtons(root);
   wireDragAndDrop(root, (outcome) => {
     if (outcome.kind === 'unsupported') {
       showOutput(
@@ -552,6 +564,20 @@ async function showFullIndex(root: HTMLElement): Promise<void> {
 
 function currentSiteParam(): string {
   return state.handle?.manifestUrl ?? '';
+}
+
+function wireExampleButtons(root: HTMLElement): void {
+  for (const btn of root.querySelectorAll<HTMLButtonElement>('.example-btn')) {
+    btn.addEventListener('click', () => {
+      const slug = btn.dataset['example'];
+      if (!slug) return;
+      const url = exampleManifestUrl(slug);
+      const absolute = new URL(url, window.location.href).toString();
+      const input = root.querySelector<HTMLInputElement>('#url-input');
+      if (input) input.value = absolute;
+      void runLoad(root, absolute);
+    });
+  }
 }
 
 function wireUrlForm(root: HTMLElement): void {
