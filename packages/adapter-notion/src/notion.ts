@@ -223,7 +223,7 @@ function validateConfig(config: Record<string, unknown>): NotionAdapterConfig {
   if (typeof config !== 'object' || config === null) {
     throw new NotionAdapterError({ code: 'config_invalid', message: 'config must be an object' });
   }
-  const c = config as Record<string, unknown>;
+  const c = config;
 
   // accessToken
   const at = c['accessToken'];
