@@ -626,8 +626,20 @@ export async function emitFiles(opts: {
     errors: [],
   };
   // PRD-400-R27 — sidecar at outputDir/.act-build-report.json (NOT under /act/).
+  // The in-memory `report` carries absolute paths so callers that consume the
+  // returned value (e.g. `verifyCapabilityBacking`) can use them directly.
+  // The on-disk JSON, however, stores paths *relative to outputDir* — absolute
+  // paths leak the build machine's user home directory and break byte-equal
+  // reproducibility checks across hosts.
   const reportPath = path.join(opts.outputDir, '.act-build-report.json');
-  await atomicWrite(reportPath, JSON.stringify(report, null, 2));
+  const onDiskReport = {
+    ...report,
+    files: report.files.map((f) => ({
+      ...f,
+      path: path.relative(opts.outputDir, f.path),
+    })),
+  };
+  await atomicWrite(reportPath, JSON.stringify(onDiskReport, null, 2));
   return report;
 }
 
