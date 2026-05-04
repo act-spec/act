@@ -90,6 +90,13 @@ export default defineConfig({
           autogenerate: { directory: 'spec/v0.2' },
         },
         {
+          label: 'Tools',
+          items: [
+            { label: 'Validator', link: '/validator/' },
+            { label: 'Site Browser', link: '/browser/' },
+          ],
+        },
+        {
           label: 'Project',
           items: [
             { label: 'Blog', link: '/blog/' },
