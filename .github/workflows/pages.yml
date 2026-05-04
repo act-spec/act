@@ -1,11 +1,9 @@
-name: GitHub Pages (validator + site-browser SPAs)
+name: GitHub Pages
 
-# Builds the hosted SPAs and deploys them to GitHub Pages:
-#  - apps/validator-web → /validator/  (PRD-600-R28 / Q8)
-#  - apps/site-browser  → /browser/    (v0.2 site browser)
-#
-# Both bundles ship from one workflow so the artifact tree mirrors the
-# eventual Pages layout. The root index.html lists the available SPAs.
+# Builds and deploys to GitHub Pages:
+#  - apps/website       → /         (act-spec.org root — Astro Starlight)
+#  - apps/validator-web → /validator/
+#  - apps/site-browser  → /browser/
 
 on:
   push:
@@ -28,58 +26,47 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - uses: pnpm/action-setup@v4
         with:
           version: '10.17.1'
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
           cache: pnpm
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
       - name: Generate @act-spec/core types from schemas/
         run: pnpm -F @act-spec/core codegen
-      - name: Build @act-spec/validator (peer dep)
-        run: pnpm -F @act-spec/validator build
-      - name: Build @act-spec/inspector (peer dep)
-        run: pnpm -F @act-spec/inspector build
+
+      - name: Build all packages
+        run: pnpm -r --filter "./packages/*" run build
+
+      - name: Build website (Astro Starlight — act-spec.org root)
+        run: pnpm -F @act-spec/website build
+
       - name: Build validator-web SPA
         env:
-          # PRD-600-R28: served at /validator/ on the Pages site.
           VALIDATOR_WEB_BASE: /validator/
         run: pnpm -F @act-spec/validator-web build
+
       - name: Build site-browser SPA
         env:
           SITE_BROWSER_BASE: /browser/
         run: pnpm -F @act-spec/site-browser build
+
       - name: Assemble Pages artifact
         run: |
           mkdir -p _site/validator _site/browser
-          cp -R apps/validator-web/dist/* _site/validator/
-          cp -R apps/site-browser/dist/* _site/browser/
-          cat > _site/index.html <<'EOF'
-          <!doctype html>
-          <html lang="en">
-            <head>
-              <meta charset="UTF-8" />
-              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-              <title>ACT spec — static sites</title>
-              <style>
-                body { font: 1rem/1.55 ui-sans-serif, system-ui, sans-serif; max-width: 40rem; margin: 3rem auto; padding: 0 1rem; color: #0f172a; }
-                h1 { font-size: 1.5rem; margin: 0 0 1rem; }
-                ul { padding-left: 1.25rem; }
-                a { color: #0369a1; }
-              </style>
-            </head>
-            <body>
-              <h1>ACT spec — hosted tools</h1>
-              <ul>
-                <li><a href="./validator/">Validator</a> — paste a manifest URL or JSON envelope and get a conformance report.</li>
-                <li><a href="./browser/">Site browser</a> — paste a URL and walk an ACT-emitting site interactively.</li>
-              </ul>
-            </body>
-          </html>
-          EOF
+          # Website at root
+          cp -R apps/website/dist/. _site/
+          # SPAs in subdirs
+          cp -R apps/validator-web/dist/. _site/validator/
+          cp -R apps/site-browser/dist/. _site/browser/
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
