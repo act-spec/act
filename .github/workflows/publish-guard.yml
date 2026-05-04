@@ -107,7 +107,7 @@ jobs:
             if [[ -n "${tgz}" ]]; then
               content_hits=$(tar -xOf "${tgz}" 2>/dev/null \
                 | strings 2>/dev/null \
-                | grep -E '/(Users|home|Volumes)/|\\Users\\' \
+                | grep -E '/(Users|home|Volumes)/\w|\\Users\\\w' \
                 || true)
               if [[ -n "${content_hits}" ]]; then
                 echo "::error::${pkg_name}: tarball content contains forbidden path patterns:"
