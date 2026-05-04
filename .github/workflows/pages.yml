@@ -1,9 +1,10 @@
 name: GitHub Pages
 
 # Builds and deploys to GitHub Pages:
-#  - apps/website       → /         (act-spec.org root — Astro Starlight)
+#  - apps/website       → /                       (act-spec.org root — Astro Starlight)
 #  - apps/validator-web → /validator/
 #  - apps/site-browser  → /browser/
+#  - examples/<slug>    → /examples/<slug>/       (one path per static-buildable example)
 
 on:
   push:
@@ -45,6 +46,24 @@ jobs:
       - name: Build all packages
         run: pnpm -r --filter "./packages/*" run build
 
+      - name: Build static examples (conformance gate per example)
+        # Each example's `conformance` script chains setup (corpus generation
+        # for the docusaurus example) → build → static walk validation.
+        # Running it here ensures every example's `dist/` exists before the
+        # assembly step copies it into `_site/examples/<slug>/`. Runtime-only
+        # examples (`hybrid-static-runtime-mcp`, `nextjs-saas-runtime`) are
+        # excluded by `assemble-examples.mjs` itself.
+        run: |
+          pnpm -F @act-spec/example-astro-docs conformance
+          pnpm -F @act-spec/example-docusaurus-docs conformance
+          pnpm -F @act-spec/example-ecommerce-catalog conformance
+          pnpm -F @act-spec/example-eleventy-blog conformance
+          pnpm -F @act-spec/example-nextjs-marketing conformance
+          pnpm -F @act-spec/example-notion-knowledge-base conformance
+          pnpm -F @act-spec/example-starlight-docs conformance
+          pnpm -F @act-spec/example-vitepress-docs conformance
+          pnpm -F @act-spec/example-wordpress-blog conformance
+
       - name: Build website (Astro Starlight — act-spec.org root)
         run: pnpm -F @act-spec/website build
 
@@ -66,6 +85,10 @@ jobs:
           # SPAs in subdirs
           cp -R apps/validator-web/dist/. _site/validator/
           cp -R apps/site-browser/dist/. _site/browser/
+          # Static examples — copy each example's dist/ into
+          # _site/examples/<slug>/ and rewrite the manifest's URL templates
+          # so they resolve under the deployed sub-path.
+          node scripts/assemble-examples.mjs _site
 
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -426,8 +426,26 @@ describe('PRD-201 markdown adapter', () => {
       const node = contrib as unknown as Record<string, unknown>;
       const source = node['source'] as { human_url?: string } | undefined;
       expect(source).toBeDefined();
-      expect(source!.human_url).toBe(`https://example.com/${node['id'] as string}/`);
+      // Top-level `index.md` collapses to the site root; every other
+      // file maps to `${siteOrigin}/${id}/`.
+      const expected =
+        node['id'] === 'index'
+          ? 'https://example.com/'
+          : `https://example.com/${node['id'] as string}/`;
+      expect(source?.human_url).toBe(expected);
     }
+  });
+
+  it('collapses top-level index.md human_url to ${siteOrigin}/', async () => {
+    const adapter = createMarkdownAdapter();
+    const c = ctx({ siteOrigin: 'https://example.com', config: { sourceDir: fixtureDir } });
+    const result = await runAdapter(adapter, { sourceDir: fixtureDir }, c);
+    const root = result.nodes.find(
+      (n) => (n as unknown as Record<string, unknown>)['id'] === 'index',
+    );
+    expect(root).toBeDefined();
+    const source = (root as unknown as { source?: { human_url?: string } }).source;
+    expect(source?.human_url).toBe('https://example.com/');
   });
 
   it('omits source.human_url when ctx.siteOrigin is unset', async () => {
