@@ -34,6 +34,14 @@ jobs:
         run: pnpm -F @act-spec/core codegen
       - name: Build all packages
         run: pnpm -r --filter "./packages/*" run build
+      - name: Verify create-act-app templates are in sync with examples/
+        run: |
+          if ! git diff --quiet -- packages/create-act-app/templates/; then
+            echo "::error::create-act-app templates have drifted from examples/."
+            echo "::error::Run 'pnpm -F create-act-app build:templates' locally and commit the result."
+            git --no-pager diff --stat -- packages/create-act-app/templates/ || true
+            exit 1
+          fi
       - name: Typecheck
         run: pnpm -r typecheck
       - name: Lint
