@@ -8,12 +8,8 @@ name: GitHub Pages (validator + site-browser SPAs)
 # eventual Pages layout. The root index.html lists the available SPAs.
 
 on:
-  # Manual-only for v0.1 (internal hand-test candidate). Re-enable the
-  # on-push trigger below for v0.2 when the validator goes public on
-  # GitHub Pages alongside the spec site.
-  #
-  # push:
-  #   branches: [master]
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:

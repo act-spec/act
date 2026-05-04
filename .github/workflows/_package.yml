@@ -32,6 +32,8 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Generate @act-spec/core types from schemas/
         run: pnpm -F @act-spec/core codegen
+      - name: Build @act-spec/core
+        run: pnpm -F @act-spec/core build
       - name: Typecheck
         run: pnpm -r typecheck
       - name: Lint
