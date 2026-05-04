@@ -17,7 +17,7 @@ The BDFL holds the final call on every decision but commits to operating transpa
 ## Roles
 
 - **BDFL** — Jeremy Forsythe. Sets direction, approves ASPs, cuts releases, resolves conflicts.
-- **Maintainers** — TBD. Maintainers have commit and merge rights, triage issues, review PRs, and shepherd ASPs through review. The initial maintainer set will be named ahead of the v0.2 public release.
+- **Maintainers** — Jeremy Forsythe ([@jdforsythe](https://github.com/jdforsythe)) — BDFL. Maintainers have commit and merge rights, triage issues, review PRs, and shepherd ASPs through review.
 - **Contributors** — anyone who files an issue, opens a PR, drafts an ASP, contributes a fixture, or improves the docs. No formal status is required to contribute.
 
 ## Spec change process
