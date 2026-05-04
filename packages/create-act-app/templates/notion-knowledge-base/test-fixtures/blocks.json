@@ -1,0 +1,281 @@
+{
+  "aaaaaaaa-0001-4000-8000-000000000001": [
+    {
+      "object": "block",
+      "id": "b-001-h",
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{ "type": "text", "plain_text": "Day one" }]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b-001-p",
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "plain_text": "Welcome to the platform team. The first day is mostly accounts, hardware, and meeting your immediate group."
+          }
+        ]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b-001-l1",
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{ "type": "text", "plain_text": "Confirm laptop, badge, and Yubikey." }]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b-001-l2",
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{ "type": "text", "plain_text": "Schedule 1:1s with manager and tech lead." }]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b-001-l3",
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{ "type": "text", "plain_text": "Run the bootstrap script and confirm a green CI build." }]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b-001-c",
+      "type": "code",
+      "code": {
+        "language": "bash",
+        "rich_text": [
+          {
+            "type": "text",
+            "plain_text": "git clone git@github.com:acme/platform.git\ncd platform\n./scripts/bootstrap.sh\nmake test"
+          }
+        ]
+      }
+    }
+  ],
+
+  "aaaaaaaa-0002-4000-8000-000000000002": [
+    {
+      "object": "block",
+      "id": "b-002-h",
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{ "type": "text", "plain_text": "Pre-flight checks" }]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b-002-p",
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "plain_text": "Confirm staging is healthy and that the change-log entry has been merged before promoting an artefact to production."
+          }
+        ]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b-002-l1",
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [{ "type": "text", "plain_text": "Run the smoke suite against staging." }]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b-002-l2",
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [{ "type": "text", "plain_text": "Promote the artefact via the deploy CLI." }]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b-002-l3",
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [{ "type": "text", "plain_text": "Watch the canary dashboard for 10 minutes before scaling." }]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b-002-c",
+      "type": "code",
+      "code": {
+        "language": "bash",
+        "rich_text": [
+          {
+            "type": "text",
+            "plain_text": "deploy promote --service api --from staging --to prod --canary 5"
+          }
+        ]
+      }
+    }
+  ],
+
+  "aaaaaaaa-0003-4000-8000-000000000003": [
+    {
+      "object": "block",
+      "id": "b-003-h",
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{ "type": "text", "plain_text": "Top five incidents" }]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b-003-p",
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "plain_text": "These five errors account for roughly 80% of the on-call pages over the past quarter; the remediation is short in each case."
+          }
+        ]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b-003-l1",
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{ "type": "text", "plain_text": "DB connection pool exhausted -> restart the worker pool." }]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b-003-l2",
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{ "type": "text", "plain_text": "Stale CDN cache -> purge the affected path." }]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b-003-c",
+      "type": "code",
+      "code": {
+        "language": "bash",
+        "rich_text": [
+          { "type": "text", "plain_text": "ops cdn purge --path /api/v1/items" }
+        ]
+      }
+    }
+  ],
+
+  "aaaaaaaa-0004-4000-8000-000000000004": [
+    {
+      "object": "block",
+      "id": "b-004-h",
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{ "type": "text", "plain_text": "Credentials and secrets" }]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b-004-p",
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "plain_text": "All long-lived credentials live in the central vault. Local development uses short-lived OIDC tokens issued by the auth proxy."
+          }
+        ]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b-004-l1",
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{ "type": "text", "plain_text": "Never commit a token to git, even in a private repo." }]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b-004-l2",
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{ "type": "text", "plain_text": "Rotate any token whose audit log shows an unrecognised consumer." }]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b-004-c",
+      "type": "code",
+      "code": {
+        "language": "bash",
+        "rich_text": [
+          { "type": "text", "plain_text": "vault login -method=oidc role=engineer\nvault kv get secret/api/db" }
+        ]
+      }
+    }
+  ],
+
+  "aaaaaaaa-0005-4000-8000-000000000005": [
+    {
+      "object": "block",
+      "id": "b-005-h",
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [{ "type": "text", "plain_text": "Primer día" }]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b-005-p",
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "plain_text": "Bienvenido al equipo de plataforma. El primer día se centra en cuentas, hardware y conocer al equipo inmediato."
+          }
+        ]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b-005-l1",
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{ "type": "text", "plain_text": "Confirma laptop, gafete y Yubikey." }]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b-005-l2",
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [{ "type": "text", "plain_text": "Programa 1:1 con manager y tech lead." }]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b-005-c",
+      "type": "code",
+      "code": {
+        "language": "bash",
+        "rich_text": [
+          {
+            "type": "text",
+            "plain_text": "git clone git@github.com:acme/platform.git\ncd platform\n./scripts/bootstrap.sh"
+          }
+        ]
+      }
+    }
+  ]
+}

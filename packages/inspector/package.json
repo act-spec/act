@@ -38,7 +38,7 @@
     "test:coverage": "vitest run --coverage",
     "lint": "eslint src",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "conformance": "tsx conformance.ts"
+    "conformance": "pnpm -F @act-spec/example-astro-docs build && tsx conformance.ts"
   },
   "dependencies": {
     "@act-spec/core": "workspace:*",

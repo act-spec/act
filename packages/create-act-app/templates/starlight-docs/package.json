@@ -1,0 +1,39 @@
+{
+  "name": "@act-spec/example-starlight-docs",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Minimal Astro Starlight starter that emits a conformant ACT (Agent Content Tree) tree alongside its static build via @act-spec/plugin-astro.",
+  "license": "Apache-2.0",
+  "author": "Jeremy Forsythe <jeremy@act-spec.org>",
+  "homepage": "https://act-spec.org",
+  "bugs": {
+    "url": "https://github.com/act-spec/act/issues"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-spec/act.git",
+    "directory": "examples/starlight-docs"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "conformance": "pnpm run build && tsx conformance.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node -e \"console.log('@act-spec/example-starlight-docs: example exercises end-to-end via conformance')\"",
+    "lint": "node -e \"console.log('@act-spec/example-starlight-docs: lint covered by Astro at build time')\""
+  },
+  "dependencies": {
+    "astro": "^4.16.19",
+    "@astrojs/sitemap": "3.2.1",
+    "@astrojs/starlight": "^0.29.3",
+    "@act-spec/plugin-astro": "workspace:*",
+    "@act-spec/adapter-markdown": "workspace:*"
+  },
+  "devDependencies": {
+    "@act-spec/validator": "workspace:*",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

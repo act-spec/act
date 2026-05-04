@@ -11,7 +11,7 @@ name: Validator parity (TS ↔ Go)
 on:
   pull_request:
   push:
-    branches: [master]
+    branches: [main]
 
 concurrency:
   group: parity-${{ github.ref }}
@@ -49,10 +49,13 @@ jobs:
       - name: Generate @act-spec/core types from schemas/
         run: pnpm -F @act-spec/core codegen
 
-      - name: Build @act-spec/validator
+      - name: Build @act-spec/validator (and workspace deps)
         # The parity script imports the validator's compiled ESM directly
-        # (in-process) so it must be built before the sweep runs.
-        run: pnpm -F @act-spec/validator build
+        # (in-process), so the validator and its workspace dependencies
+        # (e.g. @act-spec/core) must be built first. The trailing `...`
+        # tells pnpm to include upstream workspace dependencies, in
+        # topological order.
+        run: pnpm -F "@act-spec/validator..." build
 
       - name: Run parity sweep
         run: bash scripts/parity-check.sh

@@ -854,7 +854,7 @@ export async function transformOne(
   metadata['source'] = {
     adapter: 'act-markdown',
     source_id: item.relPath,
-    source_path: item.absPath,
+    source_path: item.relPath,
   };
   // PRD-201-R24 — extraction_status partial when body is empty.
   if (fm.body.trim().length === 0) {

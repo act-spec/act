@@ -324,10 +324,17 @@ describe('PRD-400 generator pipeline', () => {
       expect(stat.isFile()).toBe(true);
       const report = JSON.parse(await fs.readFile(sidecar, 'utf8')) as {
         conformanceTarget: string;
-        files: unknown[];
+        files: Array<{ path: string }>;
       };
       expect(report.conformanceTarget).toBe('core');
       expect(Array.isArray(report.files)).toBe(true);
+      // On-disk paths MUST be relative to outputDir so the sidecar is
+      // reproducible across hosts and does not leak `/Users/...` / `/home/...`
+      // build-machine paths.
+      for (const f of report.files) {
+        expect(path.isAbsolute(f.path)).toBe(false);
+        expect(f.path.startsWith('..')).toBe(false);
+      }
     } finally {
       await fs.rm(tmp, { recursive: true, force: true });
     }
@@ -419,8 +426,9 @@ describe('PRD-400 generator pipeline', () => {
     // Wrap enumerate to capture ctx.
     const wrapped: Adapter<unknown> = {
       ...probeAdapter,
-      async *enumerate(ctx) {
+      enumerate(ctx) {
         observedOrigin = ctx.siteOrigin;
+        return [];
       },
     };
     await runPipeline({
@@ -440,8 +448,9 @@ describe('PRD-400 generator pipeline', () => {
       async init() {
         return { level: 'core' };
       },
-      async *enumerate(ctx) {
+      enumerate(ctx) {
         observedOrigin = ctx.siteOrigin;
+        return [];
       },
       async transform() {
         return null;

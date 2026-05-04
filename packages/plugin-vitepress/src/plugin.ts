@@ -68,7 +68,7 @@ export function validateOptions(options: unknown): VitePressActOptions {
     throw new Error(`@act-spec/plugin-vitepress: options must be an object; got ${typeof options}`);
   }
   const opts = options as Record<string, unknown>;
-  if (typeof opts['baseUrl'] !== 'string' || (opts['baseUrl'] as string).length === 0) {
+  if (typeof opts['baseUrl'] !== 'string' || (opts['baseUrl']).length === 0) {
     throw new Error(
       `@act-spec/plugin-vitepress: 'baseUrl' is required and must be a non-empty string`,
     );

@@ -283,7 +283,3 @@ the HTML/origin layer.
 | Date | Version | Change |
 |---|---|---|
 | 2026-05-03 | 0.2.0 | Initial spec drafted by BDFL |
-
----
-
-**Sources:** prd/109-security.md, prd/106-runtime-delivery.md, prd/101-discovery.md

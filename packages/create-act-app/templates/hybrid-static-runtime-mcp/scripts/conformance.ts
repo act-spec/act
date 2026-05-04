@@ -62,7 +62,7 @@ async function hashDir(root: string): Promise<string> {
 }
 
 async function main(): Promise<void> {
-  console.log('=== PRD-706 conformance: build #1 (marketing static + parent manifest) ===');
+  console.log('=== hybrid-static-runtime-mcp conformance: build #1 (marketing static + parent manifest) ===');
   const b1 = await run('build-marketing.ts');
   if (b1 !== 0) {
     console.error(`build #1 exited ${b1}`);
@@ -71,7 +71,7 @@ async function main(): Promise<void> {
   const hash1 = await hashDir(distRoot);
   console.log(`  build #1 dist/ digest: ${hash1.slice(0, 16)}…`);
 
-  console.log('\n=== PRD-706 conformance: build #2 (byte-equality check, PRD-706-R16) ===');
+  console.log('\n=== hybrid-static-runtime-mcp conformance: build #2 (byte-equality check,) ===');
   const b2 = await run('build-marketing.ts');
   if (b2 !== 0) {
     console.error(`build #2 exited ${b2}`);
@@ -80,35 +80,35 @@ async function main(): Promise<void> {
   const hash2 = await hashDir(distRoot);
   console.log(`  build #2 dist/ digest: ${hash2.slice(0, 16)}…`);
   if (hash1 !== hash2) {
-    console.error('FAIL: build is non-deterministic (PRD-706-R16 / PRD-103-R4 violated).');
+    console.error('FAIL: build is non-deterministic (byte-equality check failed).');
     console.error(`  hash #1 = ${hash1}`);
     console.error(`  hash #2 = ${hash2}`);
     process.exit(1);
   }
   console.log('  PASS: dist/ byte-identical across two consecutive builds.');
 
-  console.log('\n=== PRD-706 conformance: validator gate (parent + per-mount) ===');
+  console.log('\n=== hybrid-static-runtime-mcp conformance: validator gate (parent + per-mount) ===');
   const v = await run('validate.ts');
   if (v !== 0) {
     console.error(`validator exited ${v}`);
     process.exit(v);
   }
 
-  console.log('\n=== PRD-706 conformance: two-principal probe + R10 transcript (app mount) ===');
+  console.log('\n=== hybrid-static-runtime-mcp conformance: two-principal probe + R10 transcript (app mount) ===');
   const p = await run('probe.ts');
   if (p !== 0) {
     console.error(`probe exited ${p}`);
     process.exit(p);
   }
 
-  console.log('\n=== PRD-706 conformance: MCP enumeration probe ===');
+  console.log('\n=== hybrid-static-runtime-mcp conformance: MCP enumeration probe ===');
   const m = await run('probe-mcp.ts');
   if (m !== 0) {
     console.error(`MCP probe exited ${m}`);
     process.exit(m);
   }
 
-  console.log('\n=== PRD-706 conformance: ALL GREEN ===');
+  console.log('\n=== hybrid-static-runtime-mcp conformance: ALL GREEN ===');
 }
 
 main().catch((err: unknown) => {

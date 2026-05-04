@@ -3,9 +3,9 @@
 // well-known manifest at /.well-known/act.json, follows the advertised
 // index URL, and walks per-node JSONs under the node URL template.
 //
-// The Walker honours the wire-format ETag contract per PRD-103: when a
-// previous response carried an ETag, it is replayed as If-None-Match on
-// the next request and a 304 response is treated as a cache hit (the
+// The Walker honours the wire-format ETag contract (spec/v0.2/wire-format/etag.md):
+// when a previous response carried an ETag, it is replayed as If-None-Match
+// on the next request and a 304 response is treated as a cache hit (the
 // previously-decoded body is returned without re-parsing).
 //
 // This file owns the Walker struct and its Run-once API. Cache shape
@@ -154,8 +154,8 @@ func resolveAgainst(base, href string) (string, error) {
 }
 
 // substituteID mirrors the TS substituteId: replaces the literal token
-// `{id}` in the template (the spec's node_url_template / subtree_url_template
-// placeholder syntax per PRD-100-R5).
+// `{id}` in the template (the node_url_template / subtree_url_template
+// placeholder syntax defined in spec/v0.2/wire-format/manifest.md).
 func substituteID(template, id string) string {
 	return strings.ReplaceAll(template, "{id}", id)
 }

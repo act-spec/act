@@ -27,6 +27,22 @@
     {
       "name": "nextjs-saas-runtime",
       "description": "Multi-tenant B2B SaaS workspace built on Next.js — serves ACT live from runtime route handlers, identity-scoped, cross-tenant safe."
+    },
+    {
+      "name": "notion-knowledge-base",
+      "description": "Runnable example: a Notion-backed knowledge base sourced from a recorded API fixture corpus, transformed by @act-spec/adapter-notion, and emitted as ACT (Agent Content Tree) static artefacts via @act-spec/generator-core."
+    },
+    {
+      "name": "starlight-docs",
+      "description": "Minimal Astro Starlight starter that emits a conformant ACT (Agent Content Tree) tree alongside its static build via @act-spec/plugin-astro."
+    },
+    {
+      "name": "vitepress-docs",
+      "description": "VitePress 1.x documentation site demonstrating zero-friction ACT generation via the @act-spec/plugin-vitepress integration, including a second locale."
+    },
+    {
+      "name": "wordpress-blog",
+      "description": "Headless WordPress blog demo wired to ACT via @act-spec/adapter-wordpress. Reads a baked WP REST fixture (no live WordPress required), runs the canonical generator pipeline, and emits ACT artefacts plus llms.txt / llms-full.txt into public/."
     }
   ]
 }

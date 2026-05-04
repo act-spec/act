@@ -249,7 +249,3 @@ curl -sS -o /dev/null -w "%{http_code}\n" \
 | Date | Version | Change |
 |---|---|---|
 | 2026-05-03 | 0.2.0 | Initial spec drafted by BDFL |
-
----
-
-**Sources:** prd/103-caching-etags.md, prd/100-wire-format.md, prd/107-conformance-levels.md

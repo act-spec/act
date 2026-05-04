@@ -1,0 +1,110 @@
+# Acme Knowledge Base
+
+> Internal handbook backed by Notion, mirrored to ACT (Agent Content Tree) for AI-agent consumption.
+
+---
+title: Onboarding checklist
+url: http://localhost:8083/act/nodes/kb%2Fen-us%2Faaaaaaaa-0001-4000-8000-000000000001.json
+type: article
+locale: en-US
+summary: Day-one and week-one tasks for every new engineer joining the platform team.
+---
+
+Day one
+
+Welcome to the platform team. The first day is mostly accounts, hardware, and meeting your immediate group.
+
+- Confirm laptop, badge, and Yubikey.
+- Schedule 1:1s with manager and tech lead.
+- Run the bootstrap script and confirm a green CI build.
+
+```bash
+git clone git@github.com:acme/platform.git
+cd platform
+./scripts/bootstrap.sh
+make test
+```
+
+
+---
+title: Production deploy runbook
+url: http://localhost:8083/act/nodes/kb%2Fen-us%2Faaaaaaaa-0002-4000-8000-000000000002.json
+type: article
+locale: en-US
+summary: Step-by-step procedure for releasing the API service to production, including rollback.
+---
+
+Pre-flight checks
+
+Confirm staging is healthy and that the change-log entry has been merged before promoting an artefact to production.
+
+1. Run the smoke suite against staging.
+1. Promote the artefact via the deploy CLI.
+1. Watch the canary dashboard for 10 minutes before scaling.
+
+```bash
+deploy promote --service api --from staging --to prod --canary 5
+```
+
+
+---
+title: Troubleshooting common errors
+url: http://localhost:8083/act/nodes/kb%2Fen-us%2Faaaaaaaa-0003-4000-8000-000000000003.json
+type: article
+locale: en-US
+summary: Recipes for the five errors that most often page the on-call rotation.
+---
+
+Top five incidents
+
+These five errors account for roughly 80% of the on-call pages over the past quarter; the remediation is short in each case.
+
+- DB connection pool exhausted -> restart the worker pool.
+- Stale CDN cache -> purge the affected path.
+
+```bash
+ops cdn purge --path /api/v1/items
+```
+
+
+---
+title: Security and access policy
+url: http://localhost:8083/act/nodes/kb%2Fen-us%2Faaaaaaaa-0004-4000-8000-000000000004.json
+type: article
+locale: en-US
+summary: How we handle credentials, secrets, and least-privilege access across services.
+---
+
+Credentials and secrets
+
+All long-lived credentials live in the central vault. Local development uses short-lived OIDC tokens issued by the auth proxy.
+
+- Never commit a token to git, even in a private repo.
+- Rotate any token whose audit log shows an unrecognised consumer.
+
+```bash
+vault login -method=oidc role=engineer
+vault kv get secret/api/db
+```
+
+
+---
+title: Lista de incorporación
+url: http://localhost:8083/act/nodes/kb%2Fes-es%2Faaaaaaaa-0005-4000-8000-000000000005.json
+type: article
+locale: es-ES
+summary: Tareas de la primera semana para cada ingeniero que se incorpora al equipo de plataforma.
+---
+
+Primer día
+
+Bienvenido al equipo de plataforma. El primer día se centra en cuentas, hardware y conocer al equipo inmediato.
+
+- Confirma laptop, gafete y Yubikey.
+- Programa 1:1 con manager y tech lead.
+
+```bash
+git clone git@github.com:acme/platform.git
+cd platform
+./scripts/bootstrap.sh
+```

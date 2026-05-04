@@ -91,7 +91,7 @@ export function transformDatabase(
     ...(typeof database.last_edited_time === 'string'
       ? { updated_at: database.last_edited_time }
       : {}),
-  } as unknown as EmittedNode;
+  };
 
   return finalizeEtag(envelope);
 }
@@ -178,7 +178,7 @@ export function transformPage(
 
   const finalized = finalizeEtag(envelope);
   if (titlePartial) {
-    return { ...finalized, _actPartial: true } as PartialEmittedNode;
+    return { ...finalized, _actPartial: true };
   }
   return finalized;
 }

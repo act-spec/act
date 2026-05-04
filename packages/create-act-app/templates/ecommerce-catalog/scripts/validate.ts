@@ -117,7 +117,7 @@ async function main(): Promise<void> {
   const indexNodes = (index['nodes'] as Array<{ id?: unknown }> | undefined) ?? [];
 
   console.log(
-    `PRD-704 conformance — ${nodeFiles.length} node files (${productNodes.length} products), ${subtreeFiles.length} subtree file(s).`,
+    `ecommerce-catalog conformance — ${nodeFiles.length} node files (${productNodes.length} products), ${subtreeFiles.length} subtree file(s).`,
   );
   console.log(
     `  declared:  ${report.declared.level ?? '<unknown>'} / ${report.declared.delivery ?? '<unknown>'}`,
@@ -141,13 +141,13 @@ async function main(): Promise<void> {
   if (report.declared.level !== 'standard') {
     failed += 1;
     console.error(
-      `FAIL: declared.level is "${String(report.declared.level)}", expected "standard" (PRD-704-R1).`,
+      `FAIL: declared.level is "${String(report.declared.level)}", expected "standard".`,
     );
   }
   if (report.achieved.level !== 'standard') {
     failed += 1;
     console.error(
-      `FAIL: achieved.level is "${String(report.achieved.level)}", expected "standard" (PRD-704-R15(c)).`,
+      `FAIL: achieved.level is "${String(report.achieved.level)}", expected "standard".`,
     );
   }
 
@@ -155,7 +155,7 @@ async function main(): Promise<void> {
   if (report.declared.delivery !== 'static' || report.achieved.delivery !== 'static') {
     failed += 1;
     console.error(
-      `FAIL: delivery is not "static" (declared=${String(report.declared.delivery)}, achieved=${String(report.achieved.delivery)}; PRD-704-R4).`,
+      `FAIL: delivery is not "static" (declared=${String(report.declared.delivery)}, achieved=${String(report.achieved.delivery)};).`,
     );
   }
 
@@ -163,7 +163,7 @@ async function main(): Promise<void> {
   if (productNodes.length < 500 || productNodes.length > 2000) {
     failed += 1;
     console.error(
-      `FAIL: corpus has ${productNodes.length} product nodes; PRD-704-R3 envelope is 500–2000.`,
+      `FAIL: corpus has ${productNodes.length} product nodes; envelope is 500–2000.`,
     );
   }
 
@@ -176,7 +176,7 @@ async function main(): Promise<void> {
   if (!subtreeIds.includes(CATALOG_ROOT_ID)) {
     failed += 1;
     console.error(
-      `FAIL: root subtree for id "${CATALOG_ROOT_ID}" is absent (PRD-704-R2). Subtree IDs: ${JSON.stringify(subtreeIds)}.`,
+      `FAIL: root subtree for id "${CATALOG_ROOT_ID}" is absent. Subtree IDs: ${JSON.stringify(subtreeIds)}.`,
     );
   }
   // Every category index node should have its own subtree — that's how
@@ -185,7 +185,7 @@ async function main(): Promise<void> {
   for (const cat of expectedCategorySubtrees) {
     if (!subtreeIds.includes(cat)) {
       failed += 1;
-      console.error(`FAIL: category subtree for id "${cat}" is absent (PRD-704-R2 + A22).`);
+      console.error(`FAIL: category subtree for id "${cat}" is absent ( + A22).`);
     }
   }
 
@@ -202,28 +202,28 @@ async function main(): Promise<void> {
   for (const [key, val] of requiredManifestPaths) {
     if (val === undefined || val === null) {
       failed += 1;
-      console.error(`FAIL: manifest is missing required field "${key}" (PRD-704-R4).`);
+      console.error(`FAIL: manifest is missing required field "${key}".`);
     }
   }
   const caps = (manifest['capabilities'] as Envelope | undefined) ?? {};
   if (caps['etag'] !== true) {
     failed += 1;
-    console.error(`FAIL: manifest.capabilities.etag is not true (PRD-704-R4).`);
+    console.error(`FAIL: manifest.capabilities.etag is not true.`);
   }
   if (caps['subtree'] !== true) {
     failed += 1;
-    console.error(`FAIL: manifest.capabilities.subtree is not true (PRD-704-R4).`);
+    console.error(`FAIL: manifest.capabilities.subtree is not true.`);
   }
   for (const forbidden of ['index_ndjson_url', 'search_url_template', 'locales', 'mounts']) {
     if (manifest[forbidden] !== undefined) {
       failed += 1;
-      console.error(`FAIL: manifest declares forbidden field "${forbidden}" (PRD-704-R4).`);
+      console.error(`FAIL: manifest declares forbidden field "${forbidden}".`);
     }
   }
   for (const forbiddenCap of ['ndjson_index']) {
     if (caps[forbiddenCap] !== undefined) {
       failed += 1;
-      console.error(`FAIL: manifest.capabilities declares forbidden flag "${forbiddenCap}" (PRD-704-R4).`);
+      console.error(`FAIL: manifest.capabilities declares forbidden flag "${forbiddenCap}".`);
     }
   }
 
@@ -336,20 +336,20 @@ async function main(): Promise<void> {
   for (const [label, ok] of coverage) {
     if (!ok) {
       failed += 1;
-      console.error(`FAIL: cited-PRD coverage missing for ${label} (PRD-704-R15(d)).`);
+      console.error(`FAIL: required spec coverage missing for ${label}.`);
     }
   }
   if (!indexHasEntries) {
     failed += 1;
-    console.error(`FAIL: index has no entries (PRD-704-R2).`);
+    console.error(`FAIL: index has no entries.`);
   }
 
   if (failed > 0) {
-    console.error(`\nPRD-704 conformance: FAILED (${failed} check(s)).`);
+    console.error(`\necommerce-catalog conformance: FAILED (${failed} check(s)).`);
     process.exit(1);
   }
   console.log(
-    `\nPRD-704 conformance: OK — gaps: 0; declared.level: standard; achieved.level: standard; delivery: static; products: ${productNodes.length}; root subtree: ${CATALOG_ROOT_ID}.`,
+    `\necommerce-catalog conformance: OK — gaps: 0; declared.level: standard; achieved.level: standard; delivery: static; products: ${productNodes.length}; root subtree: ${CATALOG_ROOT_ID}.`,
   );
 }
 

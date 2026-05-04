@@ -1,0 +1,50 @@
+{
+  "act_version": "0.1",
+  "id": "kb/en-us/aaaaaaaa-0002-4000-8000-000000000002",
+  "type": "article",
+  "title": "Production deploy runbook",
+  "etag": "s256:Kl83RnEwG68xMsJWT-E1qV",
+  "summary": "Step-by-step procedure for releasing the API service to production, including rollback.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "plain",
+      "text": "Pre-flight checks",
+      "level": 2
+    },
+    {
+      "type": "prose",
+      "format": "plain",
+      "text": "Confirm staging is healthy and that the change-log entry has been merged before promoting an artefact to production."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "1. Run the smoke suite against staging.\n1. Promote the artefact via the deploy CLI.\n1. Watch the canary dashboard for 10 minutes before scaling."
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "text": "deploy promote --service api --from staging --to prod --canary 5"
+    }
+  ],
+  "tokens": {
+    "summary": 11,
+    "body": 55
+  },
+  "parent": "kb/11111111-1111-4111-8111-111111111111",
+  "tags": [
+    "deploy",
+    "runbook"
+  ],
+  "updated_at": "2026-04-25T14:00:00.000Z",
+  "metadata": {
+    "locale": "en-US",
+    "source": {
+      "adapter": "act-notion",
+      "source_id": "aaaaaaaa-0002-4000-8000-000000000002",
+      "human_url": "https://www.notion.so/acme/deploy-runbook-aaaaaaaa00024000800000000000002"
+    }
+  }
+}

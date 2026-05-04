@@ -62,23 +62,23 @@ var integrationOnly = map[string]struct{}{
 	"102/negative/block-marketing-bad-namespace.json":      {},
 	"102/negative/block-summary-source-bad-shape.json":     {},
 	// 102 node-level fixtures whose etag values predate the strict s256
-	// admit-list (PRD-103-R3); the structural shape DOES validate against
-	// the node schema (the schema does not enforce the s256 admit-list),
-	// but since the TS conformance harness treats them as integration-only
-	// we mirror that here to avoid divergence.
+	// admit-list; the structural shape DOES validate against the node schema
+	// (the schema does not enforce the s256 admit-list), but since the TS
+	// conformance harness treats them as integration-only we mirror that here
+	// to avoid divergence.
 	"102/positive/node-variant-base.json":               {},
 	"102/positive/node-variant.json":                    {},
 	"102/positive/node-with-related-cycle.json":         {},
 	"102/positive/node-with-summary-source-author.json": {},
 	"102/positive/node-with-summary-source-llm.json":    {},
 	"102/negative/node-variant-bad-key.json":            {},
-	// PRD-102 second copy of the cycle case — same integration-only treatment.
+	// Second copy of the cycle case — same integration-only treatment.
 	"102/negative/node-children-cycle.json": {},
-	// PRD-103 negative fixture wraps the node payload under `envelope` and
-	// declares `expected_finding` at the wrapper layer; not a top-level
-	// envelope itself. Cross-cutting probe surface, not structural.
+	// This fixture wraps the node payload under `envelope` and declares
+	// `expected_finding` at the wrapper layer; not a top-level envelope
+	// itself. Cross-cutting probe surface, not structural.
 	"103/negative/node-missing-etag.json": {},
-	// PRD-105 fixture is an HTTP-state transcript (manifest_excerpt + index_excerpt
+	// This fixture is an HTTP-state transcript (manifest_excerpt + index_excerpt
 	// + filesystem_state). Probed by the static-profile suite, not by the
 	// envelope sweep.
 	"105/negative/index-references-missing-node-file.json": {},

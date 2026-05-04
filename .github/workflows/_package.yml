@@ -32,13 +32,29 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Generate @act-spec/core types from schemas/
         run: pnpm -F @act-spec/core codegen
+      - name: Build all packages
+        run: pnpm -r --filter "./packages/*" run build
       - name: Typecheck
         run: pnpm -r typecheck
       - name: Lint
         run: pnpm -r lint
       - name: Test
         run: pnpm -r test
-      - name: Build
-        run: pnpm -r --filter "./packages/*" run build
       - name: Conformance gate (per-package)
         run: pnpm -r conformance
+      - name: Check PRD references are absent from user-visible surfaces
+        run: bash scripts/check-prd-refs.sh
+      - name: Verify create-act-app templates are in sync with examples/
+        # Run AFTER conformance so each example's gitignored static/act/,
+        # public/act/, and `llms*.txt` outputs exist on disk before the
+        # template snapshot is rebuilt. build-templates.mjs normalizes
+        # `generated_at` in copied envelopes to a fixed sentinel so the
+        # snapshot is byte-deterministic across hosts and runs.
+        run: |
+          node packages/create-act-app/scripts/build-templates.mjs
+          if ! git diff --quiet -- packages/create-act-app/templates/; then
+            echo "::error::create-act-app templates have drifted from examples/."
+            echo "::error::Run 'pnpm -r conformance && pnpm -F create-act-app build:templates' locally and commit the result."
+            git --no-pager diff --stat -- packages/create-act-app/templates/ || true
+            exit 1
+          fi

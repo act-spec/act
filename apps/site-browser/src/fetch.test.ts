@@ -406,7 +406,7 @@ describe('loadHtml', () => {
         if (stub.throws instanceof Error) throw stub.throws;
         throw new Error('non-Error stub.throws');
       }
-      const bodyText = stub.body === undefined ? '' : String(stub.body);
+      const bodyText = typeof stub.body === 'string' ? stub.body : '';
       return {
         ok: stub.ok,
         status: stub.status ?? (stub.ok ? 200 : 404),

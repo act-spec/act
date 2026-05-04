@@ -2,7 +2,7 @@
  * `/llms-full.txt` emitter tests — ACT v0.2 §3.4 / §3.5 / §6.40.
  */
 import { describe, expect, it } from 'vitest';
-import type { IndexSchema, ManifestSchema, NodeSchema } from '@act-spec/core';
+import type { ManifestSchema, NodeSchema } from '@act-spec/core';
 
 import {
   DEFAULT_LLMS_FULL_MAX_BYTES,

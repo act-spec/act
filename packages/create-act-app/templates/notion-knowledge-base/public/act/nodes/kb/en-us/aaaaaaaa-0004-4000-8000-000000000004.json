@@ -1,0 +1,50 @@
+{
+  "act_version": "0.1",
+  "id": "kb/en-us/aaaaaaaa-0004-4000-8000-000000000004",
+  "type": "article",
+  "title": "Security and access policy",
+  "etag": "s256:V5Tdl1AzYbjCZEWZ89Skc-",
+  "summary": "How we handle credentials, secrets, and least-privilege access across services.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "plain",
+      "text": "Credentials and secrets",
+      "level": 2
+    },
+    {
+      "type": "prose",
+      "format": "plain",
+      "text": "All long-lived credentials live in the central vault. Local development uses short-lived OIDC tokens issued by the auth proxy."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "- Never commit a token to git, even in a private repo.\n- Rotate any token whose audit log shows an unrecognised consumer."
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "text": "vault login -method=oidc role=engineer\nvault kv get secret/api/db"
+    }
+  ],
+  "tokens": {
+    "summary": 10,
+    "body": 53
+  },
+  "parent": "kb/11111111-1111-4111-8111-111111111111",
+  "tags": [
+    "security",
+    "policy"
+  ],
+  "updated_at": "2026-04-15T09:10:00.000Z",
+  "metadata": {
+    "locale": "en-US",
+    "source": {
+      "adapter": "act-notion",
+      "source_id": "aaaaaaaa-0004-4000-8000-000000000004",
+      "human_url": "https://www.notion.so/acme/security-policy-aaaaaaaa00044000800000000000004"
+    }
+  }
+}

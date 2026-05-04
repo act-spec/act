@@ -1,0 +1,24 @@
+# Acme Knowledge Base
+
+> Internal handbook backed by Notion, mirrored to ACT (Agent Content Tree) for AI-agent consumption.
+
+## default
+
+### Collections
+
+- [Acme Knowledge Base](http://localhost:8083/act/nodes/kb%2F11111111-1111-4111-8111-111111111111.json): Internal handbook covering onboarding, deployment, troubleshooting, and policy. Mirrored from Notion to ACT for AI-agent consumption.
+
+## en-US
+
+### Articles
+
+- [Onboarding checklist](http://localhost:8083/act/nodes/kb%2Fen-us%2Faaaaaaaa-0001-4000-8000-000000000001.json): Day-one and week-one tasks for every new engineer joining the platform team.
+- [Production deploy runbook](http://localhost:8083/act/nodes/kb%2Fen-us%2Faaaaaaaa-0002-4000-8000-000000000002.json): Step-by-step procedure for releasing the API service to production, including rollback.
+- [Troubleshooting common errors](http://localhost:8083/act/nodes/kb%2Fen-us%2Faaaaaaaa-0003-4000-8000-000000000003.json): Recipes for the five errors that most often page the on-call rotation.
+- [Security and access policy](http://localhost:8083/act/nodes/kb%2Fen-us%2Faaaaaaaa-0004-4000-8000-000000000004.json): How we handle credentials, secrets, and least-privilege access across services.
+
+## es-ES
+
+### Articles
+
+- [Lista de incorporación](http://localhost:8083/act/nodes/kb%2Fes-es%2Faaaaaaaa-0005-4000-8000-000000000005.json): Tareas de la primera semana para cada ingeniero que se incorpora al equipo de plataforma.

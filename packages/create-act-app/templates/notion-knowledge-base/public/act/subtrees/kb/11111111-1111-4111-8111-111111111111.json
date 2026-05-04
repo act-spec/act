@@ -1,0 +1,180 @@
+{
+  "act_version": "0.1",
+  "root": "kb/11111111-1111-4111-8111-111111111111",
+  "depth": 2,
+  "truncated": false,
+  "tokens": {
+    "body": 249,
+    "summary": 76
+  },
+  "nodes": [
+    {
+      "act_version": "0.1",
+      "id": "kb/11111111-1111-4111-8111-111111111111",
+      "type": "collection",
+      "title": "Acme Knowledge Base",
+      "etag": "s256:I4GsRF_Awe0mXEgX_k4YQB",
+      "summary": "Internal handbook covering onboarding, deployment, troubleshooting, and policy. Mirrored from Notion to ACT for AI-agent consumption.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 16
+      },
+      "children": [
+        "kb/en-us/aaaaaaaa-0001-4000-8000-000000000001",
+        "kb/en-us/aaaaaaaa-0002-4000-8000-000000000002",
+        "kb/en-us/aaaaaaaa-0003-4000-8000-000000000003",
+        "kb/en-us/aaaaaaaa-0004-4000-8000-000000000004",
+        "kb/es-es/aaaaaaaa-0005-4000-8000-000000000005"
+      ],
+      "metadata": {
+        "source": {
+          "adapter": "act-notion",
+          "source_id": "11111111-1111-4111-8111-111111111111"
+        }
+      },
+      "updated_at": "2026-04-30T12:00:00.000Z"
+    },
+    {
+      "act_version": "0.1",
+      "id": "kb/en-us/aaaaaaaa-0001-4000-8000-000000000001",
+      "type": "article",
+      "title": "Onboarding checklist",
+      "etag": "s256:h867D8ADBK_I2bbnzgHOlP",
+      "summary": "Day-one and week-one tasks for every new engineer joining the platform team.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 12,
+        "body": 52
+      },
+      "parent": "kb/11111111-1111-4111-8111-111111111111",
+      "tags": [
+        "onboarding",
+        "people-ops"
+      ],
+      "updated_at": "2026-04-21T17:30:00.000Z",
+      "metadata": {
+        "locale": "en-US",
+        "source": {
+          "adapter": "act-notion",
+          "source_id": "aaaaaaaa-0001-4000-8000-000000000001",
+          "human_url": "https://www.notion.so/acme/onboarding-checklist-aaaaaaaa00014000800000000000001"
+        }
+      }
+    },
+    {
+      "act_version": "0.1",
+      "id": "kb/en-us/aaaaaaaa-0002-4000-8000-000000000002",
+      "type": "article",
+      "title": "Production deploy runbook",
+      "etag": "s256:Kl83RnEwG68xMsJWT-E1qV",
+      "summary": "Step-by-step procedure for releasing the API service to production, including rollback.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 11,
+        "body": 55
+      },
+      "parent": "kb/11111111-1111-4111-8111-111111111111",
+      "tags": [
+        "deploy",
+        "runbook"
+      ],
+      "updated_at": "2026-04-25T14:00:00.000Z",
+      "metadata": {
+        "locale": "en-US",
+        "source": {
+          "adapter": "act-notion",
+          "source_id": "aaaaaaaa-0002-4000-8000-000000000002",
+          "human_url": "https://www.notion.so/acme/deploy-runbook-aaaaaaaa00024000800000000000002"
+        }
+      }
+    },
+    {
+      "act_version": "0.1",
+      "id": "kb/en-us/aaaaaaaa-0003-4000-8000-000000000003",
+      "type": "article",
+      "title": "Troubleshooting common errors",
+      "etag": "s256:_UGBEeTtVs0J9LCQ3lxMMV",
+      "summary": "Recipes for the five errors that most often page the on-call rotation.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 12,
+        "body": 49
+      },
+      "parent": "kb/11111111-1111-4111-8111-111111111111",
+      "tags": [
+        "support",
+        "oncall"
+      ],
+      "updated_at": "2026-04-28T10:20:00.000Z",
+      "metadata": {
+        "locale": "en-US",
+        "source": {
+          "adapter": "act-notion",
+          "source_id": "aaaaaaaa-0003-4000-8000-000000000003",
+          "human_url": "https://www.notion.so/acme/troubleshooting-aaaaaaaa00034000800000000000003"
+        }
+      }
+    },
+    {
+      "act_version": "0.1",
+      "id": "kb/en-us/aaaaaaaa-0004-4000-8000-000000000004",
+      "type": "article",
+      "title": "Security and access policy",
+      "etag": "s256:V5Tdl1AzYbjCZEWZ89Skc-",
+      "summary": "How we handle credentials, secrets, and least-privilege access across services.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 53
+      },
+      "parent": "kb/11111111-1111-4111-8111-111111111111",
+      "tags": [
+        "security",
+        "policy"
+      ],
+      "updated_at": "2026-04-15T09:10:00.000Z",
+      "metadata": {
+        "locale": "en-US",
+        "source": {
+          "adapter": "act-notion",
+          "source_id": "aaaaaaaa-0004-4000-8000-000000000004",
+          "human_url": "https://www.notion.so/acme/security-policy-aaaaaaaa00044000800000000000004"
+        }
+      }
+    },
+    {
+      "act_version": "0.1",
+      "id": "kb/es-es/aaaaaaaa-0005-4000-8000-000000000005",
+      "type": "article",
+      "title": "Lista de incorporación",
+      "etag": "s256:J3kfe2EzJ0VpFZ-5FHPGal",
+      "summary": "Tareas de la primera semana para cada ingeniero que se incorpora al equipo de plataforma.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 15,
+        "body": 40
+      },
+      "parent": "kb/11111111-1111-4111-8111-111111111111",
+      "tags": [
+        "onboarding",
+        "people-ops"
+      ],
+      "updated_at": "2026-04-22T18:55:00.000Z",
+      "metadata": {
+        "locale": "es-ES",
+        "source": {
+          "adapter": "act-notion",
+          "source_id": "aaaaaaaa-0005-4000-8000-000000000005",
+          "human_url": "https://www.notion.so/acme/onboarding-es-aaaaaaaa00054000800000000000005"
+        }
+      }
+    }
+  ],
+  "etag": "s256:3ZtPLzFXc75iSdJbQsFrC1"
+}

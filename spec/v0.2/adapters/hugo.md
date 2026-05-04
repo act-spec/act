@@ -211,7 +211,7 @@ carries `parent: "posts/2026"`, the section nodes carry their
 
 ## Sources
 
-- `prd/402-hugo-module.md` (PRD-402; spec-only Hugo module contract).
+- `spec/v0.2/adapters/hugo.md` (this file; spec-only Hugo module contract).
 
 ## Changelog
 

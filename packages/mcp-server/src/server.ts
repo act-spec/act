@@ -118,7 +118,7 @@ export function createServer(config: ServerConfig = {}): ActMcpServer {
 
   server.setRequestHandler(CallToolRequestSchema, async (req) => {
     const name = req.params.name;
-    const args = (req.params.arguments ?? {}) as Record<string, unknown>;
+    const args = (req.params.arguments ?? {});
 
     try {
       const url = pickUrl(args, config);

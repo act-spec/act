@@ -2,7 +2,7 @@ package core
 
 // IndexEntry mirrors the IndexEntry $defs sub-schema in
 // /schemas/100/index.schema.json. Each entry summarises one node; the full
-// content array is forbidden here (PRD-100-R18).
+// content array is not permitted in index entries.
 //
 // Parent is modelled as a *string so the JSON `null` form (allowed by the
 // schema's oneOf) round-trips: nil pointer means the field was absent or
@@ -24,7 +24,7 @@ type IndexEntry struct {
 }
 
 // Index mirrors the top-level shape in /schemas/100/index.schema.json.
-// Required fields per PRD-100-R17: act_version, nodes.
+// Required fields: act_version, nodes.
 type Index struct {
 	ACTVersion  string       `json:"act_version"`
 	GeneratedAt string       `json:"generated_at,omitempty"`

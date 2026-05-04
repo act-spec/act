@@ -17,8 +17,8 @@
 // `inspect` mirrors the TS @act-spec/inspector walk surface: it fetches
 // /.well-known/act.json, follows index_url, and visits every node under
 // node_url_template, honouring the ETag conditional-request contract
-// per PRD-103. Findings are aggregated into a JSON report and an
-// error-severity finding maps to a non-zero exit code.
+// (spec/v0.2/wire-format/etag.md). Findings are aggregated into a JSON
+// report and an error-severity finding maps to a non-zero exit code.
 package main
 
 import (

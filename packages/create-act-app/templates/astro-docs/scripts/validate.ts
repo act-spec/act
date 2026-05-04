@@ -87,7 +87,7 @@ async function main(): Promise<void> {
     passedAt: '2026-05-02T00:00:00Z',
   });
 
-  console.log(`PRD-700 conformance — ${nodeFiles.length} node files, ${subtreeFiles.length} subtree files.`);
+  console.log(`astro-docs conformance — ${nodeFiles.length} node files, ${subtreeFiles.length} subtree files.`);
   console.log(`  declared:  ${report.declared.level ?? '<unknown>'} / ${report.declared.delivery ?? '<unknown>'}`);
   console.log(`  achieved:  ${report.achieved.level ?? '<none>'} / ${report.achieved.delivery ?? '<unknown>'}`);
   console.log(`  gaps:      ${report.gaps.length}`);
@@ -101,37 +101,37 @@ async function main(): Promise<void> {
   }
   if (report.declared.level !== 'standard') {
     failed += 1;
-    console.error(`FAIL: declared.level is "${report.declared.level}", expected "standard" (PRD-700-R7).`);
+    console.error(`FAIL: declared.level is "${report.declared.level}", expected "standard".`);
   }
   if (report.achieved.level !== 'standard') {
     failed += 1;
-    console.error(`FAIL: achieved.level is "${report.achieved.level}", expected "standard" (PRD-700-R12).`);
+    console.error(`FAIL: achieved.level is "${report.achieved.level}", expected "standard".`);
   }
   if (report.declared.delivery !== 'static' || report.achieved.delivery !== 'static') {
     failed += 1;
-    console.error(`FAIL: delivery profile is not "static" (PRD-700-R8).`);
+    console.error(`FAIL: delivery profile is not "static".`);
   }
 
   // PRD-700-R6 — at least one subtree-eligible parent must be emitted.
   if (subtreeFiles.length === 0) {
     failed += 1;
-    console.error(`FAIL: no subtree files emitted under ${subtreesDir} (PRD-700-R6).`);
+    console.error(`FAIL: no subtree files emitted under ${subtreesDir}.`);
   }
 
   // PRD-700-R3 — corpus envelope (10–25 nodes).
   if (nodeFiles.length < 10 || nodeFiles.length > 25) {
     failed += 1;
     console.error(
-      `FAIL: corpus has ${nodeFiles.length} nodes; PRD-700-R3 envelope is 10–25.`,
+      `FAIL: corpus has ${nodeFiles.length} nodes; envelope is 10–25.`,
     );
   }
 
   if (failed > 0) {
-    console.error(`\nPRD-700 conformance: FAILED (${failed} check(s)).`);
+    console.error(`\nastro-docs conformance: FAILED (${failed} check(s)).`);
     process.exit(1);
   }
   console.log(
-    `\nPRD-700 conformance: OK — gaps: 0; declared.level: standard; achieved.level: standard; delivery: static.`,
+    `\nastro-docs conformance: OK — gaps: 0; declared.level: standard; achieved.level: standard; delivery: static.`,
   );
 }
 

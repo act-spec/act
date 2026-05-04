@@ -1,7 +1,7 @@
 package core
 
-// Conformance is the closed sub-object carrying the conformance level,
-// per PRD-107-R1 / R2. additionalProperties: false at the schema layer.
+// Conformance is the closed sub-object carrying the conformance level.
+// additionalProperties: false at the schema layer.
 type Conformance struct {
 	Level ConformanceLevel `json:"level"`
 }
@@ -20,7 +20,7 @@ type MountConformance struct {
 	Level ConformanceLevel `json:"level"`
 }
 
-// Mount is one entry in the manifest's `mounts` array per PRD-100-R7.
+// Mount is one entry in the manifest's `mounts` array.
 type Mount struct {
 	Prefix      string            `json:"prefix"`
 	Delivery    DeliveryMode      `json:"delivery"`
@@ -28,11 +28,11 @@ type Mount struct {
 	Conformance *MountConformance `json:"conformance,omitempty"`
 }
 
-// Manifest mirrors /schemas/100/manifest.schema.json. Required fields per
-// PRD-100-R4: act_version, site, index_url, node_url_template, conformance,
-// delivery. additionalProperties is left open at the schema layer per
-// PRD-108-R7; callers that need to round-trip unknown top-level fields can
-// decode twice (once into Manifest, once into a generic map).
+// Manifest mirrors /schemas/100/manifest.schema.json. Required fields:
+// act_version, site, index_url, node_url_template, conformance, delivery.
+// additionalProperties is left open at the schema layer; callers that need
+// to round-trip unknown top-level fields can decode twice (once into
+// Manifest, once into a generic map).
 type Manifest struct {
 	ACTVersion         string        `json:"act_version"`
 	Site               Site          `json:"site"`

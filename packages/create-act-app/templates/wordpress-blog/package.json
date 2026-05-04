@@ -1,0 +1,37 @@
+{
+  "name": "@act-spec/example-wordpress-blog",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Headless WordPress blog demo wired to ACT via @act-spec/adapter-wordpress. Reads a baked WP REST fixture (no live WordPress required), runs the canonical generator pipeline, and emits ACT artefacts plus llms.txt / llms-full.txt into public/.",
+  "license": "Apache-2.0",
+  "author": "Jeremy Forsythe <jeremy@act-spec.org>",
+  "homepage": "https://act-spec.org",
+  "bugs": {
+    "url": "https://github.com/act-spec/act/issues"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-spec/act.git",
+    "directory": "examples/wordpress-blog"
+  },
+  "scripts": {
+    "build": "tsx scripts/build.ts",
+    "validate": "tsx scripts/validate.ts",
+    "conformance": "pnpm run build && pnpm run validate",
+    "start": "pnpm run build && node ../../scripts/serve-fixture.mjs public 4325",
+    "test": "node -e \"console.log('@act-spec/example-wordpress-blog: example exercises end-to-end via conformance')\"",
+    "lint": "node -e \"console.log('@act-spec/example-wordpress-blog: lint covered by typecheck + conformance')\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@act-spec/adapter-framework": "workspace:*",
+    "@act-spec/adapter-wordpress": "workspace:*",
+    "@act-spec/generator-core": "workspace:*"
+  },
+  "devDependencies": {
+    "@act-spec/validator": "workspace:*",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

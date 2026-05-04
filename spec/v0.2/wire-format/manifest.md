@@ -261,7 +261,3 @@ Adding a new optional field is MINOR.
 | Date | Version | Change |
 |---|---|---|
 | 2026-05-03 | 0.2.0 | Initial spec drafted by BDFL |
-
----
-
-**Sources:** prd/100-wire-format.md, prd/101-discovery.md, prd/105-static-delivery.md, prd/107-conformance-levels.md, prd/108-versioning-policy.md

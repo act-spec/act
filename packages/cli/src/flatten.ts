@@ -355,9 +355,9 @@ async function fetchIndex(
     if (typeof id !== 'string') continue;
     out.push({
       id,
-      type: typeof e['type'] === 'string' ? (e['type'] as string) : undefined,
-      parent: typeof e['parent'] === 'string' ? (e['parent'] as string) : null,
-      locale: typeof e['locale'] === 'string' ? (e['locale'] as string) : undefined,
+      type: typeof e['type'] === 'string' ? (e['type']) : undefined,
+      parent: typeof e['parent'] === 'string' ? (e['parent']) : null,
+      locale: typeof e['locale'] === 'string' ? (e['locale']) : undefined,
     });
   }
   return out;
@@ -414,15 +414,15 @@ function filterByLocale(
 function toLeaf(entry: IndexEntry, body: Record<string, unknown>): LeafNode {
   const leaf: LeafNode = {
     id: entry.id,
-    type: typeof body['type'] === 'string' ? (body['type'] as string) : entry.type ?? '',
+    type: typeof body['type'] === 'string' ? (body['type']) : entry.type ?? '',
   };
-  if (typeof body['title'] === 'string') leaf.title = body['title'] as string;
-  if (typeof body['summary'] === 'string') leaf.summary = body['summary'] as string;
-  if (typeof body['abstract'] === 'string') leaf.abstract = body['abstract'] as string;
+  if (typeof body['title'] === 'string') leaf.title = body['title'];
+  if (typeof body['summary'] === 'string') leaf.summary = body['summary'];
+  if (typeof body['abstract'] === 'string') leaf.abstract = body['abstract'];
   if (Array.isArray(body['content'])) {
     leaf.content = (body['content'] as Array<Record<string, unknown>>).map((b) => ({
-      type: typeof b['type'] === 'string' ? (b['type'] as string) : undefined,
-      text: typeof b['text'] === 'string' ? (b['text'] as string) : undefined,
+      type: typeof b['type'] === 'string' ? (b['type']) : undefined,
+      text: typeof b['text'] === 'string' ? (b['text']) : undefined,
     }));
   }
   if (entry.parent !== undefined) leaf.parent = entry.parent;
@@ -449,8 +449,8 @@ function readSite(m: Record<string, unknown>): { name: string; description?: str
   if (!site || typeof site !== 'object') return { name: 'ACT site' };
   const s = site as Record<string, unknown>;
   const out: { name: string; description?: string } = {
-    name: typeof s['name'] === 'string' ? (s['name'] as string) : 'ACT site',
+    name: typeof s['name'] === 'string' ? (s['name']) : 'ACT site',
   };
-  if (typeof s['description'] === 'string') out.description = s['description'] as string;
+  if (typeof s['description'] === 'string') out.description = s['description'];
   return out;
 }

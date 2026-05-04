@@ -29,19 +29,19 @@ function run(script: string): Promise<number> {
 }
 
 async function main(): Promise<void> {
-  console.log('=== PRD-705 conformance: validator gate ===');
+  console.log('=== nextjs-saas-runtime conformance: validator gate ===');
   const v = await run('validate.ts');
   if (v !== 0) {
     console.error(`validator exited ${v}`);
     process.exit(v);
   }
-  console.log('\n=== PRD-705 conformance: two-principal probe + R18 transcript ===');
+  console.log('\n=== nextjs-saas-runtime conformance: two-principal probe + R18 transcript ===');
   const p = await run('probe.ts');
   if (p !== 0) {
     console.error(`probe exited ${p}`);
     process.exit(p);
   }
-  console.log('\n=== PRD-705 conformance: ALL GREEN ===');
+  console.log('\n=== nextjs-saas-runtime conformance: ALL GREEN ===');
 }
 
 main().catch((err: unknown) => {

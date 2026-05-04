@@ -4,7 +4,7 @@ name: Release
 #
 # v0.1 is an internal hand-test candidate — no npm publish, no public tag.
 # Manual release workflow; tag drives publish. v0.2 is the first public release.
-# When v0.2 is ready: switch this trigger back to `push: branches: [master]`,
+# When v0.2 is ready: switch this trigger back to `push: branches: [main]`,
 # author a v0.2 changeset under `.changeset/`, set the NPM_TOKEN secret on
 # the repo, and let the changesets-action open the Release PR.
 on:

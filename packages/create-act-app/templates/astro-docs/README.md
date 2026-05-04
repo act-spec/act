@@ -74,6 +74,27 @@ export default defineConfig({
 
 `astro build` now emits `dist/.well-known/act.json` and `dist/act/...` alongside your HTML.
 
+## Summaries: zero-config by default
+
+Every ACT node carries a `summary` field — the one-sentence preview an agent reads to decide whether to fetch the body. The markdown adapter wires this up automatically:
+
+1. **Frontmatter `summary:`** wins when present (stamped `summary_source: "author"`).
+2. Otherwise, the adapter **extracts the first non-empty paragraph** from the body and clamps it to ~50 tokens (stamped `summary_source: "extracted"`).
+
+Set a custom summary in any markdown file's frontmatter to override the extracted default:
+
+```md
+---
+title: Quickstart
+summary: Provision a workspace token, hit the SDK, and ship the first POST.
+---
+
+# Quickstart
+…
+```
+
+Need full control over how summaries are derived (e.g. you have a custom CMS field, or want to call an LLM at build time)? Pass a `humanUrlFor`-style callback to the adapter — see [`@act-spec/adapter-markdown` docs](../../packages/adapter-markdown/README.md) for the full surface; the same precedence (author override > callback > extracted) holds.
+
 ## Run this example
 
 ```sh

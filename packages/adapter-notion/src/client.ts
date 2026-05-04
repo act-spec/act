@@ -132,7 +132,7 @@ export function httpProvider(opts: HttpProviderOpts): NotionSourceProvider {
   const apiVersion = opts.notionApiVersion ?? NOTION_API_VERSION;
   const fetcher: FetchLike =
     opts.fetch ??
-    (globalThis.fetch as unknown as FetchLike | undefined) ??
+    globalThis.fetch ??
     (() => {
       throw new NotionAdapterError({
         code: 'upstream_unavailable',
@@ -185,7 +185,7 @@ export function httpProvider(opts: HttpProviderOpts): NotionSourceProvider {
         message: `Notion API returned HTTP ${String(res.status)} on ${method} ${path}: ${detail}`,
       });
     }
-    return (await res.json()) as unknown;
+    return await res.json();
   }
 
   return {

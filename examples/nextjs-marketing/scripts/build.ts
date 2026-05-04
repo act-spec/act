@@ -442,7 +442,7 @@ async function main(): Promise<void> {
   await fs.rm(distDir, { recursive: true, force: true });
   await fs.mkdir(distDir, { recursive: true });
 
-  console.log(`PRD-702 build — exampleRoot=${exampleRoot}`);
+  console.log(`nextjs-marketing build — exampleRoot=${exampleRoot}`);
   console.log(`  outDir=${distDir}`);
   console.log(`  locales=${LOCALES.join(', ')}`);
   console.log(`  routes=${routes.length}`);
@@ -540,7 +540,7 @@ async function main(): Promise<void> {
 
   const outcome = await runPipeline({ config: cfg, logger });
   console.log(
-    `PRD-702 pipeline — ${outcome.nodes.length} nodes; ${outcome.subtrees.size} subtrees; achieved=${outcome.achieved}; warnings=${outcome.warnings.length}`,
+    `nextjs-marketing pipeline — ${outcome.nodes.length} nodes; ${outcome.subtrees.size} subtrees; achieved=${outcome.achieved}; warnings=${outcome.warnings.length}`,
   );
   for (const w of outcome.warnings) console.warn(`  pipeline warn: ${w}`);
 
@@ -631,11 +631,11 @@ async function main(): Promise<void> {
   verifyCapabilityBacking(report.capabilities as Record<string, unknown>, report.files);
 
   console.log(
-    `PRD-702 build — ${report.files.length} files written; warnings=${report.warnings.length}; errors=${report.errors.length}; achieved=${report.conformanceAchieved}`,
+    `nextjs-marketing build — ${report.files.length} files written; warnings=${report.warnings.length}; errors=${report.errors.length}; achieved=${report.conformanceAchieved}`,
   );
 
   if (report.errors.length > 0) {
-    console.error('PRD-702 build — pipeline reported errors:');
+    console.error('nextjs-marketing build — pipeline reported errors:');
     for (const e of report.errors) console.error(`  - ${e}`);
     process.exit(1);
   }

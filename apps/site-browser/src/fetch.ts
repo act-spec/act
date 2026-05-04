@@ -158,7 +158,7 @@ async function fetchJsonWithSize(url: string): Promise<FetchedJson | { httpStatu
   const text = await res.text();
   const bytes = byteLength(text);
   const gzipBytes = await gzippedByteLength(text);
-  const data = JSON.parse(text);
+  const data: unknown = JSON.parse(text) as unknown;
   return { data, bytes, gzipBytes };
 }
 

@@ -1,0 +1,47 @@
+# Acme
+
+> Agent Content Tree for Acme.
+
+## en-US
+
+### Landing
+
+- [About Acme](https://acme.example.com/en-US/landing/about): Founded to make agent-content interchange a default.
+- [Contact](https://acme.example.com/en-US/landing/contact): Talk to sales, support, or community.
+- [Data Processing Addendum](https://acme.example.com/en-US/landing/dpa): Acme's data-processing terms for enterprise customers.
+- [Features](https://acme.example.com/en-US/landing/features): Everything you need to build with ACT.
+- [Pricing](https://acme.example.com/en-US/landing/pricing): Simple, transparent pricing tiers and FAQ.
+- [Privacy Policy](https://acme.example.com/en-US/landing/privacy): How Acme handles personal data.
+
+## es-ES
+
+### Landing
+
+- [Sobre Acme](https://acme.example.com/es-ES/landing/about): Fundada para hacer del intercambio de contenidos de agentes una opción por defecto.
+- [Contacto](https://acme.example.com/es-ES/landing/contact): Contacta con ventas, soporte o la comunidad.
+- [Data Processing Addendum](https://acme.example.com/es-ES/landing/dpa): Acme's data-processing terms for enterprise customers.
+- [Funciones](https://acme.example.com/es-ES/landing/features): Todo lo que necesitas para construir con ACT.
+- [Precios](https://acme.example.com/es-ES/landing/pricing): Precios simples y transparentes.
+- [Política de privacidad](https://acme.example.com/es-ES/landing/privacy): Cómo Acme maneja los datos personales.
+
+## de-DE
+
+### Landing
+
+- [Über Acme](https://acme.example.com/de-DE/landing/about): Gegründet, um Agenten-Inhaltsaustausch zur Standardoption zu machen.
+- [Kontakt](https://acme.example.com/de-DE/landing/contact): Sprechen Sie mit Vertrieb, Support oder Community.
+- [Data Processing Addendum](https://acme.example.com/de-DE/landing/dpa): Acme's data-processing terms for enterprise customers.
+- [Funktionen](https://acme.example.com/de-DE/landing/features): Alles, was Sie für ACT brauchen.
+- [Preise](https://acme.example.com/de-DE/landing/pricing): Einfache, transparente Preise.
+- [Datenschutzerklärung](https://acme.example.com/de-DE/landing/privacy): Wie Acme mit personenbezogenen Daten umgeht.
+
+## ja-JP
+
+### Landing
+
+- [Acme について](https://acme.example.com/ja-JP/landing/about): エージェント・コンテンツ交換を標準にするために設立。
+- [お問い合わせ](https://acme.example.com/ja-JP/landing/contact): 営業、サポート、コミュニティへのお問い合わせ。
+- [Data Processing Addendum](https://acme.example.com/ja-JP/landing/dpa): Acme's data-processing terms for enterprise customers.
+- [機能](https://acme.example.com/ja-JP/landing/features): ACT で構築するために必要なすべて。
+- [料金](https://acme.example.com/ja-JP/landing/pricing): シンプルで透明性のある料金体系。
+- [プライバシーポリシー](https://acme.example.com/ja-JP/landing/privacy): Acme が個人データを扱う方法。
