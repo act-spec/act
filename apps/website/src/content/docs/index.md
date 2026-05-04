@@ -85,6 +85,11 @@ summary: ACT is an open standard for publishing structured, AI-discoverable cont
   [v0.2 specification](/spec/v0.2/) — manifest, index, node envelopes,
   conformance levels, and security model.
 
+## Tools
+
+- **[Validator](/validator/)** — Paste a URL, JSON, or file to check any ACT artifact against the v0.1 schemas. Runs entirely in the browser.
+- **[Site Browser](/browser/)** — Walk and inspect a live ACT-emitting site's node tree, payload sizes, and conformance gaps interactively.
+
 ## Status
 
 v0.2.0 is the first public release. The spec is in Draft pending the v0.2.0

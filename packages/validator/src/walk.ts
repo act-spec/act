@@ -15,7 +15,7 @@
 import type { AchievedLevel, ConformanceReport, DeliveryProfile, Gap, Warning } from '@act-spec/core';
 import { validateIndex, validateManifest, validateNode, validateSubtree, type ValidateOptions } from './envelopes.js';
 import { buildReport, inferAchievedLevel, searchBodyDeferredWarning } from './reporter.js';
-import { ETAG_LOOSE_RE } from './etag.js';
+import { ETAG_LOOSE_RE, ETAG_S256_RE } from './etag.js';
 
 /**
  * Probe the capability band advertised by the manifest (PRD-107-R6 / R8 / R10
@@ -260,7 +260,10 @@ export async function validateSite(
             const envelopeEtag = (nodeBody as { etag?: unknown }).etag;
             if (typeof headerEtag === 'string' && typeof envelopeEtag === 'string') {
               const stripped = headerEtag.replace(/^W\//, '').replace(/^"|"$/g, '');
-              if (stripped !== envelopeEtag) {
+              // Only enforce byte-equality when the HTTP ETag is in ACT format
+              // (s256: prefix). Platform-generated ETags (e.g. GitHub Pages
+              // hex ETags) are opaque and cannot be compared to ACT ETags.
+              if (ETAG_S256_RE.test(stripped) && stripped !== envelopeEtag) {
                 gaps.push({
                   level: 'core',
                   requirement: 'PRD-103-R5',

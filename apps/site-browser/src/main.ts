@@ -115,6 +115,9 @@ const APP_HTML = `
       <h1>ACT Site Browser</h1>
       <p class="muted">Paste a URL or <code>act.json</code> manifest URL to walk and inspect a site.</p>
     </div>
+    <nav class="tools-nav" aria-label="ACT tools">
+      <a class="tools-nav__btn" href="https://act-spec.org">act-spec.org</a>
+    </nav>
   </header>
 
   <aside class="cors-notice" aria-label="CORS limitation">

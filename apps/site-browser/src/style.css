@@ -53,10 +53,46 @@ body {
   padding: 1.5rem 1.25rem 4rem;
 }
 
+.app-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.app-header__brand {
+  flex: 1 1 auto;
+}
+
 .app-header h1 {
   margin: 0 0 0.25rem;
   font-size: 1.75rem;
   letter-spacing: -0.01em;
+}
+
+.tools-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  padding-top: 0.25rem;
+}
+
+.tools-nav__btn {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  background: var(--accent-bg);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tools-nav__btn:hover {
+  filter: brightness(0.95);
 }
 
 .muted {
