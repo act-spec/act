@@ -1,15 +1,27 @@
 name: Release
 
-# Changesets-driven publish. Disabled until v0.2 (the first public release).
+# Changesets-driven publish.
 #
-# v0.1 is an internal hand-test candidate — no npm publish, no public tag.
-# Manual release workflow; tag drives publish. v0.2 is the first public release.
-# When v0.2 is ready: switch this trigger back to `push: branches: [main]`,
-# author a v0.2 changeset under `.changeset/`, set the NPM_TOKEN secret on
-# the repo, and let the changesets-action open the Release PR.
+# For rc publishes: trigger manually with dist-tag=rc (the default).
+# For stable 0.2.0: trigger with dist-tag=latest, or re-enable the
+# push trigger below and set dist-tag default to latest.
+#
+# After rc.1 ships, switch to OIDC trusted publishing:
+#   1. Run `npm trust github @act-spec/<pkg> --file release.yml --repo act-spec/act`
+#      for every public package.
+#   2. Remove NPM_TOKEN from the env block and from GitHub Secrets.
+#   3. The id-token: write permission below already covers provenance.
 on:
   workflow_dispatch:
-    # Manual-only for v0.1. Re-enable on-push trigger above for v0.2.
+    inputs:
+      dist-tag:
+        description: 'npm dist-tag (rc for pre-release, latest for stable)'
+        required: true
+        default: 'rc'
+        type: choice
+        options:
+          - rc
+          - latest
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -41,7 +53,7 @@ jobs:
       - name: Create Release PR or Publish
         uses: changesets/action@v1
         with:
-          publish: pnpm changeset:publish
+          publish: pnpm changeset publish --tag ${{ inputs.dist-tag }}
           version: pnpm changeset:version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
