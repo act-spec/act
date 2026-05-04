@@ -101,6 +101,27 @@ curl http://localhost:3000/act/nodes/intro.json | jq '{title, summary, blocks: [
 
 If anything in the ACT output disagrees with what's rendered, that's a bug to file.
 
+## Summaries: zero-config by default
+
+Every ACT node carries a `summary` field — the one-sentence preview an agent reads to decide whether to fetch the body. The markdown adapter handles this automatically:
+
+1. **Frontmatter `summary:`** wins when present (`summary_source: "author"`).
+2. Otherwise the adapter extracts the first non-empty paragraph and clamps it to ~50 tokens (`summary_source: "extracted"`).
+
+Set a custom summary in any doc's frontmatter when the extracted default isn't great:
+
+```md
+---
+title: Buckets API
+summary: List, create, and delete buckets in a workspace.
+---
+
+## Endpoints
+…
+```
+
+For larger sites with a custom summary field (CMS-derived, build-time LLM call), pass a callback to `createMarkdownAdapter()` — see [`@act-spec/adapter-markdown`](../../packages/adapter-markdown/README.md) for the full surface.
+
 ## What the corpus shows
 
 - A fixed top-level shape — `intro`, `getting-started`, `concepts`, `api`, `recipes`, `troubleshooting`, `changelog`.

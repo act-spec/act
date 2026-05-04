@@ -91,6 +91,9 @@ export const act: PageContract = {
   type: 'landing',
   id: 'pricing',
   contract_version: '0.1',
+  // Required: every node needs a one-sentence summary. Component pages
+  // don't have a body to extract from, so the contract supplies it.
+  summary: 'Tinybox pricing — three tiers, transparent annual rates.',
   extract: () => ({ type: 'landing' }),
 };
 
@@ -105,6 +108,32 @@ export default function PricingPage() {
 ```
 
 `next build` now emits ACT files into `out/.well-known/` and `out/act/` alongside your static export.
+
+## Summaries: required up-front for component pages
+
+Unlike the markdown examples, **component-driven pages don't have a body to extract from**, so the framework can't auto-summarise. Every `PageContract` MUST carry a `summary` field — it's the one-sentence preview an agent reads to decide whether to fetch the page's blocks.
+
+Three places to put the summary depending on where the source of truth lives:
+
+1. **In the page contract** (shown above) — a short hand-authored string. Best for pages whose copy is owned by the codebase.
+2. **In the upstream CMS adapter** — Contentful (PRD-202), Sanity (PRD-203), Storyblok (PRD-204), and Strapi (PRD-205) read a `summary`/`subtitle`/`description` field from the entry and stamp `summary_source: "author"`. The adapter's primary-precedence merge wins over the React extract layer when both contribute.
+3. **As a fallback via `extractFirstSentence`** — when the CMS lacks a dedicated summary field, pull from a description-like field at adapter wiring time:
+
+   ```ts
+   import { extractFirstSentence } from '@act-spec/adapter-programmatic';
+
+   transform(entry) {
+     return {
+       id: `cms/${entry.locale}/${entry.slug}`,
+       type: 'landing',
+       title: entry.title,
+       summary: entry.subtitle ?? extractFirstSentence(entry.description, 50),
+       // …
+     };
+   },
+   ```
+
+If a node ships without a `summary` the adapter framework's pre-emit validator (PRD-208-R3) rejects the build with a clear error pointing at the offending node id.
 
 ## Run this example
 

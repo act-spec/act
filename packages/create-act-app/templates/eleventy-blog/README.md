@@ -80,6 +80,26 @@ pnpm -F @act-spec/example-eleventy-blog validate
 pnpm -F @act-spec/example-eleventy-blog conformance # build + validate
 ```
 
+## Summaries: zero-config by default
+
+Every ACT node carries a `summary` field — the one-sentence preview an agent reads to decide whether to fetch the body. The markdown adapter handles this automatically:
+
+1. **Frontmatter `summary:` (or Eleventy's `description`)** wins when present (`summary_source: "author"`).
+2. Otherwise the adapter extracts the first non-empty paragraph and clamps it to ~50 tokens (`summary_source: "extracted"`).
+
+Set a custom summary in any post's frontmatter when the extracted default doesn't read well:
+
+```md
+---
+title: Storage primer
+summary: A 90-second tour of buckets, objects, and what we mean by "region".
+---
+
+The post's body starts here.
+```
+
+For more control (CMS-derived field, build-time LLM call), pass a `humanUrlFor`-style callback to `createMarkdownAdapter()` — see [`@act-spec/adapter-markdown`](../../packages/adapter-markdown/README.md).
+
 ## What the corpus shows
 
 - 30 published posts spanning April–September 2026, plus an `index.md`, `about.md`, and a chronological `posts.md` index.

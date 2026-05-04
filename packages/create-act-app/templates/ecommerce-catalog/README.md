@@ -50,8 +50,10 @@ pnpm add @act-spec/plugin-astro @act-spec/adapter-programmatic @act-spec/generat
 
 **2. Write a tiny catalog adapter** — `src/act-catalog.ts`:
 
+> **Summaries are required on every node** (PRD-100-R21). The programmatic adapter doesn't have a body to extract from automatically — the user transform owns the field. Two patterns: (a) prefer an author-written `row.shortDescription` / similar; (b) fall back to `extractFirstSentence(row.description, 50)` from `@act-spec/adapter-programmatic` when no author summary exists. The example below uses both.
+
 ```ts
-import { defineProgrammaticAdapter } from '@act-spec/adapter-programmatic';
+import { defineProgrammaticAdapter, extractFirstSentence } from '@act-spec/adapter-programmatic';
 import { fetchProducts, fetchProductBySku, fetchCategories } from './your-store';
 
 export const catalogAdapter = defineProgrammaticAdapter({
@@ -97,7 +99,10 @@ export const catalogAdapter = defineProgrammaticAdapter({
       type: 'product',
       parent: item.category,
       title: p.name,
-      summary: p.shortDescription,
+      // Author summary first; if your data doesn't have one, the helper
+      // pulls the first sentence of the description and clamps it to 50
+      // tokens. For higher-quality summaries, plug in an LLM call here.
+      summary: p.shortDescription ?? extractFirstSentence(p.description, 50),
       content: [
         { type: 'prose', format: 'markdown', text: p.description },
         { type: 'data', format: 'json', text: JSON.stringify(p.specs) },
