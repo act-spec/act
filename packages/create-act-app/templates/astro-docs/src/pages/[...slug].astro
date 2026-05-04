@@ -4,10 +4,15 @@ import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
   const docs = await getCollection('docs');
-  return docs.map((d) => ({
-    params: { slug: d.id },
-    props: { entry: d },
-  }));
+  // `entry.slug` is the path-style slug without the `.md`/`.mdx` extension,
+  // so pages are emitted at `/quickstart/index.html` instead of the
+  // accidental `/quickstart.md/index.html` produced by `entry.id`.
+  return docs
+    .filter((d) => d.slug !== 'index')
+    .map((d) => ({
+      params: { slug: d.slug },
+      props: { entry: d },
+    }));
 }
 
 const { entry } = Astro.props;

@@ -16,6 +16,13 @@ last-updated: 2026-05-03
 > the plugin shape, the `eleventy.after` lifecycle integration, the
 > permalink-aware filtering, and the build-output contract.
 
+> **Live example.** A built copy of the
+> [`eleventy-blog`](https://github.com/act-spec/act/tree/main/examples/eleventy-blog)
+> example is deployed at [`/examples/eleventy-blog/`](/examples/eleventy-blog/).
+> Open it in the
+> [site browser](/browser/?site=%2Fexamples%2Feleventy-blog%2F.well-known%2Fact.json)
+> to walk its tree and compare ACT vs HTML payload sizes across 33 posts.
+
 ## Overview
 
 `@act-spec/plugin-eleventy` is a standard Eleventy plugin. Operators

@@ -16,6 +16,13 @@ last-updated: 2026-05-03
 > defines the plugin shape, the lifecycle hook placement, the
 > sidebar-driven hierarchy, and the build-output contract.
 
+> **Live example.** A built copy of the
+> [`docusaurus-docs`](https://github.com/act-spec/act/tree/main/examples/docusaurus-docs)
+> example is deployed at [`/examples/docusaurus-docs/`](/examples/docusaurus-docs/).
+> Open it in the
+> [site browser](/browser/?site=%2Fexamples%2Fdocusaurus-docs%2F.well-known%2Fact.json)
+> to walk its tree and inspect the sidebar-derived hierarchy.
+
 ## Overview
 
 `@act-spec/plugin-docusaurus` is a standard Docusaurus plugin (the

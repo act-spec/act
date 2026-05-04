@@ -167,3 +167,25 @@
   background: var(--sl-color-gray-7);
   border-radius: 0 6px 6px 0;
 }
+
+.savings-showcase {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 8px;
+  background: var(--sl-color-gray-7);
+}
+
+.savings-showcase h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.savings-showcase ul {
+  margin: 0.75rem 0;
+  padding-left: 1.25rem;
+}
+
+.savings-showcase li {
+  margin: 0.25rem 0;
+}

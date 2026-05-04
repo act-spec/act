@@ -17,11 +17,29 @@ import ExampleCard from '~/components/ExampleCard.astro';
 const here = path.dirname(fileURLToPath(import.meta.url));
 const examplesDir = path.resolve(here, '..', '..', '..', '..', 'examples');
 
+// Slugs from `scripts/assemble-examples.mjs#EXAMPLES`. Kept in sync by
+// hand because Astro's build can't import from outside its own directory
+// graph cleanly. If a new example becomes deployable, add it both here
+// and in `assemble-examples.mjs`.
+const DEPLOYED_SLUGS = new Set([
+  'astro-docs',
+  'docusaurus-docs',
+  'ecommerce-catalog',
+  'eleventy-blog',
+  'nextjs-marketing',
+  'notion-knowledge-base',
+  'starlight-docs',
+  'vitepress-docs',
+  'wordpress-blog',
+]);
+
 interface ExampleEntry {
   name: string;
   stack: string;
   description: string;
   href: string;
+  liveHref?: string;
+  browserHref?: string;
 }
 
 function inferStack(pkg: { dependencies?: Record<string, string>; devDependencies?: Record<string, string> }): string {
@@ -49,11 +67,19 @@ try {
         dependencies?: Record<string, string>;
         devDependencies?: Record<string, string>;
       };
+      const isDeployed = DEPLOYED_SLUGS.has(d.name);
+      const manifestUrl = `/examples/${d.name}/.well-known/act.json`;
       entries.push({
         name: d.name,
         stack: inferStack(pkg),
         description: pkg.description ?? `Example: ${d.name}.`,
         href: `https://github.com/act-spec/act/tree/main/examples/${d.name}`,
+        ...(isDeployed
+          ? {
+              liveHref: `/examples/${d.name}/`,
+              browserHref: `/browser/?site=${encodeURIComponent(manifestUrl)}`,
+            }
+          : {}),
       });
     } catch {
       // No package.json → skip silently.
@@ -77,7 +103,13 @@ entries.sort((a, b) => a.name.localeCompare(b.name));
 
   <div class="example-grid">
     {entries.map((e) => (
-      <ExampleCard name={e.name} stack={e.stack} href={e.href}>
+      <ExampleCard
+        name={e.name}
+        stack={e.stack}
+        href={e.href}
+        liveHref={e.liveHref}
+        browserHref={e.browserHref}
+      >
         {e.description}
       </ExampleCard>
     ))}

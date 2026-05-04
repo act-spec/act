@@ -43,6 +43,18 @@ summary: ACT is an open standard for publishing structured, AI-discoverable cont
   <p style="margin:0;"><strong>How ACT compares.</strong> ACT is a strict superset of <code>/llms.txt</code> and <code>/llms-full.txt</code> — every plugin auto-emits both files for back-compat. ACT adds typed nodes, hierarchy, native i18n, schema validation, and runtime delivery. Different from schema.org (in-page semantics) and sitemap.xml (URL list with no content). Composes with MCP rather than competing. <a href="/why-act/">Read the full comparison →</a></p>
 </aside>
 
+<section class="savings-showcase">
+  <h3>See the token savings yourself</h3>
+  <p>Every example below ships a real, runnable site that emits ACT alongside its normal HTML. Open one in the site browser, click any leaf node, then hit <strong>Estimate HTML cost</strong> — the meter shows the bytes (and approximate tokens) an agent reads from ACT vs. the same content scraped from HTML.</p>
+  <ul>
+    <li><a href="/browser/?site=%2Fexamples%2Feleventy-blog%2F.well-known%2Fact.json">Eleventy blog</a> — 33-post chronological feed.</li>
+    <li><a href="/browser/?site=%2Fexamples%2Fastro-docs%2F.well-known%2Fact.json">Astro docs</a> — small typed-doc reference.</li>
+    <li><a href="/browser/?site=%2Fexamples%2Fstarlight-docs%2F.well-known%2Fact.json">Starlight docs</a> — multi-locale Starlight site.</li>
+    <li><a href="/browser/?site=%2Fexamples%2Fvitepress-docs%2F.well-known%2Fact.json">VitePress docs</a> — guide + reference + locales.</li>
+  </ul>
+  <p style="margin-bottom:0;font-size:0.9rem;"><a href="/examples/">See every deployed example →</a></p>
+</section>
+
 <section class="mcp-snippet" id="try-act-with-your-ai-agent">
   <h3>Try ACT with your AI agent</h3>
   <p>Paste this into your <code>claude_desktop_config.json</code> (or the Cursor / Continue equivalent) and your agent can walk this site — or any ACT-emitting site — immediately.</p>
