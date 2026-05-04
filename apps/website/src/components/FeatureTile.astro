@@ -1,0 +1,15 @@
+---
+// One tile in the homepage 3-up feature row.
+interface Props {
+  title: string;
+  href: string;
+  more?: string;
+}
+const { title, href, more = 'Learn more →' } = Astro.props;
+---
+
+<article class="feature-tile">
+  <h3>{title}</h3>
+  <p><slot /></p>
+  <a class="more" href={href}>{more}</a>
+</article>

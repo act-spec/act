@@ -1,0 +1,57 @@
+---
+// "Try ACT with your AI agent" widget. Renders a copy-able JSON snippet
+// for Claude Desktop / Cursor MCP configuration that points at the
+// hosted MCP server.
+//
+// The snippet follows the Claude Desktop `claude_desktop_config.json`
+// shape and is structurally compatible with Cursor's `mcp.json`.
+const config = {
+  mcpServers: {
+    act: {
+      command: 'npx',
+      args: ['-y', '@act-spec/mcp-server', 'https://act-spec.org'],
+    },
+  },
+};
+const json = JSON.stringify(config, null, 2);
+---
+
+<section class="mcp-snippet">
+  <h3>Try ACT with your AI agent</h3>
+  <p>
+    Paste this into your <code>claude_desktop_config.json</code> (or the
+    Cursor / Continue equivalent) and your agent can walk this site —
+    or any ACT-emitting site — immediately.
+  </p>
+  <pre id="mcp-config-snippet"><code>{json}</code></pre>
+  <button
+    class="copy-btn"
+    type="button"
+    data-copy-target="mcp-config-snippet"
+    aria-label="Copy MCP config snippet to clipboard">Copy snippet</button>
+  <p style="margin-top:0.7rem;font-size:0.88rem;">
+    Want a hosted MCP server instead? Point your client at
+    <code>https://mcp.act-spec.org</code> over SSE. See the <a
+      href="/spec/v0.2/tooling/">tooling spec</a> for transport details.
+  </p>
+</section>
+
+<script>
+  // Wire the copy button. Inline so the homepage stays a single bundle.
+  document.querySelectorAll('button[data-copy-target]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const targetId = (btn as HTMLElement).dataset['copyTarget'];
+      if (!targetId) return;
+      const el = document.getElementById(targetId);
+      if (!el) return;
+      const text = el.innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const original = btn.textContent;
+        btn.textContent = 'Copied!';
+        window.setTimeout(() => {
+          btn.textContent = original;
+        }, 1400);
+      });
+    });
+  });
+</script>

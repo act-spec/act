@@ -1,0 +1,7 @@
+{
+  "id": "angular-16-detected",
+  "requirements": ["PRD-303-R2"],
+  "description": "Angular 16.x detected → assertAngular17Plus throws AngularBindingError citing PRD-303-R2. Angular 16 and earlier are explicitly out of scope for v0.1 (Open Question 3, resolved 2026-05-01).",
+  "input": { "version": "16.2.0" },
+  "expectedErrorSubstring": "PRD-303-R2"
+}

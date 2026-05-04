@@ -1,0 +1,30 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-109",
+    "violates": ["PRD-109-R14"],
+    "describes": "An error envelope whose error.message contains a user email address. PRD-109-R14 forbids PII, identity tokens, raw user input, and auth secrets from appearing in error.message. error.details MAY include code-specific structured data but is also subject to the same PII prohibition.",
+    "rejection_reason": "error.message includes the user's email address ('alice@example.com'), which is PII.",
+    "expected_error": {
+      "requirement": "PRD-109-R14",
+      "level": "core",
+      "missing": "Free-form error.message contains an email address. Expected: a generic non-PII description (e.g., 'Validation failed for one or more fields')."
+    }
+  },
+  "http_response": {
+    "status_code": 400,
+    "headers": {
+      "content_type": "application/act-error+json"
+    },
+    "body": {
+      "act_version": "0.1",
+      "error": {
+        "code": "validation",
+        "message": "Validation failed for user alice@example.com: the field 'workspace_name' must be unique within tenant t-acme.",
+        "details": {
+          "field": "workspace_name",
+          "constraint": "unique_within_tenant"
+        }
+      }
+    }
+  }
+}

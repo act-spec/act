@@ -1,0 +1,11 @@
+{
+  "id": "page-id-collision",
+  "requirements": ["PRD-300-R11"],
+  "input": {
+    "drafts": [
+      { "id": "pricing", "routeId": "app/pricing/page.tsx" },
+      { "id": "pricing", "routeId": "app/(marketing)/pricing.tsx" }
+    ]
+  },
+  "expectedErrorSubstring": "PRD-300-R11"
+}

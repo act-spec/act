@@ -1,0 +1,7 @@
+{
+  "id": "extract-returns-promise",
+  "requirements": ["PRD-302-R9", "PRD-302-R16", "PRD-300-R7"],
+  "description": "v0.1 requires synchronous extract per PRD-300-R7. An extract that returns a Promise (detected via a then-method check on the return value, not solely instanceof Promise) is treated as a failure and produces a marketing:placeholder block. The placeholder's error message references 'Promise'.",
+  "expectedFirstBlockType": "marketing:placeholder",
+  "expectedErrorSubstring": "Promise"
+}

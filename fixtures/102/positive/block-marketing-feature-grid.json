@@ -1,0 +1,11 @@
+{
+  "type": "marketing:feature-grid",
+  "features": [
+    { "title": "Instant rollback", "description": "Revert any deploy in one click." },
+    { "title": "Type-safe APIs", "description": "Generated client SDKs in TypeScript, Python, and Go." },
+    { "title": "Zero-downtime deploys", "description": "Blue/green out of the box, no config." }
+  ],
+  "metadata": {
+    "extracted_via": "component-contract"
+  }
+}

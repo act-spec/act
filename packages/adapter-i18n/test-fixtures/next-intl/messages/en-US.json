@@ -1,0 +1,16 @@
+{
+  "home": {
+    "hero": {
+      "headline": "Build with ACT",
+      "subhead": "Open agent content tree"
+    }
+  },
+  "pricing": {
+    "headline": "Simple, transparent pricing",
+    "subhead": "No hidden fees"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "answer1": "You can change plans anytime."
+  }
+}

@@ -1,0 +1,24 @@
+# Negative fixture for PRD-101 — runtime-only deployment serving a response
+# WITHOUT the required Link header. Per PRD-101-R5, every authenticated
+# response on a runtime-only deployment MUST carry the Link header. This
+# response is missing it; validators MUST flag the deployment as
+# non-conformant for the runtime profile.
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+Cache-Control: private, no-store
+Vary: Authorization
+ETag: "s256:9f2c1bAbCdEfGhIjKlMnOp"
+
+{
+  "workspace_id": "ws_42",
+  "name": "Acme Engineering"
+}
+
+# Expected validator behavior:
+# - PRD-101-R5 violated: no Link header with rel="act" was sent on an
+#   authenticated response from a deployment that declares delivery: "runtime".
+# - The validator MUST emit a finding citing PRD-101-R5 and naming the
+#   response (URL, status code) where the header was missing.
+# - This is a HARD MUST per gap A5; absence of the header is a conformance
+#   failure regardless of conformance level (Core/Standard/Plus).

@@ -1,0 +1,55 @@
+{
+  "act_version": "0.1",
+  "id": "objects-issues",
+  "type": "section",
+  "title": "Objects issues",
+  "summary": "Objects issues — section.",
+  "summary_source": "extracted",
+  "etag": "s256:-_7R5hAaNYQyikQPDSs8vJ",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# Objects issues\n\nThis section groups related objects issues documents.\n"
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 16
+  },
+  "children": [
+    "troubleshooting/objects/upload-checksum-mismatch-symptom",
+    "troubleshooting/objects/upload-checksum-mismatch-resolution",
+    "troubleshooting/objects/upload-checksum-mismatch-reproduction",
+    "troubleshooting/objects/download-truncated-symptom",
+    "troubleshooting/objects/download-truncated-resolution",
+    "troubleshooting/objects/download-truncated-reproduction",
+    "troubleshooting/objects/multipart-upload-failed-symptom",
+    "troubleshooting/objects/multipart-upload-failed-resolution",
+    "troubleshooting/objects/multipart-upload-failed-reproduction",
+    "troubleshooting/objects/precondition-failed-symptom",
+    "troubleshooting/objects/precondition-failed-resolution",
+    "troubleshooting/objects/precondition-failed-reproduction",
+    "troubleshooting/objects/storage-class-mismatch-symptom",
+    "troubleshooting/objects/storage-class-mismatch-resolution",
+    "troubleshooting/objects/storage-class-mismatch-reproduction",
+    "troubleshooting/objects/object-not-found-after-write-symptom",
+    "troubleshooting/objects/object-not-found-after-write-resolution",
+    "troubleshooting/objects/object-not-found-after-write-reproduction",
+    "troubleshooting/objects/metadata-not-persisted-symptom",
+    "troubleshooting/objects/metadata-not-persisted-resolution",
+    "troubleshooting/objects/metadata-not-persisted-reproduction",
+    "troubleshooting/objects/range-request-rejected-symptom",
+    "troubleshooting/objects/range-request-rejected-resolution",
+    "troubleshooting/objects/range-request-rejected-reproduction",
+    "troubleshooting/objects/unexpected-size-difference-symptom",
+    "troubleshooting/objects/unexpected-size-difference-resolution",
+    "troubleshooting/objects/unexpected-size-difference-reproduction"
+  ],
+  "parent": "troubleshooting",
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "sidebar-category:objects-issues"
+    }
+  }
+}

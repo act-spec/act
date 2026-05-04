@@ -1,0 +1,69 @@
+{
+  "act_version": "0.1",
+  "id": "cms/en-us/landing/about",
+  "type": "landing",
+  "title": "About Acme",
+  "etag": "s256:yUtd-lxDZOA3-DUBlppd7n",
+  "summary": "Founded to make agent-content interchange a default.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "plain",
+      "text": "Acme builds the open standard for agent content trees."
+    },
+    {
+      "type": "marketing:hero",
+      "headline": "About Acme",
+      "subhead": "We make agent-content interchange a default.",
+      "metadata": {
+        "extracted_via": "component-contract",
+        "extraction_method": "ssr-walk"
+      }
+    },
+    {
+      "type": "marketing:testimonial",
+      "quote": "ACT is the simplest path I have seen to a portable content tree.",
+      "author": "A. N. Author",
+      "role": "CTO",
+      "metadata": {
+        "extracted_via": "component-contract",
+        "extraction_method": "ssr-walk"
+      }
+    }
+  ],
+  "tokens": {
+    "summary": 7,
+    "body": 9
+  },
+  "metadata": {
+    "locale": "en-US",
+    "translations": [
+      {
+        "locale": "es-ES",
+        "id": "cms/es-es/landing/about"
+      },
+      {
+        "locale": "de-DE",
+        "id": "cms/de-de/landing/about"
+      },
+      {
+        "locale": "ja-JP",
+        "id": "cms/ja-jp/landing/about"
+      }
+    ],
+    "source": {
+      "adapter": "act-contentful",
+      "source_id": "en-US:landing/about",
+      "contributors": [
+        "act-contentful",
+        "act-react-extract",
+        "act-i18n"
+      ]
+    },
+    "translation_status": "complete"
+  },
+  "source": {
+    "human_url": "https://acme.example.com/en-US/landing/about"
+  }
+}

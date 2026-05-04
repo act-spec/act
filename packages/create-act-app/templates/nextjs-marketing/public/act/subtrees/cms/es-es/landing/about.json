@@ -1,0 +1,82 @@
+{
+  "act_version": "0.1",
+  "root": "cms/es-es/landing/about",
+  "depth": 3,
+  "truncated": false,
+  "tokens": {
+    "body": 9,
+    "summary": 13
+  },
+  "nodes": [
+    {
+      "act_version": "0.1",
+      "id": "cms/es-es/landing/about",
+      "type": "landing",
+      "title": "Sobre Acme",
+      "etag": "s256:bQz7Rv4rsQDMgCu5yp8je3",
+      "summary": "Fundada para hacer del intercambio de contenidos de agentes una opción por defecto.",
+      "summary_source": "author",
+      "content": [
+        {
+          "type": "prose",
+          "format": "plain",
+          "text": "Acme builds the open standard for agent content trees."
+        },
+        {
+          "type": "marketing:hero",
+          "headline": "About Acme",
+          "subhead": "We make agent-content interchange a default.",
+          "metadata": {
+            "extracted_via": "component-contract",
+            "extraction_method": "ssr-walk"
+          }
+        },
+        {
+          "type": "marketing:testimonial",
+          "quote": "ACT is the simplest path I have seen to a portable content tree.",
+          "author": "A. N. Author",
+          "role": "CTO",
+          "metadata": {
+            "extracted_via": "component-contract",
+            "extraction_method": "ssr-walk"
+          }
+        }
+      ],
+      "tokens": {
+        "summary": 13,
+        "body": 9
+      },
+      "metadata": {
+        "locale": "es-ES",
+        "translations": [
+          {
+            "locale": "en-US",
+            "id": "cms/en-us/landing/about"
+          },
+          {
+            "locale": "de-DE",
+            "id": "cms/de-de/landing/about"
+          },
+          {
+            "locale": "ja-JP",
+            "id": "cms/ja-jp/landing/about"
+          }
+        ],
+        "source": {
+          "adapter": "act-contentful",
+          "source_id": "es-ES:landing/about",
+          "contributors": [
+            "act-contentful",
+            "act-react-extract",
+            "act-i18n"
+          ]
+        },
+        "translation_status": "complete"
+      },
+      "source": {
+        "human_url": "https://acme.example.com/es-ES/landing/about"
+      }
+    }
+  ],
+  "etag": "s256:6iPAZs9FQ7sfme8rOuPDsH"
+}

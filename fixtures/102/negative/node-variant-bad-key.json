@@ -1,0 +1,36 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-102",
+    "violates": [
+      "PRD-102-R29"
+    ],
+    "expected_error": {
+      "level": "core",
+      "requirement": "PRD-102-R29",
+      "missing": "Variant key violates [a-z0-9-]+; uppercase and underscore not admitted."
+    }
+  },
+  "act_version": "0.1",
+  "id": "pricing@Enterprise_2026Q2",
+  "type": "landing",
+  "title": "Pricing — Enterprise variant (bad key)",
+  "etag": "sha256:badvariant",
+  "summary": "Variant key contains uppercase and underscores; violates the [a-z0-9-]+ grammar.",
+  "content": [
+    {
+      "type": "markdown",
+      "text": "..."
+    }
+  ],
+  "tokens": {
+    "summary": 18,
+    "body": 50
+  },
+  "metadata": {
+    "variant": {
+      "base_id": "pricing",
+      "key": "Enterprise_2026Q2",
+      "source": "experiment"
+    }
+  }
+}

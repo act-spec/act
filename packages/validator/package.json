@@ -1,0 +1,62 @@
+{
+  "name": "@act-spec/validator",
+  "version": "0.0.0",
+  "description": "PRD-600 conformance validator for the ACT (Agent Content Tree) v0.1 wire format. Library + CLI + hosted SPA.",
+  "license": "Apache-2.0",
+  "author": "Jeremy Forsythe <jeremy@act-spec.org>",
+  "homepage": "https://act-spec.org",
+  "bugs": {
+    "url": "https://github.com/act-spec/act/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "act-validate": "./bin/act-validate.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "bin"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-spec/act.git",
+    "directory": "packages/validator"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "pnpm -F @act-spec/validator-web dev",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:mutation": "stryker run stryker.config.json",
+    "lint": "eslint src",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "conformance": "tsx conformance.ts"
+  },
+  "dependencies": {
+    "@act-spec/core": "workspace:*",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  },
+  "devDependencies": {
+    "@act-spec/_test-utils": "workspace:*",
+    "@stryker-mutator/core": "^9.6.1",
+    "@stryker-mutator/vitest-runner": "^9.6.1",
+    "@vitest/coverage-v8": "^2.1.9",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
+}

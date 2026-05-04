@@ -1,0 +1,51 @@
+{
+  "act_version": "0.1",
+  "id": "recipes/archival/expire-temporary-uploads-sdk-python",
+  "type": "recipe",
+  "title": "Expire temporary uploads sdk python (Archival)",
+  "summary": "Expire temporary uploads sdk python — archival workflow walkthrough.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Goal"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Demonstrate \"expire temporary uploads (sdk python)\" against the Tinybox archival surface end to end."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Walkthrough"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "text": "# Step 1 — prepare a bucket for the archival workflow.\ntinybox buckets create my-bucket --region us-east-1"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Apply the recipe; verify with the API reference under API reference."
+    }
+  ],
+  "tokens": {
+    "summary": 9,
+    "body": 48
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "recipes/archival/expire-temporary-uploads-sdk-python.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/archival/expire-temporary-uploads-sdk-python.md"
+    }
+  },
+  "etag": "s256:68l2ORpA_b2U39wHvA827X",
+  "source": {
+    "human_url": "https://example.com/recipes/archival/expire-temporary-uploads-sdk-python/"
+  },
+  "parent": "archival"
+}

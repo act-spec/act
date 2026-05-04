@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/0.1/index.schema.json",
+  "title": "ACT Index envelope",
+  "description": "Per PRD-100-R16, PRD-100-R17, PRD-100-R18, PRD-100-R19. Wire shape of the index envelope (Core). NDJSON variant (Plus, PRD-100-R37): each line conforms to `$defs/IndexEntry` without the outer wrapper. Index entries carry summary-level metadata only — full `content` arrays are forbidden (PRD-100-R18). `additionalProperties` left at default (true) per PRD-108-R7.",
+  "type": "object",
+  "required": ["act_version", "nodes"],
+  "properties": {
+    "act_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$"
+    },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "etag": {
+      "type": "string",
+      "description": "Index-level ETag. Stable function of the inputs defined by PRD-103."
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/IndexEntry"
+      }
+    }
+  },
+  "$defs": {
+    "IndexEntry": {
+      "type": "object",
+      "required": ["id", "type", "title", "summary", "tokens", "etag"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]([a-z0-9._\\-]|/)*[a-z0-9](@[a-z0-9-]+)?$",
+          "maxLength": 256,
+          "description": "PRD-100 ID grammar. UTF-8 byte-length MUST also be <= 256 (validator-enforced)."
+        },
+        "type": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Open enum; well-known values listed in PRD-100. Custom types MUST be namespaced (e.g., `acme:foo`)."
+        },
+        "title": { "type": "string", "minLength": 1 },
+        "path": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Required at all conformance levels. SHOULD be <= 50 tokens (validator warning >100). PRD-100 cites gap E8."
+        },
+        "tokens": {
+          "type": "object",
+          "required": ["summary"],
+          "properties": {
+            "summary": { "type": "integer", "minimum": 0 },
+            "abstract": { "type": "integer", "minimum": 0 },
+            "body": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "etag": {
+          "type": "string",
+          "description": "Per-node ETag. Per PRD-103: stable function of payload + identity + tenant for runtime; payload-only for static."
+        },
+        "updated_at": { "type": "string", "format": "date-time" },
+        "parent": {
+          "oneOf": [
+            { "type": "string", "pattern": "^[a-z0-9]([a-z0-9._\\-]|/)*[a-z0-9](@[a-z0-9-]+)?$" },
+            { "type": "null" }
+          ]
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9]([a-z0-9._\\-]|/)*[a-z0-9](@[a-z0-9-]+)?$"
+          },
+          "description": "PRD-100 forbids cycles in `children`."
+        },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

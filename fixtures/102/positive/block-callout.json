@@ -1,0 +1,5 @@
+{
+  "type": "callout",
+  "level": "warning",
+  "text": "Node 18 or higher is required. Earlier versions are not supported."
+}

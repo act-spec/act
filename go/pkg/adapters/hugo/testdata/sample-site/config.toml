@@ -1,0 +1,11 @@
+baseURL = "https://example.com/"
+defaultContentLanguage = "en"
+title = "Sample Hugo Site"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+  [languages.es]
+    languageName = "Español"
+    weight = 2

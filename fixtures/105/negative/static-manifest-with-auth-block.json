@@ -1,0 +1,19 @@
+{
+  "_comment": "Negative fixture for PRD-105-R3 — a manifest declaring delivery: \"static\" but populating `auth.schemes`, a runtime-only field. PRD-600 MUST flag this as inconsistent: a static-profile manifest serves files anonymously over HTTP; auth scheme negotiation belongs to PRD-106.",
+  "act_version": "0.1",
+  "site": { "name": "Acme Confused Docs" },
+  "index_url": "/act/index.json",
+  "node_url_template": "/act/n/{id}.json",
+  "conformance": { "level": "core" },
+  "delivery": "static",
+  "auth": {
+    "schemes": ["bearer", "oauth2"]
+  },
+  "capabilities": {
+    "etag": true
+  },
+  "_expected_validator_finding": {
+    "requirement": "PRD-105-R3",
+    "missing": "manifest declares delivery: \"static\" but populates `auth.schemes`; auth schemes are runtime-only fields and MUST NOT appear in a static-profile manifest"
+  }
+}

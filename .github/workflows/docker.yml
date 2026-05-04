@@ -1,0 +1,138 @@
+name: Docker (ghcr.io/act-spec/actree)
+
+# Builds and pushes the actree CLI container images to GHCR.
+#
+# Two variants ship per release:
+#   - Go (primary): tagged 0.2.0, 0.2, latest — distroless static binary.
+#   - Node (legacy): tagged 0.2.0-node — pnpm/Node Alpine, kept for users
+#                    who depend on TS-only features the Go CLI lacks.
+#
+# Triggers:
+#   - On version tag pushes (v*.*.*) — ships fully-versioned + floating tags.
+#   - On manual dispatch — ships `latest` only (for ad-hoc rebuilds).
+#   - On PRs touching either Dockerfile — build-only smoke (no push).
+#
+# Once the act-spec org exists and this repo lives under it, push works as-is
+# because the image name is derived from `github.repository_owner`.
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+      - 'v*.*.*-*'
+  pull_request:
+    paths:
+      - 'Dockerfile'
+      - 'Dockerfile.node'
+      - '.github/workflows/docker.yml'
+      - 'go/**'
+  workflow_dispatch:
+
+concurrency:
+  group: docker-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-and-push:
+    name: Build and push (${{ matrix.variant }})
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # Primary Go build — owns the unsuffixed/floating tags.
+          - variant: go
+            dockerfile: ./Dockerfile
+            tag_suffix: ''
+            description: 'ACT (Agent Content Tree) reference CLI (Go binary, distroless).'
+          # Legacy Node build — only the explicit -node tag, never `latest`.
+          - variant: node
+            dockerfile: ./Dockerfile.node
+            tag_suffix: '-node'
+            description: 'ACT (Agent Content Tree) reference CLI (Node variant).'
+
+    env:
+      IMAGE: ghcr.io/${{ github.repository_owner }}/actree
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GHCR
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Compute image tags (Go variant)
+        id: meta_go
+        if: matrix.variant == 'go'
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.IMAGE }}
+          tags: |
+            # Full SemVer for tagged releases (e.g. 0.2.0-rc.1, 0.2.0).
+            type=semver,pattern={{version}}
+            # Major.minor floating tag (e.g. 0.2). Skipped for prereleases so
+            # `0.2` doesn't drift onto an -rc.
+            type=semver,pattern={{major}}.{{minor}},enable=${{ !contains(github.ref, '-') }}
+            # `latest` only for stable tags and manual dispatch.
+            type=raw,value=latest,enable=${{ (github.event_name == 'workflow_dispatch') || (startsWith(github.ref, 'refs/tags/v') && !contains(github.ref, '-')) }}
+            # PR build label, never pushed but useful in logs.
+            type=ref,event=pr
+          labels: |
+            org.opencontainers.image.title=actree
+            org.opencontainers.image.description=${{ matrix.description }}
+            org.opencontainers.image.licenses=Apache-2.0
+            org.opencontainers.image.source=https://github.com/${{ github.repository }}
+
+      - name: Compute image tags (Node variant)
+        id: meta_node
+        if: matrix.variant == 'node'
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.IMAGE }}
+          # The Node variant only gets explicit `-node` suffixed tags; never
+          # `latest` and never the floating major.minor.
+          tags: |
+            type=semver,pattern={{version}}-node
+            type=raw,value=latest-node,enable=${{ (github.event_name == 'workflow_dispatch') || (startsWith(github.ref, 'refs/tags/v') && !contains(github.ref, '-')) }}
+            type=ref,event=pr,suffix=-node
+          labels: |
+            org.opencontainers.image.title=actree
+            org.opencontainers.image.description=${{ matrix.description }}
+            org.opencontainers.image.licenses=Apache-2.0
+            org.opencontainers.image.source=https://github.com/${{ github.repository }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ${{ matrix.dockerfile }}
+          push: ${{ github.event_name != 'pull_request' }}
+          platforms: linux/amd64,linux/arm64
+          tags: ${{ matrix.variant == 'go' && steps.meta_go.outputs.tags || steps.meta_node.outputs.tags }}
+          labels: ${{ matrix.variant == 'go' && steps.meta_go.outputs.labels || steps.meta_node.outputs.labels }}
+          cache-from: type=gha,scope=${{ matrix.variant }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.variant }}
+
+      - name: Smoke test (--help) on built image
+        if: github.event_name == 'pull_request'
+        run: |
+          docker buildx build --load -f ${{ matrix.dockerfile }} -t actree:smoke-${{ matrix.variant }} .
+          docker run --rm actree:smoke-${{ matrix.variant }} --help

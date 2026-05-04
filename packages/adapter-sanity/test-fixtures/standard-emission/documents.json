@@ -1,0 +1,73 @@
+{
+  "_comment": "Recorded Sanity GROQ response for PRD-203-R27 (standard-tier) integration. Two articles with portable text, references, and tags; default field heuristics apply.",
+  "documents": [
+    {
+      "_id": "intro-getting-started",
+      "_type": "tutorial",
+      "_updatedAt": "2026-04-15T09:32:11Z",
+      "title": "Getting started with Acme",
+      "summary": "Install the SDK and send your first request in 5 minutes.",
+      "slug": { "_type": "slug", "current": "intro/getting-started" },
+      "topics": ["intro", "sdk"],
+      "relatedArticles": [
+        { "_type": "reference", "_ref": "concepts-authentication" },
+        { "_type": "reference", "_ref": "reference-widgets-api" }
+      ],
+      "body": [
+        {
+          "_type": "block",
+          "style": "h2",
+          "children": [{ "_type": "span", "text": "Install", "marks": [] }]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            { "_type": "span", "text": "First, install the SDK.", "marks": [] }
+          ]
+        },
+        {
+          "_type": "code",
+          "language": "bash",
+          "code": "npm install @acme/sdk"
+        },
+        {
+          "_type": "callout",
+          "tone": "warning",
+          "text": "Node 18 or higher is required."
+        }
+      ]
+    },
+    {
+      "_id": "concepts-authentication",
+      "_type": "concept",
+      "_updatedAt": "2026-04-10T11:00:00Z",
+      "title": "Authentication",
+      "summary": "How API tokens work in Acme.",
+      "slug": { "_type": "slug", "current": "concepts/authentication" },
+      "body": [
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            { "_type": "span", "text": "Tokens are scoped per project.", "marks": [] }
+          ]
+        }
+      ]
+    }
+  ],
+  "refDocuments": {
+    "concepts-authentication": {
+      "_id": "concepts-authentication",
+      "_type": "concept",
+      "title": "Authentication",
+      "slug": { "_type": "slug", "current": "concepts/authentication" }
+    },
+    "reference-widgets-api": {
+      "_id": "reference-widgets-api",
+      "_type": "reference",
+      "title": "Widgets API",
+      "slug": { "_type": "slug", "current": "reference/widgets-api" }
+    }
+  }
+}

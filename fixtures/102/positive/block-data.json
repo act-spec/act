@@ -1,0 +1,14 @@
+{
+  "type": "data",
+  "format": "json",
+  "text": "{\"limits\":{\"requests_per_minute\":600,\"max_payload_bytes\":1048576},\"retry\":{\"max_attempts\":3}}",
+  "value": {
+    "limits": {
+      "requests_per_minute": 600,
+      "max_payload_bytes": 1048576
+    },
+    "retry": {
+      "max_attempts": 3
+    }
+  }
+}

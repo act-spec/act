@@ -1,0 +1,8 @@
+{
+  "id": "page-id-uppercase",
+  "requirements": ["PRD-300-R5", "PRD-300-R10", "PRD-100-R10"],
+  "input": {
+    "id": "My-Pricing"
+  },
+  "expectedErrorSubstring": "PRD-300-R10"
+}

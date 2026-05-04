@@ -1,0 +1,48 @@
+{
+  "name": "@act-spec/adapter-framework",
+  "version": "0.0.0",
+  "description": "PRD-200 adapter framework for the ACT (Agent Content Tree) v0.1 reference implementation. Types, lifecycle, and multi-source merge — shared by every first-party adapter.",
+  "license": "Apache-2.0",
+  "author": "Jeremy Forsythe <jeremy@act-spec.org>",
+  "homepage": "https://act-spec.org",
+  "bugs": {
+    "url": "https://github.com/act-spec/act/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "src"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-spec/act.git",
+    "directory": "packages/adapter-framework"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "conformance": "node -e \"console.log('no conformance gate for @act-spec/adapter-framework (framework-only; PRD-200 is exercised by leaf adapter conformance gates)')\""
+  },
+  "dependencies": {
+    "@act-spec/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^2.1.9",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
+}

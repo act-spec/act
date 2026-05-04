@@ -1,0 +1,35 @@
+{
+  "_comment": "Recorded Builder.io v3 Content API response intended for pass-through emission. The page tree contains a Text component whose first paragraph yields the extracted summary (PRD-206-R10 + PRD-206-R8). The single emitted block is `marketing:builder-page` carrying the raw `data` field as `payload` (PRD-206-R10).",
+  "authProbe": "ok",
+  "keyKindProbe": "public",
+  "contentByModel": {
+    "page": [
+      {
+        "id": "builder-content-id-welcome",
+        "name": "Welcome",
+        "modelName": "page",
+        "lastUpdated": 1745568000000,
+        "data": {
+          "url": "/welcome",
+          "description": "Welcome to Acme — get started in minutes.",
+          "blocks": [
+            {
+              "@type": "@builder.io/sdk:Element",
+              "component": {
+                "name": "Text",
+                "options": { "text": "<h1>Welcome to Acme</h1>" }
+              }
+            },
+            {
+              "@type": "@builder.io/sdk:Element",
+              "component": {
+                "name": "Hero",
+                "options": { "headline": "Get started", "ctaHref": "/signup" }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+# Negative fixture for PRD-101 — runtime-only Link header with an invalid
+# `profile` parameter value. The MIME `profile` parameter is a CLOSED enum:
+# "static" | "runtime" only (per PRD-101-R7 + gap B5 + decision Q2). The
+# header below uses profile="hybrid", which is not in the enum.
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+Link: </.well-known/act.json>; rel="act"; type="application/act-manifest+json"; profile="hybrid"
+
+{
+  "workspace_id": "ws_42"
+}
+
+# Expected validator behavior:
+# - PRD-101-R7 violated: profile parameter "hybrid" is outside the closed enum.
+# - Validator MUST treat the Link header as malformed and MUST NOT attempt
+#   to dispatch on the unrecognized profile.
+# - Validator emits a finding citing PRD-101-R7. Note: the discovery hint
+#   itself (the URL) MAY still be followed, but the consumer MUST NOT trust
+#   the unrecognized profile claim; it MUST resolve the manifest and read
+#   `delivery` from there.

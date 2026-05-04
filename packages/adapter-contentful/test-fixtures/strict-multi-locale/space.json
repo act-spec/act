@@ -1,0 +1,11 @@
+{
+  "_comment": "Multi-locale fixture (PRD-202-R12 / R14). Three locales advertised; en-US default.",
+  "spaceLocales": [
+    { "code": "en-US", "default": true },
+    { "code": "es-ES" },
+    { "code": "de-DE" }
+  ],
+  "contentTypes": [
+    { "sys": { "id": "landingPage" } }
+  ]
+}

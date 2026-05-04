@@ -1,0 +1,32 @@
+{
+  "_comment": "Recorded Strapi v4 REST response shape for PRD-205-R3 / R28 (v4 envelope handling). Two tutorials entities in the v4 wrap-and-attributes form (`{ id, attributes: {...} }`). PRD-205-R26 says v4 source_id is `v4:<id>` because no documentId exists.",
+  "serverStrapiVersion": "v4",
+  "authProbe": "ok",
+  "contentTypeSingulars": { "tutorials": "tutorial" },
+  "entitiesByContentType": {
+    "tutorials": [
+      {
+        "id": 42,
+        "attributes": {
+          "slug": "getting-started",
+          "title": "Getting Started",
+          "summary": "Your first 5 minutes with Acme.",
+          "body": "# Getting Started\n\nWelcome to Acme.",
+          "publishedAt": "2026-04-10T09:00:00Z",
+          "updatedAt": "2026-04-10T09:00:00Z"
+        }
+      },
+      {
+        "id": 43,
+        "attributes": {
+          "slug": "next-steps",
+          "title": "Next Steps",
+          "summary": "Where to go after the basics.",
+          "body": "# Next Steps\n\nDive deeper into the SDK.",
+          "publishedAt": "2026-04-11T09:00:00Z",
+          "updatedAt": "2026-04-11T09:00:00Z"
+        }
+      }
+    ]
+  }
+}

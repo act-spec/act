@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/203/config.schema.json",
+  "title": "act-sanity adapter config",
+  "description": "PRD-203-R2 — config schema for @act-spec/adapter-sanity.",
+  "type": "object",
+  "required": ["projectId", "dataset", "apiToken"],
+  "additionalProperties": false,
+  "properties": {
+    "projectId": { "type": "string", "minLength": 1 },
+    "dataset": { "type": "string", "minLength": 1 },
+    "apiToken": {
+      "oneOf": [
+        { "type": "string", "minLength": 1 },
+        {
+          "type": "object",
+          "required": ["from_env"],
+          "additionalProperties": false,
+          "properties": { "from_env": { "type": "string", "minLength": 1 } }
+        }
+      ]
+    },
+    "apiVersion": { "type": "string", "minLength": 1 },
+    "version": { "type": "string", "enum": ["published", "draft", "previewDraft"] },
+    "groqFilter": { "type": "string", "minLength": 1 },
+    "allowEmpty": { "type": "boolean" },
+    "typeMapping": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "minLength": 1 }
+    },
+    "fieldMapping": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "summary": { "type": "string", "minLength": 1 },
+        "abstract": { "type": "string", "minLength": 1 },
+        "body": { "type": "string", "minLength": 1 },
+        "tags": { "type": "string", "minLength": 1 },
+        "related": {
+          "type": "object",
+          "additionalProperties": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "idField": { "type": "string", "minLength": 1 },
+    "referenceDepth": { "type": "integer", "minimum": 0, "maximum": 5 },
+    "componentMapping": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["type", "fields"],
+        "additionalProperties": false,
+        "properties": {
+          "type": { "type": "string", "pattern": "^marketing:" },
+          "fields": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      }
+    },
+    "locale": {
+      "type": "object",
+      "required": ["field", "pattern"],
+      "additionalProperties": false,
+      "properties": {
+        "field": { "type": "string", "minLength": 1 },
+        "pattern": { "type": "string", "enum": ["field", "document"] },
+        "available": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "default": { "type": "string", "minLength": 1 }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "strategy": { "type": "string", "enum": ["field", "extract", "needs-llm"] }
+      }
+    },
+    "concurrency": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "transform": { "type": "integer", "minimum": 1, "maximum": 16 }
+      }
+    },
+    "namespace": {
+      "type": "string",
+      "pattern": "^[a-z0-9]([a-z0-9._\\-]|/)*[a-z0-9]$"
+    }
+  }
+}

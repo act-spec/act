@@ -1,0 +1,24 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-100",
+    "violates": [
+      "PRD-100-R5"
+    ],
+    "expected_error": {
+      "level": "core",
+      "requirement": "PRD-100-R5",
+      "missing": "node_url_template missing the literal {id} placeholder."
+    }
+  },
+  "_negative_reason": "`node_url_template` does not contain the literal `{id}` placeholder. Violates PRD-100 URL template requirement.",
+  "act_version": "0.1",
+  "site": {
+    "name": "Acme"
+  },
+  "index_url": "/act/index.json",
+  "node_url_template": "/act/n/single-node.json",
+  "conformance": {
+    "level": "core"
+  },
+  "delivery": "static"
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/0.1/error.schema.json",
+  "title": "ACT Error envelope",
+  "description": "Per PRD-100-R41, PRD-100-R42, PRD-100-R43. Wire shape for runtime 4xx/5xx error responses (gap A4). Static profile does not require this envelope (PRD-100-R44). The `error.code` enum is closed (PRD-100-R41); adding a value is MAJOR per PRD-108-R5(4). `error.message` MUST NOT contain PII per PRD-109-R14. `error.details` is open and per-code stable (PRD-100-R43). `additionalProperties: false` at the top level — PRD-100-R41 specifies this envelope shape exactly; unknown extra top-level fields would indicate malformed input.",
+  "type": "object",
+  "required": ["act_version", "error"],
+  "additionalProperties": false,
+  "properties": {
+    "act_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$"
+    },
+    "error": {
+      "type": "object",
+      "required": ["code", "message"],
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": "string",
+          "enum": [
+            "auth_required",
+            "not_found",
+            "rate_limited",
+            "internal",
+            "validation"
+          ],
+          "description": "Closed enum. Adding a value is MAJOR per PRD-108-R5(4)."
+        },
+        "message": {
+          "type": "string",
+          "description": "Human-readable, non-PII. For logging, not parsing."
+        },
+        "details": {
+          "type": "object",
+          "description": "Open object; per-code stable shape. Unknown keys MUST be tolerated per PRD-108-R7.",
+          "additionalProperties": true
+        }
+      }
+    }
+  }
+}

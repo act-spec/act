@@ -1,0 +1,19 @@
+{
+  "_comment": "Negative fixture for PRD-103-R7 (no request-local mixing). The `etag` value here is `s256:<22-char-hash>-1714579200` — a producer that appended a Unix timestamp to the hash. Even if the leading 22 chars were derivable, the trailing timestamp is request-local data and changes per build/per request, defeating revalidation. The shape also fails the etag schema: `s256:` must be followed by exactly 22 base64url chars (no extra suffix).",
+  "envelope": {
+    "act_version": "0.1",
+    "id": "intro",
+    "type": "document",
+    "title": "Introduction",
+    "summary": "A simple introduction.",
+    "content": [
+      { "type": "prose", "text": "Hello." }
+    ],
+    "tokens": { "body": 2, "summary": 4 },
+    "etag": "s256:8Z0luYEDvPcDQKLimP55qC-1714579200"
+  },
+  "expected_finding": {
+    "requirement": "PRD-103-R7",
+    "missing": "etag value mixes request-local data (timestamp suffix) into the hash; revalidation will fail across rebuilds and replicas"
+  }
+}

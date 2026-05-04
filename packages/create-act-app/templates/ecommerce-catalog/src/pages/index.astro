@@ -1,0 +1,66 @@
+---
+import Site from '../layouts/Site.astro';
+import { loadCategories, loadProducts } from '../lib/products.ts';
+
+const categories = await loadCategories();
+const products = await loadProducts();
+const total = products.length;
+---
+<Site title="Catalog">
+  <h1 style="margin:0 0 8px;">Acme Catalog</h1>
+  <p style="color:var(--muted);margin:0 0 8px;">
+    {total} products grouped into {categories.length} categories. Pick a category to drill in,
+    or fetch the same hierarchy as ACT envelopes:
+  </p>
+  <p style="color:var(--muted);font-size:13px;margin:0 0 24px;">
+    <code>/.well-known/act.json</code> &middot; <code>/act/subtrees/catalog.json</code>
+    &middot; <code>/act/nodes/&lt;category&gt;.json</code>
+    &middot; <code>/act/nodes/&lt;sku&gt;.json</code>
+  </p>
+
+  <h2 style="margin:0 0 12px;font-size:18px;">Browse by category</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-bottom:32px;">
+    {categories.map((cat) => (
+      <a
+        href={`/c/${cat.id}/`}
+        style="background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;text-decoration:none;color:inherit;display:block;"
+      >
+        <div style="font-family:ui-monospace,monospace;color:var(--muted);font-size:12px;">{cat.id}</div>
+        <div style="font-weight:600;margin:6px 0 4px;">{cat.title}</div>
+        <div style="color:var(--muted);font-size:13px;">{cat.count} products</div>
+        <div style="margin-top:10px;font-family:ui-monospace,monospace;font-size:11px;color:var(--muted);">
+          /act/nodes/{cat.id}.json
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <h2 style="margin:0 0 12px;font-size:18px;">All products</h2>
+  <p style="color:var(--muted);margin:0 0 16px;font-size:13px;">
+    The full flat grid is here for browsing convenience. Agents that respect ACT subtrees walk
+    root → category → product instead and never load the flat index.
+  </p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
+    {products.slice(0, 60).map((p) => (
+      <a
+        href={`/p/${p.sku}/`}
+        style="background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:8px;"
+      >
+        <img
+          src="/thumb.svg"
+          alt=""
+          loading="lazy"
+          style="width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:6px;border:1px solid var(--line);background:var(--bg);"
+        />
+        <div style="font-family:ui-monospace,monospace;color:var(--muted);font-size:11px;">{p.sku}</div>
+        <div style="font-weight:600;font-size:14px;line-height:1.3;">{p.name}</div>
+        <div style="color:var(--muted);font-size:12px;">
+          <span style="background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:2px 8px;font-family:ui-monospace,monospace;font-size:11px;">{p.category}</span>
+        </div>
+      </a>
+    ))}
+  </div>
+  <p style="color:var(--muted);font-size:13px;margin-top:16px;">
+    Showing the first 60 of {total}. Use a category to see the rest.
+  </p>
+</Site>

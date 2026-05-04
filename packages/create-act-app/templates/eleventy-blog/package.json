@@ -1,0 +1,38 @@
+{
+  "name": "@act-spec/example-eleventy-blog",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Flat chronological Eleventy 2.x blog demonstrating ACT generation via the @act-spec/plugin-eleventy plugin.",
+  "license": "Apache-2.0",
+  "author": "Jeremy Forsythe <jeremy@act-spec.org>",
+  "homepage": "https://act-spec.org",
+  "bugs": {
+    "url": "https://github.com/act-spec/act/issues"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-spec/act.git",
+    "directory": "examples/eleventy-blog"
+  },
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "start": "pnpm run build && node ../../scripts/serve-fixture.mjs _site 8080",
+    "validate": "tsx scripts/validate.ts",
+    "conformance": "pnpm run build && pnpm run validate",
+    "test": "node -e \"console.log('@act-spec/example-eleventy-blog: example exercises end-to-end via conformance')\"",
+    "lint": "node -e \"console.log('@act-spec/example-eleventy-blog: lint covered by typecheck + conformance')\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.0 || ^3.0.0",
+    "@act-spec/plugin-eleventy": "workspace:*",
+    "@act-spec/adapter-markdown": "workspace:*"
+  },
+  "devDependencies": {
+    "@act-spec/validator": "workspace:*",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

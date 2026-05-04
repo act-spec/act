@@ -1,0 +1,17 @@
+{
+  "_comment": "Recorded Contentful Sync API response — incremental delta after the initial sync (PRD-202-R16).",
+  "items": [
+    {
+      "sys": {
+        "id": "post-2",
+        "type": "Entry",
+        "contentType": { "sys": { "type": "Link", "linkType": "ContentType", "id": "blogPost" } }
+      },
+      "fields": {
+        "title": "Second post",
+        "excerpt": "Edited later."
+      }
+    }
+  ],
+  "nextSyncToken": "sync-token-after-delta"
+}

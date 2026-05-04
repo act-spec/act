@@ -1,0 +1,17 @@
+{
+  "_comment": "Recorded Contentful Sync API response — initial sync (PRD-202-R16).",
+  "items": [
+    {
+      "sys": {
+        "id": "post-1",
+        "type": "Entry",
+        "contentType": { "sys": { "type": "Link", "linkType": "ContentType", "id": "blogPost" } }
+      },
+      "fields": {
+        "title": "First post",
+        "excerpt": "Hello world."
+      }
+    }
+  ],
+  "nextSyncToken": "sync-token-after-initial"
+}

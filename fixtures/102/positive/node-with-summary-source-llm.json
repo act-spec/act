@@ -1,0 +1,13 @@
+{
+  "act_version": "0.1",
+  "id": "concepts/queues",
+  "type": "concept",
+  "title": "Queues",
+  "etag": "sha256:def456",
+  "summary": "Queues route widgets to workers based on routing keys, priority, and tenancy.",
+  "summary_source": "llm",
+  "content": [
+    { "type": "markdown", "text": "## Routing\n\nEach queue has a routing key..." }
+  ],
+  "tokens": { "summary": 16, "body": 410 }
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/207/config.schema.json",
+  "title": "act-i18n adapter config",
+  "description": "PRD-207-R2 — config schema for @act-spec/adapter-i18n.",
+  "type": "object",
+  "required": ["library", "messagesDir", "locales", "bindToAdapter"],
+  "additionalProperties": false,
+  "properties": {
+    "library": { "type": "string", "enum": ["next-intl", "react-intl", "i18next"] },
+    "messagesDir": { "type": "string", "minLength": 1 },
+    "locales": {
+      "type": "object",
+      "required": ["default", "available"],
+      "additionalProperties": false,
+      "properties": {
+        "default": {
+          "type": "string",
+          "pattern": "^[a-z]{2,3}(-[A-Z][a-z]{3})?(-[A-Z]{2})?$"
+        },
+        "available": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z]{2,3}(-[A-Z][a-z]{3})?(-[A-Z]{2})?$"
+          }
+        },
+        "fallback_chain": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z]{2,3}(-[A-Z][a-z]{3})?(-[A-Z]{2})?$"
+            }
+          }
+        }
+      }
+    },
+    "bindToAdapter": { "type": "string", "minLength": 1 },
+    "idTransform": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pattern": { "type": "integer", "enum": [1, 2] },
+        "namespace": { "type": "string", "minLength": 1 }
+      }
+    },
+    "keyMapping": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "minLength": 1 }
+    },
+    "library_options": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "namespaces": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "messageFormat": { "type": "string", "enum": ["flat", "nested"] }
+      }
+    },
+    "autoDetect": { "type": "boolean" }
+  }
+}

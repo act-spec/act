@@ -1,0 +1,7 @@
+{
+  "id": "page-id-violates-grammar",
+  "requirements": ["PRD-303-R7", "PRD-100-R10"],
+  "description": "A page contract whose id violates PRD-100-R10's grammar (e.g., contains uppercase) MUST cause a build error per PRD-303-R7 → PRD-300-R10. The route is skipped; no placeholder applies at page level.",
+  "input": { "id": "BadID" },
+  "expectedErrorSubstring": "PRD-100-R10"
+}

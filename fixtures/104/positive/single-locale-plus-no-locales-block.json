@@ -1,0 +1,19 @@
+{
+  "_fixture": "PRD-104 positive — single-locale Plus producer correctly omits the `locales` block (per PRD-107-R10 + PRD-104-R14)",
+  "_satisfies": ["PRD-104-R14"],
+  "act_version": "0.1",
+  "site": { "name": "Acme Plus Workspace", "locale": "en-US" },
+  "conformance": { "level": "strict" },
+  "delivery": "runtime",
+  "index_url": "/act/index.json",
+  "index_ndjson_url": "/act/index.ndjson",
+  "node_url_template": "/act/n/{id}.json",
+  "subtree_url_template": "/act/sub/{id}.json",
+  "search_url_template": "/act/search?q={query}",
+  "capabilities": {
+    "etag": true,
+    "subtree": true,
+    "ndjson_index": true,
+    "search": { "template_advertised": true }
+  }
+}

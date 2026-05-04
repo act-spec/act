@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "composite": true,
+    "tsBuildInfoFile": "dist/.tsbuildinfo"
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["**/*.test.ts", "dist", "node_modules"],
+  "references": [
+    { "path": "../core" },
+    { "path": "../adapter-framework" },
+    { "path": "../validator" }
+  ]
+}

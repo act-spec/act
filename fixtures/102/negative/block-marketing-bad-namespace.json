@@ -1,0 +1,15 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-102",
+    "violates": [
+      "PRD-102-R6"
+    ],
+    "expected_error": {
+      "level": "core",
+      "requirement": "PRD-102-R6",
+      "missing": "marketing:* type suffix violates [a-z][a-z0-9-]*; uppercase characters not admitted."
+    }
+  },
+  "type": "marketing:Hero",
+  "headline": "Bad casing in the namespace suffix"
+}

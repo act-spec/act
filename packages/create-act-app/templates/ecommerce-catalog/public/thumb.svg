@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" role="img" aria-label="Product placeholder">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e2e8f0" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+  </defs>
+  <rect width="240" height="160" fill="url(#g)" />
+  <g fill="none" stroke="#94a3b8" stroke-width="2">
+    <circle cx="80" cy="68" r="22" />
+    <path d="M28 130 L96 76 L150 116 L212 60 L212 142 L28 142 Z" fill="#94a3b8" stroke="none" opacity="0.55" />
+  </g>
+  <text x="120" y="153" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+        font-size="10" fill="#64748b" letter-spacing="0.08em">PRODUCT</text>
+</svg>

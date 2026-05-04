@@ -1,0 +1,22 @@
+{
+  "_comment": "Positive fixture for PRD-105-R6, R7, R8 — the corporate-marketing composite from v0.1 draft §6.5 / §8.4. Plus level, single locale view (en-US root); per-locale roots are emitted under /es-ES, /de-DE, /ja-JP per the locales config. This fixture lists the en-US root only; PRD-104 owns the i18n file-set extension.",
+  "manifest_path": "/.well-known/act.json",
+  "well_known_path": "/.well-known/act.json",
+  "index_path": "/act/index.json",
+  "index_ndjson_path": "/act/index.ndjson",
+  "node_paths": [
+    "/act/n/home.json",
+    "/act/n/pricing.json",
+    "/act/n/products.json",
+    "/act/n/contact.json",
+    "/act/n/blog/launch-announcement.json",
+    "/act/n/blog/q3-roadmap.json"
+  ],
+  "subtree_paths": [
+    "/act/sub/home.json",
+    "/act/sub/blog.json"
+  ],
+  "search_path": "/act/search-index.json",
+  "conformance_level": "strict",
+  "_search_note": "The producer fulfills `search_url_template: \"/act/search?q={query}\"` by hosting a precomputed search index JSON at /act/search-index.json with a client-side wrapper that substitutes the query at consumer request time. If client-side substitution is not available, the producer MUST omit `search_url_template` from the manifest per PRD-107-R10."
+}

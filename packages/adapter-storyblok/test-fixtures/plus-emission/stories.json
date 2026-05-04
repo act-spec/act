@@ -1,0 +1,95 @@
+{
+  "_comment": "Recorded Storyblok delivery-API response for PRD-204-R27 (plus-tier) integration. Folder-pattern translations + componentMapping promoting Storyblok hero + feature-grid bloks to marketing:* blocks.",
+  "stories": [
+    {
+      "uuid": "uuid-pricing-en",
+      "id": 2001,
+      "name": "Pricing",
+      "slug": "pricing",
+      "full_slug": "en/marketing/pricing",
+      "lang": "en",
+      "group_id": "grp-pricing",
+      "published_at": "2026-04-20T10:00:00Z",
+      "updated_at": "2026-04-20T10:00:00Z",
+      "content": {
+        "component": "landing",
+        "_uid": "uid-landing-pricing-en",
+        "summary": "Acme pricing tiers and plan comparison.",
+        "body": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "blok",
+              "attrs": {
+                "id": "blok-1",
+                "body": [
+                  {
+                    "_uid": "blok-uid-hero-en",
+                    "component": "hero",
+                    "headline": "Pricing that scales with you.",
+                    "subhead": "Start free. Pay as you grow.",
+                    "ctaLabel": "Start free trial",
+                    "ctaHref": "/signup"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "blok",
+              "attrs": {
+                "id": "blok-2",
+                "body": [
+                  {
+                    "_uid": "blok-uid-fg-en",
+                    "component": "feature-grid",
+                    "features": [
+                      { "title": "Fast", "description": "Sub-second response.", "icon": "lightning" },
+                      { "title": "Secure", "description": "SOC 2 Type II.", "icon": "shield" }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "uuid": "uuid-pricing-de",
+      "id": 2002,
+      "name": "Preise",
+      "slug": "preise",
+      "full_slug": "de/marketing/pricing",
+      "lang": "de",
+      "group_id": "grp-pricing",
+      "published_at": "2026-04-20T10:00:00Z",
+      "updated_at": "2026-04-20T10:00:00Z",
+      "content": {
+        "component": "landing",
+        "_uid": "uid-landing-pricing-de",
+        "summary": "Preisstufen und Planvergleich.",
+        "body": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "blok",
+              "attrs": {
+                "id": "blok-3",
+                "body": [
+                  {
+                    "_uid": "blok-uid-hero-de",
+                    "component": "hero",
+                    "headline": "Preise, die mit dir wachsen.",
+                    "subhead": "Kostenlos starten. Zahle wenn du wächst.",
+                    "ctaLabel": "Jetzt starten",
+                    "ctaHref": "/signup"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "scenario": "A mount entry's referenced manifest itself declares a `mounts` array — recursive mounts forbidden",
+  "violates": ["PRD-106-R18"],
+  "rejected_because": "Per gap C5 / PRD-106-R18, mounts MUST NOT recurse. A mount manifest body MUST NOT itself declare further `mounts`. Recursion makes longest-prefix matching ambiguous and creates a discovery DoS surface.",
+  "parent_manifest": {
+    "act_version": "0.1",
+    "site": { "name": "Acme" },
+    "delivery": "static",
+    "conformance": { "level": "standard" },
+    "mounts": [
+      {
+        "prefix": "/app",
+        "delivery": "runtime",
+        "manifest_url": "https://app.acme.com/.well-known/act.json"
+      }
+    ]
+  },
+  "mount_target_manifest_at_app_acme_com": {
+    "act_version": "0.1",
+    "site": { "name": "Acme App" },
+    "delivery": "runtime",
+    "conformance": { "level": "standard" },
+    "mounts": [
+      {
+        "prefix": "/app/admin",
+        "delivery": "runtime",
+        "manifest_url": "https://admin.acme.com/.well-known/act.json"
+      }
+    ],
+    "violation": "Mount-targeted manifest declares its own `mounts` array. PRD-600 MUST flag this."
+  }
+}

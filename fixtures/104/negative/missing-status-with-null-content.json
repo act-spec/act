@@ -1,0 +1,25 @@
+{
+  "_fixture": "PRD-104 negative — block claims translation_status: missing AND emits null on a required string field. Producers MUST emit fallback content instead (PRD-104-R11).",
+  "_violates": ["PRD-104-R11", "PRD-104-R12"],
+  "act_version": "0.1",
+  "id": "precios",
+  "type": "landing",
+  "title": "Precios",
+  "etag": "s256:bad_NULLcontentBADbadBAD",
+  "summary": "Niveles de precios de Acme.",
+  "metadata": {
+    "locale": "es-ES",
+    "translation_status": "partial"
+  },
+  "content": [
+    {
+      "type": "marketing:hero",
+      "metadata": {
+        "translation_status": "missing"
+      },
+      "headline": null,
+      "subhead": null
+    }
+  ],
+  "tokens": { "summary": 8, "body": 0 }
+}

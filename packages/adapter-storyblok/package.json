@@ -1,0 +1,58 @@
+{
+  "name": "@act-spec/adapter-storyblok",
+  "version": "0.0.0",
+  "description": "PRD-204 Storyblok adapter for the ACT (Agent Content Tree) v0.1 reference implementation. Consumes the Storyblok Content Delivery API (stories + TipTap-derived rich text + component blocks) and emits PRD-100/PRD-102 envelopes; supports content-type / field mapping, rich-text → block conversion, story-link resolution with cycle tolerance, locale fan-out (folder + field), `cv`-marker delta, and HMAC-SHA256 webhook signature verification. Implements the PRD-200 framework contract.",
+  "license": "Apache-2.0",
+  "author": "Jeremy Forsythe <jeremy@act-spec.org>",
+  "homepage": "https://act-spec.org",
+  "bugs": {
+    "url": "https://github.com/act-spec/act/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "src", "schema"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-spec/act.git",
+    "directory": "packages/adapter-storyblok"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "conformance": "tsx conformance.ts"
+  },
+  "dependencies": {
+    "@act-spec/adapter-framework": "workspace:*",
+    "@act-spec/core": "workspace:*",
+    "@act-spec/validator": "workspace:*",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  },
+  "peerDependencies": {
+    "storyblok-js-client": "^6.0.0"
+  },
+  "peerDependenciesMeta": {
+    "storyblok-js-client": { "optional": true }
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^2.1.9",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "variant-replay",
+  "requirements": ["PRD-303-R13", "PRD-300-R15", "PRD-300-R18", "PRD-300-R19"],
+  "description": "Variant replay. A page declaring variants:[\"enterprise-2026q2\"] emits two drafts (canonical id=\"pricing\"; variant id=\"pricing@enterprise-2026q2\" with metadata.variant + variant_of related entry). Each variant pass uses a fresh ActCollectorService per PRD-303-R13.",
+  "expected": {
+    "draftCount": 2,
+    "ids": ["pricing", "pricing@enterprise-2026q2"],
+    "variantMetadata": {
+      "base_id": "pricing",
+      "key": "enterprise-2026q2",
+      "source": "experiment"
+    }
+  }
+}

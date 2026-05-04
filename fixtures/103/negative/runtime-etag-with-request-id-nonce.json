@@ -1,0 +1,21 @@
+{
+  "_comment": "Negative fixture for PRD-103-R7 in the runtime profile. The producer derived the etag from the (payload, identity, tenant, request_id) quadruple instead of the (payload, identity, tenant) triple defined in PRD-103-R6. This makes the etag unique per request, which (a) defeats If-None-Match revalidation entirely, and (b) silently leaks correlation surface. Replica-A and replica-B will produce different etags for the same content+identity+tenant. Detected by a probe that issues two requests in succession and observes the etag change with no underlying content change.",
+  "incorrect_input": {
+    "payload": {
+      "act_version": "0.1",
+      "id": "intro",
+      "type": "document",
+      "title": "Introduction",
+      "summary": "A simple introduction.",
+      "content": [{ "type": "prose", "text": "Hello." }],
+      "tokens": { "body": 2, "summary": 4 }
+    },
+    "identity": "user-42",
+    "tenant": "acme",
+    "request_id_LEAKED_INTO_HASH": "01HZX5N9D3F8Q7M2K6P4Y1B7VR"
+  },
+  "expected_finding": {
+    "requirement": "PRD-103-R7",
+    "missing": "runtime etag derivation included a per-request nonce (request_id); two consecutive requests for the same (payload, identity, tenant) triple produced different etags"
+  }
+}

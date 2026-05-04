@@ -1,0 +1,31 @@
+{
+  "$comment": "Positive fixture for PRD-101. A correctly-discoverable static manifest at /.well-known/act.json. The manifest declares delivery: \"static\" and the discovery context (an unauthenticated GET of the well-known path on the public origin) matches that declaration. Validators MUST accept this case under PRD-101-R1, PRD-101-R2, PRD-101-R12. The manifest envelope itself is owned by PRD-100; only the discovery-relevant fields are reproduced here.",
+  "discovery_context": {
+    "request": {
+      "method": "GET",
+      "url": "https://acme.example/.well-known/act.json",
+      "headers": {}
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "content-type": "application/act-manifest+json; profile=\"static\"",
+        "cache-control": "public, max-age=300"
+      }
+    }
+  },
+  "manifest": {
+    "act_version": "0.1",
+    "site": { "name": "Acme Docs" },
+    "index_url": "/act/index.json",
+    "node_url_template": "/act/n/{id}.json",
+    "conformance": { "level": "core" },
+    "delivery": "static",
+    "capabilities": { "etag": true }
+  },
+  "expected": {
+    "discovered": true,
+    "delivery_match": true,
+    "notes": "Manifest delivery field is \"static\"; discovery happened via the well-known path with no Link-header runtime hand-off. PRD-101-R12 satisfied."
+  }
+}

@@ -1,0 +1,20 @@
+# Compiled binaries
+/actree
+/cmd/actree/actree
+*.exe
+*.test
+*.out
+
+# Build artifacts
+/bin/
+/dist/
+
+# Vendored deps (we use modules; vendor/ is intentionally not committed)
+/vendor/
+
+# Coverage
+*.cover
+coverage.out
+
+# IDE / OS
+.DS_Store

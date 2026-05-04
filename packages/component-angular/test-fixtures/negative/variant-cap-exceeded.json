@@ -1,0 +1,7 @@
+{
+  "id": "variant-cap-exceeded",
+  "requirements": ["PRD-303-R13", "PRD-300-R17"],
+  "description": "A page contract declaring more than 64 variants MUST cause a build error per PRD-303-R13 / PRD-300-R17 (variant matrix cap).",
+  "input": { "variantCount": 65 },
+  "expectedErrorSubstring": "PRD-300-R17"
+}

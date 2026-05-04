@@ -1,0 +1,33 @@
+{
+  "act_version": "0.1",
+  "id": "troubleshooting",
+  "type": "section",
+  "title": "Troubleshooting",
+  "summary": "Troubleshooting — section.",
+  "summary_source": "extracted",
+  "etag": "s256:iYytR8uzgaTViOcqmI9pcT",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# Troubleshooting\n\nThis section groups related troubleshooting documents.\n"
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 16
+  },
+  "children": [
+    "buckets-issues",
+    "objects-issues",
+    "webhooks-issues",
+    "auth-issues",
+    "networking-issues",
+    "billing-issues"
+  ],
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "sidebar-category:troubleshooting"
+    }
+  }
+}

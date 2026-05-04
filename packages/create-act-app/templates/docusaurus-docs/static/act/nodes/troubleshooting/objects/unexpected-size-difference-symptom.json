@@ -1,0 +1,51 @@
+{
+  "act_version": "0.1",
+  "id": "troubleshooting/objects/unexpected-size-difference-symptom",
+  "type": "troubleshooting",
+  "title": "Unexpected size difference symptom (Objects)",
+  "summary": "Resolve \"unexpected size difference\" — symptom for the Objects surface.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Symptom"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "An operation against the Objects surface fails with an error matching \"unexpected size difference (symptom)\"."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Resolution"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Inspect the error envelope.Re-issue with corrected parameters.Confirm via the audit log."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "See the Objects API reference for the exact field set."
+    }
+  ],
+  "tokens": {
+    "summary": 10,
+    "body": 45
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "troubleshooting/objects/unexpected-size-difference-symptom.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/unexpected-size-difference-symptom.md"
+    }
+  },
+  "etag": "s256:_iv5IgxcOSSXUyAXgh0_TO",
+  "source": {
+    "human_url": "https://example.com/troubleshooting/objects/unexpected-size-difference-symptom/"
+  },
+  "parent": "objects-issues"
+}

@@ -1,0 +1,31 @@
+{
+  "act_version": "0.1",
+  "id": "api/webhooks/list",
+  "type": "reference",
+  "title": "List webhooks",
+  "summary": "Enumerate webhook subscriptions for the current project.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "GET /v1/webhooks — returns subscription records ordered by created_at descending."
+    }
+  ],
+  "tokens": {
+    "summary": 7,
+    "body": 10
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "api/webhooks/list.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/api/webhooks/list.md"
+    }
+  },
+  "etag": "s256:TFruIUnO3x4fXq_FreuNsE",
+  "source": {
+    "human_url": "https://example.com/api/webhooks/list/"
+  },
+  "parent": "webhooks"
+}

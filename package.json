@@ -1,0 +1,59 @@
+{
+  "name": "act-spec-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "description": "ACT (Agent Content Tree) v0.1 — TypeScript reference implementation monorepo",
+  "author": "Jeremy Forsythe <jeremy@act-spec.org>",
+  "license": "Apache-2.0",
+  "homepage": "https://act-spec.org",
+  "bugs": {
+    "url": "https://github.com/act-spec/act/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-spec/act.git"
+  },
+  "type": "module",
+  "packageManager": "pnpm@10.17.1",
+  "engines": {
+    "node": ">=20.18.0",
+    "pnpm": ">=10.0.0"
+  },
+  "workspaces": [
+    "packages/*",
+    "examples/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "pnpm -r --filter \"./packages/*\" run build",
+    "test": "pnpm -r run test",
+    "lint": "pnpm -r run lint",
+    "lint:fix": "pnpm -r run lint -- --fix",
+    "typecheck": "pnpm -r run typecheck",
+    "conformance": "pnpm -r run conformance",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "changeset": "changeset",
+    "changeset:version": "changeset version",
+    "changeset:publish": "pnpm -r build && changeset publish"
+  },
+  "pnpm": {
+    "overrides": {
+      "@astrojs/sitemap": "3.5.1"
+    }
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.9",
+    "@eslint/js": "^9.14.0",
+    "@stryker-mutator/core": "^9.6.1",
+    "@stryker-mutator/vitest-runner": "^9.6.1",
+    "@types/node": "^22.7.5",
+    "eslint": "^9.14.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.12.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.13.0",
+    "vitest": "^2.1.4"
+  }
+}

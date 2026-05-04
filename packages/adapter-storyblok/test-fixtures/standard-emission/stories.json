@@ -1,0 +1,97 @@
+{
+  "_comment": "Recorded Storyblok delivery-API response for PRD-204-R27 (standard-tier) integration. Two blog stories with TipTap-derived rich text, a story-link reference, and tag_list.",
+  "stories": [
+    {
+      "uuid": "uuid-launching-acme",
+      "id": 1001,
+      "name": "Launching Acme",
+      "slug": "launching-acme",
+      "full_slug": "blog/launching-acme",
+      "published_at": "2026-04-20T14:00:00Z",
+      "updated_at": "2026-04-21T09:15:00Z",
+      "tag_list": ["product", "launch"],
+      "content": {
+        "component": "post",
+        "_uid": "uid-post-launching",
+        "summary": "We are excited to announce the launch of Acme.",
+        "body": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "heading",
+              "attrs": { "level": 2 },
+              "content": [{ "type": "text", "text": "Why we built it" }]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                { "type": "text", "text": "The market needed " },
+                {
+                  "type": "text",
+                  "text": "a portable spec",
+                  "marks": [{ "type": "bold" }]
+                },
+                { "type": "text", "text": " for content." }
+              ]
+            },
+            {
+              "type": "code_block",
+              "attrs": { "class": "language-bash" },
+              "content": [{ "type": "text", "text": "curl https://api.acme.example/v1" }]
+            },
+            {
+              "type": "blockquote",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    { "type": "text", "text": "Acme is generally available in the EU and US." }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "related_articles": [
+          { "linktype": "story", "uuid": "uuid-our-mission" }
+        ]
+      }
+    },
+    {
+      "uuid": "uuid-our-mission",
+      "id": 1002,
+      "name": "Our Mission",
+      "slug": "our-mission",
+      "full_slug": "blog/our-mission",
+      "published_at": "2026-04-15T10:00:00Z",
+      "updated_at": "2026-04-15T10:00:00Z",
+      "tag_list": ["company"],
+      "content": {
+        "component": "post",
+        "_uid": "uid-post-mission",
+        "summary": "Why we're here.",
+        "body": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                { "type": "text", "text": "Make content portable across agents." }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "refStories": {
+    "uuid-our-mission": {
+      "uuid": "uuid-our-mission",
+      "id": 1002,
+      "name": "Our Mission",
+      "slug": "our-mission",
+      "full_slug": "blog/our-mission",
+      "content": { "component": "post" }
+    }
+  }
+}

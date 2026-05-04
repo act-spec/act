@@ -1,0 +1,30 @@
+{
+  "_fixture": "PRD-104 positive — Pattern 2 Spanish node carrying translation_of cross-reference",
+  "_satisfies": ["PRD-104-R8", "PRD-104-R9"],
+  "act_version": "0.1",
+  "id": "precios",
+  "type": "landing",
+  "title": "Precios",
+  "etag": "s256:9k3l_q1z2RstuvWXyz_AbcDefG",
+  "summary": "Niveles de precios de Acme, comparación de planes y preguntas frecuentes.",
+  "metadata": {
+    "locale": "es-ES",
+    "translation_status": "complete",
+    "translations": [
+      { "locale": "en-US", "id": "pricing" },
+      { "locale": "de-DE", "id": "preise" },
+      { "locale": "ja-JP", "id": "kakaku" }
+    ]
+  },
+  "related": [
+    { "id": "pricing", "relation": "translation_of", "locale": "en-US" }
+  ],
+  "content": [
+    {
+      "type": "marketing:hero",
+      "headline": "Precios simples y transparentes",
+      "subhead": "Sin tarifas ocultas. Cancela cuando quieras."
+    }
+  ],
+  "tokens": { "summary": 13, "body": 298 }
+}

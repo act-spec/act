@@ -1,0 +1,31 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-109",
+    "satisfies": ["PRD-109-R6", "PRD-109-R7", "PRD-109-R8"],
+    "describes": "A manifest auth.schemes array correctly ordered by server preference (most-preferred first, PRD-109-R6). OAuth 2.0 entry declares the required authorization_endpoint, token_endpoint, and a non-empty scopes_supported including 'act.read' (PRD-109-R7). The api_key entry uses the recommended Authorization: Bearer pattern (default header_name) per PRD-109-R8.",
+    "validates_against": "schemas/109/auth-schemes.schema.json"
+  },
+  "act_version": "0.1",
+  "site": { "name": "Acme Workspace" },
+  "delivery": "runtime",
+  "conformance": { "level": "standard" },
+  "auth": {
+    "schemes": [
+      {
+        "kind": "oauth2",
+        "authorization_endpoint": "https://acme.com/oauth/authorize",
+        "token_endpoint": "https://acme.com/oauth/token",
+        "scopes_supported": ["act.read", "act.write"]
+      },
+      {
+        "kind": "bearer"
+      },
+      {
+        "kind": "api_key",
+        "header_name": "Authorization"
+      }
+    ]
+  },
+  "index_url": "/act/index.json",
+  "node_url_template": "/act/n/{id}.json"
+}

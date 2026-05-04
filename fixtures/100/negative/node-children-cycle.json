@@ -1,0 +1,34 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-100",
+    "violates": [
+      "PRD-100-R25"
+    ],
+    "expected_error": {
+      "level": "core",
+      "requirement": "PRD-100-R25",
+      "missing": "Node children graph contains a cycle (node references itself in children); enforced programmatically by PRD-600.",
+      "kind": "integration-only"
+    }
+  },
+  "_negative_reason": "Node lists itself in `children`, creating a cycle. PRD-100 forbids cycles in `children` (gap E3).",
+  "act_version": "0.1",
+  "id": "intro",
+  "type": "article",
+  "title": "Introduction",
+  "etag": "s256:abc1230000000000000000",
+  "summary": "An overview of Acme widgets.",
+  "content": [
+    {
+      "type": "markdown",
+      "text": "..."
+    }
+  ],
+  "tokens": {
+    "summary": 14,
+    "body": 100
+  },
+  "children": [
+    "intro"
+  ]
+}

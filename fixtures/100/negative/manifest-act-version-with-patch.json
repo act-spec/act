@@ -1,0 +1,24 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-100",
+    "violates": [
+      "PRD-100-R1"
+    ],
+    "expected_error": {
+      "level": "core",
+      "requirement": "PRD-100-R1",
+      "missing": "act_version contains a PATCH segment; PRD-108-R3 forbids PATCH on the wire."
+    }
+  },
+  "_negative_reason": "`act_version` includes a PATCH segment. Violates PRD-108-R3 (no PATCH segment) and the PRD-100 envelope shape.",
+  "act_version": "0.1.0",
+  "site": {
+    "name": "Broken"
+  },
+  "index_url": "/act/index.json",
+  "node_url_template": "/act/n/{id}.json",
+  "conformance": {
+    "level": "core"
+  },
+  "delivery": "static"
+}

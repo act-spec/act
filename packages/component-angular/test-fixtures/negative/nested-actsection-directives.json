@@ -1,0 +1,6 @@
+{
+  "id": "nested-actsection-directives",
+  "requirements": ["PRD-303-R11", "PRD-300-R13"],
+  "description": "*actSection nested inside another *actSection MUST cause a build error per PRD-303-R11 / PRD-300-R13. Pages do not nest; sub-pages are separate routes with their own page-level contracts.",
+  "expectedErrorSubstring": "PRD-303-R11"
+}

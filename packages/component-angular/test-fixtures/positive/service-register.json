@@ -1,0 +1,11 @@
+{
+  "id": "service-register",
+  "requirements": ["PRD-303-R4", "PRD-303-R6", "PRD-303-R8", "PRD-303-R10", "PRD-303-R14"],
+  "description": "Service-based declaration via ActContractService.register(contract). Verifies the binding emits one canonical NodeDraft whose first content block is the marketing:pricing-table contract, that extract runs once per (instance, variant) per PRD-303-R8, and that metadata is correctly stamped per PRD-303-R14.",
+  "expected": {
+    "draftCount": 1,
+    "blockTypes": ["marketing:pricing-table"],
+    "extractedVia": "component-contract",
+    "extractionMethod": "ssr-walk"
+  }
+}

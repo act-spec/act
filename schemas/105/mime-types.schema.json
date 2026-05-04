@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/105/mime-types.schema.json",
+  "title": "ACT static-profile MIME type values",
+  "description": "Closed-enum schema for the `Content-Type` value the CDN serves for each static-profile resource. Provisional pending PRD-803 IANA registration; the values listed here are the strings producers and consumers MUST use in the interim. The `; profile=static` parameter on `application/act-manifest+json` is REQUIRED for static-profile manifests; PRD-106 owns the runtime variant. See PRD-105 and gap B5.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest", "index", "node", "subtree"],
+  "properties": {
+    "manifest": {
+      "type": "string",
+      "const": "application/act-manifest+json; profile=static",
+      "description": "MIME type the CDN MUST serve at the well-known manifest path under the static profile."
+    },
+    "index": {
+      "type": "string",
+      "const": "application/act-index+json",
+      "description": "MIME type the CDN MUST serve for the index file at the URL declared by `index_url`."
+    },
+    "index_ndjson": {
+      "type": "string",
+      "const": "application/act-index+json",
+      "description": "MIME type for the NDJSON index file at `index_ndjson_url` (Plus only). The MIME type is the same as the JSON index because both encode the same logical data; consumers disambiguate by content (line-delimited vs single object) or by URL."
+    },
+    "node": {
+      "type": "string",
+      "const": "application/act-node+json",
+      "description": "MIME type for individual node files."
+    },
+    "subtree": {
+      "type": "string",
+      "const": "application/act-subtree+json",
+      "description": "MIME type for subtree files (Standard / Plus when subtree advertised)."
+    },
+    "error": {
+      "type": "string",
+      "const": "application/act-error+json",
+      "description": "MIME type for error envelopes. Rare under the static profile — typically only the CDN's own error pages, which ACT does not control. Listed here for completeness."
+    }
+  }
+}

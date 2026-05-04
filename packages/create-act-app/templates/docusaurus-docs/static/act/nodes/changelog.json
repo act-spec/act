@@ -1,0 +1,35 @@
+{
+  "act_version": "0.1",
+  "id": "changelog",
+  "type": "reference",
+  "title": "Changelog",
+  "summary": "Release notes for the Tinybox SDK reference docs.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "v0.1 — 2026-05-02"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Initial public release.Buckets, Objects, and Webhooks API surfaces.100+ recipes and 60+ troubleshooting entries."
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 22
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-markdown",
+      "source_id": "changelog.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/changelog.md"
+    }
+  },
+  "etag": "s256:YfbINwFbcKw0MNgUkTvntl",
+  "source": {
+    "human_url": "https://example.com/changelog/"
+  }
+}

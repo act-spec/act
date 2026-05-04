@@ -1,0 +1,169 @@
+/* Site-wide CSS overrides for the ACT homepage. Layered on top of
+ * Starlight's defaults; minimal by design. */
+
+:root {
+  --sl-color-accent-low: #0d2347;
+  --sl-color-accent: #0b3d91;
+  --sl-color-accent-high: #5e8af5;
+}
+
+:root[data-theme='light'] {
+  --sl-color-accent-low: #cfe1ff;
+  --sl-color-accent: #0b3d91;
+  --sl-color-accent-high: #08305f;
+}
+
+/* Hero on the homepage. */
+.act-hero {
+  display: grid;
+  gap: 1.25rem;
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+
+.act-hero h1 {
+  font-size: clamp(2rem, 4vw + 1rem, 3.5rem);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.act-hero .tagline {
+  font-size: clamp(1.05rem, 1vw + 0.85rem, 1.4rem);
+  color: var(--sl-color-gray-2);
+  max-width: 44rem;
+  margin: 0 auto;
+}
+
+.act-hero .cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.act-hero .cta {
+  display: inline-block;
+  padding: 0.6rem 1.1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--sl-color-accent);
+}
+
+.act-hero .cta.primary {
+  background: var(--sl-color-accent);
+  color: #fff;
+}
+
+.act-hero .cta.secondary {
+  color: var(--sl-color-accent);
+}
+
+/* Feature tile row. */
+.feature-row {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  margin: 2.5rem 0;
+}
+
+.feature-tile {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 10px;
+  padding: 1.25rem 1.25rem 1rem;
+  background: var(--sl-color-bg);
+}
+
+.feature-tile h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+}
+
+.feature-tile p {
+  margin: 0 0 0.6rem;
+  color: var(--sl-color-gray-2);
+}
+
+.feature-tile .more {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* MCP config snippet block. */
+.mcp-snippet {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin: 2rem 0;
+}
+
+.mcp-snippet h3 {
+  margin: 0 0 0.5rem;
+}
+
+.mcp-snippet pre {
+  background: var(--sl-color-gray-6);
+  color: var(--sl-color-text);
+  padding: 0.85rem 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.mcp-snippet .copy-btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 5px;
+  border: 1px solid var(--sl-color-gray-5);
+  background: var(--sl-color-bg);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.mcp-snippet .copy-btn:hover {
+  border-color: var(--sl-color-accent);
+}
+
+/* Examples gallery. */
+.example-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  margin: 1.5rem 0;
+}
+
+.example-card {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+}
+
+.example-card h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1rem;
+}
+
+.example-card .stack {
+  font-size: 0.78rem;
+  color: var(--sl-color-gray-3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.example-card p {
+  margin: 0.4rem 0 0.6rem;
+  color: var(--sl-color-gray-2);
+  font-size: 0.93rem;
+}
+
+/* Comparison summary on the homepage. */
+.comparison-summary {
+  border-left: 4px solid var(--sl-color-accent);
+  padding: 0.5rem 0 0.5rem 1rem;
+  margin: 2rem 0;
+  background: var(--sl-color-gray-7);
+  border-radius: 0 6px 6px 0;
+}

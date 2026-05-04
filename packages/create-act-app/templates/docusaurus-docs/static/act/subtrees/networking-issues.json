@@ -1,0 +1,665 @@
+{
+  "act_version": "0.1",
+  "root": "networking-issues",
+  "depth": 3,
+  "truncated": false,
+  "tokens": {
+    "body": 1084,
+    "summary": 236
+  },
+  "nodes": [
+    {
+      "act_version": "0.1",
+      "id": "networking-issues",
+      "type": "section",
+      "title": "Networking issues",
+      "summary": "Networking issues — section.",
+      "summary_source": "extracted",
+      "etag": "s256:ypfkvtGJYb1ZqJtVdhdA0h",
+      "content": [
+        {
+          "type": "markdown",
+          "content": "# Networking issues\n\nThis section groups related networking issues documents.\n"
+        }
+      ],
+      "tokens": {
+        "summary": 8,
+        "body": 16
+      },
+      "children": [
+        "troubleshooting/networking/connection-reset-symptom",
+        "troubleshooting/networking/connection-reset-resolution",
+        "troubleshooting/networking/connection-reset-reproduction",
+        "troubleshooting/networking/tls-version-too-old-symptom",
+        "troubleshooting/networking/tls-version-too-old-resolution",
+        "troubleshooting/networking/tls-version-too-old-reproduction",
+        "troubleshooting/networking/http2-required-symptom",
+        "troubleshooting/networking/http2-required-resolution",
+        "troubleshooting/networking/http2-required-reproduction",
+        "troubleshooting/networking/proxy-misconfigured-symptom",
+        "troubleshooting/networking/proxy-misconfigured-resolution",
+        "troubleshooting/networking/proxy-misconfigured-reproduction",
+        "troubleshooting/networking/dns-resolution-failed-symptom",
+        "troubleshooting/networking/dns-resolution-failed-resolution",
+        "troubleshooting/networking/dns-resolution-failed-reproduction",
+        "troubleshooting/networking/cross-region-latency-symptom",
+        "troubleshooting/networking/cross-region-latency-resolution",
+        "troubleshooting/networking/cross-region-latency-reproduction",
+        "troubleshooting/networking/mtu-issues-symptom",
+        "troubleshooting/networking/mtu-issues-resolution",
+        "troubleshooting/networking/mtu-issues-reproduction",
+        "troubleshooting/networking/ipv6-disabled-symptom",
+        "troubleshooting/networking/ipv6-disabled-resolution",
+        "troubleshooting/networking/ipv6-disabled-reproduction"
+      ],
+      "parent": "troubleshooting",
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "sidebar-category:networking-issues"
+        }
+      }
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/connection-reset-symptom",
+      "type": "troubleshooting",
+      "title": "Connection reset symptom (Networking)",
+      "summary": "Resolve \"connection reset\" — symptom for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/connection-reset-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/connection-reset-symptom.md"
+        }
+      },
+      "etag": "s256:1ViEen-NPtFT7x9YM3g3nf",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/connection-reset-symptom/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/connection-reset-resolution",
+      "type": "troubleshooting",
+      "title": "Connection reset resolution (Networking)",
+      "summary": "Resolve \"connection reset\" — resolution for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/connection-reset-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/connection-reset-resolution.md"
+        }
+      },
+      "etag": "s256:ZQi_5B3GPfskxPBg9rhLdK",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/connection-reset-resolution/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/connection-reset-reproduction",
+      "type": "troubleshooting",
+      "title": "Connection reset reproduction (Networking)",
+      "summary": "Resolve \"connection reset\" — reproduction for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/connection-reset-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/connection-reset-reproduction.md"
+        }
+      },
+      "etag": "s256:DpwrfiNNoAGrtkyyjsXWId",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/connection-reset-reproduction/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/tls-version-too-old-symptom",
+      "type": "troubleshooting",
+      "title": "Tls version too old symptom (Networking)",
+      "summary": "Resolve \"tls version too old\" — symptom for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 11,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/tls-version-too-old-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/tls-version-too-old-symptom.md"
+        }
+      },
+      "etag": "s256:duVy8YMltT8CNdEeMl7j7E",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/tls-version-too-old-symptom/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/tls-version-too-old-resolution",
+      "type": "troubleshooting",
+      "title": "Tls version too old resolution (Networking)",
+      "summary": "Resolve \"tls version too old\" — resolution for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 11,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/tls-version-too-old-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/tls-version-too-old-resolution.md"
+        }
+      },
+      "etag": "s256:vqzgAo7MUTaPttnBB4z1f7",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/tls-version-too-old-resolution/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/tls-version-too-old-reproduction",
+      "type": "troubleshooting",
+      "title": "Tls version too old reproduction (Networking)",
+      "summary": "Resolve \"tls version too old\" — reproduction for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 11,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/tls-version-too-old-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/tls-version-too-old-reproduction.md"
+        }
+      },
+      "etag": "s256:QneZxtmW6zsoOZ_4EBsX8W",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/tls-version-too-old-reproduction/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/http2-required-symptom",
+      "type": "troubleshooting",
+      "title": "Http2 required symptom (Networking)",
+      "summary": "Resolve \"http2 required\" — symptom for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/http2-required-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/http2-required-symptom.md"
+        }
+      },
+      "etag": "s256:KUV7W5ySLVttO11JQJ_6M5",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/http2-required-symptom/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/http2-required-resolution",
+      "type": "troubleshooting",
+      "title": "Http2 required resolution (Networking)",
+      "summary": "Resolve \"http2 required\" — resolution for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/http2-required-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/http2-required-resolution.md"
+        }
+      },
+      "etag": "s256:KxLNJEfXkxPyxGLSltIAWV",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/http2-required-resolution/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/http2-required-reproduction",
+      "type": "troubleshooting",
+      "title": "Http2 required reproduction (Networking)",
+      "summary": "Resolve \"http2 required\" — reproduction for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/http2-required-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/http2-required-reproduction.md"
+        }
+      },
+      "etag": "s256:lryqYd4nyTulBT_UTyT7_f",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/http2-required-reproduction/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/proxy-misconfigured-symptom",
+      "type": "troubleshooting",
+      "title": "Proxy misconfigured symptom (Networking)",
+      "summary": "Resolve \"proxy misconfigured\" — symptom for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/proxy-misconfigured-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/proxy-misconfigured-symptom.md"
+        }
+      },
+      "etag": "s256:VO6cxCBBhcSrfF_WTDYlnG",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/proxy-misconfigured-symptom/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/proxy-misconfigured-resolution",
+      "type": "troubleshooting",
+      "title": "Proxy misconfigured resolution (Networking)",
+      "summary": "Resolve \"proxy misconfigured\" — resolution for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/proxy-misconfigured-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/proxy-misconfigured-resolution.md"
+        }
+      },
+      "etag": "s256:4NlMedgFotIwPpGHdD4LkC",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/proxy-misconfigured-resolution/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/proxy-misconfigured-reproduction",
+      "type": "troubleshooting",
+      "title": "Proxy misconfigured reproduction (Networking)",
+      "summary": "Resolve \"proxy misconfigured\" — reproduction for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/proxy-misconfigured-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/proxy-misconfigured-reproduction.md"
+        }
+      },
+      "etag": "s256:kyfS5jU8dENQPFERzPqQXz",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/proxy-misconfigured-reproduction/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/dns-resolution-failed-symptom",
+      "type": "troubleshooting",
+      "title": "Dns resolution failed symptom (Networking)",
+      "summary": "Resolve \"dns resolution failed\" — symptom for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/dns-resolution-failed-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/dns-resolution-failed-symptom.md"
+        }
+      },
+      "etag": "s256:rV9as7oNd_m4bvA8FXoG4T",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/dns-resolution-failed-symptom/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/dns-resolution-failed-resolution",
+      "type": "troubleshooting",
+      "title": "Dns resolution failed resolution (Networking)",
+      "summary": "Resolve \"dns resolution failed\" — resolution for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/dns-resolution-failed-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/dns-resolution-failed-resolution.md"
+        }
+      },
+      "etag": "s256:o00OQWypu7t-lWOTvtb7RK",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/dns-resolution-failed-resolution/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/dns-resolution-failed-reproduction",
+      "type": "troubleshooting",
+      "title": "Dns resolution failed reproduction (Networking)",
+      "summary": "Resolve \"dns resolution failed\" — reproduction for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/dns-resolution-failed-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/dns-resolution-failed-reproduction.md"
+        }
+      },
+      "etag": "s256:YEo8nj7Pe2uXImJrIyjLnv",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/dns-resolution-failed-reproduction/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/cross-region-latency-symptom",
+      "type": "troubleshooting",
+      "title": "Cross region latency symptom (Networking)",
+      "summary": "Resolve \"cross region latency\" — symptom for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/cross-region-latency-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/cross-region-latency-symptom.md"
+        }
+      },
+      "etag": "s256:p8FO1FHjGqXc2nguuOa7Ab",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/cross-region-latency-symptom/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/cross-region-latency-resolution",
+      "type": "troubleshooting",
+      "title": "Cross region latency resolution (Networking)",
+      "summary": "Resolve \"cross region latency\" — resolution for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/cross-region-latency-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/cross-region-latency-resolution.md"
+        }
+      },
+      "etag": "s256:VQ_w9ZHyfSLrXRRCHAXJOF",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/cross-region-latency-resolution/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/cross-region-latency-reproduction",
+      "type": "troubleshooting",
+      "title": "Cross region latency reproduction (Networking)",
+      "summary": "Resolve \"cross region latency\" — reproduction for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/cross-region-latency-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/cross-region-latency-reproduction.md"
+        }
+      },
+      "etag": "s256:3t6YCPJHQtAjwX39YZyPUG",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/cross-region-latency-reproduction/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/mtu-issues-symptom",
+      "type": "troubleshooting",
+      "title": "Mtu issues symptom (Networking)",
+      "summary": "Resolve \"mtu issues\" — symptom for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/mtu-issues-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/mtu-issues-symptom.md"
+        }
+      },
+      "etag": "s256:Sf5nKq9INgIlFv0IfG-hdR",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/mtu-issues-symptom/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/mtu-issues-resolution",
+      "type": "troubleshooting",
+      "title": "Mtu issues resolution (Networking)",
+      "summary": "Resolve \"mtu issues\" — resolution for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/mtu-issues-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/mtu-issues-resolution.md"
+        }
+      },
+      "etag": "s256:Tp0GEt8u-XW6PlzVmkq_OX",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/mtu-issues-resolution/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/mtu-issues-reproduction",
+      "type": "troubleshooting",
+      "title": "Mtu issues reproduction (Networking)",
+      "summary": "Resolve \"mtu issues\" — reproduction for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/mtu-issues-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/mtu-issues-reproduction.md"
+        }
+      },
+      "etag": "s256:4Hok1XPgOG58mMtTxzA_IO",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/mtu-issues-reproduction/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/ipv6-disabled-symptom",
+      "type": "troubleshooting",
+      "title": "Ipv6 disabled symptom (Networking)",
+      "summary": "Resolve \"ipv6 disabled\" — symptom for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/ipv6-disabled-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/ipv6-disabled-symptom.md"
+        }
+      },
+      "etag": "s256:TbAf4qrO3oIACfJHTnUSwC",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/ipv6-disabled-symptom/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/ipv6-disabled-resolution",
+      "type": "troubleshooting",
+      "title": "Ipv6 disabled resolution (Networking)",
+      "summary": "Resolve \"ipv6 disabled\" — resolution for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/ipv6-disabled-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/ipv6-disabled-resolution.md"
+        }
+      },
+      "etag": "s256:OyMx1NJpBzj8AJQx6uEi9n",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/ipv6-disabled-resolution/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/ipv6-disabled-reproduction",
+      "type": "troubleshooting",
+      "title": "Ipv6 disabled reproduction (Networking)",
+      "summary": "Resolve \"ipv6 disabled\" — reproduction for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/ipv6-disabled-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/ipv6-disabled-reproduction.md"
+        }
+      },
+      "etag": "s256:ozv6xzak01ST_KtY_Jrt-3",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/ipv6-disabled-reproduction/"
+      },
+      "parent": "networking-issues"
+    }
+  ],
+  "etag": "s256:BNwT5j1hZOHcnxrHNOB6uT"
+}

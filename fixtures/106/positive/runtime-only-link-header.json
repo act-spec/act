@@ -1,0 +1,30 @@
+{
+  "scenario": "Runtime-only deployment: every authenticated response carries the Link header pointing at the well-known ACT manifest, and the manifest declares delivery: \"runtime\"",
+  "satisfies": ["PRD-106-R23", "PRD-106-R24", "PRD-106-R25"],
+  "manifest_excerpt": {
+    "act_version": "0.1",
+    "site": { "name": "Acme Workspace" },
+    "delivery": "runtime",
+    "conformance": { "level": "core" }
+  },
+  "responses": [
+    {
+      "request_url": "https://app.acme.com/api/whoami",
+      "response_status": 200,
+      "response_headers": {
+        "Content-Type": "application/json",
+        "Link": "</.well-known/act.json>; rel=\"act\"; type=\"application/act-manifest+json\"; profile=\"runtime\""
+      },
+      "note": "Non-ACT JSON endpoint that still emits the discovery hand-off because the deployment is runtime-only."
+    },
+    {
+      "request_url": "https://app.acme.com/dashboard",
+      "response_status": 200,
+      "response_headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Link": "</.well-known/act.json>; rel=\"act\"; type=\"application/act-manifest+json\"; profile=\"runtime\""
+      },
+      "html_excerpt": "<head>\n  <link rel=\"act\" href=\"/.well-known/act.json\" type=\"application/act-manifest+json; profile=runtime\">\n</head>"
+    }
+  ]
+}

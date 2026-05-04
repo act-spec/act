@@ -1,0 +1,31 @@
+{
+  "act_version": "0.1",
+  "id": "getting-started/first-project",
+  "type": "doc",
+  "title": "Your first project",
+  "summary": "Walk through wiring a real application against Tinybox storage.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "A guided walkthrough that wires the SDK into an Express app and uploads\nuser-supplied media to a fresh bucket. End-to-end in roughly 100 lines."
+    }
+  ],
+  "tokens": {
+    "summary": 9,
+    "body": 24
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "getting-started/first-project.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/getting-started/first-project.md"
+    }
+  },
+  "etag": "s256:w6PmWnmpRCCQlyRaN3vIg_",
+  "source": {
+    "human_url": "https://example.com/getting-started/first-project/"
+  },
+  "parent": "getting-started"
+}

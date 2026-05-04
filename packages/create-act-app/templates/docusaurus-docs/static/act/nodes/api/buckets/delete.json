@@ -1,0 +1,37 @@
+{
+  "act_version": "0.1",
+  "id": "api/buckets/delete",
+  "type": "reference",
+  "title": "Delete a bucket",
+  "summary": "Remove an empty bucket from the workspace.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "DELETE /v1/buckets/{name} — fails with 409 when the bucket contains objects."
+    }
+  ],
+  "tokens": {
+    "summary": 7,
+    "body": 11
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "api/buckets/delete.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/api/buckets/delete.md"
+    }
+  },
+  "etag": "s256:pO-RgaoeuXe8GznL9a7KPH",
+  "related": [
+    {
+      "id": "api/buckets/create",
+      "relation": "see-also"
+    }
+  ],
+  "source": {
+    "human_url": "https://example.com/api/buckets/delete/"
+  },
+  "parent": "buckets"
+}

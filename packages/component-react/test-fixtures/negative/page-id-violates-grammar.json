@@ -1,0 +1,7 @@
+{
+  "id": "page-id-violates-grammar",
+  "requirements": ["PRD-301-R7", "PRD-100-R10"],
+  "description": "A page-level id that violates the PRD-100-R10 grammar (uppercase, leading hyphen, etc.) MUST throw BuildError(\"PRD-301-R7\") and skip the route.",
+  "input": { "id": "BadID" },
+  "expectedErrorSubstring": "PRD-100-R10"
+}

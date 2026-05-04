@@ -1,0 +1,665 @@
+{
+  "act_version": "0.1",
+  "root": "buckets-issues",
+  "depth": 3,
+  "truncated": false,
+  "tokens": {
+    "body": 1096,
+    "summary": 248
+  },
+  "nodes": [
+    {
+      "act_version": "0.1",
+      "id": "buckets-issues",
+      "type": "section",
+      "title": "Buckets issues",
+      "summary": "Buckets issues — section.",
+      "summary_source": "extracted",
+      "etag": "s256:cMJSbWq2gkMiFLkyg4uAuN",
+      "content": [
+        {
+          "type": "markdown",
+          "content": "# Buckets issues\n\nThis section groups related buckets issues documents.\n"
+        }
+      ],
+      "tokens": {
+        "summary": 8,
+        "body": 16
+      },
+      "children": [
+        "troubleshooting/buckets/bucket-name-conflict-symptom",
+        "troubleshooting/buckets/bucket-name-conflict-resolution",
+        "troubleshooting/buckets/bucket-name-conflict-reproduction",
+        "troubleshooting/buckets/bucket-not-empty-symptom",
+        "troubleshooting/buckets/bucket-not-empty-resolution",
+        "troubleshooting/buckets/bucket-not-empty-reproduction",
+        "troubleshooting/buckets/region-not-supported-symptom",
+        "troubleshooting/buckets/region-not-supported-resolution",
+        "troubleshooting/buckets/region-not-supported-reproduction",
+        "troubleshooting/buckets/create-rate-limited-symptom",
+        "troubleshooting/buckets/create-rate-limited-resolution",
+        "troubleshooting/buckets/create-rate-limited-reproduction",
+        "troubleshooting/buckets/replication-lag-symptom",
+        "troubleshooting/buckets/replication-lag-resolution",
+        "troubleshooting/buckets/replication-lag-reproduction",
+        "troubleshooting/buckets/lifecycle-not-applied-symptom",
+        "troubleshooting/buckets/lifecycle-not-applied-resolution",
+        "troubleshooting/buckets/lifecycle-not-applied-reproduction",
+        "troubleshooting/buckets/cross-account-access-denied-symptom",
+        "troubleshooting/buckets/cross-account-access-denied-resolution",
+        "troubleshooting/buckets/cross-account-access-denied-reproduction",
+        "troubleshooting/buckets/unexpected-versioning-state-symptom",
+        "troubleshooting/buckets/unexpected-versioning-state-resolution",
+        "troubleshooting/buckets/unexpected-versioning-state-reproduction"
+      ],
+      "parent": "troubleshooting",
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "sidebar-category:buckets-issues"
+        }
+      }
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/bucket-name-conflict-symptom",
+      "type": "troubleshooting",
+      "title": "Bucket name conflict symptom (Buckets)",
+      "summary": "Resolve \"bucket name conflict\" — symptom for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/bucket-name-conflict-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/bucket-name-conflict-symptom.md"
+        }
+      },
+      "etag": "s256:gDle7ZxbY-ECPNuain6jwS",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/bucket-name-conflict-symptom/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/bucket-name-conflict-resolution",
+      "type": "troubleshooting",
+      "title": "Bucket name conflict resolution (Buckets)",
+      "summary": "Resolve \"bucket name conflict\" — resolution for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/bucket-name-conflict-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/bucket-name-conflict-resolution.md"
+        }
+      },
+      "etag": "s256:OMf_ZFv_mpJPpnxZjWvqFg",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/bucket-name-conflict-resolution/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/bucket-name-conflict-reproduction",
+      "type": "troubleshooting",
+      "title": "Bucket name conflict reproduction (Buckets)",
+      "summary": "Resolve \"bucket name conflict\" — reproduction for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/bucket-name-conflict-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/bucket-name-conflict-reproduction.md"
+        }
+      },
+      "etag": "s256:CGpiq6UNpePq_FvI5dSbZ1",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/bucket-name-conflict-reproduction/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/bucket-not-empty-symptom",
+      "type": "troubleshooting",
+      "title": "Bucket not empty symptom (Buckets)",
+      "summary": "Resolve \"bucket not empty\" — symptom for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/bucket-not-empty-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/bucket-not-empty-symptom.md"
+        }
+      },
+      "etag": "s256:kV4exDT6KrnlGRO50nwwlh",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/bucket-not-empty-symptom/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/bucket-not-empty-resolution",
+      "type": "troubleshooting",
+      "title": "Bucket not empty resolution (Buckets)",
+      "summary": "Resolve \"bucket not empty\" — resolution for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/bucket-not-empty-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/bucket-not-empty-resolution.md"
+        }
+      },
+      "etag": "s256:EYCvM-lQsdoiRauFBGeLpf",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/bucket-not-empty-resolution/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/bucket-not-empty-reproduction",
+      "type": "troubleshooting",
+      "title": "Bucket not empty reproduction (Buckets)",
+      "summary": "Resolve \"bucket not empty\" — reproduction for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/bucket-not-empty-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/bucket-not-empty-reproduction.md"
+        }
+      },
+      "etag": "s256:EQwbYCTsQx52qx3KveJmM8",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/bucket-not-empty-reproduction/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/region-not-supported-symptom",
+      "type": "troubleshooting",
+      "title": "Region not supported symptom (Buckets)",
+      "summary": "Resolve \"region not supported\" — symptom for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/region-not-supported-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/region-not-supported-symptom.md"
+        }
+      },
+      "etag": "s256:alWDHmh1rrRucoL2JUmKSm",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/region-not-supported-symptom/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/region-not-supported-resolution",
+      "type": "troubleshooting",
+      "title": "Region not supported resolution (Buckets)",
+      "summary": "Resolve \"region not supported\" — resolution for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/region-not-supported-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/region-not-supported-resolution.md"
+        }
+      },
+      "etag": "s256:gjdu2j6mvwRkPx52Myor2n",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/region-not-supported-resolution/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/region-not-supported-reproduction",
+      "type": "troubleshooting",
+      "title": "Region not supported reproduction (Buckets)",
+      "summary": "Resolve \"region not supported\" — reproduction for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/region-not-supported-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/region-not-supported-reproduction.md"
+        }
+      },
+      "etag": "s256:T378cT9dDatnjoxwKbkjEN",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/region-not-supported-reproduction/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/create-rate-limited-symptom",
+      "type": "troubleshooting",
+      "title": "Create rate limited symptom (Buckets)",
+      "summary": "Resolve \"create rate limited\" — symptom for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/create-rate-limited-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/create-rate-limited-symptom.md"
+        }
+      },
+      "etag": "s256:c4HvBoMKDddy0azQ7Zerf6",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/create-rate-limited-symptom/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/create-rate-limited-resolution",
+      "type": "troubleshooting",
+      "title": "Create rate limited resolution (Buckets)",
+      "summary": "Resolve \"create rate limited\" — resolution for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/create-rate-limited-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/create-rate-limited-resolution.md"
+        }
+      },
+      "etag": "s256:1vZYsnoLyjUWGBIPvHOQvw",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/create-rate-limited-resolution/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/create-rate-limited-reproduction",
+      "type": "troubleshooting",
+      "title": "Create rate limited reproduction (Buckets)",
+      "summary": "Resolve \"create rate limited\" — reproduction for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/create-rate-limited-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/create-rate-limited-reproduction.md"
+        }
+      },
+      "etag": "s256:PQIjWa5z8HlgePL-usBEJm",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/create-rate-limited-reproduction/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/replication-lag-symptom",
+      "type": "troubleshooting",
+      "title": "Replication lag symptom (Buckets)",
+      "summary": "Resolve \"replication lag\" — symptom for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/replication-lag-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/replication-lag-symptom.md"
+        }
+      },
+      "etag": "s256:ze2i3jh2RF9212cDldC5Cb",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/replication-lag-symptom/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/replication-lag-resolution",
+      "type": "troubleshooting",
+      "title": "Replication lag resolution (Buckets)",
+      "summary": "Resolve \"replication lag\" — resolution for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/replication-lag-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/replication-lag-resolution.md"
+        }
+      },
+      "etag": "s256:DvHGgA8vglOgUNsGKF-kYs",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/replication-lag-resolution/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/replication-lag-reproduction",
+      "type": "troubleshooting",
+      "title": "Replication lag reproduction (Buckets)",
+      "summary": "Resolve \"replication lag\" — reproduction for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/replication-lag-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/replication-lag-reproduction.md"
+        }
+      },
+      "etag": "s256:eC6bgEQAGJ72OB9Dk6Hlvd",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/replication-lag-reproduction/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/lifecycle-not-applied-symptom",
+      "type": "troubleshooting",
+      "title": "Lifecycle not applied symptom (Buckets)",
+      "summary": "Resolve \"lifecycle not applied\" — symptom for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/lifecycle-not-applied-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/lifecycle-not-applied-symptom.md"
+        }
+      },
+      "etag": "s256:DqvCZUXw7USWMIK3zWwvPH",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/lifecycle-not-applied-symptom/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/lifecycle-not-applied-resolution",
+      "type": "troubleshooting",
+      "title": "Lifecycle not applied resolution (Buckets)",
+      "summary": "Resolve \"lifecycle not applied\" — resolution for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/lifecycle-not-applied-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/lifecycle-not-applied-resolution.md"
+        }
+      },
+      "etag": "s256:twJVkEkgKwscA_ItiL-Dnd",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/lifecycle-not-applied-resolution/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/lifecycle-not-applied-reproduction",
+      "type": "troubleshooting",
+      "title": "Lifecycle not applied reproduction (Buckets)",
+      "summary": "Resolve \"lifecycle not applied\" — reproduction for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/lifecycle-not-applied-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/lifecycle-not-applied-reproduction.md"
+        }
+      },
+      "etag": "s256:ektsCLMTpwVwIXIo7DJPVD",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/lifecycle-not-applied-reproduction/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/cross-account-access-denied-symptom",
+      "type": "troubleshooting",
+      "title": "Cross account access denied symptom (Buckets)",
+      "summary": "Resolve \"cross account access denied\" — symptom for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 11,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/cross-account-access-denied-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/cross-account-access-denied-symptom.md"
+        }
+      },
+      "etag": "s256:B_-Bdqppiwr0dJ-ynMyMgR",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/cross-account-access-denied-symptom/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/cross-account-access-denied-resolution",
+      "type": "troubleshooting",
+      "title": "Cross account access denied resolution (Buckets)",
+      "summary": "Resolve \"cross account access denied\" — resolution for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 11,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/cross-account-access-denied-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/cross-account-access-denied-resolution.md"
+        }
+      },
+      "etag": "s256:ONHvIOFKN-D_EJwTWnQjIc",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/cross-account-access-denied-resolution/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/cross-account-access-denied-reproduction",
+      "type": "troubleshooting",
+      "title": "Cross account access denied reproduction (Buckets)",
+      "summary": "Resolve \"cross account access denied\" — reproduction for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 11,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/cross-account-access-denied-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/cross-account-access-denied-reproduction.md"
+        }
+      },
+      "etag": "s256:JWTwQvPD9rC0W958rdxVnn",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/cross-account-access-denied-reproduction/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/unexpected-versioning-state-symptom",
+      "type": "troubleshooting",
+      "title": "Unexpected versioning state symptom (Buckets)",
+      "summary": "Resolve \"unexpected versioning state\" — symptom for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/unexpected-versioning-state-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/unexpected-versioning-state-symptom.md"
+        }
+      },
+      "etag": "s256:VAyRZ-iI-PuQWiEhlyFAi1",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/unexpected-versioning-state-symptom/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/unexpected-versioning-state-resolution",
+      "type": "troubleshooting",
+      "title": "Unexpected versioning state resolution (Buckets)",
+      "summary": "Resolve \"unexpected versioning state\" — resolution for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/unexpected-versioning-state-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/unexpected-versioning-state-resolution.md"
+        }
+      },
+      "etag": "s256:S48pYatyie7t7x_XiwhRwG",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/unexpected-versioning-state-resolution/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/unexpected-versioning-state-reproduction",
+      "type": "troubleshooting",
+      "title": "Unexpected versioning state reproduction (Buckets)",
+      "summary": "Resolve \"unexpected versioning state\" — reproduction for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/unexpected-versioning-state-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/unexpected-versioning-state-reproduction.md"
+        }
+      },
+      "etag": "s256:3Uq5LapQq_aH_1gutFS6D7",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/unexpected-versioning-state-reproduction/"
+      },
+      "parent": "buckets-issues"
+    }
+  ],
+  "etag": "s256:Y53AvYtAFiuHNkfXvFvphR"
+}

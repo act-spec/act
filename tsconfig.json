@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": [],
+  "references": [
+    { "path": "./packages/core" },
+    { "path": "./packages/validator" },
+    { "path": "./packages/inspector" },
+    { "path": "./packages/adapter-framework" },
+    { "path": "./packages/adapter-markdown" },
+    { "path": "./packages/adapter-programmatic" },
+    { "path": "./packages/adapter-wordpress" },
+    { "path": "./packages/generator-core" },
+    { "path": "./packages/plugin-astro" },
+    { "path": "./packages/cli" },
+    { "path": "./packages/component-contract" },
+    { "path": "./packages/component-react" },
+    { "path": "./packages/component-vue" },
+    { "path": "./packages/component-angular" }
+  ]
+}

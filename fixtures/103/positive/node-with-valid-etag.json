@@ -1,0 +1,12 @@
+{
+  "act_version": "0.1",
+  "id": "intro",
+  "type": "document",
+  "title": "Introduction",
+  "summary": "A simple introduction.",
+  "content": [
+    { "type": "prose", "text": "Hello." }
+  ],
+  "tokens": { "body": 2, "summary": 4 },
+  "etag": "s256:8Z0luYEDvPcDQKLimP55qC"
+}

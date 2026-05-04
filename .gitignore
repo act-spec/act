@@ -1,0 +1,78 @@
+# Dependency directories
+node_modules/
+
+# Build outputs
+dist/
+build/
+.tsbuildinfo
+*.tsbuildinfo
+
+# Test / coverage
+coverage/
+.vitest-cache/
+.stryker-tmp/
+reports/
+
+# Generated
+packages/*/src/generated/
+
+# Tooling caches
+.turbo/
+.eslintcache
+.prettiercache
+.astro/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.shared.json
+.idea/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Misc
+*.tgz
+.npm
+
+# Internal planning runbooks (path-to-public-release)
+docs/.ephemeral/
+
+# Internal agent definitions
+.claude/
+
+# === v0.2 sanitization additions ===
+
+# Example build outputs
+examples/*/dist/
+examples/*/build/
+examples/*/.next/
+examples/*/.nuxt/
+examples/*/.output/
+examples/*/static/act/
+examples/*/static/.well-known/
+examples/*/static/.act-build-report.json
+examples/*/public/act/
+examples/*/public/.well-known/
+examples/*/public/.act-build-report.json
+examples/*/public/llms.txt
+examples/*/public/llms-full.txt
+examples/*/static/llms.txt
+examples/*/static/llms-full.txt
+
+# Separate-repo staging (push targets: act-spec/{actree-action,homebrew-tap,scoop-bucket})
+staging/

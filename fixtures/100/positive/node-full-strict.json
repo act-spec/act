@@ -1,0 +1,50 @@
+{
+  "act_version": "0.1",
+  "id": "intro/getting-started",
+  "type": "tutorial",
+  "title": "Getting started",
+  "etag": "s256:def4560000000000000000",
+  "updated_at": "2026-04-15T08:00:00Z",
+  "summary": "Install the SDK and send your first request in 5 minutes.",
+  "summary_source": "author",
+  "abstract": "This tutorial walks you through installing the Acme SDK in Node.js or Python, configuring authentication, and making your first widget request.",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "## Install\n\nFirst, install the SDK..."
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "text": "npm install @acme/sdk"
+    },
+    {
+      "type": "callout",
+      "level": "warning",
+      "text": "Node 18 or higher is required."
+    },
+    {
+      "type": "marketing:cta",
+      "headline": "Sign up",
+      "actions": [{ "label": "Start free", "href": "/signup" }]
+    }
+  ],
+  "tokens": { "summary": 13, "abstract": 42, "body": 920 },
+  "parent": "intro",
+  "children": [],
+  "related": [
+    { "id": "concepts/authentication", "relation": "see-also" },
+    { "id": "reference/widgets-api", "relation": "see-also" }
+  ],
+  "source": {
+    "human_url": "https://acme.com/docs/getting-started",
+    "edit_url": "https://github.com/acme/docs/edit/main/getting-started.md"
+  },
+  "metadata": {
+    "tags": ["beginner", "tutorial"],
+    "audience": ["developers"],
+    "schema_org_type": "TechArticle",
+    "language": "en-US"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-109",
+    "violates": ["PRD-109-R22"],
+    "describes": "A node envelope carrying a v0.1 non-feature: an unrecognized 'agents_only' boolean and an 'no_train' boolean. PRD-109-R22 (rationale per gap F4) explicitly excludes per-node agents-only / no-train flags from v0.1; sites SHOULD use robots.txt + the Content-Signal HTTP header (out of band) instead. PRD-108-R7's forward-compat rule (consumers tolerate unknown optional fields) means a Core consumer will not reject this envelope, but PRD-600 MUST emit a warning flagging both fields as v0.1 non-features and reminding the producer that per-node access flags are NOT part of the spec contract and MUST NOT be relied upon as a control.",
+    "expected_warning": true,
+    "rejection_reason": "agents_only and no_train are v0.1 non-features per PRD-109-R22; producers SHOULD NOT emit them. Consumers MUST NOT treat them as binding access control. Detected by PRD-600 as a warning, not a hard schema rejection (PRD-108-R7 makes them tolerated unknown optional fields).",
+    "expected_error": {
+      "requirement": "PRD-109-R22",
+      "level": "core",
+      "kind": "warning",
+      "missing": "Node carries 'agents_only' and 'no_train' fields; v0.1 explicitly defers per-node access flags to robots.txt + Content-Signal. PRD-600 MUST emit a warning per PRD-109-R22; the envelope itself is wire-format-legal."
+    }
+  },
+  "envelope": {
+    "act_version": "0.1",
+    "id": "internal/proprietary-roadmap",
+    "type": "page",
+    "title": "Internal Proprietary Roadmap",
+    "etag": "s256:abcdefghijklmnopqrstuv",
+    "summary": "Confidential roadmap for fiscal year planning.",
+    "agents_only": true,
+    "no_train": true
+  }
+}

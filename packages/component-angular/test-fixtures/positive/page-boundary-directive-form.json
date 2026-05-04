@@ -1,0 +1,10 @@
+{
+  "id": "page-boundary-directive-form",
+  "requirements": ["PRD-303-R5", "PRD-303-R6", "PRD-303-R10"],
+  "description": "Page-level boundary via the *actSection structural directive. The directive's ngOnInit calls applyActSection(collector, contract); the binding aggregates descendant Hero + PricingTable contracts in render order per PRD-303-R10.",
+  "expected": {
+    "draftCount": 1,
+    "id": "pricing",
+    "blockTypes": ["marketing:hero", "marketing:pricing-table"]
+  }
+}

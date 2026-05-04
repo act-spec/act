@@ -1,0 +1,7 @@
+{
+  "id": "react-17-detected",
+  "requirements": ["PRD-301-R2"],
+  "description": "React < 18 detected via React.version probe MUST throw BuildError(\"PRD-301-R2\").",
+  "input": { "version": "17.0.2" },
+  "expectedErrorSubstring": "React 17"
+}

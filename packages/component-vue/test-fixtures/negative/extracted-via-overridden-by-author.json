@@ -1,0 +1,6 @@
+{
+  "id": "extracted-via-overridden-by-author",
+  "requirements": ["PRD-302-R14", "PRD-300-R21"],
+  "description": "An extract function that sets metadata.extracted_via to a value other than 'component-contract' is rejected (the field is binding-owned per PRD-300-R21) and the binding emits a marketing:placeholder block.",
+  "expectedFirstBlockType": "marketing:placeholder"
+}

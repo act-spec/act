@@ -1,0 +1,18 @@
+{
+  "landing/pricing": {
+    "cta": { "primary": "無料トライアル", "secondary": "営業へ問い合わせ" },
+    "footer": { "rights": "全著作権所有。" }
+  },
+  "landing/features": {
+    "cta": { "primary": "無料で試す", "secondary": "デモを見る" }
+  },
+  "landing/about": {
+    "cta": { "primary": "マニフェストを読む" }
+  },
+  "landing/contact": {
+    "cta": { "primary": "チケットを開く" }
+  },
+  "landing/privacy": {
+    "cta": { "primary": "Cookie 設定" }
+  }
+}

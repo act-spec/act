@@ -1,0 +1,6 @@
+{
+  "id": "service-register-outside-scope",
+  "requirements": ["PRD-303-R16"],
+  "description": "ActContractService.register() called outside an installed collector scope (e.g., a service constructed before the bootstrap wired it) routes via the fallback sentinel and surfaces as a build warning per PRD-303-R16. The render does NOT abort (descendants still contribute).",
+  "expectedWarningSubstring": "PRD-303-R16"
+}

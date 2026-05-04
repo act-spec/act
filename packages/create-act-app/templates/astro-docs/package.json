@@ -1,0 +1,39 @@
+{
+  "name": "@act-spec/example-astro-docs",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Minimal Astro + markdown documentation site demonstrating zero-friction ACT generation via the @act-spec/plugin-astro integration.",
+  "license": "Apache-2.0",
+  "author": "Jeremy Forsythe <jeremy@act-spec.org>",
+  "homepage": "https://act-spec.org",
+  "bugs": {
+    "url": "https://github.com/act-spec/act/issues"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-spec/act.git",
+    "directory": "examples/astro-docs"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "start": "pnpm run build && node ../../scripts/serve-fixture.mjs dist 4321",
+    "validate": "tsx scripts/validate.ts",
+    "conformance": "pnpm run build && pnpm run validate",
+    "test": "node -e \"console.log('@act-spec/example-astro-docs: example exercises end-to-end via conformance')\"",
+    "lint": "node -e \"console.log('@act-spec/example-astro-docs: lint covered by Astro at build time')\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "astro": "^4.16.19",
+    "@act-spec/plugin-astro": "workspace:*",
+    "@act-spec/adapter-markdown": "workspace:*"
+  },
+  "devDependencies": {
+    "@act-spec/validator": "workspace:*",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

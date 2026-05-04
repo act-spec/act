@@ -1,0 +1,18 @@
+{
+  "landing/pricing": {
+    "cta": { "primary": "Start free trial", "secondary": "Contact sales" },
+    "footer": { "rights": "All rights reserved." }
+  },
+  "landing/features": {
+    "cta": { "primary": "Try it free", "secondary": "View demo" }
+  },
+  "landing/about": {
+    "cta": { "primary": "Read the manifesto" }
+  },
+  "landing/contact": {
+    "cta": { "primary": "Open ticket" }
+  },
+  "landing/privacy": {
+    "cta": { "primary": "Manage cookies" }
+  }
+}

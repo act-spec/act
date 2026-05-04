@@ -1,0 +1,8 @@
+{
+  "id": "depth-first-render-order",
+  "requirements": ["PRD-302-R10"],
+  "description": "Vue 3's synchronous SSR pipeline traverses the component tree depth-first, top-to-bottom; the binding records contracts in render registration order. Verifies an Outer→[Inner a, Inner b] sibling-with-Inner c shape produces ['outer','inner:a','inner:b','inner:c'].",
+  "expected": {
+    "blockTypes": ["outer", "inner:a", "inner:b", "inner:c"]
+  }
+}

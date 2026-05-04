@@ -1,0 +1,246 @@
+{
+  "act_version": "0.1",
+  "nodes": [
+    {
+      "id": "cms/en-us/landing/about",
+      "type": "landing",
+      "title": "About Acme",
+      "summary": "Founded to make agent-content interchange a default.",
+      "tokens": {
+        "summary": 7
+      },
+      "etag": "s256:oVBFF7awWweRwJkC-83gfR"
+    },
+    {
+      "id": "cms/en-us/landing/contact",
+      "type": "landing",
+      "title": "Contact",
+      "summary": "Talk to sales, support, or community.",
+      "tokens": {
+        "summary": 6
+      },
+      "etag": "s256:uT18vKRTiF1QOPrpAqXACY"
+    },
+    {
+      "id": "cms/en-us/landing/dpa",
+      "type": "landing",
+      "title": "Data Processing Addendum",
+      "summary": "Acme's data-processing terms for enterprise customers.",
+      "tokens": {
+        "summary": 6
+      },
+      "etag": "s256:9ZzHOBot3ONcx8mOrdZ_c6"
+    },
+    {
+      "id": "cms/en-us/landing/features",
+      "type": "landing",
+      "title": "Features",
+      "summary": "Everything you need to build with ACT.",
+      "tokens": {
+        "summary": 7
+      },
+      "etag": "s256:-lniNwD_Nk8Kt4gHLGXR1j"
+    },
+    {
+      "id": "cms/en-us/landing/pricing",
+      "type": "landing",
+      "title": "Pricing",
+      "summary": "Simple, transparent pricing tiers and FAQ.",
+      "tokens": {
+        "summary": 6
+      },
+      "etag": "s256:SbHqm53s8zEbrQ-qdRU2JZ"
+    },
+    {
+      "id": "cms/en-us/landing/privacy",
+      "type": "landing",
+      "title": "Privacy Policy",
+      "summary": "How Acme handles personal data.",
+      "tokens": {
+        "summary": 5
+      },
+      "etag": "s256:Gyk36tTNAOKRbgcihn86Be"
+    },
+    {
+      "id": "cms/es-es/landing/about",
+      "type": "landing",
+      "title": "Sobre Acme",
+      "summary": "Fundada para hacer del intercambio de contenidos de agentes una opción por defecto.",
+      "tokens": {
+        "summary": 13
+      },
+      "etag": "s256:K3sbUyMw1eKkfX4pa8godV"
+    },
+    {
+      "id": "cms/es-es/landing/contact",
+      "type": "landing",
+      "title": "Contacto",
+      "summary": "Contacta con ventas, soporte o la comunidad.",
+      "tokens": {
+        "summary": 7
+      },
+      "etag": "s256:g7VF9EztrhsDJCcN4QtWtO"
+    },
+    {
+      "id": "cms/es-es/landing/dpa",
+      "type": "landing",
+      "title": "Data Processing Addendum",
+      "summary": "Acme's data-processing terms for enterprise customers.",
+      "tokens": {
+        "summary": 6
+      },
+      "etag": "s256:XqH_u17OdwJe3R4YyKNFC4"
+    },
+    {
+      "id": "cms/es-es/landing/features",
+      "type": "landing",
+      "title": "Funciones",
+      "summary": "Todo lo que necesitas para construir con ACT.",
+      "tokens": {
+        "summary": 8
+      },
+      "etag": "s256:ph2mZwnd_YTQkD1ycMRNUT"
+    },
+    {
+      "id": "cms/es-es/landing/pricing",
+      "type": "landing",
+      "title": "Precios",
+      "summary": "Precios simples y transparentes.",
+      "tokens": {
+        "summary": 4
+      },
+      "etag": "s256:s8EoXyK3T4TNiDSA4BRX0K"
+    },
+    {
+      "id": "cms/es-es/landing/privacy",
+      "type": "landing",
+      "title": "Política de privacidad",
+      "summary": "Cómo Acme maneja los datos personales.",
+      "tokens": {
+        "summary": 6
+      },
+      "etag": "s256:uBgXByImMOXj8RzNqzRNtG"
+    },
+    {
+      "id": "cms/de-de/landing/about",
+      "type": "landing",
+      "title": "Über Acme",
+      "summary": "Gegründet, um Agenten-Inhaltsaustausch zur Standardoption zu machen.",
+      "tokens": {
+        "summary": 7
+      },
+      "etag": "s256:kT1mRjE9pOvFaWbMlszSxk"
+    },
+    {
+      "id": "cms/de-de/landing/contact",
+      "type": "landing",
+      "title": "Kontakt",
+      "summary": "Sprechen Sie mit Vertrieb, Support oder Community.",
+      "tokens": {
+        "summary": 7
+      },
+      "etag": "s256:0rz7qClP-N_yNhSANUBlv5"
+    },
+    {
+      "id": "cms/de-de/landing/dpa",
+      "type": "landing",
+      "title": "Data Processing Addendum",
+      "summary": "Acme's data-processing terms for enterprise customers.",
+      "tokens": {
+        "summary": 6
+      },
+      "etag": "s256:MhKozKM8WbWYhPRMPidWjK"
+    },
+    {
+      "id": "cms/de-de/landing/features",
+      "type": "landing",
+      "title": "Funktionen",
+      "summary": "Alles, was Sie für ACT brauchen.",
+      "tokens": {
+        "summary": 6
+      },
+      "etag": "s256:Y3KUgBUwq6S8sQEidrZopA"
+    },
+    {
+      "id": "cms/de-de/landing/pricing",
+      "type": "landing",
+      "title": "Preise",
+      "summary": "Einfache, transparente Preise.",
+      "tokens": {
+        "summary": 3
+      },
+      "etag": "s256:gqRYIqjiCvYpQpmGhLXF-R"
+    },
+    {
+      "id": "cms/de-de/landing/privacy",
+      "type": "landing",
+      "title": "Datenschutzerklärung",
+      "summary": "Wie Acme mit personenbezogenen Daten umgeht.",
+      "tokens": {
+        "summary": 6
+      },
+      "etag": "s256:NSH7zvbP05UNQZ0njnkIze"
+    },
+    {
+      "id": "cms/ja-jp/landing/about",
+      "type": "landing",
+      "title": "Acme について",
+      "summary": "エージェント・コンテンツ交換を標準にするために設立。",
+      "tokens": {
+        "summary": 1
+      },
+      "etag": "s256:3Qk_Rhm1TIMqUXx5PWihfR"
+    },
+    {
+      "id": "cms/ja-jp/landing/contact",
+      "type": "landing",
+      "title": "お問い合わせ",
+      "summary": "営業、サポート、コミュニティへのお問い合わせ。",
+      "tokens": {
+        "summary": 1
+      },
+      "etag": "s256:tGnYmGmr4hs5vh6YJljEcu"
+    },
+    {
+      "id": "cms/ja-jp/landing/dpa",
+      "type": "landing",
+      "title": "Data Processing Addendum",
+      "summary": "Acme's data-processing terms for enterprise customers.",
+      "tokens": {
+        "summary": 6
+      },
+      "etag": "s256:n785KpTX2ePPPQQBZDz9fV"
+    },
+    {
+      "id": "cms/ja-jp/landing/features",
+      "type": "landing",
+      "title": "機能",
+      "summary": "ACT で構築するために必要なすべて。",
+      "tokens": {
+        "summary": 2
+      },
+      "etag": "s256:JNivHbMPkkwy2ZecmmfcAJ"
+    },
+    {
+      "id": "cms/ja-jp/landing/pricing",
+      "type": "landing",
+      "title": "料金",
+      "summary": "シンプルで透明性のある料金体系。",
+      "tokens": {
+        "summary": 1
+      },
+      "etag": "s256:lSoFYzhjIrH-xXh2wjWaWn"
+    },
+    {
+      "id": "cms/ja-jp/landing/privacy",
+      "type": "landing",
+      "title": "プライバシーポリシー",
+      "summary": "Acme が個人データを扱う方法。",
+      "tokens": {
+        "summary": 2
+      },
+      "etag": "s256:YqolSN39Bdm_dpT_aXzuB5"
+    }
+  ],
+  "etag": "s256:qxtiAzFAhpMtRHol30A0Lx"
+}

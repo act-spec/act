@@ -1,0 +1,92 @@
+---
+// Programmatic enumeration of the `examples/` directory at the repo
+// root. Each directory with a `package.json` becomes a card. The
+// description comes from `package.json#description`; stack is
+// inferred from the example's primary dependencies.
+//
+// Authored as a plain Astro page (not a Starlight collection entry) so
+// we can run filesystem reads at build time without dragging the
+// content collection through a custom loader.
+import { promises as fs } from 'node:fs';
+import * as path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import ExampleCard from '~/components/ExampleCard.astro';
+
+const here = path.dirname(fileURLToPath(import.meta.url));
+const examplesDir = path.resolve(here, '..', '..', '..', '..', 'examples');
+
+interface ExampleEntry {
+  name: string;
+  stack: string;
+  description: string;
+  href: string;
+}
+
+function inferStack(pkg: { dependencies?: Record<string, string>; devDependencies?: Record<string, string> }): string {
+  const all = { ...pkg.dependencies, ...pkg.devDependencies };
+  if (all['astro']) return 'Astro';
+  if (all['next']) return 'Next.js';
+  if (all['vitepress']) return 'VitePress';
+  if (all['nuxt']) return 'Nuxt';
+  if (all['@docusaurus/core']) return 'Docusaurus';
+  if (all['@11ty/eleventy']) return 'Eleventy';
+  if (all['remix']) return 'Remix';
+  return 'TypeScript';
+}
+
+let entries: ExampleEntry[] = [];
+try {
+  const dirents = await fs.readdir(examplesDir, { withFileTypes: true });
+  for (const d of dirents) {
+    if (!d.isDirectory()) continue;
+    const pkgPath = path.join(examplesDir, d.name, 'package.json');
+    try {
+      const raw = await fs.readFile(pkgPath, 'utf8');
+      const pkg = JSON.parse(raw) as {
+        description?: string;
+        dependencies?: Record<string, string>;
+        devDependencies?: Record<string, string>;
+      };
+      entries.push({
+        name: d.name,
+        stack: inferStack(pkg),
+        description: pkg.description ?? `Example: ${d.name}.`,
+        href: `https://github.com/act-spec/act/tree/main/examples/${d.name}`,
+      });
+    } catch {
+      // No package.json → skip silently.
+    }
+  }
+} catch {
+  entries = [];
+}
+
+entries.sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<StarlightPage frontmatter={{ title: 'Examples', description: 'Runnable example sites covering every supported stack.' }}>
+  <p>
+    Every example below is a real, runnable site that emits ACT alongside
+    its normal build output. Clone the repo, <code>pnpm install</code>,
+    then <code>pnpm -F @act-spec/example-&lt;name&gt; build</code> to see
+    the artifacts. Or scaffold one fresh with{' '}
+    <code>npm create act-app@latest -- --template &lt;name&gt;</code>.
+  </p>
+
+  <div class="example-grid">
+    {entries.map((e) => (
+      <ExampleCard name={e.name} stack={e.stack} href={e.href}>
+        {e.description}
+      </ExampleCard>
+    ))}
+  </div>
+
+  {entries.length === 0 && (
+    <p>
+      <em>(No examples found at build time. The website rendered as a
+      standalone build outside the monorepo.)</em>
+    </p>
+  )}
+</StarlightPage>

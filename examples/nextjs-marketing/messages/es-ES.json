@@ -1,0 +1,18 @@
+{
+  "landing/pricing": {
+    "cta": { "primary": "Comenzar prueba gratis", "secondary": "Contactar ventas" },
+    "footer": { "rights": "Todos los derechos reservados." }
+  },
+  "landing/features": {
+    "cta": { "primary": "Pruébalo gratis", "secondary": "Ver demo" }
+  },
+  "landing/about": {
+    "cta": { "primary": "Lee el manifiesto" }
+  },
+  "landing/contact": {
+    "cta": { "primary": "Abrir ticket" }
+  },
+  "landing/privacy": {
+    "cta": { "primary": "Gestionar cookies" }
+  }
+}

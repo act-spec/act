@@ -1,0 +1,16 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-102",
+    "violates": [
+      "PRD-102-R5"
+    ],
+    "expected_error": {
+      "level": "core",
+      "requirement": "PRD-102-R5",
+      "missing": "callout.level value outside the closed enum {info, warning, error, tip}."
+    }
+  },
+  "type": "callout",
+  "level": "danger",
+  "text": "This is a destructive operation."
+}

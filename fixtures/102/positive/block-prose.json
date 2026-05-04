@@ -1,0 +1,5 @@
+{
+  "type": "prose",
+  "format": "plain",
+  "text": "Acme Widgets help you orchestrate scheduled tasks across distributed services without managing the underlying queue infrastructure yourself."
+}

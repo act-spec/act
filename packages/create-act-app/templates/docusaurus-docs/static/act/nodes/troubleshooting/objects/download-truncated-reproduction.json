@@ -1,0 +1,51 @@
+{
+  "act_version": "0.1",
+  "id": "troubleshooting/objects/download-truncated-reproduction",
+  "type": "troubleshooting",
+  "title": "Download truncated reproduction (Objects)",
+  "summary": "Resolve \"download truncated\" — reproduction for the Objects surface.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Symptom"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "An operation against the Objects surface fails with an error matching \"download truncated (reproduction)\"."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Resolution"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Inspect the error envelope.Re-issue with corrected parameters.Confirm via the audit log."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "See the Objects API reference for the exact field set."
+    }
+  ],
+  "tokens": {
+    "summary": 9,
+    "body": 44
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "troubleshooting/objects/download-truncated-reproduction.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/download-truncated-reproduction.md"
+    }
+  },
+  "etag": "s256:aF-QTvlpypUkBHLGNpKUV6",
+  "source": {
+    "human_url": "https://example.com/troubleshooting/objects/download-truncated-reproduction/"
+  },
+  "parent": "objects-issues"
+}

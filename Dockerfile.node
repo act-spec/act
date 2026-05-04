@@ -1,0 +1,83 @@
+# syntax=docker/dockerfile:1.7
+#
+# ghcr.io/act-spec/actree — Node-based image (LEGACY variant).
+#
+# This is the original Node/pnpm-based build. Kept available for v0.2 because
+# the Go CLI does not yet have full feature parity with the TS CLI. The Go
+# build is the primary image (see ./Dockerfile); this one ships under the
+# `:0.2.0-node` tag for users who need the TS-only features.
+#
+# Multi-stage build:
+#   Stage 1 (builder): pnpm install + build the @act-spec/cli workspace.
+#   Stage 2 (runtime): minimal Node Alpine carrying only the built `actree`.
+#
+# Distroless was considered for the runtime stage but pnpm/Node + workspace
+# symlinks land more cleanly on Alpine and the size delta after pruning dev
+# deps is small.
+#
+# ENTRYPOINT is the `actree` CLI (the bin shipped by @act-spec/cli).
+# Image is tagged in CI as `:<version>-node` (e.g. `0.2.0-node`).
+
+ARG NODE_VERSION=22.11.0
+ARG PNPM_VERSION=10.17.1
+
+# ---------- Stage 1: builder ----------
+FROM node:${NODE_VERSION}-alpine AS builder
+
+ARG PNPM_VERSION
+RUN apk add --no-cache git \
+ && corepack enable \
+ && corepack prepare pnpm@${PNPM_VERSION} --activate
+
+WORKDIR /work
+
+# Copy workspace manifests first for better layer caching.
+COPY pnpm-workspace.yaml pnpm-lock.yaml package.json ./
+COPY tsconfig.base.json tsconfig.json ./
+# pnpm needs every package's package.json present to resolve the workspace
+# graph, even for filtered installs. Copy the whole tree; it's small relative
+# to node_modules and keeps the install honest.
+COPY packages ./packages
+COPY schemas ./schemas
+COPY scripts ./scripts
+
+# Install only what `@act-spec/cli` needs (workspace-filtered).
+RUN pnpm install --frozen-lockfile --filter "@act-spec/cli..."
+
+# Generate @act-spec/core types (mirrors the release workflow).
+RUN pnpm -F @act-spec/core codegen
+
+# Build the CLI and every workspace dep it pulls in.
+RUN pnpm -F "@act-spec/cli..." run build
+
+# Strip dev deps so we ship a lean node_modules to the runtime stage.
+RUN pnpm prune --prod
+
+# ---------- Stage 2: runtime ----------
+FROM node:${NODE_VERSION}-alpine AS runtime
+
+# Run as non-root.
+RUN addgroup -S act && adduser -S act -G act
+
+WORKDIR /app
+
+# Copy the resolved workspace (minus dev deps) and the CLI's own files.
+# Workspaces use symlinks under node_modules/@act-spec/* into packages/*,
+# so we need both `packages/` and `node_modules/`.
+COPY --from=builder --chown=act:act /work/node_modules ./node_modules
+COPY --from=builder --chown=act:act /work/packages ./packages
+COPY --from=builder --chown=act:act /work/package.json /work/pnpm-workspace.yaml ./
+
+USER act
+
+# ENTRYPOINT runs the CLI; CMD is empty so users append flags directly:
+#   docker run --rm ghcr.io/act-spec/actree:0.2.0-node validate https://example.com
+ENTRYPOINT ["node", "/app/packages/cli/bin/actree.js"]
+CMD []
+
+LABEL org.opencontainers.image.title="actree"
+LABEL org.opencontainers.image.description="ACT (Agent Content Tree) reference CLI (Node variant)."
+LABEL org.opencontainers.image.source="https://github.com/act-spec/act"
+LABEL org.opencontainers.image.licenses="Apache-2.0"
+LABEL org.opencontainers.image.authors="Jeremy Forsythe <jeremy@act-spec.org>"
+LABEL org.opencontainers.image.url="https://act-spec.org"

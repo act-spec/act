@@ -1,0 +1,38 @@
+{
+  "act_version": "0.1",
+  "site": {
+    "name": "Acme",
+    "canonical_url": "https://acme.example.com/"
+  },
+  "generated_at": "2026-05-03T20:10:26.258Z",
+  "generator": "@act-spec/example-nextjs-marketing@0.0.0",
+  "index_url": "/act/index.json",
+  "node_url_template": "/act/nodes/{id}.json",
+  "subtree_url_template": "/act/subtrees/{id}.json",
+  "capabilities": {
+    "etag": true,
+    "subtree": true,
+    "ndjson_index": true,
+    "search": {
+      "template_advertised": true
+    }
+  },
+  "conformance": {
+    "level": "strict"
+  },
+  "delivery": "static",
+  "stats": {
+    "node_count": 24
+  },
+  "index_ndjson_url": "/act/index.ndjson",
+  "search_url_template": "/act/search?q={query}",
+  "locales": {
+    "default": "en-US",
+    "available": [
+      "en-US",
+      "es-ES",
+      "de-DE",
+      "ja-JP"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "capability-dispatch-headless",
+  "requirements": ["PRD-300-R28", "PRD-300-R29"],
+  "input": {
+    "caps": {
+      "ssr-walk": false,
+      "static-ast": false,
+      "headless-render": true,
+      "rsc": false,
+      "streaming": false,
+      "suspense": false,
+      "concurrent": false
+    }
+  },
+  "expected": {
+    "mode": "headless-render"
+  }
+}

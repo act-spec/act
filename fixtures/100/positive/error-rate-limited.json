@@ -1,0 +1,10 @@
+{
+  "act_version": "0.1",
+  "error": {
+    "code": "rate_limited",
+    "message": "Too many requests; retry after the indicated interval",
+    "details": {
+      "retry_after_seconds": 30
+    }
+  }
+}

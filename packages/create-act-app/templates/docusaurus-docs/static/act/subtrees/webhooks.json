@@ -1,0 +1,119 @@
+{
+  "act_version": "0.1",
+  "root": "webhooks",
+  "depth": 3,
+  "truncated": false,
+  "tokens": {
+    "body": 47,
+    "summary": 31
+  },
+  "nodes": [
+    {
+      "act_version": "0.1",
+      "id": "webhooks",
+      "type": "section",
+      "title": "Webhooks",
+      "summary": "Webhooks — section.",
+      "summary_source": "extracted",
+      "etag": "s256:qEKbaYOKwUM51Guwaek1tY",
+      "content": [
+        {
+          "type": "markdown",
+          "content": "# Webhooks\n\nThis section groups related webhooks documents.\n"
+        }
+      ],
+      "tokens": {
+        "summary": 8,
+        "body": 16
+      },
+      "children": [
+        "api/webhooks/register",
+        "api/webhooks/list",
+        "api/webhooks/delete"
+      ],
+      "parent": "api-reference",
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "sidebar-category:webhooks"
+        }
+      }
+    },
+    {
+      "act_version": "0.1",
+      "id": "api/webhooks/register",
+      "type": "reference",
+      "title": "Register a webhook",
+      "summary": "Subscribe a callback URL to bucket or object lifecycle events.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 10
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "api/webhooks/register.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/api/webhooks/register.md"
+        }
+      },
+      "etag": "s256:dU3gRQcV4lnkHJjCr2S53L",
+      "source": {
+        "human_url": "https://example.com/api/webhooks/register/"
+      },
+      "parent": "webhooks"
+    },
+    {
+      "act_version": "0.1",
+      "id": "api/webhooks/list",
+      "type": "reference",
+      "title": "List webhooks",
+      "summary": "Enumerate webhook subscriptions for the current project.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 10
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "api/webhooks/list.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/api/webhooks/list.md"
+        }
+      },
+      "etag": "s256:TFruIUnO3x4fXq_FreuNsE",
+      "source": {
+        "human_url": "https://example.com/api/webhooks/list/"
+      },
+      "parent": "webhooks"
+    },
+    {
+      "act_version": "0.1",
+      "id": "api/webhooks/delete",
+      "type": "reference",
+      "title": "Delete a webhook",
+      "summary": "Remove a webhook subscription by id.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 6,
+        "body": 11
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "api/webhooks/delete.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/api/webhooks/delete.md"
+        }
+      },
+      "etag": "s256:2HeAa2Vyicd5n2Sh0dUbIG",
+      "source": {
+        "human_url": "https://example.com/api/webhooks/delete/"
+      },
+      "parent": "webhooks"
+    }
+  ],
+  "etag": "s256:9_e4dQxEyjYad4UJzv9H9E"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "static-field",
+  "requirements": ["PRD-302-R3", "PRD-302-R6", "PRD-302-R10", "PRD-302-R14", "PRD-302-R15", "PRD-302-R22"],
+  "description": "Static field declaration via Component.act = {…} on a Vue 3 SFC default export, registered through the useActStatic helper. Verifies the binding emits one canonical NodeDraft whose first content block is the marketing:hero from Hero.act, with metadata.extracted_via=component-contract and metadata.extraction_method=ssr-walk.",
+  "expected": {
+    "draftCount": 1,
+    "id": "hero-only",
+    "type": "landing",
+    "blockTypes": ["marketing:hero"],
+    "extractedVia": "component-contract",
+    "extractionMethod": "ssr-walk"
+  }
+}

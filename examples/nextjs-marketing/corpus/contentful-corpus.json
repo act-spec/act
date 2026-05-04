@@ -1,0 +1,176 @@
+{
+  "_comment": "PRD-702 reference corpus — recorded Contentful Delivery API responses for the Acme marketing site. Six landingPage entries; en-US as the authored default; es-ES, de-DE, ja-JP per-locale overrides for five of them. The 'dpa' entry is authored only in en-US to exercise the fallback path (PRD-702-R8 / PRD-104-R10/R11 / PRD-202-R14). NO live Contentful API calls.",
+  "spaceLocales": [
+    { "code": "en-US", "default": true },
+    { "code": "es-ES" },
+    { "code": "de-DE" },
+    { "code": "ja-JP" }
+  ],
+  "contentTypes": [
+    { "sys": { "id": "landingPage" } }
+  ],
+  "entries": [
+    {
+      "sys": {
+        "id": "p001",
+        "type": "Entry",
+        "contentType": { "sys": { "type": "Link", "linkType": "ContentType", "id": "landingPage" } }
+      },
+      "fields": {
+        "title": "Pricing",
+        "slug": "landing/pricing",
+        "subhead": "Simple, transparent pricing tiers and FAQ.",
+        "body": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            { "nodeType": "paragraph", "data": {}, "content": [
+              { "nodeType": "text", "value": "Pick a plan that fits your team — Starter, Pro, or Enterprise.", "marks": [], "data": {} }
+            ] }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "id": "f001",
+        "type": "Entry",
+        "contentType": { "sys": { "type": "Link", "linkType": "ContentType", "id": "landingPage" } }
+      },
+      "fields": {
+        "title": "Features",
+        "slug": "landing/features",
+        "subhead": "Everything you need to build with ACT.",
+        "body": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            { "nodeType": "paragraph", "data": {}, "content": [
+              { "nodeType": "text", "value": "From source adapters to runtime SDKs, ACT covers the full producer surface.", "marks": [], "data": {} }
+            ] }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "id": "a001",
+        "type": "Entry",
+        "contentType": { "sys": { "type": "Link", "linkType": "ContentType", "id": "landingPage" } }
+      },
+      "fields": {
+        "title": "About Acme",
+        "slug": "landing/about",
+        "subhead": "Founded to make agent-content interchange a default.",
+        "body": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            { "nodeType": "paragraph", "data": {}, "content": [
+              { "nodeType": "text", "value": "Acme builds the open standard for agent content trees.", "marks": [], "data": {} }
+            ] }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "id": "c001",
+        "type": "Entry",
+        "contentType": { "sys": { "type": "Link", "linkType": "ContentType", "id": "landingPage" } }
+      },
+      "fields": {
+        "title": "Contact",
+        "slug": "landing/contact",
+        "subhead": "Talk to sales, support, or community.",
+        "body": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            { "nodeType": "paragraph", "data": {}, "content": [
+              { "nodeType": "text", "value": "Reach out via the channels below.", "marks": [], "data": {} }
+            ] }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "id": "v001",
+        "type": "Entry",
+        "contentType": { "sys": { "type": "Link", "linkType": "ContentType", "id": "landingPage" } }
+      },
+      "fields": {
+        "title": "Privacy Policy",
+        "slug": "landing/privacy",
+        "subhead": "How Acme handles personal data.",
+        "body": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            { "nodeType": "paragraph", "data": {}, "content": [
+              { "nodeType": "text", "value": "We collect the minimum required to operate the service.", "marks": [], "data": {} }
+            ] }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "id": "d001",
+        "type": "Entry",
+        "contentType": { "sys": { "type": "Link", "linkType": "ContentType", "id": "landingPage" } }
+      },
+      "fields": {
+        "title": "Data Processing Addendum",
+        "slug": "landing/dpa",
+        "subhead": "Acme's data-processing terms for enterprise customers.",
+        "body": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            { "nodeType": "paragraph", "data": {}, "content": [
+              { "nodeType": "text", "value": "This addendum supplements the master services agreement.", "marks": [], "data": {} }
+            ] }
+          ]
+        }
+      },
+      "_comment": "Authored only in en-US — exercises PRD-702-R8 fallback path."
+    }
+  ],
+  "perLocale": {
+    "p001": {
+      "es-ES": { "title": "Precios", "subhead": "Precios simples y transparentes." },
+      "de-DE": { "title": "Preise", "subhead": "Einfache, transparente Preise." },
+      "ja-JP": { "title": "料金", "subhead": "シンプルで透明性のある料金体系。" }
+    },
+    "f001": {
+      "es-ES": { "title": "Funciones", "subhead": "Todo lo que necesitas para construir con ACT." },
+      "de-DE": { "title": "Funktionen", "subhead": "Alles, was Sie für ACT brauchen." },
+      "ja-JP": { "title": "機能", "subhead": "ACT で構築するために必要なすべて。" }
+    },
+    "a001": {
+      "es-ES": { "title": "Sobre Acme", "subhead": "Fundada para hacer del intercambio de contenidos de agentes una opción por defecto." },
+      "de-DE": { "title": "Über Acme", "subhead": "Gegründet, um Agenten-Inhaltsaustausch zur Standardoption zu machen." },
+      "ja-JP": { "title": "Acme について", "subhead": "エージェント・コンテンツ交換を標準にするために設立。" }
+    },
+    "c001": {
+      "es-ES": { "title": "Contacto", "subhead": "Contacta con ventas, soporte o la comunidad." },
+      "de-DE": { "title": "Kontakt", "subhead": "Sprechen Sie mit Vertrieb, Support oder Community." },
+      "ja-JP": { "title": "お問い合わせ", "subhead": "営業、サポート、コミュニティへのお問い合わせ。" }
+    },
+    "v001": {
+      "es-ES": { "title": "Política de privacidad", "subhead": "Cómo Acme maneja los datos personales." },
+      "de-DE": { "title": "Datenschutzerklärung", "subhead": "Wie Acme mit personenbezogenen Daten umgeht." },
+      "ja-JP": { "title": "プライバシーポリシー", "subhead": "Acme が個人データを扱う方法。" }
+    }
+  },
+  "authoredLocales": {
+    "p001": ["en-US", "es-ES", "de-DE", "ja-JP"],
+    "f001": ["en-US", "es-ES", "de-DE", "ja-JP"],
+    "a001": ["en-US", "es-ES", "de-DE", "ja-JP"],
+    "c001": ["en-US", "es-ES", "de-DE", "ja-JP"],
+    "v001": ["en-US", "es-ES", "de-DE", "ja-JP"],
+    "d001": ["en-US"]
+  }
+}

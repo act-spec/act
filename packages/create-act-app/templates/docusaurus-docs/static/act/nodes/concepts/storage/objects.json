@@ -1,0 +1,31 @@
+{
+  "act_version": "0.1",
+  "id": "concepts/storage/objects",
+  "type": "doc",
+  "title": "Objects concept",
+  "summary": "Objects are immutable byte sequences keyed within a bucket.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Object keys are UTF-8 strings up to 1024 bytes. Object payloads are\nimmutable; an upload to an existing key creates a new version when the\nbucket has versioning enabled."
+    }
+  ],
+  "tokens": {
+    "summary": 9,
+    "body": 29
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "concepts/storage/objects.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/concepts/storage/objects.md"
+    }
+  },
+  "etag": "s256:fGyqUWy4Ptv6fnyu6UjTh7",
+  "source": {
+    "human_url": "https://example.com/concepts/storage/objects/"
+  },
+  "parent": "storage"
+}

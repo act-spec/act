@@ -1,0 +1,53 @@
+{
+  "name": "@act-spec/runtime-core",
+  "version": "0.0.0",
+  "description": "PRD-500 runtime SDK contract — resolver shape, identity context, capability negotiation, conditional GET helpers. Shared by every first-party runtime SDK leaf (PRD-501 Next.js, PRD-502 Express, PRD-505 generic fetch).",
+  "license": "Apache-2.0",
+  "author": "Jeremy Forsythe <jeremy@act-spec.org>",
+  "homepage": "https://act-spec.org",
+  "bugs": {
+    "url": "https://github.com/act-spec/act/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./test-utils": {
+      "types": "./dist/test-utils/index.d.ts",
+      "import": "./dist/test-utils/index.js"
+    }
+  },
+  "files": ["dist", "src"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-spec/act.git",
+    "directory": "packages/runtime-core"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "conformance": "node -e \"console.log('no conformance gate for @act-spec/runtime-core (framework-only; PRD-500 is exercised by leaf runtime SDK conformance gates per PRD-500-R31)')\""
+  },
+  "dependencies": {
+    "@act-spec/core": "workspace:*",
+    "@act-spec/validator": "workspace:*"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^2.1.9",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
+}

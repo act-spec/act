@@ -1,0 +1,126 @@
+{
+  "act_version": "0.1",
+  "query": "",
+  "matches": [
+    {
+      "id": "cms/en-us/landing/about",
+      "title": "About Acme",
+      "summary": "Founded to make agent-content interchange a default."
+    },
+    {
+      "id": "cms/en-us/landing/contact",
+      "title": "Contact",
+      "summary": "Talk to sales, support, or community."
+    },
+    {
+      "id": "cms/en-us/landing/dpa",
+      "title": "Data Processing Addendum",
+      "summary": "Acme's data-processing terms for enterprise customers."
+    },
+    {
+      "id": "cms/en-us/landing/features",
+      "title": "Features",
+      "summary": "Everything you need to build with ACT."
+    },
+    {
+      "id": "cms/en-us/landing/pricing",
+      "title": "Pricing",
+      "summary": "Simple, transparent pricing tiers and FAQ."
+    },
+    {
+      "id": "cms/en-us/landing/privacy",
+      "title": "Privacy Policy",
+      "summary": "How Acme handles personal data."
+    },
+    {
+      "id": "cms/es-es/landing/about",
+      "title": "Sobre Acme",
+      "summary": "Fundada para hacer del intercambio de contenidos de agentes una opción por defecto."
+    },
+    {
+      "id": "cms/es-es/landing/contact",
+      "title": "Contacto",
+      "summary": "Contacta con ventas, soporte o la comunidad."
+    },
+    {
+      "id": "cms/es-es/landing/dpa",
+      "title": "Data Processing Addendum",
+      "summary": "Acme's data-processing terms for enterprise customers."
+    },
+    {
+      "id": "cms/es-es/landing/features",
+      "title": "Funciones",
+      "summary": "Todo lo que necesitas para construir con ACT."
+    },
+    {
+      "id": "cms/es-es/landing/pricing",
+      "title": "Precios",
+      "summary": "Precios simples y transparentes."
+    },
+    {
+      "id": "cms/es-es/landing/privacy",
+      "title": "Política de privacidad",
+      "summary": "Cómo Acme maneja los datos personales."
+    },
+    {
+      "id": "cms/de-de/landing/about",
+      "title": "Über Acme",
+      "summary": "Gegründet, um Agenten-Inhaltsaustausch zur Standardoption zu machen."
+    },
+    {
+      "id": "cms/de-de/landing/contact",
+      "title": "Kontakt",
+      "summary": "Sprechen Sie mit Vertrieb, Support oder Community."
+    },
+    {
+      "id": "cms/de-de/landing/dpa",
+      "title": "Data Processing Addendum",
+      "summary": "Acme's data-processing terms for enterprise customers."
+    },
+    {
+      "id": "cms/de-de/landing/features",
+      "title": "Funktionen",
+      "summary": "Alles, was Sie für ACT brauchen."
+    },
+    {
+      "id": "cms/de-de/landing/pricing",
+      "title": "Preise",
+      "summary": "Einfache, transparente Preise."
+    },
+    {
+      "id": "cms/de-de/landing/privacy",
+      "title": "Datenschutzerklärung",
+      "summary": "Wie Acme mit personenbezogenen Daten umgeht."
+    },
+    {
+      "id": "cms/ja-jp/landing/about",
+      "title": "Acme について",
+      "summary": "エージェント・コンテンツ交換を標準にするために設立。"
+    },
+    {
+      "id": "cms/ja-jp/landing/contact",
+      "title": "お問い合わせ",
+      "summary": "営業、サポート、コミュニティへのお問い合わせ。"
+    },
+    {
+      "id": "cms/ja-jp/landing/dpa",
+      "title": "Data Processing Addendum",
+      "summary": "Acme's data-processing terms for enterprise customers."
+    },
+    {
+      "id": "cms/ja-jp/landing/features",
+      "title": "機能",
+      "summary": "ACT で構築するために必要なすべて。"
+    },
+    {
+      "id": "cms/ja-jp/landing/pricing",
+      "title": "料金",
+      "summary": "シンプルで透明性のある料金体系。"
+    },
+    {
+      "id": "cms/ja-jp/landing/privacy",
+      "title": "プライバシーポリシー",
+      "summary": "Acme が個人データを扱う方法。"
+    }
+  ]
+}

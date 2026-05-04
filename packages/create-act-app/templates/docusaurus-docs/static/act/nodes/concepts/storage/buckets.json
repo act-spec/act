@@ -1,0 +1,31 @@
+{
+  "act_version": "0.1",
+  "id": "concepts/storage/buckets",
+  "type": "doc",
+  "title": "Buckets concept",
+  "summary": "Buckets are regional containers that hold objects.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Buckets are the unit of regional placement and access policy. Each\nbucket lives in exactly one region; cross-region replication is opt-in."
+    }
+  ],
+  "tokens": {
+    "summary": 7,
+    "body": 21
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "concepts/storage/buckets.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/concepts/storage/buckets.md"
+    }
+  },
+  "etag": "s256:-tz_3uwoXcxq2FlzSZTzmu",
+  "source": {
+    "human_url": "https://example.com/concepts/storage/buckets/"
+  },
+  "parent": "storage"
+}

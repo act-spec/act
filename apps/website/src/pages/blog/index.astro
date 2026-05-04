@@ -1,0 +1,32 @@
+---
+// Blog index. Lists every non-draft post in the `blog` collection,
+// newest first. Drafts surface in dev, hide in production builds.
+import { getCollection } from 'astro:content';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+
+const all = await getCollection('blog');
+const isProd = import.meta.env.PROD;
+const posts = all
+  .filter((p) => !isProd || !p.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<StarlightPage frontmatter={{ title: 'Blog', description: 'Updates from the ACT project — release posts, deep dives, and adoption notes.' }}>
+  {posts.length === 0 && (
+    <p><em>No posts yet. The first launch posts go live with v0.2.0 stable.</em></p>
+  )}
+  <ul style="list-style:none;padding:0;">
+    {posts.map((p) => (
+      <li style="margin:1.5rem 0;">
+        <h2 style="margin:0 0 0.25rem;font-size:1.25rem;">
+          <a href={`/blog/${p.slug}/`}>{p.data.title}</a>
+          {p.data.draft && <span style="font-size:0.75rem;color:#a55;">(draft)</span>}
+        </h2>
+        <p style="font-size:0.85rem;color:var(--sl-color-gray-3);margin:0 0 0.4rem;">
+          {p.data.pubDate.toISOString().slice(0, 10)} · {p.data.author}
+        </p>
+        <p style="margin:0;">{p.data.description}</p>
+      </li>
+    ))}
+  </ul>
+</StarlightPage>

@@ -1,0 +1,10 @@
+{
+  "id": "page-boundary-component-form",
+  "requirements": ["PRD-303-R5", "PRD-303-R6"],
+  "description": "Page-level boundary via the <act-section [contract]=\"...\"> component form. Per PRD-303-R6 the component form and the structural directive form produce byte-identical output given identical inputs.",
+  "expected": {
+    "draftCount": 1,
+    "id": "pricing",
+    "blockTypes": ["marketing:hero", "marketing:pricing-table"]
+  }
+}

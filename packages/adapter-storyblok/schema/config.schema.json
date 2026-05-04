@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/204/config.schema.json",
+  "title": "act-storyblok adapter config",
+  "description": "PRD-204-R2 — config schema for @act-spec/adapter-storyblok.",
+  "type": "object",
+  "required": ["spaceId", "accessToken"],
+  "additionalProperties": false,
+  "properties": {
+    "spaceId": {
+      "oneOf": [
+        { "type": "string", "minLength": 1 },
+        { "type": "integer", "minimum": 1 }
+      ]
+    },
+    "accessToken": {
+      "oneOf": [
+        { "type": "string", "minLength": 1 },
+        {
+          "type": "object",
+          "required": ["from_env"],
+          "additionalProperties": false,
+          "properties": { "from_env": { "type": "string", "minLength": 1 } }
+        }
+      ]
+    },
+    "region": { "type": "string", "enum": ["eu", "us", "cn", "ap"] },
+    "version": { "type": "string", "enum": ["published", "draft"] },
+    "cv": { "type": "integer", "minimum": 0 },
+    "storyFilter": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "allowEmpty": { "type": "boolean" },
+    "typeMapping": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "minLength": 1 }
+    },
+    "fieldMapping": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "summary": { "type": "string", "minLength": 1 },
+        "abstract": { "type": "string", "minLength": 1 },
+        "body": { "type": "string", "minLength": 1 },
+        "tags": { "type": "string", "minLength": 1 },
+        "calloutLevel": { "type": "string", "enum": ["info", "warning", "error", "tip"] },
+        "related": {
+          "type": "object",
+          "additionalProperties": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "idField": { "type": "string", "minLength": 1 },
+    "linkResolutionDepth": { "type": "integer", "minimum": 0, "maximum": 5 },
+    "componentMapping": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["type", "fields"],
+        "additionalProperties": false,
+        "properties": {
+          "type": { "type": "string", "pattern": "^marketing:" },
+          "fields": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      }
+    },
+    "componentRecursionMax": { "type": "integer", "minimum": 1, "maximum": 4 },
+    "locale": {
+      "type": "object",
+      "required": ["pattern"],
+      "additionalProperties": false,
+      "properties": {
+        "pattern": { "type": "string", "enum": ["folder", "field"] },
+        "field": { "type": "string", "minLength": 1 },
+        "available": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "default": { "type": "string", "minLength": 1 }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "strategy": { "type": "string", "enum": ["field", "extract", "needs-llm"] }
+      }
+    },
+    "concurrency": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "transform": { "type": "integer", "minimum": 1, "maximum": 16 }
+      }
+    },
+    "namespace": {
+      "type": "string",
+      "pattern": "^[a-z0-9]([a-z0-9._\\-]|/)*[a-z0-9]$"
+    },
+    "webhookSecret": { "type": "string", "minLength": 1 },
+    "debugLogging": { "type": "boolean" }
+  }
+}

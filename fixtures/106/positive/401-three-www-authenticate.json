@@ -1,0 +1,36 @@
+{
+  "scenario": "401 Unauthorized with one WWW-Authenticate header per advertised scheme, in advertised order",
+  "satisfies": ["PRD-106-R5", "PRD-106-R7", "PRD-106-R8"],
+  "manifest_excerpt": {
+    "auth": {
+      "schemes": ["cookie", "bearer", "oauth2"],
+      "oauth2": {
+        "authorization_endpoint": "https://app.acme.com/oauth/authorize",
+        "token_endpoint": "https://app.acme.com/oauth/token",
+        "scopes_supported": ["act.read"]
+      }
+    }
+  },
+  "request": {
+    "method": "GET",
+    "url": "https://app.acme.com/act/index.json",
+    "headers": { "Accept": "application/act-index+json" }
+  },
+  "response": {
+    "status": 401,
+    "headers_ordered": [
+      ["WWW-Authenticate", "Cookie realm=\"app.acme.com\""],
+      ["WWW-Authenticate", "Bearer realm=\"app.acme.com\""],
+      ["WWW-Authenticate", "Bearer realm=\"app.acme.com\", error=\"invalid_token\", scope=\"act.read\", authorization_uri=\"https://app.acme.com/oauth/authorize\""],
+      ["Content-Type", "application/act-error+json; profile=runtime"],
+      ["Link", "</.well-known/act.json>; rel=\"act\"; type=\"application/act-manifest+json\"; profile=\"runtime\""]
+    ],
+    "body": {
+      "act_version": "0.1",
+      "error": {
+        "code": "auth_required",
+        "message": "Authentication required to access this resource."
+      }
+    }
+  }
+}

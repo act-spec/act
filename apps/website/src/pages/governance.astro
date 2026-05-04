@@ -1,0 +1,39 @@
+---
+// Renders the canonical `GOVERNANCE.md` from the repo root, plus a short
+// preamble linking the ASP process and the W3C CG track.
+import { promises as fs } from 'node:fs';
+import * as path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { marked } from 'marked';
+
+const here = path.dirname(fileURLToPath(import.meta.url));
+const repoRoot = path.resolve(here, '..', '..', '..', '..');
+const governancePath = path.join(repoRoot, 'GOVERNANCE.md');
+
+let html = '';
+try {
+  const raw = await fs.readFile(governancePath, 'utf8');
+  // Strip the H1 because Starlight will render its own page title.
+  const stripped = raw.replace(/^#\s+.+\n+/m, '');
+  html = await marked.parse(stripped);
+} catch {
+  html = '<p><em>GOVERNANCE.md not found at build time.</em></p>';
+}
+---
+
+<StarlightPage
+  frontmatter={{
+    title: 'Governance',
+    description: 'How ACT is run — BDFL model, ASP spec change process, releases, and the W3C Community Group track.',
+  }}
+>
+  <p>
+    The canonical governance document lives at
+    <a href="https://github.com/act-spec/act/blob/main/GOVERNANCE.md"><code>GOVERNANCE.md</code></a>
+    in the repo. The text below is mirrored from there at build time.
+  </p>
+  <hr />
+  <Fragment set:html={html} />
+</StarlightPage>

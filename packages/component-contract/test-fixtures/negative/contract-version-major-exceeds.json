@@ -1,0 +1,9 @@
+{
+  "id": "contract-version-major-exceeds",
+  "requirements": ["PRD-300-R27"],
+  "input": {
+    "contractVersion": "1.0",
+    "bindingVersion": "0.1"
+  },
+  "expectedErrorSubstring": "PRD-300-R27"
+}

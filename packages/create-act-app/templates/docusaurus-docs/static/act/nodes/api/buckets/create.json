@@ -1,0 +1,56 @@
+{
+  "act_version": "0.1",
+  "id": "api/buckets/create",
+  "type": "reference",
+  "title": "Create a bucket",
+  "summary": "Provision a new storage bucket in the workspace.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Request"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "text": "curl -X POST -H 'Authorization: Bearer $TOKEN' \\\n  -d '{\"name\":\"my-bucket\",\"region\":\"us-east-1\"}' \\\n  https://api.tinybox.dev/v1/buckets"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Response"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "The API returns the created bucket descriptor. See List buckets."
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 28
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "api/buckets/create.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/api/buckets/create.md"
+    }
+  },
+  "etag": "s256:Ggv2ES5TqalZag8uGxRzty",
+  "related": [
+    {
+      "id": "api/buckets/list",
+      "relation": "see-also"
+    },
+    {
+      "id": "api/buckets/delete",
+      "relation": "see-also"
+    }
+  ],
+  "source": {
+    "human_url": "https://example.com/api/buckets/create/"
+  },
+  "parent": "buckets"
+}

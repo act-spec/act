@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/0.1/block-marketing-namespace.schema.json",
+  "title": "ACT content block — marketing:* namespace (generic)",
+  "description": "Per PRD-102-R6 through PRD-102-R11. Generic shape for any block whose `type` matches `^marketing:[a-z][a-z0-9-]*$`. The namespace is documented-open: new `marketing:*` types MAY be added in a MINOR bump per PRD-108-R4(4). This schema does not enforce per-type field shapes; canonical fields for `marketing:hero`, `marketing:feature-grid`, `marketing:pricing-table`, `marketing:testimonial`, and `marketing:faq` are specified in PRD-102 §Specification. Conformance: Plus.",
+  "type": "object",
+  "required": ["type"],
+  "additionalProperties": true,
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^marketing:[a-z][a-z0-9-]*$",
+      "description": "Documented-open namespace. Adding a value is MINOR per PRD-108-R4(4)."
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "Per PRD-102-R20. Component-extracted blocks MUST set `metadata.extracted_via: \"component-contract\"` and MAY set `metadata.extraction_status` to `\"failed\"` or `\"partial\"`."
+    }
+  }
+}

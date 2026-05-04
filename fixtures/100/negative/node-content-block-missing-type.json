@@ -1,0 +1,29 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-100",
+    "violates": [
+      "PRD-100-R28"
+    ],
+    "expected_error": {
+      "level": "core",
+      "requirement": "PRD-100-R28",
+      "missing": "Content block missing the required `type` discriminator."
+    }
+  },
+  "_negative_reason": "Content block omits required `type` discriminator. PRD-100 requires `content[].type` on every block.",
+  "act_version": "0.1",
+  "id": "intro",
+  "type": "article",
+  "title": "Introduction",
+  "etag": "s256:abc1230000000000000000",
+  "summary": "An overview of Acme widgets.",
+  "content": [
+    {
+      "text": "## Install\n\n..."
+    }
+  ],
+  "tokens": {
+    "summary": 14,
+    "body": 100
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/adapters/wordpress/config.schema.json",
+  "title": "WordPress adapter configuration",
+  "description": "Configuration accepted by `createWordPressAdapter`. Validated at `precheck` and `init`; failures throw `WordPressAdapterError(code: 'config_invalid')`.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["baseUrl"],
+  "properties": {
+    "baseUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Base URL of the WordPress site, including protocol. The REST root is derived as `${baseUrl}/wp-json/wp/v2`."
+    },
+    "auth": {
+      "description": "Optional authentication. Omit for public read-only sites. Strings are sent as `Authorization: Bearer <token>` (JWT plugins). For WordPress application passwords, use the `{ user, appPassword }` form (sent as HTTP Basic Auth). Either field accepts `{ from_env: NAME }` to read from a process env var.",
+      "oneOf": [
+        { "type": "string", "minLength": 1 },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["from_env"],
+          "properties": {
+            "from_env": { "type": "string", "minLength": 1 }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["user", "appPassword"],
+          "properties": {
+            "user": {
+              "oneOf": [
+                { "type": "string", "minLength": 1 },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["from_env"],
+                  "properties": { "from_env": { "type": "string", "minLength": 1 } }
+                }
+              ]
+            },
+            "appPassword": {
+              "oneOf": [
+                { "type": "string", "minLength": 1 },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["from_env"],
+                  "properties": { "from_env": { "type": "string", "minLength": 1 } }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "include": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Which WordPress collections to enumerate. Defaults: posts=true, pages=true, categories=true, tags=false, users=false.",
+      "properties": {
+        "posts": { "type": "boolean" },
+        "pages": { "type": "boolean" },
+        "categories": { "type": "boolean" },
+        "tags": { "type": "boolean" },
+        "users": { "type": "boolean" }
+      }
+    },
+    "perPage": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100,
+      "description": "REST page size. WordPress's hard cap is 100; defaults to 100 for fewest round-trips."
+    },
+    "concurrency": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 32,
+      "description": "Maximum parallel transforms. Default 4."
+    },
+    "namespace": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Prefix for emitted node ids. Default 'wp'."
+    },
+    "i18n": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "i18n configuration. By default the adapter auto-detects Polylang or WPML from response payloads.",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": ["auto", "polylang", "wpml", "none"]
+        },
+        "defaultLocale": { "type": "string", "minLength": 2 }
+      }
+    },
+    "typeMap": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "minLength": 1 },
+      "description": "Override the default ACT `type` for a WordPress collection. Keys: 'post', 'page', 'category', 'tag', 'user'."
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "_comment": "Worked example for PRD-103-R6 (runtime ETag derivation). Verifies that given the (payload, identity, tenant) triple below, the resulting etag is `s256:iH6ta82PUg0zi0lr_jpCLL`. Replicas computing the same hash from the same input MUST produce this exact value.",
+  "input": {
+    "payload": {
+      "act_version": "0.1",
+      "id": "intro",
+      "type": "document",
+      "title": "Introduction",
+      "summary": "A simple introduction.",
+      "content": [
+        { "type": "prose", "text": "Hello." }
+      ],
+      "tokens": { "body": 2, "summary": 4 }
+    },
+    "identity": "user-42",
+    "tenant": "acme"
+  },
+  "canonical_jcs_bytes_utf8": "{\"identity\":\"user-42\",\"payload\":{\"act_version\":\"0.1\",\"content\":[{\"text\":\"Hello.\",\"type\":\"prose\"}],\"id\":\"intro\",\"summary\":\"A simple introduction.\",\"title\":\"Introduction\",\"tokens\":{\"body\":2,\"summary\":4},\"type\":\"document\"},\"tenant\":\"acme\"}",
+  "sha256_base64url_no_pad_full": "iH6ta82PUg0zi0lr_jpCLLycVgByyH5N-MyxAbCbV9U",
+  "expected_etag": "s256:iH6ta82PUg0zi0lr_jpCLL",
+  "expected_envelope": {
+    "act_version": "0.1",
+    "id": "intro",
+    "type": "document",
+    "title": "Introduction",
+    "summary": "A simple introduction.",
+    "content": [
+      { "type": "prose", "text": "Hello." }
+    ],
+    "tokens": { "body": 2, "summary": 4 },
+    "etag": "s256:iH6ta82PUg0zi0lr_jpCLL"
+  }
+}

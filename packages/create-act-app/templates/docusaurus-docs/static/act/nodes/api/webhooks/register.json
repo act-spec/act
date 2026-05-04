@@ -1,0 +1,31 @@
+{
+  "act_version": "0.1",
+  "id": "api/webhooks/register",
+  "type": "reference",
+  "title": "Register a webhook",
+  "summary": "Subscribe a callback URL to bucket or object lifecycle events.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "POST /v1/webhooks — body declares target_url, event_types, and bucket filter."
+    }
+  ],
+  "tokens": {
+    "summary": 10,
+    "body": 10
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "api/webhooks/register.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/api/webhooks/register.md"
+    }
+  },
+  "etag": "s256:dU3gRQcV4lnkHJjCr2S53L",
+  "source": {
+    "human_url": "https://example.com/api/webhooks/register/"
+  },
+  "parent": "webhooks"
+}

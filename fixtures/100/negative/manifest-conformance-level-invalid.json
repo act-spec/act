@@ -1,0 +1,24 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-107",
+    "violates": [
+      "PRD-107-R2"
+    ],
+    "expected_error": {
+      "level": "core",
+      "requirement": "PRD-107-R2",
+      "missing": "conformance.level value outside the closed enum {core, standard, plus}."
+    }
+  },
+  "_negative_reason": "`conformance.level` value `premium` is outside the closed enum. Violates PRD-107-R2 and the PRD-100 manifest schema.",
+  "act_version": "0.1",
+  "site": {
+    "name": "Acme"
+  },
+  "index_url": "/act/index.json",
+  "node_url_template": "/act/n/{id}.json",
+  "conformance": {
+    "level": "premium"
+  },
+  "delivery": "static"
+}

@@ -1,0 +1,9 @@
+{
+  "_comment": "Plus-tier marketing build (PRD-202-R8 / R11). Single locale; emits marketing:hero from a structured field.",
+  "spaceLocales": [
+    { "code": "en-US", "default": true }
+  ],
+  "contentTypes": [
+    { "sys": { "id": "landingPage" } }
+  ]
+}

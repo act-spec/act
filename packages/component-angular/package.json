@@ -1,0 +1,65 @@
+{
+  "name": "@act-spec/component-angular",
+  "version": "0.0.0",
+  "description": "PRD-303 Angular binding for the ACT (Agent Content Tree) v0.1 component contract (PRD-300). Implements the three Angular declaration patterns (component static-field `static act = {...}`, service-based `ActContractService.register({...})`, and the page-level boundary structural directive `*actSection=\"contract\"` plus the `<act-section>` component form), an `ActCollectorService` provided component-locally for SSR-walk extraction, the canonical SSR-walk strategy via `@angular/platform-server.renderApplication` waiting for `ApplicationRef.isStable`, the variant replay loop with a fresh `ApplicationRef` + `EnvironmentInjector` per variant, the placeholder emission contract (truncated and secret-redacted error messages, captured via Angular's `ErrorHandler` provider), the Angular 17+ peer-dependency floor, and the `BindingCapabilities` const with values pinned per PRD-303-R20 + A15 truthfulness posture. Bridges Angular component trees to the framework-agnostic `NodeDraft` shape from `@act-spec/component-contract`.",
+  "license": "Apache-2.0",
+  "author": "Jeremy Forsythe <jeremy@act-spec.org>",
+  "homepage": "https://act-spec.org",
+  "bugs": {
+    "url": "https://github.com/act-spec/act/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-spec/act.git",
+    "directory": "packages/component-angular"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "conformance": "tsx conformance.ts"
+  },
+  "dependencies": {
+    "@act-spec/component-contract": "workspace:*",
+    "@act-spec/core": "workspace:*",
+    "@act-spec/validator": "workspace:*"
+  },
+  "peerDependencies": {
+    "@angular/core": ">=17 <21",
+    "@angular/platform-server": ">=17 <21"
+  },
+  "peerDependenciesMeta": {
+    "@angular/core": {
+      "optional": true
+    },
+    "@angular/platform-server": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^2.1.9",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
+}

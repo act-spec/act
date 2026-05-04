@@ -1,0 +1,23 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-109",
+    "satisfies": ["PRD-109-R3", "PRD-109-R4"],
+    "describes": "A runtime 404 response that MUST NOT distinguish 'does not exist' from 'not authorized'. Both cases collapse to this identical 404 envelope.",
+    "scenario_a": "Client requests /act/n/secret-doc.json. Resource exists but client lacks permission. Server returns this 404.",
+    "scenario_b": "Client requests /act/n/does-not-exist.json. Resource truly absent. Server returns this 404.",
+    "expected": "Byte-for-byte identical responses for scenarios A and B (modulo the per-request error.details.request_id which is opaque and not correlated to identity)."
+  },
+  "http_response": {
+    "status_code": 404,
+    "headers": {
+      "content_type": "application/act-error+json"
+    },
+    "body": {
+      "act_version": "0.1",
+      "error": {
+        "code": "not_found",
+        "message": "The requested resource is not available."
+      }
+    }
+  }
+}

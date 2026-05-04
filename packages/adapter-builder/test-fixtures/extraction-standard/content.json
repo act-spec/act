@@ -1,0 +1,76 @@
+{
+  "_comment": "Recorded Builder.io v3 Content API response. Two `page` model entries; one with a Text + Image + CustomCode component tree and a `references` array pointing at the second page; second page is the reference target. Exercises PRD-206-R1, R2, R5, R7, R8, R9, R14, R21.",
+  "authProbe": "ok",
+  "keyKindProbe": "public",
+  "contentByModel": {
+    "page": [
+      {
+        "id": "builder-content-id-welcome",
+        "name": "Welcome",
+        "modelName": "page",
+        "lastUpdated": 1745568000000,
+        "published": "published",
+        "data": {
+          "url": "/welcome",
+          "description": "Welcome to Acme — get started in minutes.",
+          "blocks": [
+            {
+              "@type": "@builder.io/sdk:Element",
+              "id": "blk-text-1",
+              "component": {
+                "name": "Text",
+                "options": { "text": "<h1>Welcome to Acme</h1><p>Get started in minutes.</p>" }
+              }
+            },
+            {
+              "@type": "@builder.io/sdk:Element",
+              "id": "blk-img-1",
+              "component": {
+                "name": "Image",
+                "options": {
+                  "image": "https://cdn.builder.io/api/v1/image/assets/abc/xyz",
+                  "altText": "Acme logo"
+                }
+              }
+            },
+            {
+              "@type": "@builder.io/sdk:Element",
+              "id": "blk-code-1",
+              "component": {
+                "name": "CustomCode",
+                "options": {
+                  "language": "javascript",
+                  "code": "console.log('hello acme');"
+                }
+              }
+            }
+          ],
+          "related_pages": [
+            { "@type": "@builder.io/core:Reference", "model": "page", "id": "builder-content-id-pricing" }
+          ]
+        }
+      },
+      {
+        "id": "builder-content-id-pricing",
+        "name": "Pricing",
+        "modelName": "page",
+        "lastUpdated": 1745654400000,
+        "published": "published",
+        "data": {
+          "url": "/pricing",
+          "description": "Acme pricing tiers and plan comparison.",
+          "blocks": [
+            {
+              "@type": "@builder.io/sdk:Element",
+              "id": "blk-text-2",
+              "component": {
+                "name": "Text",
+                "options": { "text": "<h1>Pricing</h1><p>Plans for every team.</p>" }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-100",
+    "violates": [
+      "PRD-100-R33"
+    ],
+    "expected_error": {
+      "level": "core",
+      "requirement": "PRD-100-R33",
+      "missing": "Subtree depth exceeds the documented maximum of 8."
+    }
+  },
+  "_negative_reason": "Subtree `depth` is 9, exceeding the documented maximum of 8. Violates PRD-100 subtree depth bound (security/DoS guard).",
+  "act_version": "0.1",
+  "root": "intro",
+  "etag": "s256:0000000000000000000000",
+  "depth": 9,
+  "nodes": [
+    {
+      "act_version": "0.1",
+      "id": "intro",
+      "type": "article",
+      "title": "Introduction",
+      "etag": "s256:abc1230000000000000000",
+      "summary": "An overview of Acme widgets.",
+      "content": [
+        {
+          "type": "markdown",
+          "text": "..."
+        }
+      ],
+      "tokens": {
+        "summary": 14,
+        "body": 100
+      }
+    }
+  ]
+}

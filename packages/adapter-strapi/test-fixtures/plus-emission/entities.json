@@ -1,0 +1,95 @@
+{
+  "_comment": "Recorded Strapi v5 REST response shape for PRD-205-R28 (plus-tier) integration. Two locale-variant landing-pages entities (`en` and `de`) with dynamic-zone bodies promoting `shared.hero` and `marketing.pricing-table` components to `marketing:hero` + `marketing:pricing-table` blocks.",
+  "serverStrapiVersion": "v5",
+  "authProbe": "ok",
+  "contentTypeSingulars": { "landing-pages": "landing" },
+  "entitiesByContentType": {
+    "landing-pages": [
+      {
+        "id": 2001,
+        "documentId": "doc-pricing-en",
+        "slug": "pricing",
+        "title": "Pricing",
+        "summary": "Acme pricing tiers.",
+        "publishedAt": "2026-04-20T10:00:00Z",
+        "updatedAt": "2026-04-20T10:00:00Z",
+        "localizations": [
+          { "id": 2002, "documentId": "doc-pricing-de" }
+        ],
+        "body": [
+          {
+            "__component": "shared.hero",
+            "id": 1,
+            "title": "Pricing that scales with you.",
+            "subtitle": "Start free. Pay as you grow.",
+            "ctaLabel": "Start free trial",
+            "ctaHref": "/signup"
+          },
+          {
+            "__component": "marketing.pricing-table",
+            "id": 2,
+            "tiers": [
+              { "name": "Starter", "price": "$0/mo", "features": ["1,000 requests/mo"] },
+              { "name": "Pro", "price": "$49/mo", "features": ["100,000 requests/mo", "99.9% SLA"] },
+              { "name": "Ent", "price": "Contact us", "features": ["Unlimited requests", "Custom SLA"] }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "entitiesByLocale": {
+    "en": {
+      "landing-pages": [
+        {
+          "id": 2001,
+          "documentId": "doc-pricing-en",
+          "slug": "pricing",
+          "title": "Pricing",
+          "summary": "Acme pricing tiers.",
+          "publishedAt": "2026-04-20T10:00:00Z",
+          "updatedAt": "2026-04-20T10:00:00Z",
+          "localizations": [
+            { "id": 2002, "documentId": "doc-pricing-de" }
+          ],
+          "body": [
+            {
+              "__component": "shared.hero",
+              "id": 1,
+              "title": "Pricing that scales with you.",
+              "subtitle": "Start free. Pay as you grow.",
+              "ctaLabel": "Start free trial",
+              "ctaHref": "/signup"
+            }
+          ]
+        }
+      ]
+    },
+    "de": {
+      "landing-pages": [
+        {
+          "id": 2002,
+          "documentId": "doc-pricing-de",
+          "slug": "pricing",
+          "title": "Preise",
+          "summary": "Acme Preisstufen.",
+          "publishedAt": "2026-04-20T10:00:00Z",
+          "updatedAt": "2026-04-20T10:00:00Z",
+          "localizations": [
+            { "id": 2001, "documentId": "doc-pricing-en" }
+          ],
+          "body": [
+            {
+              "__component": "shared.hero",
+              "id": 3,
+              "title": "Preise, die mit dir wachsen.",
+              "subtitle": "Kostenlos starten. Zahle wenn du wächst.",
+              "ctaLabel": "Jetzt starten",
+              "ctaHref": "/signup"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "act_version": "0.1",
+  "id": "concepts/auth",
+  "type": "concept",
+  "title": "Authentication",
+  "etag": "sha256:ghi789",
+  "summary": "How Acme verifies callers via API keys and OAuth 2.0.",
+  "summary_source": "author",
+  "content": [
+    { "type": "markdown", "text": "## Schemes\n\nAcme accepts API keys and OAuth 2.0..." }
+  ],
+  "tokens": { "summary": 13, "body": 540 },
+  "children": ["concepts/auth/api-keys", "concepts/auth/oauth"],
+  "related": [
+    { "id": "concepts/scopes", "relation": "see-also" },
+    { "id": "reference/auth-errors", "relation": "see-also" },
+    { "id": "concepts/security", "relation": "see-also" }
+  ]
+}

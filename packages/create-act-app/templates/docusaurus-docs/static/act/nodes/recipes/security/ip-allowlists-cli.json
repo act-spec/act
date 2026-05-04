@@ -1,0 +1,51 @@
+{
+  "act_version": "0.1",
+  "id": "recipes/security/ip-allowlists-cli",
+  "type": "recipe",
+  "title": "Ip allowlists cli (Security)",
+  "summary": "Ip allowlists cli — security workflow walkthrough.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Goal"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Demonstrate \"ip allowlists (cli)\" against the Tinybox security surface end to end."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Walkthrough"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "text": "# Step 1 — prepare a bucket for the security workflow.\ntinybox buckets create my-bucket --region us-east-1"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Apply the recipe; verify with the API reference under API reference."
+    }
+  ],
+  "tokens": {
+    "summary": 7,
+    "body": 46
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "recipes/security/ip-allowlists-cli.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/ip-allowlists-cli.md"
+    }
+  },
+  "etag": "s256:dF62nSuk_BPMShg2_U3bLR",
+  "source": {
+    "human_url": "https://example.com/recipes/security/ip-allowlists-cli/"
+  },
+  "parent": "security"
+}

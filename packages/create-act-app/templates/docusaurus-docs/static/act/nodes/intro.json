@@ -1,0 +1,40 @@
+{
+  "act_version": "0.1",
+  "id": "intro",
+  "type": "doc",
+  "title": "Tinybox SDK overview",
+  "summary": "Introduction to the Tinybox storage SDK: data model, capabilities, and a tour of the docs.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Tinybox is a fictional object-storage product used as the corpus for the PRD-701 conformance example.\nThe docs are organised into Getting Started, Concepts, an API reference grouped by surface area, recipes,\nand a troubleshooting catalog. Each page is one ACT node per PRD-201; each sidebars.js category becomes a\nsynthesized parent node per PRD-404-R6."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Where to start"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Start with Getting started or jump to the API reference."
+    }
+  ],
+  "tokens": {
+    "summary": 15,
+    "body": 67
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-markdown",
+      "source_id": "intro.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/intro.md"
+    }
+  },
+  "etag": "s256:fgQRIn_tJCQSAqRRmh3gbO",
+  "source": {
+    "human_url": "https://example.com/intro/"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "type": "markdown",
+  "text": "## Install\n\nFirst, install the SDK:\n\n```bash\nnpm install @acme/sdk\n```\n\nThen configure your API key in `.env`."
+}

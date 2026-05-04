@@ -1,0 +1,16 @@
+{
+  "id": "capability-declaration",
+  "requirements": ["PRD-303-R20", "PRD-300-R28"],
+  "description": "Capability matrix the v0.1 binding publishes. Per PRD-300-R28 / A15 every flag is set truthfully: ssr-walk + concurrent are implemented (true); static-ast (compiler-cli scanner), streaming (Angular has no public streaming API), suspense, headless-render, and rsc are all v0.1 follow-up milestones / not-applicable in Angular's v0.1 SSR (false). The PRD-303-R20 published target table flips static-ast to true once the compiler-cli scanner lands (MINOR per PRD-108-R4(5)).",
+  "expected": {
+    "capabilities": {
+      "ssr-walk": true,
+      "static-ast": false,
+      "headless-render": false,
+      "rsc": false,
+      "streaming": false,
+      "suspense": false,
+      "concurrent": true
+    }
+  }
+}

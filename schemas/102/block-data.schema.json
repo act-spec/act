@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/0.1/block-data.schema.json",
+  "title": "ACT content block — data",
+  "description": "Per PRD-102-R4. Structured data. The `text` field carries the canonical serialized form (REQUIRED). The `value` field MAY carry the parsed convenience form. Conformance: Standard.",
+  "type": "object",
+  "required": ["type", "format", "text"],
+  "additionalProperties": true,
+  "properties": {
+    "type": {
+      "type": "string",
+      "const": "data"
+    },
+    "format": {
+      "type": "string",
+      "description": "Documented-open enum. Well-known values: `json`, `csv`, `tsv`, `yaml`, `ndjson`. Adding values is MINOR per PRD-108-R4(3).",
+      "examples": ["json", "csv", "tsv", "yaml", "ndjson"]
+    },
+    "text": {
+      "type": "string",
+      "description": "Required. The serialized data as a string. Consumers MUST treat this as opaque data, not content (no markdown rendering, no script execution). Per PRD-102-R31."
+    },
+    "value": {
+      "description": "Optional convenience-only field. Producers MAY emit the parsed object/array form for consumers that prefer to skip parsing. If present, `value` MUST be the structural equivalent of `text` parsed under `format`. On disagreement between `text` and `value`, `text` is canonical.",
+      "type": ["object", "array", "string", "number", "boolean", "null"]
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}

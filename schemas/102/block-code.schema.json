@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/0.1/block-code.schema.json",
+  "title": "ACT content block — code",
+  "description": "Per PRD-102-R3. A code snippet. Conformance: Standard.",
+  "type": "object",
+  "required": ["type", "language", "text"],
+  "additionalProperties": true,
+  "properties": {
+    "type": {
+      "type": "string",
+      "const": "code"
+    },
+    "language": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Documented-open enum. Well-known values include: `bash`, `javascript`, `typescript`, `python`, `go`, `rust`, `json`, `yaml`, `html`, `css`, `sql`, `shell`, `text`. Producers SHOULD use lowercase ASCII. Adding values is MINOR per PRD-108-R4(3)."
+    },
+    "text": {
+      "type": "string",
+      "description": "Source text of the snippet. No transformation; whitespace preserved verbatim."
+    },
+    "filename": {
+      "type": "string",
+      "description": "Optional. The file path or name this snippet represents."
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}

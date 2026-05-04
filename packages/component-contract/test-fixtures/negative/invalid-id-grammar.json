@@ -1,0 +1,8 @@
+{
+  "id": "invalid-id-grammar",
+  "requirements": ["PRD-300-R5", "PRD-100-R10"],
+  "input": {
+    "id": "Pricing-2026"
+  },
+  "expectedErrorSubstring": "PRD-100-R10"
+}

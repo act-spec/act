@@ -1,0 +1,16 @@
+{
+  "type": "marketing:faq",
+  "items": [
+    {
+      "question": "Can I self-host?",
+      "answer": "Yes — Enterprise plans include a self-hosted option with the same feature set."
+    },
+    {
+      "question": "What runtimes are supported?",
+      "answer": "Node.js 18+, Python 3.10+, Go 1.21+, and any HTTP client via the REST API."
+    }
+  ],
+  "metadata": {
+    "extracted_via": "component-contract"
+  }
+}

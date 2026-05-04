@@ -1,0 +1,31 @@
+{
+  "act_version": "0.1",
+  "id": "storage",
+  "type": "section",
+  "title": "Storage",
+  "summary": "Storage — section.",
+  "summary_source": "extracted",
+  "etag": "s256:RksBEE1ojHKNjsvWd5dbxq",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# Storage\n\nThis section groups related storage documents.\n"
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 16
+  },
+  "children": [
+    "concepts/storage/buckets",
+    "concepts/storage/objects",
+    "concepts/storage/lifecycle"
+  ],
+  "parent": "concepts",
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "sidebar-category:storage"
+    }
+  }
+}

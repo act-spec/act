@@ -1,0 +1,18 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-100",
+    "violates": [
+      "PRD-100-R1"
+    ],
+    "expected_error": {
+      "level": "core",
+      "requirement": "PRD-100-R1",
+      "missing": "Error envelope missing act_version at root."
+    }
+  },
+  "_negative_reason": "Error envelope missing `act_version` at root. PRD-108-R1 requires `act_version` on every envelope including error.",
+  "error": {
+    "code": "internal",
+    "message": "Server error"
+  }
+}

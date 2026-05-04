@@ -1,0 +1,33 @@
+{
+  "_comment": "Negative fixture for PRD-103-R2 (etag value-shape). Two illegal forms: (a) leading/internal whitespace; (b) non-base64url characters such as `+`, `/`, or `=` padding. The schema pattern `^[a-z0-9]+:[A-Za-z0-9_-]+$` rejects all three.",
+  "cases": [
+    {
+      "etag": " s256:8Z0luYEDvPcDQKLimP55qC",
+      "reason": "leading whitespace"
+    },
+    {
+      "etag": "s256: 8Z0luYEDvPcDQKLimP55qC",
+      "reason": "internal whitespace after colon"
+    },
+    {
+      "etag": "s256:8Z0luYEDvPcDQKLimP+5qC",
+      "reason": "non-base64url-safe char `+` (this is standard base64; the recipe requires base64url per RFC 4648 §5)"
+    },
+    {
+      "etag": "s256:8Z0luYEDvPcDQKLimP/5qC",
+      "reason": "non-base64url-safe char `/` (this is standard base64; the recipe requires base64url per RFC 4648 §5)"
+    },
+    {
+      "etag": "s256:8Z0luYEDvPcDQKLimP55qC==",
+      "reason": "padding `=` is forbidden — the recipe specifies no padding"
+    },
+    {
+      "etag": "S256:8Z0luYEDvPcDQKLimP55qC",
+      "reason": "algorithm prefix MUST be lowercase ASCII; `S256` is not the canonical form"
+    }
+  ],
+  "expected_finding": {
+    "requirement": "PRD-103-R2",
+    "missing": "etag value violates the value-shape pattern `^[a-z0-9]+:[A-Za-z0-9_-]+$` (whitespace, non-base64url chars, padding, or uppercase algorithm prefix)"
+  }
+}

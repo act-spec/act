@@ -1,0 +1,51 @@
+{
+  "act_version": "0.1",
+  "id": "troubleshooting/billing/spend-alert-not-firing-reproduction",
+  "type": "troubleshooting",
+  "title": "Spend alert not firing reproduction (Billing)",
+  "summary": "Resolve \"spend alert not firing\" — reproduction for the Billing surface.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Symptom"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "An operation against the Billing surface fails with an error matching \"spend alert not firing (reproduction)\"."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Resolution"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Inspect the error envelope.Re-issue with corrected parameters.Confirm via the audit log."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "See the Billing API reference for the exact field set."
+    }
+  ],
+  "tokens": {
+    "summary": 11,
+    "body": 46
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "troubleshooting/billing/spend-alert-not-firing-reproduction.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/billing/spend-alert-not-firing-reproduction.md"
+    }
+  },
+  "etag": "s256:XaM-P4HkYVMXnlr7wIaD3b",
+  "source": {
+    "human_url": "https://example.com/troubleshooting/billing/spend-alert-not-firing-reproduction/"
+  },
+  "parent": "billing-issues"
+}

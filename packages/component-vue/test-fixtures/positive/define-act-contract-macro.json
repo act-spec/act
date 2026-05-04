@@ -1,0 +1,9 @@
+{
+  "id": "define-act-contract-macro",
+  "requirements": ["PRD-302-R3", "PRD-302-R5", "PRD-302-R6", "PRD-302-R10"],
+  "description": "defineActContract macro form (lowered to its runtime equivalent of useActContract). Verifies the runtime-equivalent path emits the marketing:faq block correctly inside an SSR walk; in real <script setup> SFC code the binding's Vite plugin rewrites defineActContract({...}) to useActContract({...}) at compile time per PRD-302-R3 / R5.",
+  "expected": {
+    "draftCount": 1,
+    "blockTypes": ["marketing:faq"]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_comment": "Negative fixture for PRD-105-R12 — a CDN that auto-minifies/recomments JSON in transit, changing the bytes the consumer sees and breaking ETag agreement (the etag was computed over the canonical JSON the producer wrote, but the bytes the consumer receives differ). PRD-600 MUST flag CDN configurations that mutate JSON.",
+  "producer_emitted_bytes": "{\n  \"act_version\": \"0.1\",\n  \"id\": \"intro\",\n  \"summary\": \"Hello.\",\n  \"etag\": \"s256:8Z0luYEDvPcDQKLimP55qC\"\n}\n",
+  "cdn_served_bytes": "{\"act_version\":\"0.1\",\"id\":\"intro\",\"summary\":\"Hello.\",\"etag\":\"s256:8Z0luYEDvPcDQKLimP55qC\",\"_cdn_meta\":{\"served_from\":\"edge-iad1\"}}",
+  "_notes": [
+    "The CDN auto-minified whitespace AND injected a `_cdn_meta` field. The whitespace change is permitted only if the etag is computed over canonical JSON (per PRD-103, it is — JCS canonicalization absorbs whitespace differences). However the field injection is a hard violation: the consumer parses an envelope the producer never authored.",
+    "PRD-105-R12 prohibits mutation of the JSON body. Wire-layer compression (gzip/brotli) is permitted because it does not change the decoded bytes."
+  ],
+  "_expected_validator_finding": {
+    "requirement": "PRD-105-R12",
+    "missing": "CDN injected an unsolicited `_cdn_meta` field into the JSON body served at /act/n/intro.json; producer-emitted bytes and CDN-served bytes do not agree after decompression"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "act_version": "0.1",
+  "id": "networking-issues",
+  "type": "section",
+  "title": "Networking issues",
+  "summary": "Networking issues — section.",
+  "summary_source": "extracted",
+  "etag": "s256:ypfkvtGJYb1ZqJtVdhdA0h",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# Networking issues\n\nThis section groups related networking issues documents.\n"
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 16
+  },
+  "children": [
+    "troubleshooting/networking/connection-reset-symptom",
+    "troubleshooting/networking/connection-reset-resolution",
+    "troubleshooting/networking/connection-reset-reproduction",
+    "troubleshooting/networking/tls-version-too-old-symptom",
+    "troubleshooting/networking/tls-version-too-old-resolution",
+    "troubleshooting/networking/tls-version-too-old-reproduction",
+    "troubleshooting/networking/http2-required-symptom",
+    "troubleshooting/networking/http2-required-resolution",
+    "troubleshooting/networking/http2-required-reproduction",
+    "troubleshooting/networking/proxy-misconfigured-symptom",
+    "troubleshooting/networking/proxy-misconfigured-resolution",
+    "troubleshooting/networking/proxy-misconfigured-reproduction",
+    "troubleshooting/networking/dns-resolution-failed-symptom",
+    "troubleshooting/networking/dns-resolution-failed-resolution",
+    "troubleshooting/networking/dns-resolution-failed-reproduction",
+    "troubleshooting/networking/cross-region-latency-symptom",
+    "troubleshooting/networking/cross-region-latency-resolution",
+    "troubleshooting/networking/cross-region-latency-reproduction",
+    "troubleshooting/networking/mtu-issues-symptom",
+    "troubleshooting/networking/mtu-issues-resolution",
+    "troubleshooting/networking/mtu-issues-reproduction",
+    "troubleshooting/networking/ipv6-disabled-symptom",
+    "troubleshooting/networking/ipv6-disabled-resolution",
+    "troubleshooting/networking/ipv6-disabled-reproduction"
+  ],
+  "parent": "troubleshooting",
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "sidebar-category:networking-issues"
+    }
+  }
+}

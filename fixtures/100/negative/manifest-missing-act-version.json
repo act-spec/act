@@ -1,0 +1,23 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-100",
+    "violates": [
+      "PRD-100-R1"
+    ],
+    "expected_error": {
+      "level": "core",
+      "requirement": "PRD-100-R1",
+      "missing": "Manifest missing required act_version at envelope root."
+    }
+  },
+  "_negative_reason": "Missing required `act_version` at envelope root. Violates PRD-100-R1 and PRD-108-R1.",
+  "site": {
+    "name": "Broken"
+  },
+  "index_url": "/act/index.json",
+  "node_url_template": "/act/n/{id}.json",
+  "conformance": {
+    "level": "core"
+  },
+  "delivery": "static"
+}

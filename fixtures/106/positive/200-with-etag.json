@@ -1,0 +1,34 @@
+{
+  "scenario": "200 OK on a node fetch with ETag header set, in the runtime profile",
+  "satisfies": ["PRD-106-R1", "PRD-106-R3", "PRD-106-R4", "PRD-106-R12"],
+  "request": {
+    "method": "GET",
+    "url": "https://app.acme.com/act/n/doc%2Fproj-launch-2026.json",
+    "headers": {
+      "Accept": "application/act-node+json",
+      "Cookie": "session=alex-session-id"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/act-node+json; profile=runtime",
+      "ETag": "\"s256:8aBcDeFgHiJkLmNoPqRsTu\"",
+      "Cache-Control": "private, must-revalidate",
+      "Vary": "Cookie",
+      "Link": "</.well-known/act.json>; rel=\"act\"; type=\"application/act-manifest+json\"; profile=\"runtime\""
+    },
+    "body": {
+      "act_version": "0.1",
+      "id": "doc/proj-launch-2026",
+      "type": "article",
+      "title": "Q2 Launch Plan",
+      "etag": "s256:8aBcDeFgHiJkLmNoPqRsTu",
+      "summary": "Full Q2 product launch timeline, owners, and milestones.",
+      "tokens": { "summary": 14, "body": 1820 },
+      "content": [
+        { "type": "prose", "format": "markdown", "text": "# Q2 Launch Plan\n\n..." }
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "_comment": "Worked example for PRD-103-R5 (static ETag derivation). Hash input is the JCS-canonical encoding of the node payload minus the `etag` field itself. No identity, no tenant.",
+  "input_payload_minus_etag": {
+    "act_version": "0.1",
+    "id": "intro",
+    "type": "document",
+    "title": "Introduction",
+    "summary": "A simple introduction.",
+    "content": [
+      { "type": "prose", "text": "Hello." }
+    ],
+    "tokens": { "body": 2, "summary": 4 }
+  },
+  "canonical_jcs_bytes_utf8": "{\"act_version\":\"0.1\",\"content\":[{\"text\":\"Hello.\",\"type\":\"prose\"}],\"id\":\"intro\",\"summary\":\"A simple introduction.\",\"title\":\"Introduction\",\"tokens\":{\"body\":2,\"summary\":4},\"type\":\"document\"}",
+  "expected_etag": "s256:8Z0luYEDvPcDQKLimP55qC",
+  "expected_envelope": {
+    "act_version": "0.1",
+    "id": "intro",
+    "type": "document",
+    "title": "Introduction",
+    "summary": "A simple introduction.",
+    "content": [
+      { "type": "prose", "text": "Hello." }
+    ],
+    "tokens": { "body": 2, "summary": 4 },
+    "etag": "s256:8Z0luYEDvPcDQKLimP55qC"
+  }
+}

@@ -1,0 +1,21 @@
+name: DCO
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+permissions:
+  pull-requests: read
+  contents: read
+jobs:
+  dco:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: tim-actions/get-pr-commits@v1.3.1
+        id: pr-commits
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: tim-actions/dco@2fd0504dc0d27b33f542867c300c60840c6dcb20
+        with:
+          commits: ${{ steps.pr-commits.outputs.commits }}

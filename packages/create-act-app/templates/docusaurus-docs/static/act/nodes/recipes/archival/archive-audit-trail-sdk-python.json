@@ -1,0 +1,51 @@
+{
+  "act_version": "0.1",
+  "id": "recipes/archival/archive-audit-trail-sdk-python",
+  "type": "recipe",
+  "title": "Archive audit trail sdk python (Archival)",
+  "summary": "Archive audit trail sdk python — archival workflow walkthrough.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Goal"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Demonstrate \"archive audit trail (sdk python)\" against the Tinybox archival surface end to end."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Walkthrough"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "text": "# Step 1 — prepare a bucket for the archival workflow.\ntinybox buckets create my-bucket --region us-east-1"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Apply the recipe; verify with the API reference under API reference."
+    }
+  ],
+  "tokens": {
+    "summary": 9,
+    "body": 48
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "recipes/archival/archive-audit-trail-sdk-python.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/archival/archive-audit-trail-sdk-python.md"
+    }
+  },
+  "etag": "s256:ub6Mv3Ygy5_D2SfYoa2Gjv",
+  "source": {
+    "human_url": "https://example.com/recipes/archival/archive-audit-trail-sdk-python/"
+  },
+  "parent": "archival"
+}

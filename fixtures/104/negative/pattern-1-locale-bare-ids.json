@@ -1,0 +1,45 @@
+{
+  "_fixture": "PRD-104 negative — multi-locale Pattern 1 site emitting locale-bare IDs and omitting `metadata.locale` on every node. Ambiguous: 'pricing' could be any of four locales. MUST be rejected (PRD-104-R5 + PRD-104-R7).",
+  "_violates": ["PRD-104-R5", "PRD-104-R7"],
+  "_manifest": {
+    "act_version": "0.1",
+    "site": { "name": "Acme", "locale": "en-US" },
+    "conformance": { "level": "strict" },
+    "delivery": "static",
+    "index_url": "/act/index.json",
+    "index_ndjson_url": "/act/index.ndjson",
+    "node_url_template": "/act/n/{id}.json",
+    "subtree_url_template": "/act/sub/{id}.json",
+    "search_url_template": "/act/search?q={query}",
+    "locales": {
+      "default": "en-US",
+      "available": ["en-US", "es-ES"]
+    },
+    "capabilities": {
+      "etag": true, "subtree": true, "ndjson_index": true,
+      "search": { "template_advertised": true }
+    }
+  },
+  "_index_excerpt": {
+    "act_version": "0.1",
+    "etag": "s256:bareIDsAMBIGUOUSneverWORK",
+    "nodes": [
+      {
+        "id": "pricing",
+        "type": "landing",
+        "title": "Pricing",
+        "summary": "Acme pricing tiers.",
+        "etag": "s256:abc123",
+        "tokens": { "summary": 5 }
+      },
+      {
+        "id": "pricing",
+        "type": "landing",
+        "title": "Precios",
+        "summary": "Niveles de precios de Acme.",
+        "etag": "s256:def456",
+        "tokens": { "summary": 7 }
+      }
+    ]
+  }
+}

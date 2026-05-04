@@ -1,0 +1,64 @@
+{
+  "act_version": "0.1",
+  "id": "archival",
+  "type": "section",
+  "title": "Archival",
+  "summary": "Archival — section.",
+  "summary_source": "extracted",
+  "etag": "s256:c2GU7Vp4CKDimcVdSgmIPx",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# Archival\n\nThis section groups related archival documents.\n"
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 16
+  },
+  "children": [
+    "recipes/archival/archive-old-objects-overview",
+    "recipes/archival/archive-old-objects-cli",
+    "recipes/archival/archive-old-objects-sdk-node",
+    "recipes/archival/archive-old-objects-sdk-python",
+    "recipes/archival/restore-from-archive-overview",
+    "recipes/archival/restore-from-archive-cli",
+    "recipes/archival/restore-from-archive-sdk-node",
+    "recipes/archival/restore-from-archive-sdk-python",
+    "recipes/archival/expire-temporary-uploads-overview",
+    "recipes/archival/expire-temporary-uploads-cli",
+    "recipes/archival/expire-temporary-uploads-sdk-node",
+    "recipes/archival/expire-temporary-uploads-sdk-python",
+    "recipes/archival/tag-driven-lifecycle-overview",
+    "recipes/archival/tag-driven-lifecycle-cli",
+    "recipes/archival/tag-driven-lifecycle-sdk-node",
+    "recipes/archival/tag-driven-lifecycle-sdk-python",
+    "recipes/archival/cross-region-archive-overview",
+    "recipes/archival/cross-region-archive-cli",
+    "recipes/archival/cross-region-archive-sdk-node",
+    "recipes/archival/cross-region-archive-sdk-python",
+    "recipes/archival/compliance-retention-overview",
+    "recipes/archival/compliance-retention-cli",
+    "recipes/archival/compliance-retention-sdk-node",
+    "recipes/archival/compliance-retention-sdk-python",
+    "recipes/archival/legal-hold-overview",
+    "recipes/archival/legal-hold-cli",
+    "recipes/archival/legal-hold-sdk-node",
+    "recipes/archival/legal-hold-sdk-python",
+    "recipes/archival/tiered-cold-storage-overview",
+    "recipes/archival/tiered-cold-storage-cli",
+    "recipes/archival/tiered-cold-storage-sdk-node",
+    "recipes/archival/tiered-cold-storage-sdk-python",
+    "recipes/archival/archive-audit-trail-overview",
+    "recipes/archival/archive-audit-trail-cli",
+    "recipes/archival/archive-audit-trail-sdk-node",
+    "recipes/archival/archive-audit-trail-sdk-python"
+  ],
+  "parent": "recipes",
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "sidebar-category:archival"
+    }
+  }
+}

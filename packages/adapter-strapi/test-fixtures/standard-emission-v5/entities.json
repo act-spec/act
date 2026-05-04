@@ -1,0 +1,41 @@
+{
+  "_comment": "Recorded Strapi v5 REST response shape for PRD-205-R28 (standard-tier) integration. Two articles entities (v5 flat envelope), one with a markdown body and a relation to a sibling article. Markdown body is emitted as a single `markdown` block (PRD-205-R9 default).",
+  "serverStrapiVersion": "v5",
+  "authProbe": "ok",
+  "contentTypeSingulars": { "articles": "article" },
+  "entitiesByContentType": {
+    "articles": [
+      {
+        "id": 1001,
+        "documentId": "doc-installing-acme",
+        "slug": "installing-acme",
+        "title": "Installing Acme",
+        "summary": "How to install the Acme SDK and get started.",
+        "body": "# Installing Acme\n\nFirst, install the SDK:\n\n```bash\nnpm install @acme/sdk\n```\n\n> [!info] Node 18+ is required.\n\nNext, configure your environment.",
+        "tags": [
+          { "id": 1, "name": "sdk" },
+          { "id": 2, "name": "installation" }
+        ],
+        "publishedAt": "2026-04-22T08:15:00Z",
+        "updatedAt": "2026-04-22T08:15:00Z",
+        "related_articles": [
+          {
+            "id": 1002,
+            "documentId": "doc-authentication",
+            "__contentType": "articles"
+          }
+        ]
+      },
+      {
+        "id": 1002,
+        "documentId": "doc-authentication",
+        "slug": "authentication",
+        "title": "Authentication",
+        "summary": "How Acme authenticates SDK requests.",
+        "body": "# Authentication\n\nAcme uses bearer tokens.",
+        "publishedAt": "2026-04-15T10:00:00Z",
+        "updatedAt": "2026-04-15T10:00:00Z"
+      }
+    ]
+  }
+}

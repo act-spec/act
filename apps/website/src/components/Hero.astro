@@ -1,0 +1,21 @@
+---
+// Hero block for the homepage. Renders the primary tagline and the
+// twin-CTA row (Quickstart + Why ACT).
+interface Props {
+  title?: string;
+  tagline?: string;
+}
+const {
+  title = 'Publish AI-readable, structured content',
+  tagline = 'ACT (Agent Content Tree) is an open standard for shipping typed, schema-validated content trees from any site, CMS, or app — readable today by any MCP-capable agent.',
+} = Astro.props;
+---
+
+<section class="act-hero">
+  <h1>{title}</h1>
+  <p class="tagline">{tagline}</p>
+  <div class="cta-row">
+    <a class="cta primary" href="/quickstart/">Quickstart</a>
+    <a class="cta secondary" href="/why-act/">Why ACT?</a>
+  </div>
+</section>

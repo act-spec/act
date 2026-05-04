@@ -1,0 +1,12 @@
+{
+  "type": "marketing:hero",
+  "headline": "Ship safer software, faster.",
+  "subhead": "Type-safe APIs, instant rollbacks, and zero-downtime deploys — out of the box.",
+  "cta": {
+    "label": "Start free trial",
+    "href": "/signup"
+  },
+  "metadata": {
+    "extracted_via": "component-contract"
+  }
+}

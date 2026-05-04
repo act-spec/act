@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/104/node-locale-metadata.schema.json",
+  "title": "ACT Node — locale-related metadata (PRD-104)",
+  "description": "Constraints on the locale-related fields a node MAY carry on `metadata`, plus the cross-locale references PRD-104 owns. The surrounding node envelope is owned by the wire-format / content-block sibling PRDs; this schema covers only the locale-specific shape.",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "locale": {
+          "type": "string",
+          "description": "BCP-47 locale tag, same subset as locales-block.schema.json. REQUIRED on every node in Pattern 1 (locale-prefixed IDs / single manifest) sites. MAY be omitted in Pattern 2 (per-locale manifest) sites because the per-locale manifest's `site.locale` is the authoritative source.",
+          "pattern": "^[a-z]{2,3}(-[A-Z][a-z]{3})?(-[A-Z]{2})?$"
+        },
+        "translation_status": {
+          "type": "string",
+          "description": "Closed enum (v0.1) describing the translation state of the node or block. Adding a value is a MAJOR change per PRD-108 R5(4).",
+          "enum": ["complete", "partial", "fallback", "missing"]
+        },
+        "fallback_from": {
+          "type": "string",
+          "description": "When `translation_status: \"fallback\"`, identifies the locale whose value was substituted. SHOULD equal `locales.default` of the producing manifest in the typical case.",
+          "pattern": "^[a-z]{2,3}(-[A-Z][a-z]{3})?(-[A-Z]{2})?$"
+        },
+        "translations": {
+          "type": "array",
+          "description": "Optional dense form of cross-locale references. An alternative to emitting one `relation: \"translation_of\"` edge per locale in `related`. Producers MAY emit either or both; consumers MUST tolerate both.",
+          "items": {
+            "type": "object",
+            "required": ["locale", "id"],
+            "additionalProperties": false,
+            "properties": {
+              "locale": {
+                "type": "string",
+                "pattern": "^[a-z]{2,3}(-[A-Z][a-z]{3})?(-[A-Z]{2})?$"
+              },
+              "id": { "type": "string" }
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$comment": "PRD-104-R10: when translation_status is 'fallback', fallback_from SHOULD be present and content fields MUST NOT be null.",
+          "if": {
+            "properties": { "translation_status": { "const": "fallback" } },
+            "required": ["translation_status"]
+          },
+          "then": {
+            "required": ["fallback_from"]
+          }
+        }
+      ]
+    }
+  }
+}

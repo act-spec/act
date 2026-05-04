@@ -1,0 +1,20 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-102",
+    "violates": [
+      "PRD-102-R4"
+    ],
+    "expected_error": {
+      "level": "core",
+      "requirement": "PRD-102-R4",
+      "missing": "data block missing required `text` (canonical form)."
+    }
+  },
+  "type": "data",
+  "format": "json",
+  "value": {
+    "limits": {
+      "rpm": 600
+    }
+  }
+}

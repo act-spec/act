@@ -1,0 +1,27 @@
+{
+  "_comment": "Positive fixture for PRD-105-R10 — a CDN response trace demonstrating correct 304 Not Modified handling. The consumer sent If-None-Match matching the resource's stored ETag; the CDN MUST return 304 with no body. Cite PRD-103 for ETag derivation; PRD-105 only requires the CDN to honor revalidation.",
+  "request": {
+    "method": "GET",
+    "url": "https://acme.com/act/n/intro.json",
+    "headers": {
+      "If-None-Match": "\"s256:8Z0luYEDvPcDQKLimP55qC\"",
+      "Accept": "application/act-node+json"
+    }
+  },
+  "response": {
+    "status": 304,
+    "status_text": "Not Modified",
+    "headers": {
+      "ETag": "\"s256:8Z0luYEDvPcDQKLimP55qC\"",
+      "Cache-Control": "public, max-age=600",
+      "Content-Type": "application/act-node+json"
+    },
+    "body": null
+  },
+  "_notes": [
+    "ETag value byte-equal to the consumer's If-None-Match — CDN MUST return 304.",
+    "No response body on 304 per RFC 9110 §15.4.5.",
+    "Cache-Control max-age 600 (10 minutes) is producer-tunable; PRD-105-R11 recommends 5–60 minutes.",
+    "Content-Type is informational on a 304 (no body) but SHOULD match the resource's normal type."
+  ]
+}

@@ -1,0 +1,3850 @@
+{
+  "act_version": "0.1",
+  "root": "troubleshooting",
+  "depth": 3,
+  "truncated": false,
+  "tokens": {
+    "body": 6430,
+    "summary": 1439
+  },
+  "nodes": [
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting",
+      "type": "section",
+      "title": "Troubleshooting",
+      "summary": "Troubleshooting — section.",
+      "summary_source": "extracted",
+      "etag": "s256:iYytR8uzgaTViOcqmI9pcT",
+      "content": [
+        {
+          "type": "markdown",
+          "content": "# Troubleshooting\n\nThis section groups related troubleshooting documents.\n"
+        }
+      ],
+      "tokens": {
+        "summary": 8,
+        "body": 16
+      },
+      "children": [
+        "buckets-issues",
+        "objects-issues",
+        "webhooks-issues",
+        "auth-issues",
+        "networking-issues",
+        "billing-issues"
+      ],
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "sidebar-category:troubleshooting"
+        }
+      }
+    },
+    {
+      "act_version": "0.1",
+      "id": "buckets-issues",
+      "type": "section",
+      "title": "Buckets issues",
+      "summary": "Buckets issues — section.",
+      "summary_source": "extracted",
+      "etag": "s256:cMJSbWq2gkMiFLkyg4uAuN",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 16
+      },
+      "children": [
+        "troubleshooting/buckets/bucket-name-conflict-symptom",
+        "troubleshooting/buckets/bucket-name-conflict-resolution",
+        "troubleshooting/buckets/bucket-name-conflict-reproduction",
+        "troubleshooting/buckets/bucket-not-empty-symptom",
+        "troubleshooting/buckets/bucket-not-empty-resolution",
+        "troubleshooting/buckets/bucket-not-empty-reproduction",
+        "troubleshooting/buckets/region-not-supported-symptom",
+        "troubleshooting/buckets/region-not-supported-resolution",
+        "troubleshooting/buckets/region-not-supported-reproduction",
+        "troubleshooting/buckets/create-rate-limited-symptom",
+        "troubleshooting/buckets/create-rate-limited-resolution",
+        "troubleshooting/buckets/create-rate-limited-reproduction",
+        "troubleshooting/buckets/replication-lag-symptom",
+        "troubleshooting/buckets/replication-lag-resolution",
+        "troubleshooting/buckets/replication-lag-reproduction",
+        "troubleshooting/buckets/lifecycle-not-applied-symptom",
+        "troubleshooting/buckets/lifecycle-not-applied-resolution",
+        "troubleshooting/buckets/lifecycle-not-applied-reproduction",
+        "troubleshooting/buckets/cross-account-access-denied-symptom",
+        "troubleshooting/buckets/cross-account-access-denied-resolution",
+        "troubleshooting/buckets/cross-account-access-denied-reproduction",
+        "troubleshooting/buckets/unexpected-versioning-state-symptom",
+        "troubleshooting/buckets/unexpected-versioning-state-resolution",
+        "troubleshooting/buckets/unexpected-versioning-state-reproduction"
+      ],
+      "parent": "troubleshooting",
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "sidebar-category:buckets-issues"
+        }
+      }
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/bucket-name-conflict-symptom",
+      "type": "troubleshooting",
+      "title": "Bucket name conflict symptom (Buckets)",
+      "summary": "Resolve \"bucket name conflict\" — symptom for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/bucket-name-conflict-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/bucket-name-conflict-symptom.md"
+        }
+      },
+      "etag": "s256:gDle7ZxbY-ECPNuain6jwS",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/bucket-name-conflict-symptom/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/bucket-name-conflict-resolution",
+      "type": "troubleshooting",
+      "title": "Bucket name conflict resolution (Buckets)",
+      "summary": "Resolve \"bucket name conflict\" — resolution for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/bucket-name-conflict-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/bucket-name-conflict-resolution.md"
+        }
+      },
+      "etag": "s256:OMf_ZFv_mpJPpnxZjWvqFg",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/bucket-name-conflict-resolution/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/bucket-name-conflict-reproduction",
+      "type": "troubleshooting",
+      "title": "Bucket name conflict reproduction (Buckets)",
+      "summary": "Resolve \"bucket name conflict\" — reproduction for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/bucket-name-conflict-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/bucket-name-conflict-reproduction.md"
+        }
+      },
+      "etag": "s256:CGpiq6UNpePq_FvI5dSbZ1",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/bucket-name-conflict-reproduction/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/bucket-not-empty-symptom",
+      "type": "troubleshooting",
+      "title": "Bucket not empty symptom (Buckets)",
+      "summary": "Resolve \"bucket not empty\" — symptom for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/bucket-not-empty-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/bucket-not-empty-symptom.md"
+        }
+      },
+      "etag": "s256:kV4exDT6KrnlGRO50nwwlh",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/bucket-not-empty-symptom/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/bucket-not-empty-resolution",
+      "type": "troubleshooting",
+      "title": "Bucket not empty resolution (Buckets)",
+      "summary": "Resolve \"bucket not empty\" — resolution for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/bucket-not-empty-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/bucket-not-empty-resolution.md"
+        }
+      },
+      "etag": "s256:EYCvM-lQsdoiRauFBGeLpf",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/bucket-not-empty-resolution/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/bucket-not-empty-reproduction",
+      "type": "troubleshooting",
+      "title": "Bucket not empty reproduction (Buckets)",
+      "summary": "Resolve \"bucket not empty\" — reproduction for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/bucket-not-empty-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/bucket-not-empty-reproduction.md"
+        }
+      },
+      "etag": "s256:EQwbYCTsQx52qx3KveJmM8",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/bucket-not-empty-reproduction/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/region-not-supported-symptom",
+      "type": "troubleshooting",
+      "title": "Region not supported symptom (Buckets)",
+      "summary": "Resolve \"region not supported\" — symptom for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/region-not-supported-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/region-not-supported-symptom.md"
+        }
+      },
+      "etag": "s256:alWDHmh1rrRucoL2JUmKSm",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/region-not-supported-symptom/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/region-not-supported-resolution",
+      "type": "troubleshooting",
+      "title": "Region not supported resolution (Buckets)",
+      "summary": "Resolve \"region not supported\" — resolution for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/region-not-supported-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/region-not-supported-resolution.md"
+        }
+      },
+      "etag": "s256:gjdu2j6mvwRkPx52Myor2n",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/region-not-supported-resolution/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/region-not-supported-reproduction",
+      "type": "troubleshooting",
+      "title": "Region not supported reproduction (Buckets)",
+      "summary": "Resolve \"region not supported\" — reproduction for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/region-not-supported-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/region-not-supported-reproduction.md"
+        }
+      },
+      "etag": "s256:T378cT9dDatnjoxwKbkjEN",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/region-not-supported-reproduction/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/create-rate-limited-symptom",
+      "type": "troubleshooting",
+      "title": "Create rate limited symptom (Buckets)",
+      "summary": "Resolve \"create rate limited\" — symptom for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/create-rate-limited-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/create-rate-limited-symptom.md"
+        }
+      },
+      "etag": "s256:c4HvBoMKDddy0azQ7Zerf6",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/create-rate-limited-symptom/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/create-rate-limited-resolution",
+      "type": "troubleshooting",
+      "title": "Create rate limited resolution (Buckets)",
+      "summary": "Resolve \"create rate limited\" — resolution for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/create-rate-limited-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/create-rate-limited-resolution.md"
+        }
+      },
+      "etag": "s256:1vZYsnoLyjUWGBIPvHOQvw",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/create-rate-limited-resolution/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/create-rate-limited-reproduction",
+      "type": "troubleshooting",
+      "title": "Create rate limited reproduction (Buckets)",
+      "summary": "Resolve \"create rate limited\" — reproduction for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/create-rate-limited-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/create-rate-limited-reproduction.md"
+        }
+      },
+      "etag": "s256:PQIjWa5z8HlgePL-usBEJm",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/create-rate-limited-reproduction/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/replication-lag-symptom",
+      "type": "troubleshooting",
+      "title": "Replication lag symptom (Buckets)",
+      "summary": "Resolve \"replication lag\" — symptom for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/replication-lag-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/replication-lag-symptom.md"
+        }
+      },
+      "etag": "s256:ze2i3jh2RF9212cDldC5Cb",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/replication-lag-symptom/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/replication-lag-resolution",
+      "type": "troubleshooting",
+      "title": "Replication lag resolution (Buckets)",
+      "summary": "Resolve \"replication lag\" — resolution for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/replication-lag-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/replication-lag-resolution.md"
+        }
+      },
+      "etag": "s256:DvHGgA8vglOgUNsGKF-kYs",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/replication-lag-resolution/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/replication-lag-reproduction",
+      "type": "troubleshooting",
+      "title": "Replication lag reproduction (Buckets)",
+      "summary": "Resolve \"replication lag\" — reproduction for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/replication-lag-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/replication-lag-reproduction.md"
+        }
+      },
+      "etag": "s256:eC6bgEQAGJ72OB9Dk6Hlvd",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/replication-lag-reproduction/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/lifecycle-not-applied-symptom",
+      "type": "troubleshooting",
+      "title": "Lifecycle not applied symptom (Buckets)",
+      "summary": "Resolve \"lifecycle not applied\" — symptom for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/lifecycle-not-applied-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/lifecycle-not-applied-symptom.md"
+        }
+      },
+      "etag": "s256:DqvCZUXw7USWMIK3zWwvPH",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/lifecycle-not-applied-symptom/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/lifecycle-not-applied-resolution",
+      "type": "troubleshooting",
+      "title": "Lifecycle not applied resolution (Buckets)",
+      "summary": "Resolve \"lifecycle not applied\" — resolution for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/lifecycle-not-applied-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/lifecycle-not-applied-resolution.md"
+        }
+      },
+      "etag": "s256:twJVkEkgKwscA_ItiL-Dnd",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/lifecycle-not-applied-resolution/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/lifecycle-not-applied-reproduction",
+      "type": "troubleshooting",
+      "title": "Lifecycle not applied reproduction (Buckets)",
+      "summary": "Resolve \"lifecycle not applied\" — reproduction for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/lifecycle-not-applied-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/lifecycle-not-applied-reproduction.md"
+        }
+      },
+      "etag": "s256:ektsCLMTpwVwIXIo7DJPVD",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/lifecycle-not-applied-reproduction/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/cross-account-access-denied-symptom",
+      "type": "troubleshooting",
+      "title": "Cross account access denied symptom (Buckets)",
+      "summary": "Resolve \"cross account access denied\" — symptom for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 11,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/cross-account-access-denied-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/cross-account-access-denied-symptom.md"
+        }
+      },
+      "etag": "s256:B_-Bdqppiwr0dJ-ynMyMgR",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/cross-account-access-denied-symptom/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/cross-account-access-denied-resolution",
+      "type": "troubleshooting",
+      "title": "Cross account access denied resolution (Buckets)",
+      "summary": "Resolve \"cross account access denied\" — resolution for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 11,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/cross-account-access-denied-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/cross-account-access-denied-resolution.md"
+        }
+      },
+      "etag": "s256:ONHvIOFKN-D_EJwTWnQjIc",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/cross-account-access-denied-resolution/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/cross-account-access-denied-reproduction",
+      "type": "troubleshooting",
+      "title": "Cross account access denied reproduction (Buckets)",
+      "summary": "Resolve \"cross account access denied\" — reproduction for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 11,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/cross-account-access-denied-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/cross-account-access-denied-reproduction.md"
+        }
+      },
+      "etag": "s256:JWTwQvPD9rC0W958rdxVnn",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/cross-account-access-denied-reproduction/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/unexpected-versioning-state-symptom",
+      "type": "troubleshooting",
+      "title": "Unexpected versioning state symptom (Buckets)",
+      "summary": "Resolve \"unexpected versioning state\" — symptom for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/unexpected-versioning-state-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/unexpected-versioning-state-symptom.md"
+        }
+      },
+      "etag": "s256:VAyRZ-iI-PuQWiEhlyFAi1",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/unexpected-versioning-state-symptom/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/unexpected-versioning-state-resolution",
+      "type": "troubleshooting",
+      "title": "Unexpected versioning state resolution (Buckets)",
+      "summary": "Resolve \"unexpected versioning state\" — resolution for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/unexpected-versioning-state-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/unexpected-versioning-state-resolution.md"
+        }
+      },
+      "etag": "s256:S48pYatyie7t7x_XiwhRwG",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/unexpected-versioning-state-resolution/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/buckets/unexpected-versioning-state-reproduction",
+      "type": "troubleshooting",
+      "title": "Unexpected versioning state reproduction (Buckets)",
+      "summary": "Resolve \"unexpected versioning state\" — reproduction for the Buckets surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/buckets/unexpected-versioning-state-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/buckets/unexpected-versioning-state-reproduction.md"
+        }
+      },
+      "etag": "s256:3Uq5LapQq_aH_1gutFS6D7",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/buckets/unexpected-versioning-state-reproduction/"
+      },
+      "parent": "buckets-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "objects-issues",
+      "type": "section",
+      "title": "Objects issues",
+      "summary": "Objects issues — section.",
+      "summary_source": "extracted",
+      "etag": "s256:-_7R5hAaNYQyikQPDSs8vJ",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 16
+      },
+      "children": [
+        "troubleshooting/objects/upload-checksum-mismatch-symptom",
+        "troubleshooting/objects/upload-checksum-mismatch-resolution",
+        "troubleshooting/objects/upload-checksum-mismatch-reproduction",
+        "troubleshooting/objects/download-truncated-symptom",
+        "troubleshooting/objects/download-truncated-resolution",
+        "troubleshooting/objects/download-truncated-reproduction",
+        "troubleshooting/objects/multipart-upload-failed-symptom",
+        "troubleshooting/objects/multipart-upload-failed-resolution",
+        "troubleshooting/objects/multipart-upload-failed-reproduction",
+        "troubleshooting/objects/precondition-failed-symptom",
+        "troubleshooting/objects/precondition-failed-resolution",
+        "troubleshooting/objects/precondition-failed-reproduction",
+        "troubleshooting/objects/storage-class-mismatch-symptom",
+        "troubleshooting/objects/storage-class-mismatch-resolution",
+        "troubleshooting/objects/storage-class-mismatch-reproduction",
+        "troubleshooting/objects/object-not-found-after-write-symptom",
+        "troubleshooting/objects/object-not-found-after-write-resolution",
+        "troubleshooting/objects/object-not-found-after-write-reproduction",
+        "troubleshooting/objects/metadata-not-persisted-symptom",
+        "troubleshooting/objects/metadata-not-persisted-resolution",
+        "troubleshooting/objects/metadata-not-persisted-reproduction",
+        "troubleshooting/objects/range-request-rejected-symptom",
+        "troubleshooting/objects/range-request-rejected-resolution",
+        "troubleshooting/objects/range-request-rejected-reproduction",
+        "troubleshooting/objects/unexpected-size-difference-symptom",
+        "troubleshooting/objects/unexpected-size-difference-resolution",
+        "troubleshooting/objects/unexpected-size-difference-reproduction"
+      ],
+      "parent": "troubleshooting",
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "sidebar-category:objects-issues"
+        }
+      }
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/upload-checksum-mismatch-symptom",
+      "type": "troubleshooting",
+      "title": "Upload checksum mismatch symptom (Objects)",
+      "summary": "Resolve \"upload checksum mismatch\" — symptom for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/upload-checksum-mismatch-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/upload-checksum-mismatch-symptom.md"
+        }
+      },
+      "etag": "s256:cpAxPSa2FrvCtUbREM7_WJ",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/upload-checksum-mismatch-symptom/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/upload-checksum-mismatch-resolution",
+      "type": "troubleshooting",
+      "title": "Upload checksum mismatch resolution (Objects)",
+      "summary": "Resolve \"upload checksum mismatch\" — resolution for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/upload-checksum-mismatch-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/upload-checksum-mismatch-resolution.md"
+        }
+      },
+      "etag": "s256:043WIp-GDvyfcOvvhX8tLG",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/upload-checksum-mismatch-resolution/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/upload-checksum-mismatch-reproduction",
+      "type": "troubleshooting",
+      "title": "Upload checksum mismatch reproduction (Objects)",
+      "summary": "Resolve \"upload checksum mismatch\" — reproduction for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/upload-checksum-mismatch-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/upload-checksum-mismatch-reproduction.md"
+        }
+      },
+      "etag": "s256:JDlqvzPKRRjMGMOj33kxie",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/upload-checksum-mismatch-reproduction/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/download-truncated-symptom",
+      "type": "troubleshooting",
+      "title": "Download truncated symptom (Objects)",
+      "summary": "Resolve \"download truncated\" — symptom for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/download-truncated-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/download-truncated-symptom.md"
+        }
+      },
+      "etag": "s256:3Y_dY8nC0tCAQ38wvZysFT",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/download-truncated-symptom/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/download-truncated-resolution",
+      "type": "troubleshooting",
+      "title": "Download truncated resolution (Objects)",
+      "summary": "Resolve \"download truncated\" — resolution for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/download-truncated-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/download-truncated-resolution.md"
+        }
+      },
+      "etag": "s256:9MX53OphfsswsZWFatb6oG",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/download-truncated-resolution/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/download-truncated-reproduction",
+      "type": "troubleshooting",
+      "title": "Download truncated reproduction (Objects)",
+      "summary": "Resolve \"download truncated\" — reproduction for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/download-truncated-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/download-truncated-reproduction.md"
+        }
+      },
+      "etag": "s256:aF-QTvlpypUkBHLGNpKUV6",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/download-truncated-reproduction/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/multipart-upload-failed-symptom",
+      "type": "troubleshooting",
+      "title": "Multipart upload failed symptom (Objects)",
+      "summary": "Resolve \"multipart upload failed\" — symptom for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/multipart-upload-failed-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/multipart-upload-failed-symptom.md"
+        }
+      },
+      "etag": "s256:6paadPP-PvsoLSFamrjzUN",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/multipart-upload-failed-symptom/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/multipart-upload-failed-resolution",
+      "type": "troubleshooting",
+      "title": "Multipart upload failed resolution (Objects)",
+      "summary": "Resolve \"multipart upload failed\" — resolution for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/multipart-upload-failed-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/multipart-upload-failed-resolution.md"
+        }
+      },
+      "etag": "s256:KNfXtr6bbcKqqjoAQNpQwJ",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/multipart-upload-failed-resolution/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/multipart-upload-failed-reproduction",
+      "type": "troubleshooting",
+      "title": "Multipart upload failed reproduction (Objects)",
+      "summary": "Resolve \"multipart upload failed\" — reproduction for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/multipart-upload-failed-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/multipart-upload-failed-reproduction.md"
+        }
+      },
+      "etag": "s256:D8yw_0vb6rzi3yajjbuyMa",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/multipart-upload-failed-reproduction/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/precondition-failed-symptom",
+      "type": "troubleshooting",
+      "title": "Precondition failed symptom (Objects)",
+      "summary": "Resolve \"precondition failed\" — symptom for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/precondition-failed-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/precondition-failed-symptom.md"
+        }
+      },
+      "etag": "s256:wVIaC3z-UNAEWzY3ZQf6p4",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/precondition-failed-symptom/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/precondition-failed-resolution",
+      "type": "troubleshooting",
+      "title": "Precondition failed resolution (Objects)",
+      "summary": "Resolve \"precondition failed\" — resolution for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/precondition-failed-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/precondition-failed-resolution.md"
+        }
+      },
+      "etag": "s256:aidqwm1Eq_7W8-HekWJl3Y",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/precondition-failed-resolution/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/precondition-failed-reproduction",
+      "type": "troubleshooting",
+      "title": "Precondition failed reproduction (Objects)",
+      "summary": "Resolve \"precondition failed\" — reproduction for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/precondition-failed-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/precondition-failed-reproduction.md"
+        }
+      },
+      "etag": "s256:ftaQ2bacuqMiQ3koWmmcha",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/precondition-failed-reproduction/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/storage-class-mismatch-symptom",
+      "type": "troubleshooting",
+      "title": "Storage class mismatch symptom (Objects)",
+      "summary": "Resolve \"storage class mismatch\" — symptom for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/storage-class-mismatch-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/storage-class-mismatch-symptom.md"
+        }
+      },
+      "etag": "s256:3OEMsM5EV1rwUMPcfClWjr",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/storage-class-mismatch-symptom/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/storage-class-mismatch-resolution",
+      "type": "troubleshooting",
+      "title": "Storage class mismatch resolution (Objects)",
+      "summary": "Resolve \"storage class mismatch\" — resolution for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/storage-class-mismatch-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/storage-class-mismatch-resolution.md"
+        }
+      },
+      "etag": "s256:g9ce-rrlEkXF-SLBhGr59H",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/storage-class-mismatch-resolution/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/storage-class-mismatch-reproduction",
+      "type": "troubleshooting",
+      "title": "Storage class mismatch reproduction (Objects)",
+      "summary": "Resolve \"storage class mismatch\" — reproduction for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/storage-class-mismatch-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/storage-class-mismatch-reproduction.md"
+        }
+      },
+      "etag": "s256:FxP4_mk5z5L8v358kcHtGX",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/storage-class-mismatch-reproduction/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/object-not-found-after-write-symptom",
+      "type": "troubleshooting",
+      "title": "Object not found after write symptom (Objects)",
+      "summary": "Resolve \"object not found after write\" — symptom for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 12,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/object-not-found-after-write-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/object-not-found-after-write-symptom.md"
+        }
+      },
+      "etag": "s256:3XV_32hKVpAB5J9prbJmG7",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/object-not-found-after-write-symptom/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/object-not-found-after-write-resolution",
+      "type": "troubleshooting",
+      "title": "Object not found after write resolution (Objects)",
+      "summary": "Resolve \"object not found after write\" — resolution for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 12,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/object-not-found-after-write-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/object-not-found-after-write-resolution.md"
+        }
+      },
+      "etag": "s256:3CAI5O0WzPwUvWoXw7wdnk",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/object-not-found-after-write-resolution/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/object-not-found-after-write-reproduction",
+      "type": "troubleshooting",
+      "title": "Object not found after write reproduction (Objects)",
+      "summary": "Resolve \"object not found after write\" — reproduction for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 12,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/object-not-found-after-write-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/object-not-found-after-write-reproduction.md"
+        }
+      },
+      "etag": "s256:Rq1oX4rXgXcg3rs3aoH_FB",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/object-not-found-after-write-reproduction/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/metadata-not-persisted-symptom",
+      "type": "troubleshooting",
+      "title": "Metadata not persisted symptom (Objects)",
+      "summary": "Resolve \"metadata not persisted\" — symptom for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/metadata-not-persisted-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/metadata-not-persisted-symptom.md"
+        }
+      },
+      "etag": "s256:Npwn_OmXV5Zi_WGvtLLTKd",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/metadata-not-persisted-symptom/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/metadata-not-persisted-resolution",
+      "type": "troubleshooting",
+      "title": "Metadata not persisted resolution (Objects)",
+      "summary": "Resolve \"metadata not persisted\" — resolution for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/metadata-not-persisted-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/metadata-not-persisted-resolution.md"
+        }
+      },
+      "etag": "s256:WmWPHCJkpQAecr5yOtyb1p",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/metadata-not-persisted-resolution/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/metadata-not-persisted-reproduction",
+      "type": "troubleshooting",
+      "title": "Metadata not persisted reproduction (Objects)",
+      "summary": "Resolve \"metadata not persisted\" — reproduction for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/metadata-not-persisted-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/metadata-not-persisted-reproduction.md"
+        }
+      },
+      "etag": "s256:KzzqP_UK_CHpZxUf9cwXxb",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/metadata-not-persisted-reproduction/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/range-request-rejected-symptom",
+      "type": "troubleshooting",
+      "title": "Range request rejected symptom (Objects)",
+      "summary": "Resolve \"range request rejected\" — symptom for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/range-request-rejected-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/range-request-rejected-symptom.md"
+        }
+      },
+      "etag": "s256:PpnfB6W5S7hGjfl7huxEzm",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/range-request-rejected-symptom/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/range-request-rejected-resolution",
+      "type": "troubleshooting",
+      "title": "Range request rejected resolution (Objects)",
+      "summary": "Resolve \"range request rejected\" — resolution for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/range-request-rejected-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/range-request-rejected-resolution.md"
+        }
+      },
+      "etag": "s256:iPiNG4XwmTs2ultfuqnnmP",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/range-request-rejected-resolution/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/range-request-rejected-reproduction",
+      "type": "troubleshooting",
+      "title": "Range request rejected reproduction (Objects)",
+      "summary": "Resolve \"range request rejected\" — reproduction for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/range-request-rejected-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/range-request-rejected-reproduction.md"
+        }
+      },
+      "etag": "s256:dXnhp4M4IPWcmbmh9ob0uC",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/range-request-rejected-reproduction/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/unexpected-size-difference-symptom",
+      "type": "troubleshooting",
+      "title": "Unexpected size difference symptom (Objects)",
+      "summary": "Resolve \"unexpected size difference\" — symptom for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/unexpected-size-difference-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/unexpected-size-difference-symptom.md"
+        }
+      },
+      "etag": "s256:_iv5IgxcOSSXUyAXgh0_TO",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/unexpected-size-difference-symptom/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/unexpected-size-difference-resolution",
+      "type": "troubleshooting",
+      "title": "Unexpected size difference resolution (Objects)",
+      "summary": "Resolve \"unexpected size difference\" — resolution for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/unexpected-size-difference-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/unexpected-size-difference-resolution.md"
+        }
+      },
+      "etag": "s256:AIxZ7NUgJfc98QhYq9rx9v",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/unexpected-size-difference-resolution/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/objects/unexpected-size-difference-reproduction",
+      "type": "troubleshooting",
+      "title": "Unexpected size difference reproduction (Objects)",
+      "summary": "Resolve \"unexpected size difference\" — reproduction for the Objects surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/objects/unexpected-size-difference-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/objects/unexpected-size-difference-reproduction.md"
+        }
+      },
+      "etag": "s256:KyXx1ojThWsL_l07ZwFqdP",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/objects/unexpected-size-difference-reproduction/"
+      },
+      "parent": "objects-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "webhooks-issues",
+      "type": "section",
+      "title": "Webhooks issues",
+      "summary": "Webhooks issues — section.",
+      "summary_source": "extracted",
+      "etag": "s256:Glg8IMmRCp1LQlx6t4L_2X",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 16
+      },
+      "children": [
+        "troubleshooting/webhooks/callback-not-received-symptom",
+        "troubleshooting/webhooks/callback-not-received-resolution",
+        "troubleshooting/webhooks/callback-not-received-reproduction",
+        "troubleshooting/webhooks/duplicate-deliveries-symptom",
+        "troubleshooting/webhooks/duplicate-deliveries-resolution",
+        "troubleshooting/webhooks/duplicate-deliveries-reproduction",
+        "troubleshooting/webhooks/callback-times-out-symptom",
+        "troubleshooting/webhooks/callback-times-out-resolution",
+        "troubleshooting/webhooks/callback-times-out-reproduction",
+        "troubleshooting/webhooks/signature-verification-failed-symptom",
+        "troubleshooting/webhooks/signature-verification-failed-resolution",
+        "troubleshooting/webhooks/signature-verification-failed-reproduction",
+        "troubleshooting/webhooks/event-filter-not-applied-symptom",
+        "troubleshooting/webhooks/event-filter-not-applied-resolution",
+        "troubleshooting/webhooks/event-filter-not-applied-reproduction",
+        "troubleshooting/webhooks/subscription-quota-exceeded-symptom",
+        "troubleshooting/webhooks/subscription-quota-exceeded-resolution",
+        "troubleshooting/webhooks/subscription-quota-exceeded-reproduction",
+        "troubleshooting/webhooks/callback-host-unreachable-symptom",
+        "troubleshooting/webhooks/callback-host-unreachable-resolution",
+        "troubleshooting/webhooks/callback-host-unreachable-reproduction",
+        "troubleshooting/webhooks/tls-handshake-failed-symptom",
+        "troubleshooting/webhooks/tls-handshake-failed-resolution",
+        "troubleshooting/webhooks/tls-handshake-failed-reproduction"
+      ],
+      "parent": "troubleshooting",
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "sidebar-category:webhooks-issues"
+        }
+      }
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/callback-not-received-symptom",
+      "type": "troubleshooting",
+      "title": "Callback not received symptom (Webhooks)",
+      "summary": "Resolve \"callback not received\" — symptom for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/callback-not-received-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/callback-not-received-symptom.md"
+        }
+      },
+      "etag": "s256:0BYAk8zi-8mmxqECPIosfz",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/callback-not-received-symptom/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/callback-not-received-resolution",
+      "type": "troubleshooting",
+      "title": "Callback not received resolution (Webhooks)",
+      "summary": "Resolve \"callback not received\" — resolution for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/callback-not-received-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/callback-not-received-resolution.md"
+        }
+      },
+      "etag": "s256:45v6qbMhWNUp0dmQgrI9zy",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/callback-not-received-resolution/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/callback-not-received-reproduction",
+      "type": "troubleshooting",
+      "title": "Callback not received reproduction (Webhooks)",
+      "summary": "Resolve \"callback not received\" — reproduction for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/callback-not-received-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/callback-not-received-reproduction.md"
+        }
+      },
+      "etag": "s256:9wbXVVwV4eTmzxLHPSU4cu",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/callback-not-received-reproduction/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/duplicate-deliveries-symptom",
+      "type": "troubleshooting",
+      "title": "Duplicate deliveries symptom (Webhooks)",
+      "summary": "Resolve \"duplicate deliveries\" — symptom for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/duplicate-deliveries-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/duplicate-deliveries-symptom.md"
+        }
+      },
+      "etag": "s256:ApSyyVeQ5wwf__ncgfaMet",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/duplicate-deliveries-symptom/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/duplicate-deliveries-resolution",
+      "type": "troubleshooting",
+      "title": "Duplicate deliveries resolution (Webhooks)",
+      "summary": "Resolve \"duplicate deliveries\" — resolution for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/duplicate-deliveries-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/duplicate-deliveries-resolution.md"
+        }
+      },
+      "etag": "s256:VGVrzokhwZSOB-iIPOKRl4",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/duplicate-deliveries-resolution/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/duplicate-deliveries-reproduction",
+      "type": "troubleshooting",
+      "title": "Duplicate deliveries reproduction (Webhooks)",
+      "summary": "Resolve \"duplicate deliveries\" — reproduction for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/duplicate-deliveries-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/duplicate-deliveries-reproduction.md"
+        }
+      },
+      "etag": "s256:EYlimNyluJzIJxScDmeICo",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/duplicate-deliveries-reproduction/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/callback-times-out-symptom",
+      "type": "troubleshooting",
+      "title": "Callback times out symptom (Webhooks)",
+      "summary": "Resolve \"callback times out\" — symptom for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/callback-times-out-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/callback-times-out-symptom.md"
+        }
+      },
+      "etag": "s256:DVZRji361EhITQGZ00HJK4",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/callback-times-out-symptom/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/callback-times-out-resolution",
+      "type": "troubleshooting",
+      "title": "Callback times out resolution (Webhooks)",
+      "summary": "Resolve \"callback times out\" — resolution for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/callback-times-out-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/callback-times-out-resolution.md"
+        }
+      },
+      "etag": "s256:WijwbCCoIhIw2RXLOH9KOr",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/callback-times-out-resolution/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/callback-times-out-reproduction",
+      "type": "troubleshooting",
+      "title": "Callback times out reproduction (Webhooks)",
+      "summary": "Resolve \"callback times out\" — reproduction for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/callback-times-out-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/callback-times-out-reproduction.md"
+        }
+      },
+      "etag": "s256:vxuBL65-2189RlafWRdCRo",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/callback-times-out-reproduction/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/signature-verification-failed-symptom",
+      "type": "troubleshooting",
+      "title": "Signature verification failed symptom (Webhooks)",
+      "summary": "Resolve \"signature verification failed\" — symptom for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/signature-verification-failed-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/signature-verification-failed-symptom.md"
+        }
+      },
+      "etag": "s256:ecLEcOn-2ephmnAsrK_-fY",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/signature-verification-failed-symptom/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/signature-verification-failed-resolution",
+      "type": "troubleshooting",
+      "title": "Signature verification failed resolution (Webhooks)",
+      "summary": "Resolve \"signature verification failed\" — resolution for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/signature-verification-failed-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/signature-verification-failed-resolution.md"
+        }
+      },
+      "etag": "s256:62sanZKdkoyfFUfGpjQEyM",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/signature-verification-failed-resolution/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/signature-verification-failed-reproduction",
+      "type": "troubleshooting",
+      "title": "Signature verification failed reproduction (Webhooks)",
+      "summary": "Resolve \"signature verification failed\" — reproduction for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/signature-verification-failed-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/signature-verification-failed-reproduction.md"
+        }
+      },
+      "etag": "s256:4GmdRZlMKfXaIpEh-RNo1g",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/signature-verification-failed-reproduction/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/event-filter-not-applied-symptom",
+      "type": "troubleshooting",
+      "title": "Event filter not applied symptom (Webhooks)",
+      "summary": "Resolve \"event filter not applied\" — symptom for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 11,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/event-filter-not-applied-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/event-filter-not-applied-symptom.md"
+        }
+      },
+      "etag": "s256:uY0Br-Ao4FbQ1zeZ02v0m_",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/event-filter-not-applied-symptom/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/event-filter-not-applied-resolution",
+      "type": "troubleshooting",
+      "title": "Event filter not applied resolution (Webhooks)",
+      "summary": "Resolve \"event filter not applied\" — resolution for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 11,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/event-filter-not-applied-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/event-filter-not-applied-resolution.md"
+        }
+      },
+      "etag": "s256:i8GOFkjuGRoEimafvC5toU",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/event-filter-not-applied-resolution/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/event-filter-not-applied-reproduction",
+      "type": "troubleshooting",
+      "title": "Event filter not applied reproduction (Webhooks)",
+      "summary": "Resolve \"event filter not applied\" — reproduction for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 11,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/event-filter-not-applied-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/event-filter-not-applied-reproduction.md"
+        }
+      },
+      "etag": "s256:AbUVXlsOhai1Z0lkp1UkAW",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/event-filter-not-applied-reproduction/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/subscription-quota-exceeded-symptom",
+      "type": "troubleshooting",
+      "title": "Subscription quota exceeded symptom (Webhooks)",
+      "summary": "Resolve \"subscription quota exceeded\" — symptom for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/subscription-quota-exceeded-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/subscription-quota-exceeded-symptom.md"
+        }
+      },
+      "etag": "s256:2tZUkEhaWJM6BMS9i-Sjdi",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/subscription-quota-exceeded-symptom/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/subscription-quota-exceeded-resolution",
+      "type": "troubleshooting",
+      "title": "Subscription quota exceeded resolution (Webhooks)",
+      "summary": "Resolve \"subscription quota exceeded\" — resolution for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/subscription-quota-exceeded-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/subscription-quota-exceeded-resolution.md"
+        }
+      },
+      "etag": "s256:uZUgYlRKe3pM5HMKvFRCuC",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/subscription-quota-exceeded-resolution/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/subscription-quota-exceeded-reproduction",
+      "type": "troubleshooting",
+      "title": "Subscription quota exceeded reproduction (Webhooks)",
+      "summary": "Resolve \"subscription quota exceeded\" — reproduction for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/subscription-quota-exceeded-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/subscription-quota-exceeded-reproduction.md"
+        }
+      },
+      "etag": "s256:s2FT4f3AZbWQYlQ24gjXzy",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/subscription-quota-exceeded-reproduction/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/callback-host-unreachable-symptom",
+      "type": "troubleshooting",
+      "title": "Callback host unreachable symptom (Webhooks)",
+      "summary": "Resolve \"callback host unreachable\" — symptom for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/callback-host-unreachable-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/callback-host-unreachable-symptom.md"
+        }
+      },
+      "etag": "s256:mE6Xr1bj-7GXGtbv-G78nt",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/callback-host-unreachable-symptom/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/callback-host-unreachable-resolution",
+      "type": "troubleshooting",
+      "title": "Callback host unreachable resolution (Webhooks)",
+      "summary": "Resolve \"callback host unreachable\" — resolution for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/callback-host-unreachable-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/callback-host-unreachable-resolution.md"
+        }
+      },
+      "etag": "s256:UQ7NPyrLlSlmBUZ8Aeq7fC",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/callback-host-unreachable-resolution/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/callback-host-unreachable-reproduction",
+      "type": "troubleshooting",
+      "title": "Callback host unreachable reproduction (Webhooks)",
+      "summary": "Resolve \"callback host unreachable\" — reproduction for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/callback-host-unreachable-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/callback-host-unreachable-reproduction.md"
+        }
+      },
+      "etag": "s256:mB_WF2FF9GIvJ2qT4XGdJO",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/callback-host-unreachable-reproduction/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/tls-handshake-failed-symptom",
+      "type": "troubleshooting",
+      "title": "Tls handshake failed symptom (Webhooks)",
+      "summary": "Resolve \"tls handshake failed\" — symptom for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/tls-handshake-failed-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/tls-handshake-failed-symptom.md"
+        }
+      },
+      "etag": "s256:nXB48liVaAJ25G4fmjTla8",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/tls-handshake-failed-symptom/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/tls-handshake-failed-resolution",
+      "type": "troubleshooting",
+      "title": "Tls handshake failed resolution (Webhooks)",
+      "summary": "Resolve \"tls handshake failed\" — resolution for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/tls-handshake-failed-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/tls-handshake-failed-resolution.md"
+        }
+      },
+      "etag": "s256:1wDtyRxXzf-wVOM1rgjXTe",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/tls-handshake-failed-resolution/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/webhooks/tls-handshake-failed-reproduction",
+      "type": "troubleshooting",
+      "title": "Tls handshake failed reproduction (Webhooks)",
+      "summary": "Resolve \"tls handshake failed\" — reproduction for the Webhooks surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/webhooks/tls-handshake-failed-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/tls-handshake-failed-reproduction.md"
+        }
+      },
+      "etag": "s256:ncSonK7yRbk_qz4FgAxW5Q",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/webhooks/tls-handshake-failed-reproduction/"
+      },
+      "parent": "webhooks-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "auth-issues",
+      "type": "section",
+      "title": "Auth issues",
+      "summary": "Auth issues — section.",
+      "summary_source": "extracted",
+      "etag": "s256:Uyyxge__Vt-uFPqfbfRvsp",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 16
+      },
+      "children": [
+        "troubleshooting/auth/token-expired-symptom",
+        "troubleshooting/auth/token-expired-resolution",
+        "troubleshooting/auth/token-expired-reproduction",
+        "troubleshooting/auth/token-not-found-symptom",
+        "troubleshooting/auth/token-not-found-resolution",
+        "troubleshooting/auth/token-not-found-reproduction",
+        "troubleshooting/auth/permission-denied-symptom",
+        "troubleshooting/auth/permission-denied-resolution",
+        "troubleshooting/auth/permission-denied-reproduction",
+        "troubleshooting/auth/cross-project-token-symptom",
+        "troubleshooting/auth/cross-project-token-resolution",
+        "troubleshooting/auth/cross-project-token-reproduction",
+        "troubleshooting/auth/rotation-overlap-window-symptom",
+        "troubleshooting/auth/rotation-overlap-window-resolution",
+        "troubleshooting/auth/rotation-overlap-window-reproduction",
+        "troubleshooting/auth/mfa-required-symptom",
+        "troubleshooting/auth/mfa-required-resolution",
+        "troubleshooting/auth/mfa-required-reproduction",
+        "troubleshooting/auth/principal-disabled-symptom",
+        "troubleshooting/auth/principal-disabled-resolution",
+        "troubleshooting/auth/principal-disabled-reproduction",
+        "troubleshooting/auth/audit-log-missing-symptom",
+        "troubleshooting/auth/audit-log-missing-resolution",
+        "troubleshooting/auth/audit-log-missing-reproduction"
+      ],
+      "parent": "troubleshooting",
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "sidebar-category:auth-issues"
+        }
+      }
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/token-expired-symptom",
+      "type": "troubleshooting",
+      "title": "Token expired symptom (Auth)",
+      "summary": "Resolve \"token expired\" — symptom for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/token-expired-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/token-expired-symptom.md"
+        }
+      },
+      "etag": "s256:g0j2GqPA8-5bM0g_RXBpg1",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/token-expired-symptom/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/token-expired-resolution",
+      "type": "troubleshooting",
+      "title": "Token expired resolution (Auth)",
+      "summary": "Resolve \"token expired\" — resolution for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/token-expired-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/token-expired-resolution.md"
+        }
+      },
+      "etag": "s256:XxLqjwW9wT-i8UQ0W7NdDg",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/token-expired-resolution/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/token-expired-reproduction",
+      "type": "troubleshooting",
+      "title": "Token expired reproduction (Auth)",
+      "summary": "Resolve \"token expired\" — reproduction for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/token-expired-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/token-expired-reproduction.md"
+        }
+      },
+      "etag": "s256:7r1EZo7w_lImVTiYjoXWL5",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/token-expired-reproduction/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/token-not-found-symptom",
+      "type": "troubleshooting",
+      "title": "Token not found symptom (Auth)",
+      "summary": "Resolve \"token not found\" — symptom for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/token-not-found-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/token-not-found-symptom.md"
+        }
+      },
+      "etag": "s256:3Lp4qGDW5mUc-lbHq-VPah",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/token-not-found-symptom/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/token-not-found-resolution",
+      "type": "troubleshooting",
+      "title": "Token not found resolution (Auth)",
+      "summary": "Resolve \"token not found\" — resolution for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/token-not-found-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/token-not-found-resolution.md"
+        }
+      },
+      "etag": "s256:-yV72KdyF0f7OOCOxIR3sB",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/token-not-found-resolution/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/token-not-found-reproduction",
+      "type": "troubleshooting",
+      "title": "Token not found reproduction (Auth)",
+      "summary": "Resolve \"token not found\" — reproduction for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/token-not-found-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/token-not-found-reproduction.md"
+        }
+      },
+      "etag": "s256:9bCJhY2YC6J914UlLiapeY",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/token-not-found-reproduction/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/permission-denied-symptom",
+      "type": "troubleshooting",
+      "title": "Permission denied symptom (Auth)",
+      "summary": "Resolve \"permission denied\" — symptom for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/permission-denied-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/permission-denied-symptom.md"
+        }
+      },
+      "etag": "s256:bbrxAyb8MOxEu0JdgqREzd",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/permission-denied-symptom/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/permission-denied-resolution",
+      "type": "troubleshooting",
+      "title": "Permission denied resolution (Auth)",
+      "summary": "Resolve \"permission denied\" — resolution for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/permission-denied-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/permission-denied-resolution.md"
+        }
+      },
+      "etag": "s256:oKKhXM5OUjNhmLlqsM5cA8",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/permission-denied-resolution/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/permission-denied-reproduction",
+      "type": "troubleshooting",
+      "title": "Permission denied reproduction (Auth)",
+      "summary": "Resolve \"permission denied\" — reproduction for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/permission-denied-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/permission-denied-reproduction.md"
+        }
+      },
+      "etag": "s256:ne4VPrtcGn7bjGT8JIN2xa",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/permission-denied-reproduction/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/cross-project-token-symptom",
+      "type": "troubleshooting",
+      "title": "Cross project token symptom (Auth)",
+      "summary": "Resolve \"cross project token\" — symptom for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/cross-project-token-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/cross-project-token-symptom.md"
+        }
+      },
+      "etag": "s256:914p-YpKDD2ndJT6Oo9ZUB",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/cross-project-token-symptom/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/cross-project-token-resolution",
+      "type": "troubleshooting",
+      "title": "Cross project token resolution (Auth)",
+      "summary": "Resolve \"cross project token\" — resolution for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/cross-project-token-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/cross-project-token-resolution.md"
+        }
+      },
+      "etag": "s256:mijgMJc5RW-BGpHoEYW_F2",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/cross-project-token-resolution/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/cross-project-token-reproduction",
+      "type": "troubleshooting",
+      "title": "Cross project token reproduction (Auth)",
+      "summary": "Resolve \"cross project token\" — reproduction for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/cross-project-token-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/cross-project-token-reproduction.md"
+        }
+      },
+      "etag": "s256:74IZ8SsI07ahvIM1BWJ-xL",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/cross-project-token-reproduction/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/rotation-overlap-window-symptom",
+      "type": "troubleshooting",
+      "title": "Rotation overlap window symptom (Auth)",
+      "summary": "Resolve \"rotation overlap window\" — symptom for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/rotation-overlap-window-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/rotation-overlap-window-symptom.md"
+        }
+      },
+      "etag": "s256:hoiY-S9KouTYZJQ12cOHGl",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/rotation-overlap-window-symptom/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/rotation-overlap-window-resolution",
+      "type": "troubleshooting",
+      "title": "Rotation overlap window resolution (Auth)",
+      "summary": "Resolve \"rotation overlap window\" — resolution for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/rotation-overlap-window-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/rotation-overlap-window-resolution.md"
+        }
+      },
+      "etag": "s256:J82XQQ2m3kXTdCyYt5hwcr",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/rotation-overlap-window-resolution/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/rotation-overlap-window-reproduction",
+      "type": "troubleshooting",
+      "title": "Rotation overlap window reproduction (Auth)",
+      "summary": "Resolve \"rotation overlap window\" — reproduction for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/rotation-overlap-window-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/rotation-overlap-window-reproduction.md"
+        }
+      },
+      "etag": "s256:osARRLXAGO_unoFO-gqkhC",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/rotation-overlap-window-reproduction/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/mfa-required-symptom",
+      "type": "troubleshooting",
+      "title": "Mfa required symptom (Auth)",
+      "summary": "Resolve \"mfa required\" — symptom for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/mfa-required-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/mfa-required-symptom.md"
+        }
+      },
+      "etag": "s256:S86QAEcmyDLUVnRQji8Cx4",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/mfa-required-symptom/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/mfa-required-resolution",
+      "type": "troubleshooting",
+      "title": "Mfa required resolution (Auth)",
+      "summary": "Resolve \"mfa required\" — resolution for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/mfa-required-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/mfa-required-resolution.md"
+        }
+      },
+      "etag": "s256:pff25ryhUE197nlnm_wBFK",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/mfa-required-resolution/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/mfa-required-reproduction",
+      "type": "troubleshooting",
+      "title": "Mfa required reproduction (Auth)",
+      "summary": "Resolve \"mfa required\" — reproduction for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/mfa-required-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/mfa-required-reproduction.md"
+        }
+      },
+      "etag": "s256:gQLz6wLHRqHR97WQWg9BGI",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/mfa-required-reproduction/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/principal-disabled-symptom",
+      "type": "troubleshooting",
+      "title": "Principal disabled symptom (Auth)",
+      "summary": "Resolve \"principal disabled\" — symptom for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/principal-disabled-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/principal-disabled-symptom.md"
+        }
+      },
+      "etag": "s256:Ahbzht8LePBqFfTxKb5tli",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/principal-disabled-symptom/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/principal-disabled-resolution",
+      "type": "troubleshooting",
+      "title": "Principal disabled resolution (Auth)",
+      "summary": "Resolve \"principal disabled\" — resolution for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/principal-disabled-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/principal-disabled-resolution.md"
+        }
+      },
+      "etag": "s256:CSdUjsKG4yMR2wSpwgdLBH",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/principal-disabled-resolution/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/principal-disabled-reproduction",
+      "type": "troubleshooting",
+      "title": "Principal disabled reproduction (Auth)",
+      "summary": "Resolve \"principal disabled\" — reproduction for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/principal-disabled-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/principal-disabled-reproduction.md"
+        }
+      },
+      "etag": "s256:hTLsgyWkYiefLKVsBMsNt_",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/principal-disabled-reproduction/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/audit-log-missing-symptom",
+      "type": "troubleshooting",
+      "title": "Audit log missing symptom (Auth)",
+      "summary": "Resolve \"audit log missing\" — symptom for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/audit-log-missing-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/audit-log-missing-symptom.md"
+        }
+      },
+      "etag": "s256:wuZAmUhyxrB5BQxyIm5Nvh",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/audit-log-missing-symptom/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/audit-log-missing-resolution",
+      "type": "troubleshooting",
+      "title": "Audit log missing resolution (Auth)",
+      "summary": "Resolve \"audit log missing\" — resolution for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/audit-log-missing-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/audit-log-missing-resolution.md"
+        }
+      },
+      "etag": "s256:L5R31Q6YWEuDz6DfYQ6bGk",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/audit-log-missing-resolution/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/audit-log-missing-reproduction",
+      "type": "troubleshooting",
+      "title": "Audit log missing reproduction (Auth)",
+      "summary": "Resolve \"audit log missing\" — reproduction for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/audit-log-missing-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/audit-log-missing-reproduction.md"
+        }
+      },
+      "etag": "s256:dzOCrG3fwV8DhsK_Xomu8a",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/audit-log-missing-reproduction/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "networking-issues",
+      "type": "section",
+      "title": "Networking issues",
+      "summary": "Networking issues — section.",
+      "summary_source": "extracted",
+      "etag": "s256:ypfkvtGJYb1ZqJtVdhdA0h",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 16
+      },
+      "children": [
+        "troubleshooting/networking/connection-reset-symptom",
+        "troubleshooting/networking/connection-reset-resolution",
+        "troubleshooting/networking/connection-reset-reproduction",
+        "troubleshooting/networking/tls-version-too-old-symptom",
+        "troubleshooting/networking/tls-version-too-old-resolution",
+        "troubleshooting/networking/tls-version-too-old-reproduction",
+        "troubleshooting/networking/http2-required-symptom",
+        "troubleshooting/networking/http2-required-resolution",
+        "troubleshooting/networking/http2-required-reproduction",
+        "troubleshooting/networking/proxy-misconfigured-symptom",
+        "troubleshooting/networking/proxy-misconfigured-resolution",
+        "troubleshooting/networking/proxy-misconfigured-reproduction",
+        "troubleshooting/networking/dns-resolution-failed-symptom",
+        "troubleshooting/networking/dns-resolution-failed-resolution",
+        "troubleshooting/networking/dns-resolution-failed-reproduction",
+        "troubleshooting/networking/cross-region-latency-symptom",
+        "troubleshooting/networking/cross-region-latency-resolution",
+        "troubleshooting/networking/cross-region-latency-reproduction",
+        "troubleshooting/networking/mtu-issues-symptom",
+        "troubleshooting/networking/mtu-issues-resolution",
+        "troubleshooting/networking/mtu-issues-reproduction",
+        "troubleshooting/networking/ipv6-disabled-symptom",
+        "troubleshooting/networking/ipv6-disabled-resolution",
+        "troubleshooting/networking/ipv6-disabled-reproduction"
+      ],
+      "parent": "troubleshooting",
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "sidebar-category:networking-issues"
+        }
+      }
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/connection-reset-symptom",
+      "type": "troubleshooting",
+      "title": "Connection reset symptom (Networking)",
+      "summary": "Resolve \"connection reset\" — symptom for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/connection-reset-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/connection-reset-symptom.md"
+        }
+      },
+      "etag": "s256:1ViEen-NPtFT7x9YM3g3nf",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/connection-reset-symptom/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/connection-reset-resolution",
+      "type": "troubleshooting",
+      "title": "Connection reset resolution (Networking)",
+      "summary": "Resolve \"connection reset\" — resolution for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/connection-reset-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/connection-reset-resolution.md"
+        }
+      },
+      "etag": "s256:ZQi_5B3GPfskxPBg9rhLdK",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/connection-reset-resolution/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/connection-reset-reproduction",
+      "type": "troubleshooting",
+      "title": "Connection reset reproduction (Networking)",
+      "summary": "Resolve \"connection reset\" — reproduction for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/connection-reset-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/connection-reset-reproduction.md"
+        }
+      },
+      "etag": "s256:DpwrfiNNoAGrtkyyjsXWId",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/connection-reset-reproduction/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/tls-version-too-old-symptom",
+      "type": "troubleshooting",
+      "title": "Tls version too old symptom (Networking)",
+      "summary": "Resolve \"tls version too old\" — symptom for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 11,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/tls-version-too-old-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/tls-version-too-old-symptom.md"
+        }
+      },
+      "etag": "s256:duVy8YMltT8CNdEeMl7j7E",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/tls-version-too-old-symptom/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/tls-version-too-old-resolution",
+      "type": "troubleshooting",
+      "title": "Tls version too old resolution (Networking)",
+      "summary": "Resolve \"tls version too old\" — resolution for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 11,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/tls-version-too-old-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/tls-version-too-old-resolution.md"
+        }
+      },
+      "etag": "s256:vqzgAo7MUTaPttnBB4z1f7",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/tls-version-too-old-resolution/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/tls-version-too-old-reproduction",
+      "type": "troubleshooting",
+      "title": "Tls version too old reproduction (Networking)",
+      "summary": "Resolve \"tls version too old\" — reproduction for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 11,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/tls-version-too-old-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/tls-version-too-old-reproduction.md"
+        }
+      },
+      "etag": "s256:QneZxtmW6zsoOZ_4EBsX8W",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/tls-version-too-old-reproduction/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/http2-required-symptom",
+      "type": "troubleshooting",
+      "title": "Http2 required symptom (Networking)",
+      "summary": "Resolve \"http2 required\" — symptom for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/http2-required-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/http2-required-symptom.md"
+        }
+      },
+      "etag": "s256:KUV7W5ySLVttO11JQJ_6M5",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/http2-required-symptom/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/http2-required-resolution",
+      "type": "troubleshooting",
+      "title": "Http2 required resolution (Networking)",
+      "summary": "Resolve \"http2 required\" — resolution for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/http2-required-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/http2-required-resolution.md"
+        }
+      },
+      "etag": "s256:KxLNJEfXkxPyxGLSltIAWV",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/http2-required-resolution/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/http2-required-reproduction",
+      "type": "troubleshooting",
+      "title": "Http2 required reproduction (Networking)",
+      "summary": "Resolve \"http2 required\" — reproduction for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/http2-required-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/http2-required-reproduction.md"
+        }
+      },
+      "etag": "s256:lryqYd4nyTulBT_UTyT7_f",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/http2-required-reproduction/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/proxy-misconfigured-symptom",
+      "type": "troubleshooting",
+      "title": "Proxy misconfigured symptom (Networking)",
+      "summary": "Resolve \"proxy misconfigured\" — symptom for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/proxy-misconfigured-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/proxy-misconfigured-symptom.md"
+        }
+      },
+      "etag": "s256:VO6cxCBBhcSrfF_WTDYlnG",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/proxy-misconfigured-symptom/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/proxy-misconfigured-resolution",
+      "type": "troubleshooting",
+      "title": "Proxy misconfigured resolution (Networking)",
+      "summary": "Resolve \"proxy misconfigured\" — resolution for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/proxy-misconfigured-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/proxy-misconfigured-resolution.md"
+        }
+      },
+      "etag": "s256:4NlMedgFotIwPpGHdD4LkC",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/proxy-misconfigured-resolution/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/proxy-misconfigured-reproduction",
+      "type": "troubleshooting",
+      "title": "Proxy misconfigured reproduction (Networking)",
+      "summary": "Resolve \"proxy misconfigured\" — reproduction for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/proxy-misconfigured-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/proxy-misconfigured-reproduction.md"
+        }
+      },
+      "etag": "s256:kyfS5jU8dENQPFERzPqQXz",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/proxy-misconfigured-reproduction/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/dns-resolution-failed-symptom",
+      "type": "troubleshooting",
+      "title": "Dns resolution failed symptom (Networking)",
+      "summary": "Resolve \"dns resolution failed\" — symptom for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/dns-resolution-failed-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/dns-resolution-failed-symptom.md"
+        }
+      },
+      "etag": "s256:rV9as7oNd_m4bvA8FXoG4T",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/dns-resolution-failed-symptom/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/dns-resolution-failed-resolution",
+      "type": "troubleshooting",
+      "title": "Dns resolution failed resolution (Networking)",
+      "summary": "Resolve \"dns resolution failed\" — resolution for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/dns-resolution-failed-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/dns-resolution-failed-resolution.md"
+        }
+      },
+      "etag": "s256:o00OQWypu7t-lWOTvtb7RK",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/dns-resolution-failed-resolution/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/dns-resolution-failed-reproduction",
+      "type": "troubleshooting",
+      "title": "Dns resolution failed reproduction (Networking)",
+      "summary": "Resolve \"dns resolution failed\" — reproduction for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/dns-resolution-failed-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/dns-resolution-failed-reproduction.md"
+        }
+      },
+      "etag": "s256:YEo8nj7Pe2uXImJrIyjLnv",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/dns-resolution-failed-reproduction/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/cross-region-latency-symptom",
+      "type": "troubleshooting",
+      "title": "Cross region latency symptom (Networking)",
+      "summary": "Resolve \"cross region latency\" — symptom for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/cross-region-latency-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/cross-region-latency-symptom.md"
+        }
+      },
+      "etag": "s256:p8FO1FHjGqXc2nguuOa7Ab",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/cross-region-latency-symptom/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/cross-region-latency-resolution",
+      "type": "troubleshooting",
+      "title": "Cross region latency resolution (Networking)",
+      "summary": "Resolve \"cross region latency\" — resolution for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/cross-region-latency-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/cross-region-latency-resolution.md"
+        }
+      },
+      "etag": "s256:VQ_w9ZHyfSLrXRRCHAXJOF",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/cross-region-latency-resolution/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/cross-region-latency-reproduction",
+      "type": "troubleshooting",
+      "title": "Cross region latency reproduction (Networking)",
+      "summary": "Resolve \"cross region latency\" — reproduction for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/cross-region-latency-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/cross-region-latency-reproduction.md"
+        }
+      },
+      "etag": "s256:3t6YCPJHQtAjwX39YZyPUG",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/cross-region-latency-reproduction/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/mtu-issues-symptom",
+      "type": "troubleshooting",
+      "title": "Mtu issues symptom (Networking)",
+      "summary": "Resolve \"mtu issues\" — symptom for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/mtu-issues-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/mtu-issues-symptom.md"
+        }
+      },
+      "etag": "s256:Sf5nKq9INgIlFv0IfG-hdR",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/mtu-issues-symptom/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/mtu-issues-resolution",
+      "type": "troubleshooting",
+      "title": "Mtu issues resolution (Networking)",
+      "summary": "Resolve \"mtu issues\" — resolution for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/mtu-issues-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/mtu-issues-resolution.md"
+        }
+      },
+      "etag": "s256:Tp0GEt8u-XW6PlzVmkq_OX",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/mtu-issues-resolution/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/mtu-issues-reproduction",
+      "type": "troubleshooting",
+      "title": "Mtu issues reproduction (Networking)",
+      "summary": "Resolve \"mtu issues\" — reproduction for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/mtu-issues-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/mtu-issues-reproduction.md"
+        }
+      },
+      "etag": "s256:4Hok1XPgOG58mMtTxzA_IO",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/mtu-issues-reproduction/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/ipv6-disabled-symptom",
+      "type": "troubleshooting",
+      "title": "Ipv6 disabled symptom (Networking)",
+      "summary": "Resolve \"ipv6 disabled\" — symptom for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/ipv6-disabled-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/ipv6-disabled-symptom.md"
+        }
+      },
+      "etag": "s256:TbAf4qrO3oIACfJHTnUSwC",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/ipv6-disabled-symptom/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/ipv6-disabled-resolution",
+      "type": "troubleshooting",
+      "title": "Ipv6 disabled resolution (Networking)",
+      "summary": "Resolve \"ipv6 disabled\" — resolution for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/ipv6-disabled-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/ipv6-disabled-resolution.md"
+        }
+      },
+      "etag": "s256:OyMx1NJpBzj8AJQx6uEi9n",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/ipv6-disabled-resolution/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/networking/ipv6-disabled-reproduction",
+      "type": "troubleshooting",
+      "title": "Ipv6 disabled reproduction (Networking)",
+      "summary": "Resolve \"ipv6 disabled\" — reproduction for the Networking surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/networking/ipv6-disabled-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/ipv6-disabled-reproduction.md"
+        }
+      },
+      "etag": "s256:ozv6xzak01ST_KtY_Jrt-3",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/networking/ipv6-disabled-reproduction/"
+      },
+      "parent": "networking-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "billing-issues",
+      "type": "section",
+      "title": "Billing issues",
+      "summary": "Billing issues — section.",
+      "summary_source": "extracted",
+      "etag": "s256:CZnr6f5-57y3PHmN7NT_YM",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 16
+      },
+      "children": [
+        "troubleshooting/billing/over-quota-symptom",
+        "troubleshooting/billing/over-quota-resolution",
+        "troubleshooting/billing/over-quota-reproduction",
+        "troubleshooting/billing/unexpected-egress-charges-symptom",
+        "troubleshooting/billing/unexpected-egress-charges-resolution",
+        "troubleshooting/billing/unexpected-egress-charges-reproduction",
+        "troubleshooting/billing/spend-alert-not-firing-symptom",
+        "troubleshooting/billing/spend-alert-not-firing-resolution",
+        "troubleshooting/billing/spend-alert-not-firing-reproduction",
+        "troubleshooting/billing/invoice-mismatch-symptom",
+        "troubleshooting/billing/invoice-mismatch-resolution",
+        "troubleshooting/billing/invoice-mismatch-reproduction",
+        "troubleshooting/billing/tax-jurisdiction-changed-symptom",
+        "troubleshooting/billing/tax-jurisdiction-changed-resolution",
+        "troubleshooting/billing/tax-jurisdiction-changed-reproduction",
+        "troubleshooting/billing/plan-downgrade-blocked-symptom",
+        "troubleshooting/billing/plan-downgrade-blocked-resolution",
+        "troubleshooting/billing/plan-downgrade-blocked-reproduction"
+      ],
+      "parent": "troubleshooting",
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "sidebar-category:billing-issues"
+        }
+      }
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/billing/over-quota-symptom",
+      "type": "troubleshooting",
+      "title": "Over quota symptom (Billing)",
+      "summary": "Resolve \"over quota\" — symptom for the Billing surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/billing/over-quota-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/billing/over-quota-symptom.md"
+        }
+      },
+      "etag": "s256:YdRLDs1i_wmUZWxHsuNTfR",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/billing/over-quota-symptom/"
+      },
+      "parent": "billing-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/billing/over-quota-resolution",
+      "type": "troubleshooting",
+      "title": "Over quota resolution (Billing)",
+      "summary": "Resolve \"over quota\" — resolution for the Billing surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/billing/over-quota-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/billing/over-quota-resolution.md"
+        }
+      },
+      "etag": "s256:qa0WFElXxJL7jnBCLlnUl4",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/billing/over-quota-resolution/"
+      },
+      "parent": "billing-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/billing/over-quota-reproduction",
+      "type": "troubleshooting",
+      "title": "Over quota reproduction (Billing)",
+      "summary": "Resolve \"over quota\" — reproduction for the Billing surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/billing/over-quota-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/billing/over-quota-reproduction.md"
+        }
+      },
+      "etag": "s256:iJsonouxlb_RsWj8f3aSwG",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/billing/over-quota-reproduction/"
+      },
+      "parent": "billing-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/billing/unexpected-egress-charges-symptom",
+      "type": "troubleshooting",
+      "title": "Unexpected egress charges symptom (Billing)",
+      "summary": "Resolve \"unexpected egress charges\" — symptom for the Billing surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/billing/unexpected-egress-charges-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/billing/unexpected-egress-charges-symptom.md"
+        }
+      },
+      "etag": "s256:wOl2VpTzkAYMfQkXgnH7XW",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/billing/unexpected-egress-charges-symptom/"
+      },
+      "parent": "billing-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/billing/unexpected-egress-charges-resolution",
+      "type": "troubleshooting",
+      "title": "Unexpected egress charges resolution (Billing)",
+      "summary": "Resolve \"unexpected egress charges\" — resolution for the Billing surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/billing/unexpected-egress-charges-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/billing/unexpected-egress-charges-resolution.md"
+        }
+      },
+      "etag": "s256:dafV_grp-nef1FN6L_G8jm",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/billing/unexpected-egress-charges-resolution/"
+      },
+      "parent": "billing-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/billing/unexpected-egress-charges-reproduction",
+      "type": "troubleshooting",
+      "title": "Unexpected egress charges reproduction (Billing)",
+      "summary": "Resolve \"unexpected egress charges\" — reproduction for the Billing surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/billing/unexpected-egress-charges-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/billing/unexpected-egress-charges-reproduction.md"
+        }
+      },
+      "etag": "s256:Ll_RokG9z890dELC5bWCFh",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/billing/unexpected-egress-charges-reproduction/"
+      },
+      "parent": "billing-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/billing/spend-alert-not-firing-symptom",
+      "type": "troubleshooting",
+      "title": "Spend alert not firing symptom (Billing)",
+      "summary": "Resolve \"spend alert not firing\" — symptom for the Billing surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 11,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/billing/spend-alert-not-firing-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/billing/spend-alert-not-firing-symptom.md"
+        }
+      },
+      "etag": "s256:F-rTvbMPe4ul5t48insd9m",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/billing/spend-alert-not-firing-symptom/"
+      },
+      "parent": "billing-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/billing/spend-alert-not-firing-resolution",
+      "type": "troubleshooting",
+      "title": "Spend alert not firing resolution (Billing)",
+      "summary": "Resolve \"spend alert not firing\" — resolution for the Billing surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 11,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/billing/spend-alert-not-firing-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/billing/spend-alert-not-firing-resolution.md"
+        }
+      },
+      "etag": "s256:SpoC80wo2zYuDex4qmkp-9",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/billing/spend-alert-not-firing-resolution/"
+      },
+      "parent": "billing-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/billing/spend-alert-not-firing-reproduction",
+      "type": "troubleshooting",
+      "title": "Spend alert not firing reproduction (Billing)",
+      "summary": "Resolve \"spend alert not firing\" — reproduction for the Billing surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 11,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/billing/spend-alert-not-firing-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/billing/spend-alert-not-firing-reproduction.md"
+        }
+      },
+      "etag": "s256:XaM-P4HkYVMXnlr7wIaD3b",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/billing/spend-alert-not-firing-reproduction/"
+      },
+      "parent": "billing-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/billing/invoice-mismatch-symptom",
+      "type": "troubleshooting",
+      "title": "Invoice mismatch symptom (Billing)",
+      "summary": "Resolve \"invoice mismatch\" — symptom for the Billing surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/billing/invoice-mismatch-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/billing/invoice-mismatch-symptom.md"
+        }
+      },
+      "etag": "s256:-araKpydnLMPk7c7EKs5we",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/billing/invoice-mismatch-symptom/"
+      },
+      "parent": "billing-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/billing/invoice-mismatch-resolution",
+      "type": "troubleshooting",
+      "title": "Invoice mismatch resolution (Billing)",
+      "summary": "Resolve \"invoice mismatch\" — resolution for the Billing surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/billing/invoice-mismatch-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/billing/invoice-mismatch-resolution.md"
+        }
+      },
+      "etag": "s256:3zb1qJYbGBunIzN8wkiKq7",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/billing/invoice-mismatch-resolution/"
+      },
+      "parent": "billing-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/billing/invoice-mismatch-reproduction",
+      "type": "troubleshooting",
+      "title": "Invoice mismatch reproduction (Billing)",
+      "summary": "Resolve \"invoice mismatch\" — reproduction for the Billing surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/billing/invoice-mismatch-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/billing/invoice-mismatch-reproduction.md"
+        }
+      },
+      "etag": "s256:4GQAKhsmtW0LVWsi1opMJT",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/billing/invoice-mismatch-reproduction/"
+      },
+      "parent": "billing-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/billing/tax-jurisdiction-changed-symptom",
+      "type": "troubleshooting",
+      "title": "Tax jurisdiction changed symptom (Billing)",
+      "summary": "Resolve \"tax jurisdiction changed\" — symptom for the Billing surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/billing/tax-jurisdiction-changed-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/billing/tax-jurisdiction-changed-symptom.md"
+        }
+      },
+      "etag": "s256:P5d3mgomoBfPfuiQLuZvDm",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/billing/tax-jurisdiction-changed-symptom/"
+      },
+      "parent": "billing-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/billing/tax-jurisdiction-changed-resolution",
+      "type": "troubleshooting",
+      "title": "Tax jurisdiction changed resolution (Billing)",
+      "summary": "Resolve \"tax jurisdiction changed\" — resolution for the Billing surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/billing/tax-jurisdiction-changed-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/billing/tax-jurisdiction-changed-resolution.md"
+        }
+      },
+      "etag": "s256:6Vc71WSnXRtoFs06v1hHBX",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/billing/tax-jurisdiction-changed-resolution/"
+      },
+      "parent": "billing-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/billing/tax-jurisdiction-changed-reproduction",
+      "type": "troubleshooting",
+      "title": "Tax jurisdiction changed reproduction (Billing)",
+      "summary": "Resolve \"tax jurisdiction changed\" — reproduction for the Billing surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/billing/tax-jurisdiction-changed-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/billing/tax-jurisdiction-changed-reproduction.md"
+        }
+      },
+      "etag": "s256:NIU9p1LXsq8wFrJT0rb10I",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/billing/tax-jurisdiction-changed-reproduction/"
+      },
+      "parent": "billing-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/billing/plan-downgrade-blocked-symptom",
+      "type": "troubleshooting",
+      "title": "Plan downgrade blocked symptom (Billing)",
+      "summary": "Resolve \"plan downgrade blocked\" — symptom for the Billing surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/billing/plan-downgrade-blocked-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/billing/plan-downgrade-blocked-symptom.md"
+        }
+      },
+      "etag": "s256:lJfaWdMhj3AahBirIFb7bZ",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/billing/plan-downgrade-blocked-symptom/"
+      },
+      "parent": "billing-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/billing/plan-downgrade-blocked-resolution",
+      "type": "troubleshooting",
+      "title": "Plan downgrade blocked resolution (Billing)",
+      "summary": "Resolve \"plan downgrade blocked\" — resolution for the Billing surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/billing/plan-downgrade-blocked-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/billing/plan-downgrade-blocked-resolution.md"
+        }
+      },
+      "etag": "s256:FPMTb9RFZhJ0LG71GplEtH",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/billing/plan-downgrade-blocked-resolution/"
+      },
+      "parent": "billing-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/billing/plan-downgrade-blocked-reproduction",
+      "type": "troubleshooting",
+      "title": "Plan downgrade blocked reproduction (Billing)",
+      "summary": "Resolve \"plan downgrade blocked\" — reproduction for the Billing surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/billing/plan-downgrade-blocked-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/billing/plan-downgrade-blocked-reproduction.md"
+        }
+      },
+      "etag": "s256:wpIq7jCyjaZWSuT_ThJsk2",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/billing/plan-downgrade-blocked-reproduction/"
+      },
+      "parent": "billing-issues"
+    }
+  ],
+  "etag": "s256:pNdPhnhcKd7BcHvR_lVyFp"
+}

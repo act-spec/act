@@ -1,0 +1,141 @@
+{
+  "act_version": "0.1",
+  "id": "cms/ja-jp/landing/pricing",
+  "type": "landing",
+  "title": "料金",
+  "etag": "s256:lsys0qzo37kNQhBUicYjSK",
+  "summary": "シンプルで透明性のある料金体系。",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "plain",
+      "text": "Pick a plan that fits your team — Starter, Pro, or Enterprise."
+    },
+    {
+      "type": "marketing:hero",
+      "headline": "Simple, transparent pricing",
+      "subhead": "No hidden fees. Cancel anytime.",
+      "cta": {
+        "text": "Start free trial",
+        "to": "/signup"
+      },
+      "metadata": {
+        "extracted_via": "component-contract",
+        "extraction_method": "ssr-walk"
+      }
+    },
+    {
+      "type": "marketing:pricing-table",
+      "tiers": [
+        {
+          "name": "Starter",
+          "price": "$9/mo",
+          "features": [
+            "1 user",
+            "10GB"
+          ]
+        },
+        {
+          "name": "Pro",
+          "price": "$29/mo",
+          "features": [
+            "10 users",
+            "1TB"
+          ]
+        },
+        {
+          "name": "Enterprise",
+          "price": "Contact us",
+          "features": [
+            "Unlimited"
+          ]
+        }
+      ],
+      "highlighted": "Pro",
+      "metadata": {
+        "extracted_via": "component-contract",
+        "extraction_method": "ssr-walk"
+      }
+    },
+    {
+      "type": "marketing:faq",
+      "items": [
+        {
+          "q": "Can I change plans?",
+          "a": "You can change plans anytime."
+        },
+        {
+          "q": "Is there a free trial?",
+          "a": "Yes, 14 days, no credit card."
+        }
+      ],
+      "metadata": {
+        "extracted_via": "component-contract",
+        "extraction_method": "ssr-walk"
+      }
+    },
+    {
+      "type": "marketing:cta",
+      "headline": "Ready to get started?",
+      "actions": [
+        {
+          "text": "Start free trial",
+          "to": "/signup"
+        },
+        {
+          "text": "Talk to sales",
+          "to": "/contact"
+        }
+      ],
+      "metadata": {
+        "extracted_via": "component-contract",
+        "extraction_method": "ssr-walk"
+      }
+    }
+  ],
+  "tokens": {
+    "summary": 1,
+    "body": 12
+  },
+  "metadata": {
+    "locale": "ja-JP",
+    "translations": [
+      {
+        "locale": "en-US",
+        "id": "cms/en-us/landing/pricing"
+      },
+      {
+        "locale": "es-ES",
+        "id": "cms/es-es/landing/pricing"
+      },
+      {
+        "locale": "de-DE",
+        "id": "cms/de-de/landing/pricing"
+      }
+    ],
+    "source": {
+      "adapter": "act-contentful",
+      "source_id": "ja-JP:landing/pricing",
+      "contributors": [
+        "act-contentful",
+        "act-react-extract",
+        "act-i18n"
+      ]
+    },
+    "translation_status": "complete"
+  },
+  "related": [
+    {
+      "id": "cms/ja-jp/landing/features",
+      "relation": "see-also"
+    },
+    {
+      "id": "cms/ja-jp/landing/contact",
+      "relation": "see-also"
+    }
+  ],
+  "source": {
+    "human_url": "https://acme.example.com/ja-JP/landing/pricing"
+  }
+}

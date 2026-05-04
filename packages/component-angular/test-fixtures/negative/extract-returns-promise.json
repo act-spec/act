@@ -1,0 +1,7 @@
+{
+  "id": "extract-returns-promise",
+  "requirements": ["PRD-303-R9", "PRD-303-R16", "PRD-300-R7"],
+  "description": "An extract function returning a Promise (forbidden under PRD-300-R7 — extract is sync only) is detected via a then-method check on the returned value (PRD-303-R9) and produces a marketing:placeholder block per PRD-303-R16 / PRD-300-R22.",
+  "expectedFirstBlockType": "marketing:placeholder",
+  "expectedErrorSubstring": "Promise"
+}

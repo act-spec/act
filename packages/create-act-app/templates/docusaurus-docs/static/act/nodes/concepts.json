@@ -1,0 +1,30 @@
+{
+  "act_version": "0.1",
+  "id": "concepts",
+  "type": "section",
+  "title": "Concepts",
+  "summary": "Concepts — section.",
+  "summary_source": "extracted",
+  "etag": "s256:wOEnfRMqtMV5zSI0CW7S-c",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# Concepts\n\nThis section groups related concepts documents.\n"
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 16
+  },
+  "children": [
+    "concepts/data-model",
+    "concepts/auth",
+    "storage"
+  ],
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "sidebar-category:concepts"
+    }
+  }
+}

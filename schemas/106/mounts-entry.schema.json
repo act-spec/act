@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/106/mounts-entry.schema.json",
+  "title": "ACT Manifest — single mounts entry (runtime + hybrid)",
+  "description": "Extends the basic mount shape pinned by PRD-107-R5 with the runtime-specific constraints PRD-106 enforces (no recursion; absolute or origin-relative `manifest_url`; longest-prefix matching). Overlapping prefixes across the array are a manifest validation error per PRD-106-R20; that constraint is enforced at the array level and not expressible inside a single-entry schema.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["prefix", "delivery", "manifest_url"],
+  "properties": {
+    "prefix": {
+      "type": "string",
+      "pattern": "^/([A-Za-z0-9._~!$&'()*+,;=:@%-]+(/[A-Za-z0-9._~!$&'()*+,;=:@%-]+)*)?/?$",
+      "description": "Origin-relative URL path prefix. Matched longest-first by consumers (PRD-106-R19)."
+    },
+    "delivery": {
+      "type": "string",
+      "enum": ["static", "runtime"],
+      "description": "Per PRD-107-R5, each mount carries its own delivery profile."
+    },
+    "manifest_url": {
+      "type": "string",
+      "format": "uri-reference",
+      "description": "Absolute or origin-relative URL of the mount's manifest. Cross-origin permitted (PRD-106-R22); origin trust is consumer-side per PRD-109."
+    },
+    "conformance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "level": {
+          "type": "string",
+          "enum": ["core", "standard", "strict"],
+          "description": "Per PRD-107-R5, optional; inherits the parent manifest's level when omitted."
+        }
+      }
+    },
+    "mounts": false
+  },
+  "$comment": "`mounts: false` enforces the no-recursion rule from PRD-106-R18 + gap C5 — a mount manifest's *entry* MUST NOT itself declare further `mounts`. The mount's referenced manifest body must also not contain a `mounts` array; that is a separate cross-document check enforced by PRD-600."
+}

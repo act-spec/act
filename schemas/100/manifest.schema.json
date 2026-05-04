@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/0.1/manifest.schema.json",
+  "title": "ACT Manifest envelope",
+  "description": "Per PRD-100-R3 through PRD-100-R9. Wire shape of the manifest envelope at /.well-known/act.json. The Core required field set (PRD-100-R4) is `act_version`, `site.name`, `index_url`, `node_url_template`, `conformance.level`, `delivery`. The closed `capabilities` object form (PRD-100-R6) replaces the v0.1-draft array form. `mounts` shape (PRD-100-R7) follows PRD-107-R5. `additionalProperties` is left at its default (true) per PRD-108-R7 (consumers tolerate unknown optional fields); the `conformance` sub-object is closed per PRD-107-R2.",
+  "type": "object",
+  "required": [
+    "act_version",
+    "site",
+    "index_url",
+    "node_url_template",
+    "conformance",
+    "delivery"
+  ],
+  "properties": {
+    "act_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$",
+      "description": "MAJOR.MINOR per PRD-108-R2. No PATCH segment."
+    },
+    "site": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "description": { "type": "string" },
+        "canonical_url": { "type": "string", "format": "uri" },
+        "locale": { "type": "string" },
+        "license": { "type": "string" }
+      }
+    },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "generator": { "type": "string" },
+    "index_url": { "type": "string", "format": "uri-reference" },
+    "index_ndjson_url": { "type": "string", "format": "uri-reference" },
+    "node_url_template": {
+      "type": "string",
+      "pattern": "\\{id\\}",
+      "description": "URL template carrying a literal {id} placeholder."
+    },
+    "subtree_url_template": {
+      "type": "string",
+      "pattern": "\\{id\\}"
+    },
+    "search_url_template": {
+      "type": "string",
+      "pattern": "\\{query\\}"
+    },
+    "root_id": { "type": "string" },
+    "stats": {
+      "type": "object",
+      "properties": {
+        "node_count": { "type": "integer", "minimum": 0 },
+        "total_tokens_full": { "type": "integer", "minimum": 0 },
+        "total_tokens_summary": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "capabilities": {
+      "type": "object",
+      "description": "Structured capability flags (PRD-100). Replaces the v0.1-draft array form. Unknown keys are tolerated per PRD-108-R7.",
+      "properties": {
+        "etag": { "type": "boolean" },
+        "subtree": { "type": "boolean" },
+        "ndjson_index": { "type": "boolean" },
+        "search": {
+          "type": "object",
+          "properties": {
+            "template_advertised": { "type": "boolean" }
+          }
+        },
+        "change_feed": { "type": "boolean" }
+      }
+    },
+    "conformance": {
+      "type": "object",
+      "required": ["level"],
+      "additionalProperties": false,
+      "properties": {
+        "level": {
+          "type": "string",
+          "enum": ["core", "standard", "strict"],
+          "description": "Closed enum per PRD-107-R1."
+        }
+      }
+    },
+    "delivery": {
+      "type": "string",
+      "enum": ["static", "runtime"],
+      "description": "Closed enum per PRD-107-R3."
+    },
+    "mounts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["prefix", "delivery", "manifest_url"],
+        "properties": {
+          "prefix": { "type": "string" },
+          "delivery": { "type": "string", "enum": ["static", "runtime"] },
+          "manifest_url": { "type": "string", "format": "uri-reference" },
+          "conformance": {
+            "type": "object",
+            "required": ["level"],
+            "properties": {
+              "level": { "type": "string", "enum": ["core", "standard", "strict"] }
+            }
+          }
+        }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "properties": {
+        "robots_respected": { "type": "boolean" },
+        "rate_limit_per_minute": { "type": "integer", "minimum": 0 },
+        "contact": { "type": "string" }
+      }
+    }
+  }
+}

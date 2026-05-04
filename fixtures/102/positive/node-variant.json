@@ -1,0 +1,28 @@
+{
+  "act_version": "0.1",
+  "id": "pricing@enterprise-2026q2",
+  "type": "landing",
+  "title": "Pricing — Enterprise (2026 Q2)",
+  "etag": "sha256:variant1",
+  "summary": "Acme pricing — enterprise variant for the 2026-Q2 experiment arm.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "marketing:hero",
+      "headline": "Built for enterprise scale.",
+      "subhead": "SLA-backed, audit-ready, and globally distributed.",
+      "metadata": { "extracted_via": "component-contract" }
+    }
+  ],
+  "tokens": { "summary": 16, "body": 90 },
+  "metadata": {
+    "variant": {
+      "base_id": "pricing",
+      "key": "enterprise-2026q2",
+      "source": "experiment"
+    }
+  },
+  "related": [
+    { "id": "pricing", "relation": "variant_of" }
+  ]
+}

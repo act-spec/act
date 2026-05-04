@@ -1,0 +1,51 @@
+{
+  "act_version": "0.1",
+  "id": "troubleshooting/auth/principal-disabled-symptom",
+  "type": "troubleshooting",
+  "title": "Principal disabled symptom (Auth)",
+  "summary": "Resolve \"principal disabled\" — symptom for the Auth surface.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Symptom"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "An operation against the Auth surface fails with an error matching \"principal disabled (symptom)\"."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Resolution"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Inspect the error envelope.Re-issue with corrected parameters.Confirm via the audit log."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "See the Auth API reference for the exact field set."
+    }
+  ],
+  "tokens": {
+    "summary": 9,
+    "body": 44
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "troubleshooting/auth/principal-disabled-symptom.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/principal-disabled-symptom.md"
+    }
+  },
+  "etag": "s256:Ahbzht8LePBqFfTxKb5tli",
+  "source": {
+    "human_url": "https://example.com/troubleshooting/auth/principal-disabled-symptom/"
+  },
+  "parent": "auth-issues"
+}

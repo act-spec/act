@@ -1,0 +1,18 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-109",
+    "satisfies": ["PRD-109-R16", "PRD-109-R17", "PRD-103-R3"],
+    "describes": "An ETag computed per the PRD-103 recipe (cited by PRD-109): hash input is the canonical JCS encoding of {payload, identity, tenant}. The hash output is cryptographically opaque; the cleartext identity tokens MUST NOT appear anywhere in the emitted ETag string. No request-local timestamps or nonces in the input. Value-shape conforms to PRD-103-R3 (s256:[A-Za-z0-9_-]{22}).",
+    "hash_input_jcs": "{\"identity\":\"u-7f3c1d2e\",\"payload\":{\"act_version\":\"0.1\",\"id\":\"workspace/projects/atlas\",\"title\":\"Atlas project\",\"summary\":\"...\"},\"tenant\":\"t-acme\"}",
+    "hash_algorithm": "s256",
+    "expected_etag_length_chars": 27
+  },
+  "envelope": {
+    "act_version": "0.1",
+    "id": "workspace/projects/atlas",
+    "type": "page",
+    "title": "Atlas project",
+    "etag": "s256:k4Tj9Hw2pQrXz1Lm8sBnYv",
+    "summary": "Top-level project record for the Atlas initiative."
+  }
+}

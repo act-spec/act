@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/0.1/link-header.schema.json",
+  "title": "ACT runtime-profile Link header — value pattern",
+  "description": "Per PRD-101-R5 and PRD-101-R7. Pattern for the value of the HTTP Link header advertising an ACT manifest from a runtime-only deployment (gap A5). The structure follows RFC 8288: a quoted target URI in angle brackets, followed by `rel`, `type`, and `profile` parameters in any order, separated by `;` and optional whitespace. The `profile` parameter is a closed enum (PRD-101-R7): \"static\" or \"runtime\". The pattern is permissive about parameter ordering and surrounding whitespace per RFC 8288, strict about the closed `profile` enum, and verifies `rel=\"act\"` and `type=\"application/act-manifest+json\"` are both present.",
+  "type": "string",
+  "pattern": "^\\s*<[^>]+>\\s*;\\s*(?=[^,]*\\brel\\s*=\\s*\"act\"\\b)(?=[^,]*\\btype\\s*=\\s*\"application/act-manifest\\+json\"\\b)(?=[^,]*\\bprofile\\s*=\\s*\"(static|runtime)\"\\b)([^,]+)$",
+  "examples": [
+    "</.well-known/act.json>; rel=\"act\"; type=\"application/act-manifest+json\"; profile=\"runtime\"",
+    "</.well-known/act.json>; rel=\"act\"; type=\"application/act-manifest+json\"; profile=\"static\""
+  ]
+}

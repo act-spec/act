@@ -1,0 +1,51 @@
+{
+  "act_version": "0.1",
+  "id": "troubleshooting/networking/proxy-misconfigured-reproduction",
+  "type": "troubleshooting",
+  "title": "Proxy misconfigured reproduction (Networking)",
+  "summary": "Resolve \"proxy misconfigured\" — reproduction for the Networking surface.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Symptom"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "An operation against the Networking surface fails with an error matching \"proxy misconfigured (reproduction)\"."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Resolution"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Inspect the error envelope.Re-issue with corrected parameters.Confirm via the audit log."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "See the Networking API reference for the exact field set."
+    }
+  ],
+  "tokens": {
+    "summary": 9,
+    "body": 44
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "troubleshooting/networking/proxy-misconfigured-reproduction.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/networking/proxy-misconfigured-reproduction.md"
+    }
+  },
+  "etag": "s256:kyfS5jU8dENQPFERzPqQXz",
+  "source": {
+    "human_url": "https://example.com/troubleshooting/networking/proxy-misconfigured-reproduction/"
+  },
+  "parent": "networking-issues"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "capability-dispatch-rsc-ssr",
+  "requirements": ["PRD-300-R28", "PRD-300-R30"],
+  "input": {
+    "caps": {
+      "ssr-walk": true,
+      "static-ast": true,
+      "headless-render": false,
+      "rsc": true,
+      "streaming": true,
+      "suspense": true,
+      "concurrent": true
+    }
+  },
+  "expected": {
+    "mode": "rsc-ssr"
+  }
+}

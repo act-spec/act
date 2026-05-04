@@ -1,0 +1,18 @@
+{
+  "scenario": "A runtime-only deployment fails to emit the `Link: rel=\"act\"` header on an authenticated response",
+  "violates": ["PRD-106-R23"],
+  "rejected_because": "Runtime-only deployments MUST emit the Link header on every authenticated response so non-HTML clients can discover the well-known ACT manifest. Omitting it leaves agents with no discovery hand-off (cite gap A5).",
+  "request": {
+    "method": "GET",
+    "url": "https://app.acme.com/api/whoami",
+    "headers": { "Cookie": "session=alex-session-id" }
+  },
+  "observed_response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "missing_header": "Link",
+    "note": "Authenticated branch returned a non-ACT JSON payload but did not advertise the runtime ACT manifest. Validator MUST flag per PRD-106-R23."
+  }
+}

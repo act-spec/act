@@ -1,0 +1,46 @@
+{
+  "act_version": "0.1",
+  "id": "billing-issues",
+  "type": "section",
+  "title": "Billing issues",
+  "summary": "Billing issues — section.",
+  "summary_source": "extracted",
+  "etag": "s256:CZnr6f5-57y3PHmN7NT_YM",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# Billing issues\n\nThis section groups related billing issues documents.\n"
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 16
+  },
+  "children": [
+    "troubleshooting/billing/over-quota-symptom",
+    "troubleshooting/billing/over-quota-resolution",
+    "troubleshooting/billing/over-quota-reproduction",
+    "troubleshooting/billing/unexpected-egress-charges-symptom",
+    "troubleshooting/billing/unexpected-egress-charges-resolution",
+    "troubleshooting/billing/unexpected-egress-charges-reproduction",
+    "troubleshooting/billing/spend-alert-not-firing-symptom",
+    "troubleshooting/billing/spend-alert-not-firing-resolution",
+    "troubleshooting/billing/spend-alert-not-firing-reproduction",
+    "troubleshooting/billing/invoice-mismatch-symptom",
+    "troubleshooting/billing/invoice-mismatch-resolution",
+    "troubleshooting/billing/invoice-mismatch-reproduction",
+    "troubleshooting/billing/tax-jurisdiction-changed-symptom",
+    "troubleshooting/billing/tax-jurisdiction-changed-resolution",
+    "troubleshooting/billing/tax-jurisdiction-changed-reproduction",
+    "troubleshooting/billing/plan-downgrade-blocked-symptom",
+    "troubleshooting/billing/plan-downgrade-blocked-resolution",
+    "troubleshooting/billing/plan-downgrade-blocked-reproduction"
+  ],
+  "parent": "troubleshooting",
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "sidebar-category:billing-issues"
+    }
+  }
+}

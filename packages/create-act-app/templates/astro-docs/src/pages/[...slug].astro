@@ -1,0 +1,30 @@
+---
+// PRD-700-R9 — dynamic route for every doc node.
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const docs = await getCollection('docs');
+  return docs.map((d) => ({
+    params: { slug: d.id },
+    props: { entry: d },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>{entry.data.title} — Tinybox</title>
+    <meta name="description" content={entry.data.summary} />
+  </head>
+  <body>
+    <h1>{entry.data.title}</h1>
+    <p><em>{entry.data.summary}</em></p>
+    <Content />
+    <hr />
+    <p><a href="/">← Tinybox home</a></p>
+  </body>
+</html>

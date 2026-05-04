@@ -1,0 +1,16 @@
+{
+  "scenario": "Server's resolved node URL does not percent-encode reserved characters in the ID path segment, producing two distinct URLs that decode to different IDs",
+  "violates": ["PRD-106-R13", "PRD-106-R14", "PRD-106-R15"],
+  "rejected_because": "Per gap A3 / PRD-106-R14, when substituting an ID into `node_url_template`, each path segment MUST be percent-encoded with the `pchar` rules of RFC 3986 §3.3, with `/` between ID segments preserved verbatim. Two URLs that decode to the same canonical ID MUST resolve to the same resource (PRD-106-R15).",
+  "manifest_excerpt": {
+    "node_url_template": "/act/n/{id}.json"
+  },
+  "id": "doc/q1+retro space",
+  "produced_url_observed": "/act/n/doc/q1+retro space.json",
+  "produced_url_required": "/act/n/doc/q1%2Bretro%20space.json",
+  "violations": [
+    "Literal space character left unencoded — invalid URL per RFC 3986.",
+    "`+` left unencoded inside a path segment — RFC 3986 reserves `+` for query interpretation in some contexts; safer to encode in path.",
+    "Server's request handler MUST decode percent-encoding consistently; if the producer URL omits encoding while the consumer's URL applies it, the two requests resolve differently — violating PRD-106-R15."
+  ]
+}

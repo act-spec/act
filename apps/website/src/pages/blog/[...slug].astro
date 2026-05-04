@@ -1,0 +1,32 @@
+---
+// Per-post blog page. Renders the markdown body inside a Starlight
+// content frame so navigation, search, and theming carry over.
+import { getCollection, type CollectionEntry } from 'astro:content';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  // Drop drafts from production builds; surface them in dev for review.
+  const visible = import.meta.env.PROD ? posts.filter((p) => !p.data.draft) : posts;
+  return visible.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+interface Props { post: CollectionEntry<'blog'>; }
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<StarlightPage
+  frontmatter={{
+    title: post.data.title,
+    description: post.data.description,
+  }}
+>
+  <p style="font-size:0.85rem;color:var(--sl-color-gray-3);margin:0 0 1.5rem;">
+    {post.data.pubDate.toISOString().slice(0, 10)} · {post.data.author}
+  </p>
+  <Content />
+</StarlightPage>

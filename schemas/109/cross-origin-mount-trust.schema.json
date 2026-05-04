@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/0.1/cross-origin-mount-trust.schema.json",
+  "title": "Cross-origin mount trust evaluation input/output (PRD-109)",
+  "description": "Per PRD-109-R21 (the cross-origin mount trust evaluation algorithm). PRD-101-R11 requires consumers to evaluate origin trust before treating a mounted manifest as binding. This schema describes the structured input the trust-evaluation algorithm consumes and the verdict it emits. PRD-101/PRD-106 own the discovery and serving flows; PRD-109 owns the trust algorithm.",
+  "type": "object",
+  "required": ["input", "verdict"],
+  "additionalProperties": false,
+  "properties": {
+    "input": {
+      "type": "object",
+      "required": ["parent_manifest_origin", "mount_manifest_url", "consumer_allowlist"],
+      "additionalProperties": false,
+      "properties": {
+        "parent_manifest_origin": {
+          "type": "string",
+          "format": "uri",
+          "description": "The origin (scheme://host[:port]) the parent manifest was fetched from."
+        },
+        "mount_manifest_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Absolute URL declared by the mount entry's manifest_url field."
+        },
+        "consumer_allowlist": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Consumer-configured list of origins (or origin patterns) the consumer trusts in addition to the parent origin. MAY be empty."
+        }
+      }
+    },
+    "verdict": {
+      "type": "object",
+      "required": ["trusted", "scheme_equivalent", "host_equivalent_or_allowlisted", "mime_validated"],
+      "additionalProperties": false,
+      "properties": {
+        "trusted": {
+          "type": "boolean",
+          "description": "Final verdict. True iff scheme_equivalent AND (host_equivalent_or_allowlisted) AND mime_validated."
+        },
+        "scheme_equivalent": {
+          "type": "boolean",
+          "description": "True iff the mount's URL scheme matches the parent's. https→http downgrade MUST yield false."
+        },
+        "host_equivalent_or_allowlisted": {
+          "type": "boolean",
+          "description": "True iff the mount host equals the parent host OR appears in consumer_allowlist."
+        },
+        "mime_validated": {
+          "type": "boolean",
+          "description": "True iff the fetched mounted manifest's Content-Type matches application/act-manifest+json (per gap B5). A mismatch indicates a hostile or misconfigured mount and MUST yield false."
+        },
+        "rejection_reason": {
+          "type": "string",
+          "description": "Present and non-empty only when trusted == false."
+        }
+      }
+    }
+  }
+}

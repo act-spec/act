@@ -1,0 +1,30 @@
+{
+  "act_version": "0.1",
+  "id": "api-reference",
+  "type": "section",
+  "title": "API reference",
+  "summary": "API reference — section.",
+  "summary_source": "extracted",
+  "etag": "s256:8bQ1cml8dihN8FT3yBdcCq",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# API reference\n\nThis section groups related api reference documents.\n"
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 16
+  },
+  "children": [
+    "buckets",
+    "objects",
+    "webhooks"
+  ],
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "sidebar-category:api-reference"
+    }
+  }
+}

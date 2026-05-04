@@ -1,0 +1,13 @@
+{
+  "id": "static-field",
+  "requirements": ["PRD-303-R3", "PRD-303-R6", "PRD-303-R10", "PRD-303-R14", "PRD-303-R15", "PRD-303-R22"],
+  "description": "Static field declaration via Component.act = {…} → registered on the per-render ActCollectorService by the synthetic walker (mirrors what an Angular standalone-component bootstrap would do via the Ivy compiler-emitted reference). Verifies the binding emits one canonical NodeDraft whose first content block is the marketing:hero from HeroComponent.act, with metadata.extracted_via=component-contract and metadata.extraction_method=ssr-walk.",
+  "expected": {
+    "draftCount": 1,
+    "id": "hero-only",
+    "type": "landing",
+    "blockTypes": ["marketing:hero"],
+    "extractedVia": "component-contract",
+    "extractionMethod": "ssr-walk"
+  }
+}

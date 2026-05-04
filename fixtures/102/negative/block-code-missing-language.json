@@ -1,0 +1,15 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-102",
+    "violates": [
+      "PRD-102-R3"
+    ],
+    "expected_error": {
+      "level": "core",
+      "requirement": "PRD-102-R3",
+      "missing": "code block missing required `language` field."
+    }
+  },
+  "type": "code",
+  "text": "npm install @acme/sdk"
+}

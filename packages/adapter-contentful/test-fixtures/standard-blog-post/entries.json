@@ -1,0 +1,83 @@
+{
+  "_comment": "Recorded Contentful Delivery API entries response. Each entry follows the CDA shape under fields/sys; Rich Text fields use the JSON AST per @contentful/rich-text-types.",
+  "items": [
+    {
+      "sys": {
+        "id": "5xq0dpjt7l",
+        "type": "Entry",
+        "contentType": { "sys": { "type": "Link", "linkType": "ContentType", "id": "blogPost" } }
+      },
+      "metadata": {
+        "tags": [
+          { "sys": { "type": "Link", "linkType": "Tag", "id": "intro" } },
+          { "sys": { "type": "Link", "linkType": "Tag", "id": "spec" } }
+        ]
+      },
+      "fields": {
+        "title": "Welcome to ACT",
+        "slug": "welcome-to-act",
+        "excerpt": "A brief intro to the spec.",
+        "body": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "heading-2",
+              "data": {},
+              "content": [{ "nodeType": "text", "value": "Why ACT", "marks": [], "data": {} }]
+            },
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                { "nodeType": "text", "value": "ACT is an open standard for ", "marks": [], "data": {} },
+                { "nodeType": "text", "value": "agent-readable", "marks": [{ "type": "bold" }], "data": {} },
+                { "nodeType": "text", "value": " content trees.", "marks": [], "data": {} }
+              ]
+            },
+            {
+              "nodeType": "unordered-list",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "list-item",
+                  "data": {},
+                  "content": [
+                    {
+                      "nodeType": "paragraph",
+                      "data": {},
+                      "content": [{ "nodeType": "text", "value": "Composable adapters.", "marks": [], "data": {} }]
+                    }
+                  ]
+                },
+                {
+                  "nodeType": "list-item",
+                  "data": {},
+                  "content": [
+                    {
+                      "nodeType": "paragraph",
+                      "data": {},
+                      "content": [{ "nodeType": "text", "value": "Plain-old envelopes.", "marks": [], "data": {} }]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "nodeType": "blockquote",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "paragraph",
+                  "data": {},
+                  "content": [{ "nodeType": "text", "value": "PRD-100 is the wire.", "marks": [], "data": {} }]
+                }
+              ]
+            },
+            { "nodeType": "hr", "data": {}, "content": [] }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "name": "@act-spec/component-react",
+  "version": "0.0.0",
+  "description": "PRD-301 React binding for the ACT (Agent Content Tree) v0.1 component contract (PRD-300). Implements the three React declaration patterns (static field `Component.act = {…}`, hook `useActContract({…})`, page-level boundary as exported `act` const or `<ActContractWrapper>`), an `<ActProvider>` collector for SSR-walk extraction via `react-dom/server`, the streaming completion rule (`onAllReady`), the React Server Components server-tree-only walk, the variant replay loop, the placeholder emission contract (truncated and secret-redacted error messages), the React 18+ peer-dependency floor, and the `BindingCapabilities` const with values pinned per PRD-301-R20. Bridges React component trees to the framework-agnostic `NodeDraft` shape from `@act-spec/component-contract`.",
+  "license": "Apache-2.0",
+  "author": "Jeremy Forsythe <jeremy@act-spec.org>",
+  "homepage": "https://act-spec.org",
+  "bugs": {
+    "url": "https://github.com/act-spec/act/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-spec/act.git",
+    "directory": "packages/component-react"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "conformance": "tsx conformance.ts"
+  },
+  "dependencies": {
+    "@act-spec/component-contract": "workspace:*",
+    "@act-spec/core": "workspace:*",
+    "@act-spec/validator": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": ">=18 <20",
+    "react-dom": ">=18 <20"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.28",
+    "@types/react-dom": "^18.3.7",
+    "@vitest/coverage-v8": "^2.1.9",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
+}

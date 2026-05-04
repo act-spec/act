@@ -1,0 +1,52 @@
+{
+  "act_version": "0.1",
+  "id": "auth-issues",
+  "type": "section",
+  "title": "Auth issues",
+  "summary": "Auth issues — section.",
+  "summary_source": "extracted",
+  "etag": "s256:Uyyxge__Vt-uFPqfbfRvsp",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# Auth issues\n\nThis section groups related auth issues documents.\n"
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 16
+  },
+  "children": [
+    "troubleshooting/auth/token-expired-symptom",
+    "troubleshooting/auth/token-expired-resolution",
+    "troubleshooting/auth/token-expired-reproduction",
+    "troubleshooting/auth/token-not-found-symptom",
+    "troubleshooting/auth/token-not-found-resolution",
+    "troubleshooting/auth/token-not-found-reproduction",
+    "troubleshooting/auth/permission-denied-symptom",
+    "troubleshooting/auth/permission-denied-resolution",
+    "troubleshooting/auth/permission-denied-reproduction",
+    "troubleshooting/auth/cross-project-token-symptom",
+    "troubleshooting/auth/cross-project-token-resolution",
+    "troubleshooting/auth/cross-project-token-reproduction",
+    "troubleshooting/auth/rotation-overlap-window-symptom",
+    "troubleshooting/auth/rotation-overlap-window-resolution",
+    "troubleshooting/auth/rotation-overlap-window-reproduction",
+    "troubleshooting/auth/mfa-required-symptom",
+    "troubleshooting/auth/mfa-required-resolution",
+    "troubleshooting/auth/mfa-required-reproduction",
+    "troubleshooting/auth/principal-disabled-symptom",
+    "troubleshooting/auth/principal-disabled-resolution",
+    "troubleshooting/auth/principal-disabled-reproduction",
+    "troubleshooting/auth/audit-log-missing-symptom",
+    "troubleshooting/auth/audit-log-missing-resolution",
+    "troubleshooting/auth/audit-log-missing-reproduction"
+  ],
+  "parent": "troubleshooting",
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "sidebar-category:auth-issues"
+    }
+  }
+}

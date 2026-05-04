@@ -1,0 +1,9 @@
+{
+  "id": "serverprefetch-completion",
+  "requirements": ["PRD-302-R11", "PRD-300-R31"],
+  "description": "When a component declares Vue's serverPrefetch lifecycle, @vue/server-renderer.renderToString awaits all serverPrefetch promises before resolving. The binding's wait-for-completion behaviour follows that contract; the extract function sees prefetched data because it runs after renderToString settles.",
+  "expected": {
+    "blockTypes": ["marketing:prefetched"],
+    "prefetchSeenByExtract": true
+  }
+}

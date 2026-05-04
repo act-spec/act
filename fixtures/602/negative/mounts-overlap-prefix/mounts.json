@@ -1,0 +1,7 @@
+{
+  "$comment": "PRD-602-R24 / PRD-106-R20 — overlapping prefixes MUST be rejected at createBridge construction time. The prefix '/docs/v2' is a strict path-segment-aware prefix-extension of '/docs', which violates PRD-106-R20 mounts coherence. The bridge throws BridgeConfigurationError with code OVERLAPPING_PREFIXES; no request is served.",
+  "mounts": [
+    { "prefix": "/docs" },
+    { "prefix": "/docs/v2" }
+  ]
+}

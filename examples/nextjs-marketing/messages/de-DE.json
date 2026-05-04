@@ -1,0 +1,18 @@
+{
+  "landing/pricing": {
+    "cta": { "primary": "Kostenlose Testversion", "secondary": "Vertrieb kontaktieren" },
+    "footer": { "rights": "Alle Rechte vorbehalten." }
+  },
+  "landing/features": {
+    "cta": { "primary": "Kostenlos testen", "secondary": "Demo ansehen" }
+  },
+  "landing/about": {
+    "cta": { "primary": "Manifest lesen" }
+  },
+  "landing/contact": {
+    "cta": { "primary": "Ticket öffnen" }
+  },
+  "landing/privacy": {
+    "cta": { "primary": "Cookies verwalten" }
+  }
+}

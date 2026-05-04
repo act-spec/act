@@ -1,0 +1,20 @@
+{
+  "scenario": "Server responds 401 only when the resource exists and 404 only when it does not — leaking existence to unauthenticated requesters",
+  "violates": ["PRD-106-R6", "PRD-106-R8"],
+  "rejected_because": "Per PRD-106-R6, an authenticated-but-unauthorized requester MUST receive 404 (not 403, not 401), and the existence-vs-no-existence distinction MUST NOT be observable from response status. Distinguishing the two cases by status code is an existence oracle (cite PRD-109).",
+  "request_pair": [
+    {
+      "label": "real resource, no credentials",
+      "request": { "method": "GET", "url": "https://app.acme.com/act/n/doc%2Fsecret-launch.json" },
+      "observed_response_status": 401,
+      "observed_response_headers": { "WWW-Authenticate": "Bearer realm=\"app.acme.com\"" },
+      "expected_response_status_per_spec": "Either both real and fake return 401-with-WWW-Authenticate (auth required, existence not signaled), or both return 404. They MUST NOT diverge."
+    },
+    {
+      "label": "fake resource, no credentials",
+      "request": { "method": "GET", "url": "https://app.acme.com/act/n/doc%2Fdoes-not-exist.json" },
+      "observed_response_status": 404,
+      "expected_response_status_per_spec": "MUST match the response code returned for the real resource. Diverging is the violation."
+    }
+  ]
+}

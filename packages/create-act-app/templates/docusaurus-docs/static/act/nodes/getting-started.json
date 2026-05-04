@@ -1,0 +1,30 @@
+{
+  "act_version": "0.1",
+  "id": "getting-started",
+  "type": "section",
+  "title": "Getting started",
+  "summary": "Getting started — section.",
+  "summary_source": "extracted",
+  "etag": "s256:qsTSbK5o2FUp1zUlI11VqW",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# Getting started\n\nThis section groups related getting started documents.\n"
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 16
+  },
+  "children": [
+    "getting-started/install",
+    "getting-started/quickstart",
+    "getting-started/first-project"
+  ],
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "sidebar-category:getting-started"
+    }
+  }
+}

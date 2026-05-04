@@ -1,0 +1,51 @@
+{
+  "act_version": "0.1",
+  "id": "troubleshooting/auth/audit-log-missing-reproduction",
+  "type": "troubleshooting",
+  "title": "Audit log missing reproduction (Auth)",
+  "summary": "Resolve \"audit log missing\" — reproduction for the Auth surface.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Symptom"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "An operation against the Auth surface fails with an error matching \"audit log missing (reproduction)\"."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Resolution"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Inspect the error envelope.Re-issue with corrected parameters.Confirm via the audit log."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "See the Auth API reference for the exact field set."
+    }
+  ],
+  "tokens": {
+    "summary": 10,
+    "body": 45
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "troubleshooting/auth/audit-log-missing-reproduction.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/audit-log-missing-reproduction.md"
+    }
+  },
+  "etag": "s256:dzOCrG3fwV8DhsK_Xomu8a",
+  "source": {
+    "human_url": "https://example.com/troubleshooting/auth/audit-log-missing-reproduction/"
+  },
+  "parent": "auth-issues"
+}

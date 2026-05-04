@@ -1,0 +1,10 @@
+{
+  "id": "page-boundary-const",
+  "requirements": ["PRD-301-R5", "PRD-301-R6"],
+  "description": "Page-level boundary via the exported act const form. Verifies the binding accepts the const form (preferred per PRD-301-R5) and emits a NodeDraft whose id matches the const's id and whose summary falls back to the contract.summary.",
+  "expected": {
+    "draftCount": 1,
+    "id": "pricing",
+    "summary": "Acme pricing tiers and plan comparison."
+  }
+}

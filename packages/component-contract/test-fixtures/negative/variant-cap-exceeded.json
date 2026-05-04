@@ -1,0 +1,6 @@
+{
+  "id": "variant-cap-exceeded",
+  "requirements": ["PRD-300-R17"],
+  "input": {},
+  "expectedErrorSubstring": "PRD-300-R17"
+}

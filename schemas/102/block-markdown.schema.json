@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/0.1/block-markdown.schema.json",
+  "title": "ACT content block — markdown",
+  "description": "Per PRD-102-R1. The simplest base content block. Conformance: Core.",
+  "type": "object",
+  "required": ["type", "text"],
+  "additionalProperties": true,
+  "properties": {
+    "type": {
+      "type": "string",
+      "const": "markdown"
+    },
+    "text": {
+      "type": "string",
+      "minLength": 0,
+      "description": "CommonMark markdown source. MAY be empty (consumers MUST tolerate)."
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "Per PRD-102-R20. May include extracted_via, extraction_status, etc."
+    }
+  }
+}

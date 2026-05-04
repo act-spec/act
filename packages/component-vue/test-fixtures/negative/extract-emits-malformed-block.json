@@ -1,0 +1,6 @@
+{
+  "id": "extract-emits-malformed-block",
+  "requirements": ["PRD-302-R14", "PRD-100-R28"],
+  "description": "An extract function that returns a block missing the REQUIRED type discriminator (PRD-100-R28) is rejected by validateBlockShape and produces a marketing:placeholder block.",
+  "expectedFirstBlockType": "marketing:placeholder"
+}

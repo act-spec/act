@@ -1,0 +1,54 @@
+{
+  "_comment": "Recorded Sanity GROQ response for PRD-203-R27 (plus-tier) integration. Document-level translations + componentMapping → marketing:hero blocks.",
+  "documents": [
+    {
+      "_id": "landing-pricing-en",
+      "_type": "landing",
+      "_updatedAt": "2026-04-20T10:00:00Z",
+      "title": "Pricing",
+      "summary": "Acme pricing tiers and plan comparison.",
+      "lang": "en-US",
+      "translationsOf": "landing-pricing",
+      "slug": { "_type": "slug", "current": "landing/pricing" },
+      "body": [
+        {
+          "_type": "heroBlock",
+          "headline": "Pricing that scales with you.",
+          "subhead": "Start free. Pay as you grow.",
+          "ctaLabel": "Start free trial",
+          "ctaHref": "/signup"
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Compare plans below.",
+              "marks": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "landing-pricing-es",
+      "_type": "landing",
+      "_updatedAt": "2026-04-20T10:00:00Z",
+      "title": "Precios",
+      "summary": "Niveles de precios de Acme.",
+      "lang": "es-ES",
+      "translationsOf": "landing-pricing",
+      "slug": { "_type": "slug", "current": "landing/pricing" },
+      "body": [
+        {
+          "_type": "heroBlock",
+          "headline": "Precios que escalan contigo.",
+          "subhead": "Empieza gratis. Paga al crecer.",
+          "ctaLabel": "Probar gratis",
+          "ctaHref": "/signup"
+        }
+      ]
+    }
+  ]
+}

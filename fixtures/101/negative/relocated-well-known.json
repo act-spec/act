@@ -1,0 +1,29 @@
+{
+  "$comment": "Negative fixture for PRD-101. The producer has relocated the static manifest to /act/manifest.json instead of /.well-known/act.json. Per PRD-101-R1 (and decision Q2 which locks the well-known path), producers MUST NOT relocate the manifest. A consumer that fetches /.well-known/act.json receives 404; discovery fails. The producer is non-conformant for static discovery even if the relocated file is internally well-formed.",
+  "discovery_context": {
+    "attempted_requests": [
+      {
+        "url": "https://acme.example/.well-known/act.json",
+        "response_status": 404
+      },
+      {
+        "url": "https://acme.example/act/manifest.json",
+        "response_status": 200,
+        "note": "manifest exists here but the location is non-conformant"
+      }
+    ]
+  },
+  "manifest_at_relocated_path": {
+    "act_version": "0.1",
+    "site": { "name": "Acme Wrong-Path Docs" },
+    "index_url": "/act/index.json",
+    "node_url_template": "/act/n/{id}.json",
+    "conformance": { "level": "core" },
+    "delivery": "static"
+  },
+  "expected": {
+    "discovered": false,
+    "violation": "PRD-101-R1",
+    "notes": "Static manifest MUST be at /.well-known/act.json. Validators MUST NOT discover this manifest from any other path; the producer is non-conformant."
+  }
+}

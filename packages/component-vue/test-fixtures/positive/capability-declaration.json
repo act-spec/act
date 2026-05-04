@@ -1,0 +1,16 @@
+{
+  "id": "capability-declaration",
+  "requirements": ["PRD-302-R20", "PRD-300-R28"],
+  "description": "Capability matrix the v0.1 binding publishes. Per PRD-300-R28 / A15 every flag is set truthfully: ssr-walk and concurrent are implemented (true); static-ast (compiler-sfc scanner), streaming (renderToWebStream wiring), suspense (depends on streaming), headless-render, and rsc are follow-up milestones (false). The PRD-302-R20 published target table flips these to true as each milestone lands.",
+  "expected": {
+    "capabilities": {
+      "ssr-walk": true,
+      "static-ast": false,
+      "headless-render": false,
+      "rsc": false,
+      "streaming": false,
+      "suspense": false,
+      "concurrent": true
+    }
+  }
+}

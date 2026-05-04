@@ -1,0 +1,75 @@
+{
+  "name": "@act-spec/plugin-docusaurus",
+  "version": "0.0.0",
+  "description": "PRD-404 Docusaurus generator plugin for the ACT (Agent Content Tree) v0.1 reference implementation.",
+  "license": "Apache-2.0",
+  "author": "Jeremy Forsythe <jeremy@act-spec.org>",
+  "homepage": "https://act-spec.org",
+  "bugs": {
+    "url": "https://github.com/act-spec/act/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-spec/act.git",
+    "directory": "packages/plugin-docusaurus"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "conformance": "tsx conformance.ts"
+  },
+  "peerDependencies": {
+    "@docusaurus/core": "^3.0.0",
+    "@docusaurus/types": "^3.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@docusaurus/core": {
+      "optional": true
+    },
+    "@docusaurus/types": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@act-spec/adapter-framework": "workspace:*",
+    "@act-spec/core": "workspace:*",
+    "@act-spec/generator-core": "workspace:*",
+    "@act-spec/adapter-markdown": "workspace:*",
+    "@act-spec/validator": "workspace:*"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^2.1.9",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
+}

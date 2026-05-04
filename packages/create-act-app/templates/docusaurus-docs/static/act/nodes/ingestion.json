@@ -1,0 +1,68 @@
+{
+  "act_version": "0.1",
+  "id": "ingestion",
+  "type": "section",
+  "title": "Ingestion",
+  "summary": "Ingestion — section.",
+  "summary_source": "extracted",
+  "etag": "s256:Qv0qQ6KMla88a7jjLYSDJv",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# Ingestion\n\nThis section groups related ingestion documents.\n"
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 16
+  },
+  "children": [
+    "recipes/ingestion/multipart-upload-overview",
+    "recipes/ingestion/multipart-upload-cli",
+    "recipes/ingestion/multipart-upload-sdk-node",
+    "recipes/ingestion/multipart-upload-sdk-python",
+    "recipes/ingestion/streaming-upload-overview",
+    "recipes/ingestion/streaming-upload-cli",
+    "recipes/ingestion/streaming-upload-sdk-node",
+    "recipes/ingestion/streaming-upload-sdk-python",
+    "recipes/ingestion/parallel-shards-overview",
+    "recipes/ingestion/parallel-shards-cli",
+    "recipes/ingestion/parallel-shards-sdk-node",
+    "recipes/ingestion/parallel-shards-sdk-python",
+    "recipes/ingestion/resume-interrupted-upload-overview",
+    "recipes/ingestion/resume-interrupted-upload-cli",
+    "recipes/ingestion/resume-interrupted-upload-sdk-node",
+    "recipes/ingestion/resume-interrupted-upload-sdk-python",
+    "recipes/ingestion/upload-from-presigned-url-overview",
+    "recipes/ingestion/upload-from-presigned-url-cli",
+    "recipes/ingestion/upload-from-presigned-url-sdk-node",
+    "recipes/ingestion/upload-from-presigned-url-sdk-python",
+    "recipes/ingestion/browser-direct-upload-overview",
+    "recipes/ingestion/browser-direct-upload-cli",
+    "recipes/ingestion/browser-direct-upload-sdk-node",
+    "recipes/ingestion/browser-direct-upload-sdk-python",
+    "recipes/ingestion/mobile-direct-upload-overview",
+    "recipes/ingestion/mobile-direct-upload-cli",
+    "recipes/ingestion/mobile-direct-upload-sdk-node",
+    "recipes/ingestion/mobile-direct-upload-sdk-python",
+    "recipes/ingestion/rate-limited-ingestion-overview",
+    "recipes/ingestion/rate-limited-ingestion-cli",
+    "recipes/ingestion/rate-limited-ingestion-sdk-node",
+    "recipes/ingestion/rate-limited-ingestion-sdk-python",
+    "recipes/ingestion/idempotent-uploads-overview",
+    "recipes/ingestion/idempotent-uploads-cli",
+    "recipes/ingestion/idempotent-uploads-sdk-node",
+    "recipes/ingestion/idempotent-uploads-sdk-python",
+    "recipes/ingestion/content-md5-verification-overview",
+    "recipes/ingestion/content-md5-verification-cli",
+    "recipes/ingestion/content-md5-verification-sdk-node",
+    "recipes/ingestion/content-md5-verification-sdk-python"
+  ],
+  "parent": "recipes",
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "sidebar-category:ingestion"
+    }
+  }
+}

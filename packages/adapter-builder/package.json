@@ -1,0 +1,52 @@
+{
+  "name": "@act-spec/adapter-builder",
+  "version": "0.0.0",
+  "description": "PRD-206 Builder.io adapter for the ACT (Agent Content Tree) v0.1 reference implementation. Consumes the Builder.io Content API and emits PRD-100/PRD-102 envelopes; supports two emission modes (pass-through emits a single `marketing:builder-page` block carrying the raw Builder tree as `payload`; extraction walks Builder primitives `Text` / `Image` / `Button` / `CustomCode` / `Section` / `Symbol` into `prose` / `code` / `marketing:*` blocks per a configured mapping). Public-key kind validation, draft / published version, optional locale fan-out via Builder targeting, opt-in experiment / variant emission, reference resolution with cycle tolerance, Symbol recursion bound, lastUpdated delta marker, HMAC-SHA256 webhook signature verification. Implements the PRD-200 framework contract.",
+  "license": "Apache-2.0",
+  "author": "Jeremy Forsythe <jeremy@act-spec.org>",
+  "homepage": "https://act-spec.org",
+  "bugs": {
+    "url": "https://github.com/act-spec/act/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "src", "schema"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-spec/act.git",
+    "directory": "packages/adapter-builder"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "conformance": "tsx conformance.ts"
+  },
+  "dependencies": {
+    "@act-spec/adapter-framework": "workspace:*",
+    "@act-spec/core": "workspace:*",
+    "@act-spec/validator": "workspace:*",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^2.1.9",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
+}

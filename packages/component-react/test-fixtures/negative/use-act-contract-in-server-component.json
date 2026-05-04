@@ -1,0 +1,11 @@
+{
+  "id": "use-act-contract-in-server-component",
+  "requirements": ["PRD-301-R12", "PRD-300-R30"],
+  "description": "useActContract detected in a module without the \"use client\" boundary (server component) MUST throw BuildError(\"PRD-301-R12\"). Generators classify modules and call assertHookNotInServerComponent per discovered module.",
+  "input": {
+    "modulePath": "app/pricing/page.tsx",
+    "isClient": false,
+    "usesActContractHook": true
+  },
+  "expectedErrorSubstring": "server component"
+}

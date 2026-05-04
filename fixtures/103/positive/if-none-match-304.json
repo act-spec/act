@@ -1,0 +1,21 @@
+{
+  "_comment": "Worked example for PRD-103-R8 (runtime honors If-None-Match). Given the request below and the server's current etag matching the client-supplied If-None-Match value, the server MUST respond 304 Not Modified with the ETag header echoed and no body.",
+  "request": {
+    "method": "GET",
+    "url": "/act/n/intro.json",
+    "headers": {
+      "If-None-Match": "\"s256:iH6ta82PUg0zi0lr_jpCLL\""
+    }
+  },
+  "server_state": {
+    "current_etag_for_resource": "s256:iH6ta82PUg0zi0lr_jpCLL"
+  },
+  "expected_response": {
+    "status": 304,
+    "headers": {
+      "ETag": "\"s256:iH6ta82PUg0zi0lr_jpCLL\"",
+      "Cache-Control": "private, must-revalidate"
+    },
+    "body": null
+  }
+}

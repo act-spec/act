@@ -1,0 +1,33 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-102",
+    "violates": [
+      "PRD-102-R12"
+    ],
+    "expected_error": {
+      "level": "core",
+      "requirement": "PRD-102-R12",
+      "missing": "summary_source must be a string per the documented-open enum; here it is an array."
+    }
+  },
+  "act_version": "0.1",
+  "id": "concepts/widgets",
+  "type": "concept",
+  "title": "Widgets",
+  "etag": "sha256:badsumsrc",
+  "summary": "Widgets are the unit of scheduled work.",
+  "summary_source": [
+    "llm",
+    "author"
+  ],
+  "content": [
+    {
+      "type": "markdown",
+      "text": "..."
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 100
+  }
+}

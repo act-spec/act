@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/105/static-file-set.schema.json",
+  "title": "ACT static-deliverable file set",
+  "description": "Build-time enumeration of the static files a generator MUST emit for a manifest declaring `delivery: \"static\"`. This schema is informational: it describes the *contract* between PRD-105 and PRD-400 (the generator series), not a wire envelope a consumer fetches. PRD-600's static-profile probe MAY load this shape from a generator's manifest output to predict what to crawl. See PRD-105.",
+  "type": "object",
+  "required": ["manifest_path", "well_known_path", "index_path", "node_paths", "conformance_level"],
+  "additionalProperties": false,
+  "properties": {
+    "manifest_path": {
+      "type": "string",
+      "description": "Filesystem path (relative to the build output root) of the emitted manifest. Typically equal to well_known_path.",
+      "format": "uri-reference"
+    },
+    "well_known_path": {
+      "type": "string",
+      "const": "/.well-known/act.json",
+      "description": "URL path the manifest MUST be reachable at. PRD-101 owns the well-known location; PRD-105 restates it for completeness."
+    },
+    "index_path": {
+      "type": "string",
+      "description": "URL path of the index file. MUST equal the manifest's `index_url`.",
+      "format": "uri-reference"
+    },
+    "index_ndjson_path": {
+      "oneOf": [
+        { "type": "string", "format": "uri-reference" },
+        { "type": "null" }
+      ],
+      "description": "URL path of the NDJSON index. REQUIRED iff conformance_level is `\"strict\"`. Otherwise null."
+    },
+    "node_paths": {
+      "type": "array",
+      "description": "URL paths for every node referenced in the index. One entry per index entry; each path is the result of substituting the node id into `node_url_template`.",
+      "items": { "type": "string", "format": "uri-reference" },
+      "minItems": 0
+    },
+    "subtree_paths": {
+      "type": "array",
+      "description": "URL paths for every advertised subtree. REQUIRED at Standard or Strict when subtree availability is claimed for any node. Each path is the result of substituting the subtree-root id into `subtree_url_template`.",
+      "items": { "type": "string", "format": "uri-reference" }
+    },
+    "search_path": {
+      "oneOf": [
+        { "type": "string", "format": "uri-reference" },
+        { "type": "null" }
+      ],
+      "description": "URL path of the static search index, if the producer chose to fulfill `search_url_template` via a precomputed JSON. Null when the static profile cannot fulfill query-substitution semantics, in which case `search_url_template` MUST be omitted from the manifest (PRD-107-R10)."
+    },
+    "conformance_level": {
+      "type": "string",
+      "enum": ["core", "standard", "strict"],
+      "description": "Mirrors the manifest's `conformance.level`. Used by validators to enforce the right minimum file set."
+    }
+  }
+}

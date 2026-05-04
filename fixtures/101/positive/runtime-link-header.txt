@@ -1,0 +1,29 @@
+# Positive fixture for PRD-101 — runtime-only Link header.
+#
+# A pure-SaaS deployment with no public HTML and no static well-known file.
+# The application's authenticated JSON API responses carry a Link header
+# advertising the runtime ACT manifest. PRD-101-R5 requires that EVERY
+# authenticated response on a runtime-only deployment carry this header.
+# PRD-101-R6 forbids the absence of the header on such deployments.
+#
+# Reproduced below: a representative authenticated HTTP response with the
+# Link header set per PRD-101-R5 and PRD-101-R7 (profile parameter = "runtime").
+# Validators MUST accept this case.
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+Cache-Control: private, no-store
+Vary: Authorization
+Link: </.well-known/act.json>; rel="act"; type="application/act-manifest+json"; profile="runtime"
+ETag: "s256:9f2c1bAbCdEfGhIjKlMnOp"
+
+{
+  "workspace_id": "ws_42",
+  "name": "Acme Engineering"
+}
+
+# Expected validator behavior:
+# - Discovers the manifest URL </.well-known/act.json> from the Link header.
+# - Notes profile="runtime"; expects the resolved manifest to declare delivery: "runtime".
+# - PRD-101-R5 satisfied (header present on authenticated response).
+# - PRD-101-R7 satisfied (profile parameter is in the closed enum).

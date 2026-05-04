@@ -1,0 +1,51 @@
+{
+  "name": "@act-spec/mcp-bridge",
+  "version": "0.0.0",
+  "description": "PRD-602 ACT-MCP bridge for the ACT (Agent Content Tree) v0.1 reference implementation. Wraps a PRD-500 ActRuntime (or a multi-mount BridgeConfig.mounts array per amendment A4) and exposes ACT nodes as MCP 1.0 resources under the canonical act:// URI scheme. Single-source and multi-mount construction (runtime + static walker mixes) per PRD-602-R3 / R5 / R6 / R10 / R11 / R24.",
+  "license": "Apache-2.0",
+  "author": "Jeremy Forsythe <jeremy@act-spec.org>",
+  "homepage": "https://act-spec.org",
+  "bugs": {
+    "url": "https://github.com/act-spec/act/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "src"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-spec/act.git",
+    "directory": "packages/mcp-bridge"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "conformance": "tsx conformance.ts"
+  },
+  "dependencies": {
+    "@act-spec/core": "workspace:*",
+    "@act-spec/runtime-core": "workspace:*",
+    "@act-spec/validator": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.29.0"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^2.1.9",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
+}

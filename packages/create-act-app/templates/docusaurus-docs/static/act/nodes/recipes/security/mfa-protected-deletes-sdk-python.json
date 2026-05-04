@@ -1,0 +1,51 @@
+{
+  "act_version": "0.1",
+  "id": "recipes/security/mfa-protected-deletes-sdk-python",
+  "type": "recipe",
+  "title": "Mfa protected deletes sdk python (Security)",
+  "summary": "Mfa protected deletes sdk python — security workflow walkthrough.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Goal"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Demonstrate \"mfa protected deletes (sdk python)\" against the Tinybox security surface end to end."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Walkthrough"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "text": "# Step 1 — prepare a bucket for the security workflow.\ntinybox buckets create my-bucket --region us-east-1"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Apply the recipe; verify with the API reference under API reference."
+    }
+  ],
+  "tokens": {
+    "summary": 9,
+    "body": 48
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "recipes/security/mfa-protected-deletes-sdk-python.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/mfa-protected-deletes-sdk-python.md"
+    }
+  },
+  "etag": "s256:Ewf4jwIyHzt5AhNq6TC4C4",
+  "source": {
+    "human_url": "https://example.com/recipes/security/mfa-protected-deletes-sdk-python/"
+  },
+  "parent": "security"
+}

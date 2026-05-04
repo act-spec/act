@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/104/locales-block.schema.json",
+  "title": "ACT Manifest — locales block (PRD-104)",
+  "description": "Shape of the optional `locales` block on the ACT manifest envelope. Owned by PRD-104. Sibling PRD (manifest envelope, gap-A1 / wire-format) owns the surrounding manifest object; this schema covers only the `locales` sub-object.",
+  "type": "object",
+  "required": ["default", "available"],
+  "additionalProperties": false,
+  "properties": {
+    "default": {
+      "type": "string",
+      "description": "Default BCP-47 locale tag (e.g. \"en-US\"). REQUIRED when the `locales` block is present. Pattern is a deliberate v0.1 subset of BCP-47 — full BCP-47 admits extlangs, multiple variants, private-use tags, and grandfathered tags that v0.1 does not need to model. Producers needing a full-BCP-47 tag SHOULD validate it out-of-band; consumers MUST accept whatever string passes the subset regex.",
+      "pattern": "^[a-z]{2,3}(-[A-Z][a-z]{3})?(-[A-Z]{2})?$"
+    },
+    "available": {
+      "type": "array",
+      "description": "Closed-content list of BCP-47 locale tags this producer ships. MUST include `default`. Adding a value to this array is producer-side data, not a spec change; the array shape itself is MINOR-extensible at the spec level per PRD-108 R4(1).",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z]{2,3}(-[A-Z][a-z]{3})?(-[A-Z]{2})?$"
+      }
+    },
+    "manifest_url_template": {
+      "type": "string",
+      "description": "OPTIONAL URL template containing the `{locale}` placeholder. When present, consumers fetch the per-locale manifest by substituting a value from `available`. When omitted, the same `index_url` / `node_url_template` from the parent manifest are reused with locale-prefixed IDs (Pattern 1).",
+      "pattern": ".*\\{locale\\}.*"
+    }
+  },
+  "$comment": "Cross-validation rule (default MUST appear in available) is expressed in the surrounding manifest schema or by PRD-600's validator, not by this fragment alone — JSON Schema 2020-12 cannot express that constraint without a `$dynamicRef` to the runtime value of `default`. PRD-104-R3 makes the rule normative."
+}

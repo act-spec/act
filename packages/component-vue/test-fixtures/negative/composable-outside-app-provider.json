@@ -1,0 +1,6 @@
+{
+  "id": "composable-outside-app-provider",
+  "requirements": ["PRD-302-R16"],
+  "description": "useActContract called outside an installActProvider scope bumps the module-level fallback sentinel; the binding surfaces this as a placeholder when extractRoute's render pass drains the sentinel. The composable does NOT throw (would abort Vue render and prevent descendants from contributing per PRD-302-R16).",
+  "expectedFallbackBumped": true
+}

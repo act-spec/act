@@ -1,0 +1,29 @@
+{
+  "_comment": "Negative fixture for PRD-105-R5 — the index references a node id (\"missing-page\") for which no file exists at the substituted node_url_template path. PRD-600 fetches each node referenced in the index and MUST emit a gap when the fetch returns 404.",
+  "manifest_excerpt": {
+    "act_version": "0.1",
+    "index_url": "/act/index.json",
+    "node_url_template": "/act/n/{id}.json",
+    "conformance": { "level": "core" },
+    "delivery": "static"
+  },
+  "index_excerpt": {
+    "act_version": "0.1",
+    "nodes": [
+      { "id": "intro", "type": "document", "title": "Introduction", "summary": "...", "tokens": { "summary": 4 }, "etag": "s256:8Z0luYEDvPcDQKLimP55qC" },
+      { "id": "missing-page", "type": "document", "title": "Missing", "summary": "...", "tokens": { "summary": 3 }, "etag": "s256:KQp3RlbVm2nVsPmHfYxL9Q" }
+    ]
+  },
+  "filesystem_state": {
+    "/act/n/intro.json": "present",
+    "/act/n/missing-page.json": "absent — generator failed to emit"
+  },
+  "expected_responses": {
+    "/act/n/intro.json": { "status": 200 },
+    "/act/n/missing-page.json": { "status": 404 }
+  },
+  "_expected_validator_finding": {
+    "requirement": "PRD-105-R5",
+    "missing": "index entry id=\"missing-page\" has no corresponding node file at /act/n/missing-page.json (probe returned 404)"
+  }
+}

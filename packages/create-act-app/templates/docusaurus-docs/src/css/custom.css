@@ -1,0 +1,6 @@
+/* Placeholder CSS for Docusaurus's preset-classic theme.customCss requirement.
+   The example's conformance gate doesn't run a full Docusaurus build; this file
+   exists so the docusaurus.config.js shape (per PRD-701-R9) is loadable. */
+:root {
+  --ifm-color-primary: #2e8555;
+}

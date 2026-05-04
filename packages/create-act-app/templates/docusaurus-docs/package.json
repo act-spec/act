@@ -1,0 +1,49 @@
+{
+  "name": "@act-spec/example-docusaurus-docs",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Large Docusaurus 3.x documentation site demonstrating ACT generation across a deep sidebar hierarchy.",
+  "license": "Apache-2.0",
+  "author": "Jeremy Forsythe <jeremy@act-spec.org>",
+  "homepage": "https://act-spec.org",
+  "bugs": {
+    "url": "https://github.com/act-spec/act/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-spec/act.git",
+    "directory": "examples/docusaurus-docs"
+  },
+  "type": "module",
+  "scripts": {
+    "generate-corpus": "tsx scripts/generate-corpus.ts",
+    "dev": "docusaurus start",
+    "build": "tsx scripts/build.ts",
+    "build:site": "docusaurus build",
+    "serve": "docusaurus serve",
+    "start": "pnpm run build && node ../../scripts/serve-fixture.mjs static 3001",
+    "validate": "tsx scripts/validate.ts",
+    "conformance": "tsx scripts/generate-corpus.ts && tsx scripts/build.ts && tsx scripts/validate.ts",
+    "test": "node -e \"console.log('@act-spec/example-docusaurus-docs: example exercises end-to-end via conformance')\"",
+    "lint": "node -e \"console.log('@act-spec/example-docusaurus-docs: lint covered by typecheck + conformance')\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@act-spec/adapter-framework": "workspace:*",
+    "@act-spec/plugin-docusaurus": "workspace:*",
+    "@act-spec/generator-core": "workspace:*",
+    "@act-spec/adapter-markdown": "workspace:*",
+    "@docusaurus/core": "3.6.3",
+    "@docusaurus/preset-classic": "3.6.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "webpack": "5.95.0"
+  },
+  "devDependencies": {
+    "@act-spec/validator": "workspace:*",
+    "@docusaurus/module-type-aliases": "3.6.3",
+    "@types/node": "^22.7.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

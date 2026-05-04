@@ -1,0 +1,9 @@
+{
+  "id": "hook-form",
+  "requirements": ["PRD-301-R4", "PRD-301-R6", "PRD-301-R8", "PRD-301-R10"],
+  "description": "Hook form via useActContract({…}) inside a function component. Verifies (a) extract is registration-only (not invoked during render), (b) post-render aggregation produces one block, (c) byte-identical output to the static-field form for the same inputs (PRD-301-R6).",
+  "expected": {
+    "draftCount": 1,
+    "blockTypes": ["marketing:pricing-table"]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "act_version": "0.1",
+  "id": "performance",
+  "type": "section",
+  "title": "Performance",
+  "summary": "Performance — section.",
+  "summary_source": "extracted",
+  "etag": "s256:qkrfAvXlXMqYJ4TUPyooWV",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# Performance\n\nThis section groups related performance documents.\n"
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 16
+  },
+  "children": [
+    "recipes/performance/use-byte-ranges-overview",
+    "recipes/performance/use-byte-ranges-cli",
+    "recipes/performance/use-byte-ranges-sdk-node",
+    "recipes/performance/use-byte-ranges-sdk-python",
+    "recipes/performance/parallel-downloads-overview",
+    "recipes/performance/parallel-downloads-cli",
+    "recipes/performance/parallel-downloads-sdk-node",
+    "recipes/performance/parallel-downloads-sdk-python",
+    "recipes/performance/cdn-frontends-overview",
+    "recipes/performance/cdn-frontends-cli",
+    "recipes/performance/cdn-frontends-sdk-node",
+    "recipes/performance/cdn-frontends-sdk-python",
+    "recipes/performance/request-coalescing-overview",
+    "recipes/performance/request-coalescing-cli",
+    "recipes/performance/request-coalescing-sdk-node",
+    "recipes/performance/request-coalescing-sdk-python",
+    "recipes/performance/reduce-listing-cost-overview",
+    "recipes/performance/reduce-listing-cost-cli",
+    "recipes/performance/reduce-listing-cost-sdk-node",
+    "recipes/performance/reduce-listing-cost-sdk-python",
+    "recipes/performance/choose-region-overview",
+    "recipes/performance/choose-region-cli",
+    "recipes/performance/choose-region-sdk-node",
+    "recipes/performance/choose-region-sdk-python",
+    "recipes/performance/multi-region-reads-overview",
+    "recipes/performance/multi-region-reads-cli",
+    "recipes/performance/multi-region-reads-sdk-node",
+    "recipes/performance/multi-region-reads-sdk-python",
+    "recipes/performance/avoid-listings-in-hot-paths-overview",
+    "recipes/performance/avoid-listings-in-hot-paths-cli",
+    "recipes/performance/avoid-listings-in-hot-paths-sdk-node",
+    "recipes/performance/avoid-listings-in-hot-paths-sdk-python",
+    "recipes/performance/edge-cache-invalidation-overview",
+    "recipes/performance/edge-cache-invalidation-cli",
+    "recipes/performance/edge-cache-invalidation-sdk-node",
+    "recipes/performance/edge-cache-invalidation-sdk-python"
+  ],
+  "parent": "recipes",
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "sidebar-category:performance"
+    }
+  }
+}

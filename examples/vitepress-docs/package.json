@@ -1,0 +1,38 @@
+{
+  "name": "@act-spec/example-vitepress-docs",
+  "version": "0.2.0",
+  "private": true,
+  "description": "VitePress 1.x documentation site demonstrating zero-friction ACT generation via the @act-spec/plugin-vitepress integration, including a second locale.",
+  "license": "Apache-2.0",
+  "author": "Jeremy Forsythe <jeremy@act-spec.org>",
+  "homepage": "https://act-spec.org",
+  "bugs": {
+    "url": "https://github.com/act-spec/act/issues"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-spec/act.git",
+    "directory": "examples/vitepress-docs"
+  },
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs",
+    "validate": "tsx conformance.ts",
+    "conformance": "pnpm run build && pnpm run validate",
+    "test": "node -e \"console.log('@act-spec/example-vitepress-docs: example exercises end-to-end via conformance')\"",
+    "lint": "node -e \"console.log('@act-spec/example-vitepress-docs: lint covered by typecheck + conformance')\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "vitepress": "^1.5.0",
+    "@act-spec/plugin-vitepress": "workspace:*",
+    "@act-spec/adapter-markdown": "workspace:*"
+  },
+  "devDependencies": {
+    "@act-spec/validator": "workspace:*",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

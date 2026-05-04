@@ -1,0 +1,21 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-109",
+    "violates": ["PRD-109-R17", "PRD-103-R7"],
+    "describes": "An ETag whose hash input mixes a request-local timestamp into the JCS-encoded tuple. This is forbidden by PRD-109-R17 (no request-local data in the hash input) and PRD-103-R7 (determinism contract). Beyond the determinism break, mixing a timestamp introduces a measurable side-channel that correlates with the server's wall clock.",
+    "hash_input_jcs": "{\"identity\":\"u-7f3c1d2e\",\"now\":\"2026-05-01T12:34:56.789Z\",\"payload\":{\"act_version\":\"0.1\",\"id\":\"workspace/projects/atlas\",\"title\":\"Atlas project\",\"summary\":\"...\"},\"tenant\":\"t-acme\"}",
+    "rejection_reason": "Hash input includes 'now' (request timestamp). Producers MUST NOT mix request-local data into the ETag input.",
+    "expected_error": {
+      "requirement": "PRD-109-R17",
+      "level": "core",
+      "missing": "ETag hash input contains a request-local timestamp; expected only {payload, identity, tenant} per PRD-103-R6 / PRD-109-R17."
+    }
+  },
+  "envelope": {
+    "act_version": "0.1",
+    "id": "workspace/projects/atlas",
+    "type": "page",
+    "title": "Atlas project",
+    "etag": "s256:NonDeterministicValue1234567"
+  }
+}

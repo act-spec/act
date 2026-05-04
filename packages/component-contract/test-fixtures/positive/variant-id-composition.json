@@ -1,0 +1,11 @@
+{
+  "id": "variant-id-composition",
+  "requirements": ["PRD-300-R15", "PRD-102-R29"],
+  "input": {
+    "baseId": "pricing",
+    "key": "enterprise-2026q2"
+  },
+  "expected": {
+    "id": "pricing@enterprise-2026q2"
+  }
+}

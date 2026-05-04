@@ -1,0 +1,15 @@
+---
+// One card in the /examples gallery.
+interface Props {
+  name: string;
+  stack: string;
+  href: string;
+}
+const { name, stack, href } = Astro.props;
+---
+
+<article class="example-card">
+  <span class="stack">{stack}</span>
+  <h3><a href={href}>{name}</a></h3>
+  <p><slot /></p>
+</article>

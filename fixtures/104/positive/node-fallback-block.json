@@ -1,0 +1,33 @@
+{
+  "_fixture": "PRD-104 positive — node with a single block carrying translation_status: fallback (default-locale value substituted)",
+  "_satisfies": ["PRD-104-R10", "PRD-104-R11"],
+  "act_version": "0.1",
+  "id": "precios",
+  "type": "landing",
+  "title": "Precios",
+  "etag": "s256:abc_DEF123ghIjKlMnOpQrS",
+  "summary": "Niveles de precios de Acme, comparación de planes y preguntas frecuentes.",
+  "metadata": {
+    "locale": "es-ES",
+    "translation_status": "partial"
+  },
+  "content": [
+    {
+      "type": "marketing:hero",
+      "headline": "Precios simples y transparentes",
+      "subhead": "Sin tarifas ocultas. Cancela cuando quieras."
+    },
+    {
+      "type": "marketing:faq",
+      "metadata": {
+        "translation_status": "fallback",
+        "fallback_from": "en-US"
+      },
+      "items": [
+        { "type": "qa", "question": "Can I change plans later?", "answer": "Yes, anytime." },
+        { "type": "qa", "question": "Do you offer refunds?", "answer": "Within 30 days." }
+      ]
+    }
+  ],
+  "tokens": { "summary": 13, "body": 312 }
+}

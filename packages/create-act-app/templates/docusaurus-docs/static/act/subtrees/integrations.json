@@ -1,0 +1,1289 @@
+{
+  "act_version": "0.1",
+  "root": "integrations",
+  "depth": 3,
+  "truncated": false,
+  "tokens": {
+    "body": 2272,
+    "summary": 392
+  },
+  "nodes": [
+    {
+      "act_version": "0.1",
+      "id": "integrations",
+      "type": "section",
+      "title": "Integrations",
+      "summary": "Integrations — section.",
+      "summary_source": "extracted",
+      "etag": "s256:LVbHcYkcqNMgiggZHTM-zf",
+      "content": [
+        {
+          "type": "markdown",
+          "content": "# Integrations\n\nThis section groups related integrations documents.\n"
+        }
+      ],
+      "tokens": {
+        "summary": 8,
+        "body": 16
+      },
+      "children": [
+        "recipes/integrations/cloudflare-workers-overview",
+        "recipes/integrations/cloudflare-workers-cli",
+        "recipes/integrations/cloudflare-workers-sdk-node",
+        "recipes/integrations/cloudflare-workers-sdk-python",
+        "recipes/integrations/aws-lambda-overview",
+        "recipes/integrations/aws-lambda-cli",
+        "recipes/integrations/aws-lambda-sdk-node",
+        "recipes/integrations/aws-lambda-sdk-python",
+        "recipes/integrations/github-actions-overview",
+        "recipes/integrations/github-actions-cli",
+        "recipes/integrations/github-actions-sdk-node",
+        "recipes/integrations/github-actions-sdk-python",
+        "recipes/integrations/vercel-edge-functions-overview",
+        "recipes/integrations/vercel-edge-functions-cli",
+        "recipes/integrations/vercel-edge-functions-sdk-node",
+        "recipes/integrations/vercel-edge-functions-sdk-python",
+        "recipes/integrations/next-js-app-router-overview",
+        "recipes/integrations/next-js-app-router-cli",
+        "recipes/integrations/next-js-app-router-sdk-node",
+        "recipes/integrations/next-js-app-router-sdk-python",
+        "recipes/integrations/astro-image-pipeline-overview",
+        "recipes/integrations/astro-image-pipeline-cli",
+        "recipes/integrations/astro-image-pipeline-sdk-node",
+        "recipes/integrations/astro-image-pipeline-sdk-python",
+        "recipes/integrations/remix-loaders-overview",
+        "recipes/integrations/remix-loaders-cli",
+        "recipes/integrations/remix-loaders-sdk-node",
+        "recipes/integrations/remix-loaders-sdk-python",
+        "recipes/integrations/svelte-kit-endpoints-overview",
+        "recipes/integrations/svelte-kit-endpoints-cli",
+        "recipes/integrations/svelte-kit-endpoints-sdk-node",
+        "recipes/integrations/svelte-kit-endpoints-sdk-python",
+        "recipes/integrations/flutter-mobile-overview",
+        "recipes/integrations/flutter-mobile-cli",
+        "recipes/integrations/flutter-mobile-sdk-node",
+        "recipes/integrations/flutter-mobile-sdk-python",
+        "recipes/integrations/rails-active-storage-overview",
+        "recipes/integrations/rails-active-storage-cli",
+        "recipes/integrations/rails-active-storage-sdk-node",
+        "recipes/integrations/rails-active-storage-sdk-python",
+        "recipes/integrations/django-storages-overview",
+        "recipes/integrations/django-storages-cli",
+        "recipes/integrations/django-storages-sdk-node",
+        "recipes/integrations/django-storages-sdk-python",
+        "recipes/integrations/spring-boot-overview",
+        "recipes/integrations/spring-boot-cli",
+        "recipes/integrations/spring-boot-sdk-node",
+        "recipes/integrations/spring-boot-sdk-python"
+      ],
+      "parent": "recipes",
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "sidebar-category:integrations"
+        }
+      }
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/cloudflare-workers-overview",
+      "type": "recipe",
+      "title": "Cloudflare workers overview (Integrations)",
+      "summary": "Cloudflare workers overview — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/cloudflare-workers-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/cloudflare-workers-overview.md"
+        }
+      },
+      "etag": "s256:YLng_LdUFB98TqL0440b-f",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/cloudflare-workers-overview/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/cloudflare-workers-cli",
+      "type": "recipe",
+      "title": "Cloudflare workers cli (Integrations)",
+      "summary": "Cloudflare workers cli — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/cloudflare-workers-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/cloudflare-workers-cli.md"
+        }
+      },
+      "etag": "s256:8jXAwxyWlvwvcEAXTXiBx1",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/cloudflare-workers-cli/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/cloudflare-workers-sdk-node",
+      "type": "recipe",
+      "title": "Cloudflare workers sdk node (Integrations)",
+      "summary": "Cloudflare workers sdk node — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/cloudflare-workers-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/cloudflare-workers-sdk-node.md"
+        }
+      },
+      "etag": "s256:WHRyHk2wK05xbiczosS2fe",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/cloudflare-workers-sdk-node/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/cloudflare-workers-sdk-python",
+      "type": "recipe",
+      "title": "Cloudflare workers sdk python (Integrations)",
+      "summary": "Cloudflare workers sdk python — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/cloudflare-workers-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/cloudflare-workers-sdk-python.md"
+        }
+      },
+      "etag": "s256:hA4DO3QeO0xySGZiDHehIl",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/cloudflare-workers-sdk-python/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/aws-lambda-overview",
+      "type": "recipe",
+      "title": "Aws lambda overview (Integrations)",
+      "summary": "Aws lambda overview — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/aws-lambda-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/aws-lambda-overview.md"
+        }
+      },
+      "etag": "s256:GiVCighQsM-EOmTP1Q6vU0",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/aws-lambda-overview/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/aws-lambda-cli",
+      "type": "recipe",
+      "title": "Aws lambda cli (Integrations)",
+      "summary": "Aws lambda cli — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/aws-lambda-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/aws-lambda-cli.md"
+        }
+      },
+      "etag": "s256:YV3DJgT7M2K_UNlLSI-YFO",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/aws-lambda-cli/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/aws-lambda-sdk-node",
+      "type": "recipe",
+      "title": "Aws lambda sdk node (Integrations)",
+      "summary": "Aws lambda sdk node — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/aws-lambda-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/aws-lambda-sdk-node.md"
+        }
+      },
+      "etag": "s256:f2nG3mdz2bGkyCLA0jkUGd",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/aws-lambda-sdk-node/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/aws-lambda-sdk-python",
+      "type": "recipe",
+      "title": "Aws lambda sdk python (Integrations)",
+      "summary": "Aws lambda sdk python — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/aws-lambda-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/aws-lambda-sdk-python.md"
+        }
+      },
+      "etag": "s256:wRRujaxWEr8p2ncg2kNRB1",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/aws-lambda-sdk-python/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/github-actions-overview",
+      "type": "recipe",
+      "title": "Github actions overview (Integrations)",
+      "summary": "Github actions overview — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/github-actions-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/github-actions-overview.md"
+        }
+      },
+      "etag": "s256:v-eHskedbza0d52q0fmZGP",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/github-actions-overview/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/github-actions-cli",
+      "type": "recipe",
+      "title": "Github actions cli (Integrations)",
+      "summary": "Github actions cli — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/github-actions-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/github-actions-cli.md"
+        }
+      },
+      "etag": "s256:GiwtHGPAwCHFaiQvFASHDb",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/github-actions-cli/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/github-actions-sdk-node",
+      "type": "recipe",
+      "title": "Github actions sdk node (Integrations)",
+      "summary": "Github actions sdk node — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/github-actions-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/github-actions-sdk-node.md"
+        }
+      },
+      "etag": "s256:gFQoX2hg5qNSz8_IUEr5JX",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/github-actions-sdk-node/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/github-actions-sdk-python",
+      "type": "recipe",
+      "title": "Github actions sdk python (Integrations)",
+      "summary": "Github actions sdk python — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/github-actions-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/github-actions-sdk-python.md"
+        }
+      },
+      "etag": "s256:UiJllKVF0GW7Pxf5XQLf6c",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/github-actions-sdk-python/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/vercel-edge-functions-overview",
+      "type": "recipe",
+      "title": "Vercel edge functions overview (Integrations)",
+      "summary": "Vercel edge functions overview — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/vercel-edge-functions-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/vercel-edge-functions-overview.md"
+        }
+      },
+      "etag": "s256:Hd1VBmWUIh3gB017sE95Sz",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/vercel-edge-functions-overview/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/vercel-edge-functions-cli",
+      "type": "recipe",
+      "title": "Vercel edge functions cli (Integrations)",
+      "summary": "Vercel edge functions cli — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/vercel-edge-functions-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/vercel-edge-functions-cli.md"
+        }
+      },
+      "etag": "s256:lCC6DOog7GsdXLmyVw-DTD",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/vercel-edge-functions-cli/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/vercel-edge-functions-sdk-node",
+      "type": "recipe",
+      "title": "Vercel edge functions sdk node (Integrations)",
+      "summary": "Vercel edge functions sdk node — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/vercel-edge-functions-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/vercel-edge-functions-sdk-node.md"
+        }
+      },
+      "etag": "s256:8wC9EE7BPnVtyk1NYWXcGW",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/vercel-edge-functions-sdk-node/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/vercel-edge-functions-sdk-python",
+      "type": "recipe",
+      "title": "Vercel edge functions sdk python (Integrations)",
+      "summary": "Vercel edge functions sdk python — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/vercel-edge-functions-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/vercel-edge-functions-sdk-python.md"
+        }
+      },
+      "etag": "s256:GvooV9vVTS2CXsfA9DyRz0",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/vercel-edge-functions-sdk-python/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/next-js-app-router-overview",
+      "type": "recipe",
+      "title": "Next js app router overview (Integrations)",
+      "summary": "Next js app router overview — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/next-js-app-router-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/next-js-app-router-overview.md"
+        }
+      },
+      "etag": "s256:XvjbB3KAakAssRHcl0yK0J",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/next-js-app-router-overview/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/next-js-app-router-cli",
+      "type": "recipe",
+      "title": "Next js app router cli (Integrations)",
+      "summary": "Next js app router cli — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/next-js-app-router-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/next-js-app-router-cli.md"
+        }
+      },
+      "etag": "s256:z7lLCJF-qK5OP-mGjONeMR",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/next-js-app-router-cli/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/next-js-app-router-sdk-node",
+      "type": "recipe",
+      "title": "Next js app router sdk node (Integrations)",
+      "summary": "Next js app router sdk node — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 49
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/next-js-app-router-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/next-js-app-router-sdk-node.md"
+        }
+      },
+      "etag": "s256:C7cD8o88geAjCQcxzc-Lll",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/next-js-app-router-sdk-node/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/next-js-app-router-sdk-python",
+      "type": "recipe",
+      "title": "Next js app router sdk python (Integrations)",
+      "summary": "Next js app router sdk python — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 49
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/next-js-app-router-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/next-js-app-router-sdk-python.md"
+        }
+      },
+      "etag": "s256:70lI9OX2OXlMPplq1ItYTg",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/next-js-app-router-sdk-python/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/astro-image-pipeline-overview",
+      "type": "recipe",
+      "title": "Astro image pipeline overview (Integrations)",
+      "summary": "Astro image pipeline overview — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/astro-image-pipeline-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/astro-image-pipeline-overview.md"
+        }
+      },
+      "etag": "s256:6w5Hf-1_nXVECKKzK02edD",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/astro-image-pipeline-overview/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/astro-image-pipeline-cli",
+      "type": "recipe",
+      "title": "Astro image pipeline cli (Integrations)",
+      "summary": "Astro image pipeline cli — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/astro-image-pipeline-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/astro-image-pipeline-cli.md"
+        }
+      },
+      "etag": "s256:DmHSTGt2Z5h3w7cqIJ8uOZ",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/astro-image-pipeline-cli/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/astro-image-pipeline-sdk-node",
+      "type": "recipe",
+      "title": "Astro image pipeline sdk node (Integrations)",
+      "summary": "Astro image pipeline sdk node — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/astro-image-pipeline-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/astro-image-pipeline-sdk-node.md"
+        }
+      },
+      "etag": "s256:QIVATKH3xlPNoFYQwbCYfG",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/astro-image-pipeline-sdk-node/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/astro-image-pipeline-sdk-python",
+      "type": "recipe",
+      "title": "Astro image pipeline sdk python (Integrations)",
+      "summary": "Astro image pipeline sdk python — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/astro-image-pipeline-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/astro-image-pipeline-sdk-python.md"
+        }
+      },
+      "etag": "s256:8CCevAOblpwg3IOUNIvTfy",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/astro-image-pipeline-sdk-python/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/remix-loaders-overview",
+      "type": "recipe",
+      "title": "Remix loaders overview (Integrations)",
+      "summary": "Remix loaders overview — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/remix-loaders-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/remix-loaders-overview.md"
+        }
+      },
+      "etag": "s256:heSvX6hYi6WEK0GAHAMulG",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/remix-loaders-overview/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/remix-loaders-cli",
+      "type": "recipe",
+      "title": "Remix loaders cli (Integrations)",
+      "summary": "Remix loaders cli — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/remix-loaders-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/remix-loaders-cli.md"
+        }
+      },
+      "etag": "s256:Uh4O1V3cB8EoUwEKOGlwgY",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/remix-loaders-cli/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/remix-loaders-sdk-node",
+      "type": "recipe",
+      "title": "Remix loaders sdk node (Integrations)",
+      "summary": "Remix loaders sdk node — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/remix-loaders-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/remix-loaders-sdk-node.md"
+        }
+      },
+      "etag": "s256:D4tOgasmmNR1I_zz_ILSkJ",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/remix-loaders-sdk-node/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/remix-loaders-sdk-python",
+      "type": "recipe",
+      "title": "Remix loaders sdk python (Integrations)",
+      "summary": "Remix loaders sdk python — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/remix-loaders-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/remix-loaders-sdk-python.md"
+        }
+      },
+      "etag": "s256:8VF0rSKgfPzhEggd78GztX",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/remix-loaders-sdk-python/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/svelte-kit-endpoints-overview",
+      "type": "recipe",
+      "title": "Svelte kit endpoints overview (Integrations)",
+      "summary": "Svelte kit endpoints overview — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/svelte-kit-endpoints-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/svelte-kit-endpoints-overview.md"
+        }
+      },
+      "etag": "s256:fUzsigd1XOVS8keDIZSzOF",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/svelte-kit-endpoints-overview/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/svelte-kit-endpoints-cli",
+      "type": "recipe",
+      "title": "Svelte kit endpoints cli (Integrations)",
+      "summary": "Svelte kit endpoints cli — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/svelte-kit-endpoints-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/svelte-kit-endpoints-cli.md"
+        }
+      },
+      "etag": "s256:2zbmElaRXffv405RP5m-tt",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/svelte-kit-endpoints-cli/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/svelte-kit-endpoints-sdk-node",
+      "type": "recipe",
+      "title": "Svelte kit endpoints sdk node (Integrations)",
+      "summary": "Svelte kit endpoints sdk node — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/svelte-kit-endpoints-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/svelte-kit-endpoints-sdk-node.md"
+        }
+      },
+      "etag": "s256:CMhfgGrWIjQ9RIeRfBInXv",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/svelte-kit-endpoints-sdk-node/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/svelte-kit-endpoints-sdk-python",
+      "type": "recipe",
+      "title": "Svelte kit endpoints sdk python (Integrations)",
+      "summary": "Svelte kit endpoints sdk python — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/svelte-kit-endpoints-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/svelte-kit-endpoints-sdk-python.md"
+        }
+      },
+      "etag": "s256:9uj3qtqQjRlsEw0KQHRTeV",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/svelte-kit-endpoints-sdk-python/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/flutter-mobile-overview",
+      "type": "recipe",
+      "title": "Flutter mobile overview (Integrations)",
+      "summary": "Flutter mobile overview — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/flutter-mobile-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/flutter-mobile-overview.md"
+        }
+      },
+      "etag": "s256:KeC1LYV47EMBIrMC6RTmwq",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/flutter-mobile-overview/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/flutter-mobile-cli",
+      "type": "recipe",
+      "title": "Flutter mobile cli (Integrations)",
+      "summary": "Flutter mobile cli — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/flutter-mobile-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/flutter-mobile-cli.md"
+        }
+      },
+      "etag": "s256:87AClCqfRde2g3LIQgM9ob",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/flutter-mobile-cli/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/flutter-mobile-sdk-node",
+      "type": "recipe",
+      "title": "Flutter mobile sdk node (Integrations)",
+      "summary": "Flutter mobile sdk node — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/flutter-mobile-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/flutter-mobile-sdk-node.md"
+        }
+      },
+      "etag": "s256:pbbKXIdzoZDru30YnrCPoM",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/flutter-mobile-sdk-node/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/flutter-mobile-sdk-python",
+      "type": "recipe",
+      "title": "Flutter mobile sdk python (Integrations)",
+      "summary": "Flutter mobile sdk python — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/flutter-mobile-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/flutter-mobile-sdk-python.md"
+        }
+      },
+      "etag": "s256:u_HoVk8GCy5zjVaGyNKpi5",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/flutter-mobile-sdk-python/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/rails-active-storage-overview",
+      "type": "recipe",
+      "title": "Rails active storage overview (Integrations)",
+      "summary": "Rails active storage overview — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/rails-active-storage-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/rails-active-storage-overview.md"
+        }
+      },
+      "etag": "s256:szHWNgm6O37uxIahHn01JI",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/rails-active-storage-overview/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/rails-active-storage-cli",
+      "type": "recipe",
+      "title": "Rails active storage cli (Integrations)",
+      "summary": "Rails active storage cli — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/rails-active-storage-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/rails-active-storage-cli.md"
+        }
+      },
+      "etag": "s256:lr8l-HkeWF1TuQ0tbe5W6t",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/rails-active-storage-cli/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/rails-active-storage-sdk-node",
+      "type": "recipe",
+      "title": "Rails active storage sdk node (Integrations)",
+      "summary": "Rails active storage sdk node — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/rails-active-storage-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/rails-active-storage-sdk-node.md"
+        }
+      },
+      "etag": "s256:RLrx59j5bx06gOGElfvo7U",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/rails-active-storage-sdk-node/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/rails-active-storage-sdk-python",
+      "type": "recipe",
+      "title": "Rails active storage sdk python (Integrations)",
+      "summary": "Rails active storage sdk python — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/rails-active-storage-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/rails-active-storage-sdk-python.md"
+        }
+      },
+      "etag": "s256:fng4pd8hUCgiNIU4_ukBtY",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/rails-active-storage-sdk-python/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/django-storages-overview",
+      "type": "recipe",
+      "title": "Django storages overview (Integrations)",
+      "summary": "Django storages overview — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/django-storages-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/django-storages-overview.md"
+        }
+      },
+      "etag": "s256:Q_7TwAcdLcdWKR8kp0U3au",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/django-storages-overview/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/django-storages-cli",
+      "type": "recipe",
+      "title": "Django storages cli (Integrations)",
+      "summary": "Django storages cli — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/django-storages-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/django-storages-cli.md"
+        }
+      },
+      "etag": "s256:GF8Qa17jFZgiDqTvuiGtRY",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/django-storages-cli/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/django-storages-sdk-node",
+      "type": "recipe",
+      "title": "Django storages sdk node (Integrations)",
+      "summary": "Django storages sdk node — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/django-storages-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/django-storages-sdk-node.md"
+        }
+      },
+      "etag": "s256:gv5Q5RXhJU20KqsATOASzN",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/django-storages-sdk-node/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/django-storages-sdk-python",
+      "type": "recipe",
+      "title": "Django storages sdk python (Integrations)",
+      "summary": "Django storages sdk python — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/django-storages-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/django-storages-sdk-python.md"
+        }
+      },
+      "etag": "s256:OSXsKMu9VhXFVywR5G417l",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/django-storages-sdk-python/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/spring-boot-overview",
+      "type": "recipe",
+      "title": "Spring boot overview (Integrations)",
+      "summary": "Spring boot overview — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/spring-boot-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/spring-boot-overview.md"
+        }
+      },
+      "etag": "s256:1DG5Git8EP_f6yI3d89O6s",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/spring-boot-overview/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/spring-boot-cli",
+      "type": "recipe",
+      "title": "Spring boot cli (Integrations)",
+      "summary": "Spring boot cli — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/spring-boot-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/spring-boot-cli.md"
+        }
+      },
+      "etag": "s256:IMblNUVsZxW4NoGp8lbcim",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/spring-boot-cli/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/spring-boot-sdk-node",
+      "type": "recipe",
+      "title": "Spring boot sdk node (Integrations)",
+      "summary": "Spring boot sdk node — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/spring-boot-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/spring-boot-sdk-node.md"
+        }
+      },
+      "etag": "s256:JhLWAZj2OwUcbOodqovavJ",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/spring-boot-sdk-node/"
+      },
+      "parent": "integrations"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/integrations/spring-boot-sdk-python",
+      "type": "recipe",
+      "title": "Spring boot sdk python (Integrations)",
+      "summary": "Spring boot sdk python — integrations workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/integrations/spring-boot-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/integrations/spring-boot-sdk-python.md"
+        }
+      },
+      "etag": "s256:pXAciFsqtd_f_hEQJpZEBQ",
+      "source": {
+        "human_url": "https://example.com/recipes/integrations/spring-boot-sdk-python/"
+      },
+      "parent": "integrations"
+    }
+  ],
+  "etag": "s256:jiv3RfG0Lb0yKszWHjhujW"
+}

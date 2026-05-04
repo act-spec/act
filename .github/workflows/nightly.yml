@@ -1,0 +1,84 @@
+name: Nightly
+
+# Nightly conformance + mutation testing per QA SOP-4 (G5). Runs the full
+# PRD-600 fixture sweep against every package's `conformance` script, and
+# Stryker mutation testing on the wire-format core (`@act-spec/validator` +
+# `@act-spec/core`). On failure, post a tracking-issue summary.
+on:
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+
+jobs:
+  full-conformance:
+    name: Full conformance matrix
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: '10.17.1'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Generate codegen
+        run: pnpm -F @act-spec/core codegen
+      - name: Build
+        run: pnpm -r --filter "./packages/*" run build
+      - name: Run PRD-600 conformance suite
+        run: pnpm -r run conformance
+
+  mutation-validator:
+    name: Mutation testing — @act-spec/validator
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: '10.17.1'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Generate codegen
+        run: pnpm -F @act-spec/core codegen
+      - name: Stryker — @act-spec/validator
+        run: pnpm -F @act-spec/validator test:mutation
+      - name: Upload mutation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stryker-validator-report
+          path: packages/validator/reports/mutation/
+          if-no-files-found: ignore
+
+  mutation-core:
+    name: Mutation testing — @act-spec/core
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: '10.17.1'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Generate codegen
+        run: pnpm -F @act-spec/core codegen
+      - name: Stryker — @act-spec/core
+        run: pnpm -F @act-spec/core test:mutation
+      - name: Upload mutation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stryker-core-report
+          path: packages/core/reports/mutation/
+          if-no-files-found: ignore

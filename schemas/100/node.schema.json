@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/0.1/node.schema.json",
+  "title": "ACT Node envelope",
+  "description": "Per PRD-100-R21, PRD-100-R22, PRD-100-R23, PRD-100-R24, PRD-100-R28, PRD-100-R31. Node envelope shape with the eight Core required fields. ID grammar per PRD-100-R10/R11/R13, extended for variant IDs per PRD-102-R29 (single `@` separator allowed; conservative interpretation pending amendment A6). `summary_source` is open per PRD-100-R23/PRD-102-R12. Content blocks are open-ended (PRD-100-R28: type discriminator required); per-type field shapes are owned by PRD-102. `related` items follow PRD-102-R18 ({id, relation}); the inline schema in PRD-100 is array-of-strings and is superseded here pending amendment A5. `metadata` is open per PRD-100-R22 and PRD-108-R7. Children-cycle prohibition (PRD-100-R25) is not expressible in JSON Schema; PRD-600 enforces it programmatically.",
+  "type": "object",
+  "required": [
+    "act_version",
+    "id",
+    "type",
+    "title",
+    "etag",
+    "summary",
+    "content",
+    "tokens"
+  ],
+  "properties": {
+    "act_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]([a-z0-9._\\-]|/)*[a-z0-9](@[a-z0-9-]+)?$",
+      "maxLength": 256,
+      "description": "Per PRD-100-R10, PRD-100-R11. Lowercase ASCII alphanumeric + dot/underscore/hyphen/slash. Optional `@<variant_key>` suffix per PRD-102-R29 (variant_key matches `[a-z0-9-]+`). Pending amendment A6 to align PRD-100-R10 with PRD-102-R29."
+    },
+    "type": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Open enum; see PRD-100 for well-known values. Custom types MUST be namespaced (`acme:thing`)."
+    },
+    "title": { "type": "string", "minLength": 1 },
+    "etag": { "type": "string" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary_source": {
+      "type": "string",
+      "description": "Open enum (PRD-100). Well-known: `llm`, `author`, `extracted`. Adding values is MINOR per PRD-108-R4(3)."
+    },
+    "abstract": { "type": "string" },
+    "content": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/ContentBlock" }
+    },
+    "tokens": {
+      "type": "object",
+      "required": ["summary"],
+      "properties": {
+        "summary": { "type": "integer", "minimum": 0 },
+        "abstract": { "type": "integer", "minimum": 0 },
+        "body": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "parent": {
+      "oneOf": [
+        { "type": "string", "pattern": "^[a-z0-9]([a-z0-9._\\-]|/)*[a-z0-9](@[a-z0-9-]+)?$" },
+        { "type": "null" }
+      ],
+      "description": "Per PRD-100-R10, PRD-100-R24. Variant-ID extension per PRD-102-R29 (amendment A6)."
+    },
+    "children": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]([a-z0-9._\\-]|/)*[a-z0-9](@[a-z0-9-]+)?$"
+      },
+      "description": "Per PRD-100-R24, PRD-100-R25. Variant-ID extension per PRD-102-R29 (amendment A6). Cycles prohibited (PRD-100-R25) — enforced programmatically by PRD-600."
+    },
+    "related": {
+      "type": "array",
+      "description": "Per PRD-102-R18, PRD-102-R19, PRD-102-R20. Cross-references to other nodes; cycles permitted (consumer-side cycle detection required). Supersedes PRD-100's inline array-of-strings shape per amendment A5.",
+      "items": {
+        "type": "object",
+        "required": ["id", "relation"],
+        "additionalProperties": true,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]([a-z0-9._\\-]|/)*[a-z0-9](@[a-z0-9-]+)?$",
+            "description": "Per PRD-100-R10 plus variant extension (amendment A6)."
+          },
+          "relation": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Per PRD-102-R19 (open enum). Well-known: see-also, supersedes, variant_of, child_of, parent_of, translation_of, has-variant. Adding values is MINOR per PRD-108-R4(3)."
+          }
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "human_url": { "type": "string", "format": "uri" },
+        "edit_url": { "type": "string", "format": "uri" }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "ContentBlock": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Block type. Well-known: `markdown` (Core), `prose`, `code`, `data`, `callout`, `image` (Standard). Plus namespace: `marketing:*` (documented-open). Per PRD-102-R5a, `image` blocks carry `{src, alt?, title?, caption?}`. Unknown types MUST be tolerated per PRD-108-R7."
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "id": "collector-provided-at-root",
+  "requirements": ["PRD-303-R7"],
+  "description": "ActCollectorService installed at root-level providers (instead of component-level) MUST cause a build error per PRD-303-R7. Root-scoped providers leak per-render state across SSR runs producing non-deterministic extractions.",
+  "input": { "scope": "root" },
+  "expectedErrorSubstring": "PRD-303-R7"
+}

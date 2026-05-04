@@ -1,0 +1,76 @@
+{
+  "act_version": "0.1",
+  "id": "integrations",
+  "type": "section",
+  "title": "Integrations",
+  "summary": "Integrations — section.",
+  "summary_source": "extracted",
+  "etag": "s256:LVbHcYkcqNMgiggZHTM-zf",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# Integrations\n\nThis section groups related integrations documents.\n"
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 16
+  },
+  "children": [
+    "recipes/integrations/cloudflare-workers-overview",
+    "recipes/integrations/cloudflare-workers-cli",
+    "recipes/integrations/cloudflare-workers-sdk-node",
+    "recipes/integrations/cloudflare-workers-sdk-python",
+    "recipes/integrations/aws-lambda-overview",
+    "recipes/integrations/aws-lambda-cli",
+    "recipes/integrations/aws-lambda-sdk-node",
+    "recipes/integrations/aws-lambda-sdk-python",
+    "recipes/integrations/github-actions-overview",
+    "recipes/integrations/github-actions-cli",
+    "recipes/integrations/github-actions-sdk-node",
+    "recipes/integrations/github-actions-sdk-python",
+    "recipes/integrations/vercel-edge-functions-overview",
+    "recipes/integrations/vercel-edge-functions-cli",
+    "recipes/integrations/vercel-edge-functions-sdk-node",
+    "recipes/integrations/vercel-edge-functions-sdk-python",
+    "recipes/integrations/next-js-app-router-overview",
+    "recipes/integrations/next-js-app-router-cli",
+    "recipes/integrations/next-js-app-router-sdk-node",
+    "recipes/integrations/next-js-app-router-sdk-python",
+    "recipes/integrations/astro-image-pipeline-overview",
+    "recipes/integrations/astro-image-pipeline-cli",
+    "recipes/integrations/astro-image-pipeline-sdk-node",
+    "recipes/integrations/astro-image-pipeline-sdk-python",
+    "recipes/integrations/remix-loaders-overview",
+    "recipes/integrations/remix-loaders-cli",
+    "recipes/integrations/remix-loaders-sdk-node",
+    "recipes/integrations/remix-loaders-sdk-python",
+    "recipes/integrations/svelte-kit-endpoints-overview",
+    "recipes/integrations/svelte-kit-endpoints-cli",
+    "recipes/integrations/svelte-kit-endpoints-sdk-node",
+    "recipes/integrations/svelte-kit-endpoints-sdk-python",
+    "recipes/integrations/flutter-mobile-overview",
+    "recipes/integrations/flutter-mobile-cli",
+    "recipes/integrations/flutter-mobile-sdk-node",
+    "recipes/integrations/flutter-mobile-sdk-python",
+    "recipes/integrations/rails-active-storage-overview",
+    "recipes/integrations/rails-active-storage-cli",
+    "recipes/integrations/rails-active-storage-sdk-node",
+    "recipes/integrations/rails-active-storage-sdk-python",
+    "recipes/integrations/django-storages-overview",
+    "recipes/integrations/django-storages-cli",
+    "recipes/integrations/django-storages-sdk-node",
+    "recipes/integrations/django-storages-sdk-python",
+    "recipes/integrations/spring-boot-overview",
+    "recipes/integrations/spring-boot-cli",
+    "recipes/integrations/spring-boot-sdk-node",
+    "recipes/integrations/spring-boot-sdk-python"
+  ],
+  "parent": "recipes",
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "sidebar-category:integrations"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/0.1/auth-schemes.schema.json",
+  "title": "ACT Manifest auth.schemes — security-relevant shape (PRD-109)",
+  "description": "Per PRD-109-R6, PRD-109-R7, PRD-109-R8. PRD-109 fixes the security-relevant shape of the manifest's auth.schemes array. The full manifest envelope and all non-security-relevant fields are owned by PRD-100/PRD-106; this schema is the security-constrained subset that PRD-109 normatively imposes. The array is ordered by server preference, most-preferred first (PRD-109-R6, gap C3). The `kind` enum is closed at v0.1; adding a value is MAJOR per PRD-108-R5(4). Conditional sub-schema enforces OAuth2 required fields per PRD-109-R7.",
+  "type": "object",
+  "required": ["schemes"],
+  "additionalProperties": true,
+  "properties": {
+    "schemes": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Ordered list of supported auth schemes. Order MUST reflect server preference, most-preferred first. Consumers SHOULD attempt schemes in advertised order.",
+      "items": {
+        "type": "object",
+        "required": ["kind"],
+        "additionalProperties": true,
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": ["cookie", "bearer", "oauth2", "api_key"],
+            "description": "Closed enum at v0.1. Adding a value is a MAJOR change per PRD-108."
+          },
+          "header_name": {
+            "type": "string",
+            "description": "For api_key: the HTTP header name to send the key in. SHOULD default to 'Authorization' with a 'Bearer <key>' value to avoid header proliferation."
+          },
+          "authorization_endpoint": {
+            "type": "string",
+            "format": "uri",
+            "description": "Required when kind == 'oauth2'."
+          },
+          "token_endpoint": {
+            "type": "string",
+            "format": "uri",
+            "description": "Required when kind == 'oauth2'."
+          },
+          "scopes_supported": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" },
+            "description": "Required when kind == 'oauth2'. MUST be non-empty. The minimum scope 'act.read' is reserved by PRD-109; OAuth schemes MUST advertise at least 'act.read' or a superset."
+          }
+        },
+        "allOf": [
+          {
+            "if": { "properties": { "kind": { "const": "oauth2" } }, "required": ["kind"] },
+            "then": {
+              "required": ["authorization_endpoint", "token_endpoint", "scopes_supported"]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

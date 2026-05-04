@@ -1,0 +1,15 @@
+{
+  "act_version": "0.1",
+  "id": "intro",
+  "type": "article",
+  "title": "Introduction",
+  "etag": "s256:abc1230000000000000000",
+  "summary": "An overview of Acme widgets and what you can build with them.",
+  "content": [
+    {
+      "type": "markdown",
+      "text": "# Introduction\n\nAcme widgets are..."
+    }
+  ],
+  "tokens": { "summary": 14, "body": 12 }
+}

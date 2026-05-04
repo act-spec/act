@@ -1,0 +1,6 @@
+{
+  "type": "code",
+  "language": "typescript",
+  "filename": "src/index.ts",
+  "text": "import { AcmeClient } from '@acme/sdk';\n\nconst client = new AcmeClient({ apiKey: process.env.ACME_API_KEY });\nawait client.widgets.list({ limit: 10 });\n"
+}

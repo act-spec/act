@@ -1,0 +1,9 @@
+{
+  "id": "composable-form",
+  "requirements": ["PRD-302-R4", "PRD-302-R6", "PRD-302-R8", "PRD-302-R10", "PRD-302-R22"],
+  "description": "useActContract composable invoked inside setup() on a Vue 3 component. Verifies the binding registers the contract once per (component instance, variant) per PRD-302-R8 and emits the marketing:pricing-table block in render order.",
+  "expected": {
+    "draftCount": 1,
+    "blockTypes": ["marketing:pricing-table"]
+  }
+}

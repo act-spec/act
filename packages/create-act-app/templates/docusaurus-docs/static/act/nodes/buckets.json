@@ -1,0 +1,32 @@
+{
+  "act_version": "0.1",
+  "id": "buckets",
+  "type": "section",
+  "title": "Buckets",
+  "summary": "Buckets — section.",
+  "summary_source": "extracted",
+  "etag": "s256:IQjk2GR5Ur-1rrNM8eP0Bc",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# Buckets\n\nThis section groups related buckets documents.\n"
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 16
+  },
+  "children": [
+    "api/buckets/create",
+    "api/buckets/get",
+    "api/buckets/list",
+    "api/buckets/delete"
+  ],
+  "parent": "api-reference",
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "sidebar-category:buckets"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "_fixture": "PRD-104 positive — Pattern 1, locale-prefixed IDs, single manifest",
+  "_satisfies": ["PRD-104-R1", "PRD-104-R2", "PRD-104-R5", "PRD-104-R7"],
+  "act_version": "0.1",
+  "site": { "name": "Acme", "locale": "en-US" },
+  "conformance": { "level": "strict" },
+  "delivery": "static",
+  "index_url": "/act/index.json",
+  "index_ndjson_url": "/act/index.ndjson",
+  "node_url_template": "/act/n/{id}.json",
+  "subtree_url_template": "/act/sub/{id}.json",
+  "search_url_template": "/act/search?q={query}&locale={locale}",
+  "locales": {
+    "default": "en-US",
+    "available": ["en-US", "es-ES", "de-DE", "ja-JP"]
+  },
+  "capabilities": {
+    "etag": true,
+    "subtree": true,
+    "ndjson_index": true,
+    "search": { "template_advertised": true }
+  }
+}

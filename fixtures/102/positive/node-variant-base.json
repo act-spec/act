@@ -1,0 +1,21 @@
+{
+  "act_version": "0.1",
+  "id": "pricing",
+  "type": "landing",
+  "title": "Pricing",
+  "etag": "sha256:base000",
+  "summary": "Acme pricing tiers and plan comparison.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "marketing:hero",
+      "headline": "Pricing that scales with you.",
+      "subhead": "Start free. Pay as you grow.",
+      "metadata": { "extracted_via": "component-contract" }
+    }
+  ],
+  "tokens": { "summary": 10, "body": 80 },
+  "related": [
+    { "id": "pricing@enterprise-2026q2", "relation": "has-variant" }
+  ]
+}

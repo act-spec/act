@@ -1,0 +1,33 @@
+{
+  "act_version": "0.1",
+  "id": "recipes",
+  "type": "section",
+  "title": "Recipes",
+  "summary": "Recipes — section.",
+  "summary_source": "extracted",
+  "etag": "s256:o8CqW7mN0Ykaq0sQip9Cc8",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# Recipes\n\nThis section groups related recipes documents.\n"
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 16
+  },
+  "children": [
+    "recipes/lifecycle-policy",
+    "ingestion",
+    "archival",
+    "security",
+    "performance",
+    "integrations"
+  ],
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "sidebar-category:recipes"
+    }
+  }
+}

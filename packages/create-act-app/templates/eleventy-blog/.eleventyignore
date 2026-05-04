@@ -1,0 +1,6 @@
+# Eleventy ignore patterns honored by PRD-408-R3 (threaded into the
+# auto-wired markdown adapter as glob excludes).
+# Lines starting with # are comments; blank lines are skipped.
+README.md
+node_modules
+_site

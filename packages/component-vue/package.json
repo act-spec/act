@@ -1,0 +1,67 @@
+{
+  "name": "@act-spec/component-vue",
+  "version": "0.0.0",
+  "description": "PRD-302 Vue 3 binding for the ACT (Agent Content Tree) v0.1 component contract (PRD-300). Implements the Vue declaration patterns (SFC default-export static field `Component.act = {…}`, `useActContract` composable, `<script setup>` `defineActContract` macro form, page-level boundary via `<ActSection>` wrapper or macro), the provide/inject collector for SSR-walk extraction via `@vue/server-renderer.renderToString`, the variant replay loop (fresh Vue app per variant), the placeholder emission contract via `app.config.errorHandler` (truncated and secret-redacted error messages), the Vue 3+ peer-dependency floor (Vue 2 explicitly out of scope), and the `BindingCapabilities` const with values pinned per A15-qualified PRD-302-R20 (only what v0.1 ships). Bridges Vue component trees to the framework-agnostic `NodeDraft` shape from `@act-spec/component-contract`.",
+  "license": "Apache-2.0",
+  "author": "Jeremy Forsythe <jeremy@act-spec.org>",
+  "homepage": "https://act-spec.org",
+  "bugs": {
+    "url": "https://github.com/act-spec/act/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-spec/act.git",
+    "directory": "packages/component-vue"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "conformance": "tsx conformance.ts"
+  },
+  "dependencies": {
+    "@act-spec/component-contract": "workspace:*",
+    "@act-spec/core": "workspace:*",
+    "@act-spec/validator": "workspace:*"
+  },
+  "peerDependencies": {
+    "vue": ">=3.4 <4",
+    "@vue/server-renderer": ">=3.4 <4"
+  },
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": true
+    },
+    "@vue/server-renderer": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^2.1.9",
+    "@vue/server-renderer": "^3.4.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4",
+    "vue": "^3.4.0"
+  }
+}

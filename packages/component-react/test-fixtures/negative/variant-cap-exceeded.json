@@ -1,0 +1,7 @@
+{
+  "id": "variant-cap-exceeded",
+  "requirements": ["PRD-301-R13", "PRD-300-R17"],
+  "description": "A variant matrix > 64 keys MUST throw BuildError(\"PRD-300-R17\").",
+  "input": { "variantCount": 65 },
+  "expectedErrorSubstring": "PRD-300-R17"
+}

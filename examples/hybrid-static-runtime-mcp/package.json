@@ -1,0 +1,45 @@
+{
+  "name": "@act-spec/example-hybrid-static-runtime-mcp",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Hybrid deployment combining a static ACT mount, a multi-tenant runtime mount, and an MCP bridge serving both to AI agents under one URI namespace.",
+  "license": "Apache-2.0",
+  "author": "Jeremy Forsythe <jeremy@act-spec.org>",
+  "homepage": "https://act-spec.org",
+  "bugs": {
+    "url": "https://github.com/act-spec/act/issues"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-spec/act.git",
+    "directory": "examples/hybrid-static-runtime-mcp"
+  },
+  "scripts": {
+    "build:marketing": "tsx scripts/build-marketing.ts",
+    "start": "tsx scripts/serve.ts",
+    "probe": "tsx scripts/probe.ts",
+    "probe:mcp": "tsx scripts/probe-mcp.ts",
+    "validate": "tsx scripts/validate.ts",
+    "conformance": "tsx scripts/conformance.ts",
+    "test": "node -e \"console.log('@act-spec/example-hybrid-static-runtime-mcp: example exercises end-to-end via conformance')\"",
+    "lint": "node -e \"console.log('@act-spec/example-hybrid-static-runtime-mcp: lint covered by typecheck + conformance')\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@act-spec/adapter-framework": "workspace:*",
+    "@act-spec/cli": "workspace:*",
+    "@act-spec/core": "workspace:*",
+    "@act-spec/generator-core": "workspace:*",
+    "@act-spec/adapter-markdown": "workspace:*",
+    "@act-spec/mcp-bridge": "workspace:*",
+    "@act-spec/adapter-programmatic": "workspace:*",
+    "@act-spec/runtime-core": "workspace:*",
+    "@act-spec/runtime-next": "workspace:*"
+  },
+  "devDependencies": {
+    "@act-spec/validator": "workspace:*",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/0.1/etag.schema.json",
+  "title": "ACT etag value",
+  "description": "Per PRD-103-R1, PRD-103-R2, PRD-103-R3. Shape of the value carried in any envelope's `etag` field. General form is `<algorithm>:<hash>` where `<algorithm>` is a lowercase ASCII identifier and `<hash>` is base64url-safe (RFC 4648 §5) without padding. v0.1 admits exactly one algorithm: `s256` (SHA-256, base64url, no padding, truncated to 22 chars) — see `$defs.v0_1_algorithm_admit_list`. Adding a new algorithm value to the open admit-list is MINOR per PRD-108-R4(3); changing or removing `s256` is MAJOR per PRD-108-R5. The top-level `pattern` is intentionally loose so future MINOR additions remain valid against archived envelopes.",
+  "type": "string",
+  "pattern": "^s256:[A-Za-z0-9_-]{22}$",
+  "examples": [
+    "s256:iH6ta82PUg0zi0lr_jpCLL",
+    "s256:8Z0luYEDvPcDQKLimP55qC"
+  ],
+  "$defs": {
+    "v0_1_algorithm_admit_list": {
+      "description": "v0.1 strict form (PRD-103-R3): algorithm MUST be `s256`, hash MUST be exactly 22 base64url-safe characters. The top-level schema enforces this strict form. A future MINOR per PRD-108-R4(3) MAY add additional algorithm prefixes; consumers reading future-MINOR envelopes MUST treat unknown algorithm prefixes as opaque revalidation tokens (PRD-103 forward-compat rule).",
+      "type": "string",
+      "pattern": "^s256:[A-Za-z0-9_-]{22}$"
+    },
+    "loose_future_minor_form": {
+      "description": "Loose forward-compat pattern admitting any lowercase ASCII algorithm prefix and base64url-safe hash. Provided for non-validating tooling that needs to recognize future-MINOR etag shapes; PRD-600 v0.1 enforces the strict form at top level.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+:[A-Za-z0-9_-]+$"
+    }
+  }
+}

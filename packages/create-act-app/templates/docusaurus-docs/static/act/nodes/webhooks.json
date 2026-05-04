@@ -1,0 +1,31 @@
+{
+  "act_version": "0.1",
+  "id": "webhooks",
+  "type": "section",
+  "title": "Webhooks",
+  "summary": "Webhooks — section.",
+  "summary_source": "extracted",
+  "etag": "s256:qEKbaYOKwUM51Guwaek1tY",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# Webhooks\n\nThis section groups related webhooks documents.\n"
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 16
+  },
+  "children": [
+    "api/webhooks/register",
+    "api/webhooks/list",
+    "api/webhooks/delete"
+  ],
+  "parent": "api-reference",
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "sidebar-category:webhooks"
+    }
+  }
+}

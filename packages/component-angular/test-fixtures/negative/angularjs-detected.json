@@ -1,0 +1,7 @@
+{
+  "id": "angularjs-detected",
+  "requirements": ["PRD-303-R2"],
+  "description": "AngularJS (Angular 1.x) → out of scope; assertAngular17Plus throws AngularBindingError citing PRD-303-R2.",
+  "input": { "version": "1.8.3" },
+  "expectedErrorSubstring": "PRD-303-R2"
+}

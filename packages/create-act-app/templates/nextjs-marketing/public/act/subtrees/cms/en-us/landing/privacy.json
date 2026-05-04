@@ -1,0 +1,72 @@
+{
+  "act_version": "0.1",
+  "root": "cms/en-us/landing/privacy",
+  "depth": 3,
+  "truncated": false,
+  "tokens": {
+    "body": 9,
+    "summary": 5
+  },
+  "nodes": [
+    {
+      "act_version": "0.1",
+      "id": "cms/en-us/landing/privacy",
+      "type": "landing",
+      "title": "Privacy Policy",
+      "etag": "s256:eTjvsHouIXTr7Ex5yPbJ30",
+      "summary": "How Acme handles personal data.",
+      "summary_source": "author",
+      "content": [
+        {
+          "type": "prose",
+          "format": "plain",
+          "text": "We collect the minimum required to operate the service."
+        },
+        {
+          "type": "marketing:hero",
+          "headline": "Privacy Policy",
+          "subhead": "How Acme handles personal data.",
+          "metadata": {
+            "extracted_via": "component-contract",
+            "extraction_method": "ssr-walk"
+          }
+        }
+      ],
+      "tokens": {
+        "summary": 5,
+        "body": 9
+      },
+      "metadata": {
+        "locale": "en-US",
+        "translations": [
+          {
+            "locale": "es-ES",
+            "id": "cms/es-es/landing/privacy"
+          },
+          {
+            "locale": "de-DE",
+            "id": "cms/de-de/landing/privacy"
+          },
+          {
+            "locale": "ja-JP",
+            "id": "cms/ja-jp/landing/privacy"
+          }
+        ],
+        "source": {
+          "adapter": "act-contentful",
+          "source_id": "en-US:landing/privacy",
+          "contributors": [
+            "act-contentful",
+            "act-react-extract",
+            "act-i18n"
+          ]
+        },
+        "translation_status": "complete"
+      },
+      "source": {
+        "human_url": "https://acme.example.com/en-US/landing/privacy"
+      }
+    }
+  ],
+  "etag": "s256:rfjEyQAcF9FIoHGp9MnXqb"
+}

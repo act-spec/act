@@ -1,0 +1,32 @@
+{
+  "$comment": "Negative fixture for PRD-101. The manifest declares delivery: \"runtime\" but is being served via the static well-known path with no Link-header runtime hand-off and no authenticated context. Per PRD-101-R12, the declared `delivery` MUST match the discovery context. A runtime-declared manifest reached purely as a static file with no runtime signal is a conformance error.",
+  "discovery_context": {
+    "request": {
+      "method": "GET",
+      "url": "https://acme.example/.well-known/act.json",
+      "headers": {}
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "content-type": "application/act-manifest+json"
+      }
+    },
+    "discovery_path_used": "static-well-known",
+    "runtime_signals_observed": []
+  },
+  "manifest": {
+    "act_version": "0.1",
+    "site": { "name": "Acme Confused" },
+    "index_url": "/act/index.json",
+    "node_url_template": "/act/n/{id}.json",
+    "conformance": { "level": "core" },
+    "delivery": "runtime"
+  },
+  "expected": {
+    "discovered": true,
+    "delivery_match": false,
+    "violation": "PRD-101-R12",
+    "notes": "Manifest declares delivery=runtime but was reached via static well-known path with no Link header advertising runtime profile. Validators MUST emit a discovery-mismatch finding."
+  }
+}

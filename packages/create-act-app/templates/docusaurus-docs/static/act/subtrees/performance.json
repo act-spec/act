@@ -1,0 +1,977 @@
+{
+  "act_version": "0.1",
+  "root": "performance",
+  "depth": 3,
+  "truncated": false,
+  "tokens": {
+    "body": 1718,
+    "summary": 306
+  },
+  "nodes": [
+    {
+      "act_version": "0.1",
+      "id": "performance",
+      "type": "section",
+      "title": "Performance",
+      "summary": "Performance — section.",
+      "summary_source": "extracted",
+      "etag": "s256:qkrfAvXlXMqYJ4TUPyooWV",
+      "content": [
+        {
+          "type": "markdown",
+          "content": "# Performance\n\nThis section groups related performance documents.\n"
+        }
+      ],
+      "tokens": {
+        "summary": 8,
+        "body": 16
+      },
+      "children": [
+        "recipes/performance/use-byte-ranges-overview",
+        "recipes/performance/use-byte-ranges-cli",
+        "recipes/performance/use-byte-ranges-sdk-node",
+        "recipes/performance/use-byte-ranges-sdk-python",
+        "recipes/performance/parallel-downloads-overview",
+        "recipes/performance/parallel-downloads-cli",
+        "recipes/performance/parallel-downloads-sdk-node",
+        "recipes/performance/parallel-downloads-sdk-python",
+        "recipes/performance/cdn-frontends-overview",
+        "recipes/performance/cdn-frontends-cli",
+        "recipes/performance/cdn-frontends-sdk-node",
+        "recipes/performance/cdn-frontends-sdk-python",
+        "recipes/performance/request-coalescing-overview",
+        "recipes/performance/request-coalescing-cli",
+        "recipes/performance/request-coalescing-sdk-node",
+        "recipes/performance/request-coalescing-sdk-python",
+        "recipes/performance/reduce-listing-cost-overview",
+        "recipes/performance/reduce-listing-cost-cli",
+        "recipes/performance/reduce-listing-cost-sdk-node",
+        "recipes/performance/reduce-listing-cost-sdk-python",
+        "recipes/performance/choose-region-overview",
+        "recipes/performance/choose-region-cli",
+        "recipes/performance/choose-region-sdk-node",
+        "recipes/performance/choose-region-sdk-python",
+        "recipes/performance/multi-region-reads-overview",
+        "recipes/performance/multi-region-reads-cli",
+        "recipes/performance/multi-region-reads-sdk-node",
+        "recipes/performance/multi-region-reads-sdk-python",
+        "recipes/performance/avoid-listings-in-hot-paths-overview",
+        "recipes/performance/avoid-listings-in-hot-paths-cli",
+        "recipes/performance/avoid-listings-in-hot-paths-sdk-node",
+        "recipes/performance/avoid-listings-in-hot-paths-sdk-python",
+        "recipes/performance/edge-cache-invalidation-overview",
+        "recipes/performance/edge-cache-invalidation-cli",
+        "recipes/performance/edge-cache-invalidation-sdk-node",
+        "recipes/performance/edge-cache-invalidation-sdk-python"
+      ],
+      "parent": "recipes",
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "sidebar-category:performance"
+        }
+      }
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/use-byte-ranges-overview",
+      "type": "recipe",
+      "title": "Use byte ranges overview (Performance)",
+      "summary": "Use byte ranges overview — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/use-byte-ranges-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/use-byte-ranges-overview.md"
+        }
+      },
+      "etag": "s256:VaqoGsHwhmN9mpBz0CcPqY",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/use-byte-ranges-overview/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/use-byte-ranges-cli",
+      "type": "recipe",
+      "title": "Use byte ranges cli (Performance)",
+      "summary": "Use byte ranges cli — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/use-byte-ranges-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/use-byte-ranges-cli.md"
+        }
+      },
+      "etag": "s256:7dsbMa3ZZyQQJTdKoJuPR4",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/use-byte-ranges-cli/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/use-byte-ranges-sdk-node",
+      "type": "recipe",
+      "title": "Use byte ranges sdk node (Performance)",
+      "summary": "Use byte ranges sdk node — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/use-byte-ranges-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/use-byte-ranges-sdk-node.md"
+        }
+      },
+      "etag": "s256:mhvB-VwubKkm1shnwGnd2Z",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/use-byte-ranges-sdk-node/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/use-byte-ranges-sdk-python",
+      "type": "recipe",
+      "title": "Use byte ranges sdk python (Performance)",
+      "summary": "Use byte ranges sdk python — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/use-byte-ranges-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/use-byte-ranges-sdk-python.md"
+        }
+      },
+      "etag": "s256:5IsivWACD8n1klsFx3ADIi",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/use-byte-ranges-sdk-python/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/parallel-downloads-overview",
+      "type": "recipe",
+      "title": "Parallel downloads overview (Performance)",
+      "summary": "Parallel downloads overview — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/parallel-downloads-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/parallel-downloads-overview.md"
+        }
+      },
+      "etag": "s256:MWSvzLXoHTbKduti2MzhM-",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/parallel-downloads-overview/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/parallel-downloads-cli",
+      "type": "recipe",
+      "title": "Parallel downloads cli (Performance)",
+      "summary": "Parallel downloads cli — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/parallel-downloads-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/parallel-downloads-cli.md"
+        }
+      },
+      "etag": "s256:u387zszVOvgAQLePpi_IaA",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/parallel-downloads-cli/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/parallel-downloads-sdk-node",
+      "type": "recipe",
+      "title": "Parallel downloads sdk node (Performance)",
+      "summary": "Parallel downloads sdk node — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/parallel-downloads-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/parallel-downloads-sdk-node.md"
+        }
+      },
+      "etag": "s256:IH59PMjhd5E91V0JYycEWS",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/parallel-downloads-sdk-node/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/parallel-downloads-sdk-python",
+      "type": "recipe",
+      "title": "Parallel downloads sdk python (Performance)",
+      "summary": "Parallel downloads sdk python — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/parallel-downloads-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/parallel-downloads-sdk-python.md"
+        }
+      },
+      "etag": "s256:DN4_wK7HaWAHP8ujPRX44M",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/parallel-downloads-sdk-python/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/cdn-frontends-overview",
+      "type": "recipe",
+      "title": "Cdn frontends overview (Performance)",
+      "summary": "Cdn frontends overview — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/cdn-frontends-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/cdn-frontends-overview.md"
+        }
+      },
+      "etag": "s256:US0fFtfUia7zjGpcRT4nii",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/cdn-frontends-overview/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/cdn-frontends-cli",
+      "type": "recipe",
+      "title": "Cdn frontends cli (Performance)",
+      "summary": "Cdn frontends cli — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/cdn-frontends-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/cdn-frontends-cli.md"
+        }
+      },
+      "etag": "s256:PzS5i7_AvVU1cxnWsQ3NUd",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/cdn-frontends-cli/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/cdn-frontends-sdk-node",
+      "type": "recipe",
+      "title": "Cdn frontends sdk node (Performance)",
+      "summary": "Cdn frontends sdk node — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/cdn-frontends-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/cdn-frontends-sdk-node.md"
+        }
+      },
+      "etag": "s256:HIZ6tHwuk6miG_eh-kGKP0",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/cdn-frontends-sdk-node/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/cdn-frontends-sdk-python",
+      "type": "recipe",
+      "title": "Cdn frontends sdk python (Performance)",
+      "summary": "Cdn frontends sdk python — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/cdn-frontends-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/cdn-frontends-sdk-python.md"
+        }
+      },
+      "etag": "s256:Y4Rq2AYwWB4N8hxfBzubVy",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/cdn-frontends-sdk-python/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/request-coalescing-overview",
+      "type": "recipe",
+      "title": "Request coalescing overview (Performance)",
+      "summary": "Request coalescing overview — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/request-coalescing-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/request-coalescing-overview.md"
+        }
+      },
+      "etag": "s256:_HSvmmz1zZK7bjLZpG5eF3",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/request-coalescing-overview/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/request-coalescing-cli",
+      "type": "recipe",
+      "title": "Request coalescing cli (Performance)",
+      "summary": "Request coalescing cli — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/request-coalescing-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/request-coalescing-cli.md"
+        }
+      },
+      "etag": "s256:3nalx9l165UEyXRhmPShFQ",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/request-coalescing-cli/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/request-coalescing-sdk-node",
+      "type": "recipe",
+      "title": "Request coalescing sdk node (Performance)",
+      "summary": "Request coalescing sdk node — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/request-coalescing-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/request-coalescing-sdk-node.md"
+        }
+      },
+      "etag": "s256:jIXTyaaJqxqVQ1sOwDvv9v",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/request-coalescing-sdk-node/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/request-coalescing-sdk-python",
+      "type": "recipe",
+      "title": "Request coalescing sdk python (Performance)",
+      "summary": "Request coalescing sdk python — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/request-coalescing-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/request-coalescing-sdk-python.md"
+        }
+      },
+      "etag": "s256:Cn7mdwSDfuN6gkwIoSANq1",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/request-coalescing-sdk-python/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/reduce-listing-cost-overview",
+      "type": "recipe",
+      "title": "Reduce listing cost overview (Performance)",
+      "summary": "Reduce listing cost overview — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/reduce-listing-cost-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/reduce-listing-cost-overview.md"
+        }
+      },
+      "etag": "s256:toFVcEXQg4EiARoYvJCGsK",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/reduce-listing-cost-overview/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/reduce-listing-cost-cli",
+      "type": "recipe",
+      "title": "Reduce listing cost cli (Performance)",
+      "summary": "Reduce listing cost cli — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/reduce-listing-cost-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/reduce-listing-cost-cli.md"
+        }
+      },
+      "etag": "s256:bgANwCMUV-5ynazS_PX81H",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/reduce-listing-cost-cli/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/reduce-listing-cost-sdk-node",
+      "type": "recipe",
+      "title": "Reduce listing cost sdk node (Performance)",
+      "summary": "Reduce listing cost sdk node — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/reduce-listing-cost-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/reduce-listing-cost-sdk-node.md"
+        }
+      },
+      "etag": "s256:342-noCnKYQoRuqnVskpMv",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/reduce-listing-cost-sdk-node/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/reduce-listing-cost-sdk-python",
+      "type": "recipe",
+      "title": "Reduce listing cost sdk python (Performance)",
+      "summary": "Reduce listing cost sdk python — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/reduce-listing-cost-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/reduce-listing-cost-sdk-python.md"
+        }
+      },
+      "etag": "s256:vc_k1h6aEF88cIwQZLPmNk",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/reduce-listing-cost-sdk-python/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/choose-region-overview",
+      "type": "recipe",
+      "title": "Choose region overview (Performance)",
+      "summary": "Choose region overview — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/choose-region-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/choose-region-overview.md"
+        }
+      },
+      "etag": "s256:mf_qImpy8HsRiyx-R4R_Xm",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/choose-region-overview/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/choose-region-cli",
+      "type": "recipe",
+      "title": "Choose region cli (Performance)",
+      "summary": "Choose region cli — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/choose-region-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/choose-region-cli.md"
+        }
+      },
+      "etag": "s256:qut7y3DinjIQ3GI6e6uIFV",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/choose-region-cli/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/choose-region-sdk-node",
+      "type": "recipe",
+      "title": "Choose region sdk node (Performance)",
+      "summary": "Choose region sdk node — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/choose-region-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/choose-region-sdk-node.md"
+        }
+      },
+      "etag": "s256:aLZTYQGGa0bK0Q64VWdcv_",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/choose-region-sdk-node/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/choose-region-sdk-python",
+      "type": "recipe",
+      "title": "Choose region sdk python (Performance)",
+      "summary": "Choose region sdk python — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/choose-region-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/choose-region-sdk-python.md"
+        }
+      },
+      "etag": "s256:CDiHAAXpCTVFKbSP1FLYAL",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/choose-region-sdk-python/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/multi-region-reads-overview",
+      "type": "recipe",
+      "title": "Multi region reads overview (Performance)",
+      "summary": "Multi region reads overview — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/multi-region-reads-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/multi-region-reads-overview.md"
+        }
+      },
+      "etag": "s256:ke0uPfquvnWwEolpVlDpdk",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/multi-region-reads-overview/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/multi-region-reads-cli",
+      "type": "recipe",
+      "title": "Multi region reads cli (Performance)",
+      "summary": "Multi region reads cli — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/multi-region-reads-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/multi-region-reads-cli.md"
+        }
+      },
+      "etag": "s256:Xp7T8Vco15wBnBJ8KRi6mq",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/multi-region-reads-cli/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/multi-region-reads-sdk-node",
+      "type": "recipe",
+      "title": "Multi region reads sdk node (Performance)",
+      "summary": "Multi region reads sdk node — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/multi-region-reads-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/multi-region-reads-sdk-node.md"
+        }
+      },
+      "etag": "s256:cBBZbu-VrvVJCfctdc89ix",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/multi-region-reads-sdk-node/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/multi-region-reads-sdk-python",
+      "type": "recipe",
+      "title": "Multi region reads sdk python (Performance)",
+      "summary": "Multi region reads sdk python — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/multi-region-reads-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/multi-region-reads-sdk-python.md"
+        }
+      },
+      "etag": "s256:VaQilR-GLDlPRDrbQP_-ts",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/multi-region-reads-sdk-python/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/avoid-listings-in-hot-paths-overview",
+      "type": "recipe",
+      "title": "Avoid listings in hot paths overview (Performance)",
+      "summary": "Avoid listings in hot paths overview — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 49
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/avoid-listings-in-hot-paths-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/avoid-listings-in-hot-paths-overview.md"
+        }
+      },
+      "etag": "s256:i7vtlH0Oe8RCZ7V_tsWUrq",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/avoid-listings-in-hot-paths-overview/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/avoid-listings-in-hot-paths-cli",
+      "type": "recipe",
+      "title": "Avoid listings in hot paths cli (Performance)",
+      "summary": "Avoid listings in hot paths cli — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 49
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/avoid-listings-in-hot-paths-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/avoid-listings-in-hot-paths-cli.md"
+        }
+      },
+      "etag": "s256:DeORmS8WgFk-x6hTSW9GkN",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/avoid-listings-in-hot-paths-cli/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/avoid-listings-in-hot-paths-sdk-node",
+      "type": "recipe",
+      "title": "Avoid listings in hot paths sdk node (Performance)",
+      "summary": "Avoid listings in hot paths sdk node — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 11,
+        "body": 50
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/avoid-listings-in-hot-paths-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/avoid-listings-in-hot-paths-sdk-node.md"
+        }
+      },
+      "etag": "s256:N09FYP2mvl0rKoIa1BF3Sz",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/avoid-listings-in-hot-paths-sdk-node/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/avoid-listings-in-hot-paths-sdk-python",
+      "type": "recipe",
+      "title": "Avoid listings in hot paths sdk python (Performance)",
+      "summary": "Avoid listings in hot paths sdk python — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 11,
+        "body": 50
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/avoid-listings-in-hot-paths-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/avoid-listings-in-hot-paths-sdk-python.md"
+        }
+      },
+      "etag": "s256:RjBD70Fgvn3mf5GKkRsNNN",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/avoid-listings-in-hot-paths-sdk-python/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/edge-cache-invalidation-overview",
+      "type": "recipe",
+      "title": "Edge cache invalidation overview (Performance)",
+      "summary": "Edge cache invalidation overview — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/edge-cache-invalidation-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/edge-cache-invalidation-overview.md"
+        }
+      },
+      "etag": "s256:DnM8Md8ZYUQW7YE7H178RV",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/edge-cache-invalidation-overview/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/edge-cache-invalidation-cli",
+      "type": "recipe",
+      "title": "Edge cache invalidation cli (Performance)",
+      "summary": "Edge cache invalidation cli — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/edge-cache-invalidation-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/edge-cache-invalidation-cli.md"
+        }
+      },
+      "etag": "s256:S0CHDBJyEY6xJhW3eh4wYs",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/edge-cache-invalidation-cli/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/edge-cache-invalidation-sdk-node",
+      "type": "recipe",
+      "title": "Edge cache invalidation sdk node (Performance)",
+      "summary": "Edge cache invalidation sdk node — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/edge-cache-invalidation-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/edge-cache-invalidation-sdk-node.md"
+        }
+      },
+      "etag": "s256:TNWYAMZ1a8MtV8p5E3Iq9u",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/edge-cache-invalidation-sdk-node/"
+      },
+      "parent": "performance"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/performance/edge-cache-invalidation-sdk-python",
+      "type": "recipe",
+      "title": "Edge cache invalidation sdk python (Performance)",
+      "summary": "Edge cache invalidation sdk python — performance workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/performance/edge-cache-invalidation-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/performance/edge-cache-invalidation-sdk-python.md"
+        }
+      },
+      "etag": "s256:NSPWgP6J8HMpDn3xcw4gvW",
+      "source": {
+        "human_url": "https://example.com/recipes/performance/edge-cache-invalidation-sdk-python/"
+      },
+      "parent": "performance"
+    }
+  ],
+  "etag": "s256:zcVEq7b2rthFRRD7kWEEn8"
+}

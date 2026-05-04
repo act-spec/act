@@ -1,0 +1,1081 @@
+{
+  "act_version": "0.1",
+  "root": "security",
+  "depth": 3,
+  "truncated": false,
+  "tokens": {
+    "body": 1908,
+    "summary": 340
+  },
+  "nodes": [
+    {
+      "act_version": "0.1",
+      "id": "security",
+      "type": "section",
+      "title": "Security",
+      "summary": "Security — section.",
+      "summary_source": "extracted",
+      "etag": "s256:FF-5JIBtlXAvEOT3bxu12i",
+      "content": [
+        {
+          "type": "markdown",
+          "content": "# Security\n\nThis section groups related security documents.\n"
+        }
+      ],
+      "tokens": {
+        "summary": 8,
+        "body": 16
+      },
+      "children": [
+        "recipes/security/rotate-tokens-overview",
+        "recipes/security/rotate-tokens-cli",
+        "recipes/security/rotate-tokens-sdk-node",
+        "recipes/security/rotate-tokens-sdk-python",
+        "recipes/security/scope-tokens-per-project-overview",
+        "recipes/security/scope-tokens-per-project-cli",
+        "recipes/security/scope-tokens-per-project-sdk-node",
+        "recipes/security/scope-tokens-per-project-sdk-python",
+        "recipes/security/audit-access-logs-overview",
+        "recipes/security/audit-access-logs-cli",
+        "recipes/security/audit-access-logs-sdk-node",
+        "recipes/security/audit-access-logs-sdk-python",
+        "recipes/security/encrypt-at-rest-overview",
+        "recipes/security/encrypt-at-rest-cli",
+        "recipes/security/encrypt-at-rest-sdk-node",
+        "recipes/security/encrypt-at-rest-sdk-python",
+        "recipes/security/customer-managed-keys-overview",
+        "recipes/security/customer-managed-keys-cli",
+        "recipes/security/customer-managed-keys-sdk-node",
+        "recipes/security/customer-managed-keys-sdk-python",
+        "recipes/security/block-public-access-overview",
+        "recipes/security/block-public-access-cli",
+        "recipes/security/block-public-access-sdk-node",
+        "recipes/security/block-public-access-sdk-python",
+        "recipes/security/signed-download-urls-overview",
+        "recipes/security/signed-download-urls-cli",
+        "recipes/security/signed-download-urls-sdk-node",
+        "recipes/security/signed-download-urls-sdk-python",
+        "recipes/security/ip-allowlists-overview",
+        "recipes/security/ip-allowlists-cli",
+        "recipes/security/ip-allowlists-sdk-node",
+        "recipes/security/ip-allowlists-sdk-python",
+        "recipes/security/vpc-peering-overview",
+        "recipes/security/vpc-peering-cli",
+        "recipes/security/vpc-peering-sdk-node",
+        "recipes/security/vpc-peering-sdk-python",
+        "recipes/security/mfa-protected-deletes-overview",
+        "recipes/security/mfa-protected-deletes-cli",
+        "recipes/security/mfa-protected-deletes-sdk-node",
+        "recipes/security/mfa-protected-deletes-sdk-python"
+      ],
+      "parent": "recipes",
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "sidebar-category:security"
+        }
+      }
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/rotate-tokens-overview",
+      "type": "recipe",
+      "title": "Rotate tokens overview (Security)",
+      "summary": "Rotate tokens overview — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/rotate-tokens-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/rotate-tokens-overview.md"
+        }
+      },
+      "etag": "s256:q_bfX7prchcYQSpVhj8BwV",
+      "source": {
+        "human_url": "https://example.com/recipes/security/rotate-tokens-overview/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/rotate-tokens-cli",
+      "type": "recipe",
+      "title": "Rotate tokens cli (Security)",
+      "summary": "Rotate tokens cli — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/rotate-tokens-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/rotate-tokens-cli.md"
+        }
+      },
+      "etag": "s256:mZ7Mx84GcMx7leCXlGnwE8",
+      "source": {
+        "human_url": "https://example.com/recipes/security/rotate-tokens-cli/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/rotate-tokens-sdk-node",
+      "type": "recipe",
+      "title": "Rotate tokens sdk node (Security)",
+      "summary": "Rotate tokens sdk node — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/rotate-tokens-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/rotate-tokens-sdk-node.md"
+        }
+      },
+      "etag": "s256:KwjxRnNmEbKORbwLVoYHCZ",
+      "source": {
+        "human_url": "https://example.com/recipes/security/rotate-tokens-sdk-node/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/rotate-tokens-sdk-python",
+      "type": "recipe",
+      "title": "Rotate tokens sdk python (Security)",
+      "summary": "Rotate tokens sdk python — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/rotate-tokens-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/rotate-tokens-sdk-python.md"
+        }
+      },
+      "etag": "s256:bKN5TcZbEOHeOGReXtowsb",
+      "source": {
+        "human_url": "https://example.com/recipes/security/rotate-tokens-sdk-python/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/scope-tokens-per-project-overview",
+      "type": "recipe",
+      "title": "Scope tokens per project overview (Security)",
+      "summary": "Scope tokens per project overview — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/scope-tokens-per-project-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/scope-tokens-per-project-overview.md"
+        }
+      },
+      "etag": "s256:gbGWxHaNBqNOnAQDTajWc1",
+      "source": {
+        "human_url": "https://example.com/recipes/security/scope-tokens-per-project-overview/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/scope-tokens-per-project-cli",
+      "type": "recipe",
+      "title": "Scope tokens per project cli (Security)",
+      "summary": "Scope tokens per project cli — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/scope-tokens-per-project-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/scope-tokens-per-project-cli.md"
+        }
+      },
+      "etag": "s256:vVyBEkeDOV24ewWeCwX4jl",
+      "source": {
+        "human_url": "https://example.com/recipes/security/scope-tokens-per-project-cli/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/scope-tokens-per-project-sdk-node",
+      "type": "recipe",
+      "title": "Scope tokens per project sdk node (Security)",
+      "summary": "Scope tokens per project sdk node — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 49
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/scope-tokens-per-project-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/scope-tokens-per-project-sdk-node.md"
+        }
+      },
+      "etag": "s256:49N87GRqNmWQxTjyhk_8yh",
+      "source": {
+        "human_url": "https://example.com/recipes/security/scope-tokens-per-project-sdk-node/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/scope-tokens-per-project-sdk-python",
+      "type": "recipe",
+      "title": "Scope tokens per project sdk python (Security)",
+      "summary": "Scope tokens per project sdk python — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 49
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/scope-tokens-per-project-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/scope-tokens-per-project-sdk-python.md"
+        }
+      },
+      "etag": "s256:b0krte75e3MKlV6EoNYmH5",
+      "source": {
+        "human_url": "https://example.com/recipes/security/scope-tokens-per-project-sdk-python/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/audit-access-logs-overview",
+      "type": "recipe",
+      "title": "Audit access logs overview (Security)",
+      "summary": "Audit access logs overview — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/audit-access-logs-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/audit-access-logs-overview.md"
+        }
+      },
+      "etag": "s256:aTCmU-9xVSN8QGrS3MphYm",
+      "source": {
+        "human_url": "https://example.com/recipes/security/audit-access-logs-overview/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/audit-access-logs-cli",
+      "type": "recipe",
+      "title": "Audit access logs cli (Security)",
+      "summary": "Audit access logs cli — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/audit-access-logs-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/audit-access-logs-cli.md"
+        }
+      },
+      "etag": "s256:8EHF-XP3L-sDJBInY3KE6o",
+      "source": {
+        "human_url": "https://example.com/recipes/security/audit-access-logs-cli/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/audit-access-logs-sdk-node",
+      "type": "recipe",
+      "title": "Audit access logs sdk node (Security)",
+      "summary": "Audit access logs sdk node — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/audit-access-logs-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/audit-access-logs-sdk-node.md"
+        }
+      },
+      "etag": "s256:mgkirNmLOqGgoyY_5yioLR",
+      "source": {
+        "human_url": "https://example.com/recipes/security/audit-access-logs-sdk-node/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/audit-access-logs-sdk-python",
+      "type": "recipe",
+      "title": "Audit access logs sdk python (Security)",
+      "summary": "Audit access logs sdk python — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/audit-access-logs-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/audit-access-logs-sdk-python.md"
+        }
+      },
+      "etag": "s256:yqkQGcE_gWTyrrkYgft61V",
+      "source": {
+        "human_url": "https://example.com/recipes/security/audit-access-logs-sdk-python/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/encrypt-at-rest-overview",
+      "type": "recipe",
+      "title": "Encrypt at rest overview (Security)",
+      "summary": "Encrypt at rest overview — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/encrypt-at-rest-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/encrypt-at-rest-overview.md"
+        }
+      },
+      "etag": "s256:JrmTWLias7Ih5u70Ikjiwt",
+      "source": {
+        "human_url": "https://example.com/recipes/security/encrypt-at-rest-overview/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/encrypt-at-rest-cli",
+      "type": "recipe",
+      "title": "Encrypt at rest cli (Security)",
+      "summary": "Encrypt at rest cli — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/encrypt-at-rest-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/encrypt-at-rest-cli.md"
+        }
+      },
+      "etag": "s256:r0mZcJQumGwxjBLorVFF7d",
+      "source": {
+        "human_url": "https://example.com/recipes/security/encrypt-at-rest-cli/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/encrypt-at-rest-sdk-node",
+      "type": "recipe",
+      "title": "Encrypt at rest sdk node (Security)",
+      "summary": "Encrypt at rest sdk node — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/encrypt-at-rest-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/encrypt-at-rest-sdk-node.md"
+        }
+      },
+      "etag": "s256:cabKjUBaDE_FD2jvxAT3WA",
+      "source": {
+        "human_url": "https://example.com/recipes/security/encrypt-at-rest-sdk-node/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/encrypt-at-rest-sdk-python",
+      "type": "recipe",
+      "title": "Encrypt at rest sdk python (Security)",
+      "summary": "Encrypt at rest sdk python — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/encrypt-at-rest-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/encrypt-at-rest-sdk-python.md"
+        }
+      },
+      "etag": "s256:owiNWssUxI_v_DeonwT_Uw",
+      "source": {
+        "human_url": "https://example.com/recipes/security/encrypt-at-rest-sdk-python/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/customer-managed-keys-overview",
+      "type": "recipe",
+      "title": "Customer managed keys overview (Security)",
+      "summary": "Customer managed keys overview — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/customer-managed-keys-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/customer-managed-keys-overview.md"
+        }
+      },
+      "etag": "s256:bWhnbcK29IuXt26b3FPNCv",
+      "source": {
+        "human_url": "https://example.com/recipes/security/customer-managed-keys-overview/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/customer-managed-keys-cli",
+      "type": "recipe",
+      "title": "Customer managed keys cli (Security)",
+      "summary": "Customer managed keys cli — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/customer-managed-keys-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/customer-managed-keys-cli.md"
+        }
+      },
+      "etag": "s256:_twJnvzpww7fv66RAiofI1",
+      "source": {
+        "human_url": "https://example.com/recipes/security/customer-managed-keys-cli/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/customer-managed-keys-sdk-node",
+      "type": "recipe",
+      "title": "Customer managed keys sdk node (Security)",
+      "summary": "Customer managed keys sdk node — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/customer-managed-keys-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/customer-managed-keys-sdk-node.md"
+        }
+      },
+      "etag": "s256:BuaAMrB-cYjatX1tduTzGL",
+      "source": {
+        "human_url": "https://example.com/recipes/security/customer-managed-keys-sdk-node/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/customer-managed-keys-sdk-python",
+      "type": "recipe",
+      "title": "Customer managed keys sdk python (Security)",
+      "summary": "Customer managed keys sdk python — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/customer-managed-keys-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/customer-managed-keys-sdk-python.md"
+        }
+      },
+      "etag": "s256:pc3CySrJSO92PvdOtPMNg5",
+      "source": {
+        "human_url": "https://example.com/recipes/security/customer-managed-keys-sdk-python/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/block-public-access-overview",
+      "type": "recipe",
+      "title": "Block public access overview (Security)",
+      "summary": "Block public access overview — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/block-public-access-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/block-public-access-overview.md"
+        }
+      },
+      "etag": "s256:ogecLLFQ-zpV-NPsc6hKtO",
+      "source": {
+        "human_url": "https://example.com/recipes/security/block-public-access-overview/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/block-public-access-cli",
+      "type": "recipe",
+      "title": "Block public access cli (Security)",
+      "summary": "Block public access cli — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/block-public-access-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/block-public-access-cli.md"
+        }
+      },
+      "etag": "s256:HlwOVHgJwvzAfuqEs-GSti",
+      "source": {
+        "human_url": "https://example.com/recipes/security/block-public-access-cli/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/block-public-access-sdk-node",
+      "type": "recipe",
+      "title": "Block public access sdk node (Security)",
+      "summary": "Block public access sdk node — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/block-public-access-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/block-public-access-sdk-node.md"
+        }
+      },
+      "etag": "s256:eIcrOZrixYHDZDvstEyMDx",
+      "source": {
+        "human_url": "https://example.com/recipes/security/block-public-access-sdk-node/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/block-public-access-sdk-python",
+      "type": "recipe",
+      "title": "Block public access sdk python (Security)",
+      "summary": "Block public access sdk python — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/block-public-access-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/block-public-access-sdk-python.md"
+        }
+      },
+      "etag": "s256:oBiJt0EkflZP_cIQ71vEOk",
+      "source": {
+        "human_url": "https://example.com/recipes/security/block-public-access-sdk-python/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/signed-download-urls-overview",
+      "type": "recipe",
+      "title": "Signed download urls overview (Security)",
+      "summary": "Signed download urls overview — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/signed-download-urls-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/signed-download-urls-overview.md"
+        }
+      },
+      "etag": "s256:zfpuDeCGjxbBNd9ZR5Rr6n",
+      "source": {
+        "human_url": "https://example.com/recipes/security/signed-download-urls-overview/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/signed-download-urls-cli",
+      "type": "recipe",
+      "title": "Signed download urls cli (Security)",
+      "summary": "Signed download urls cli — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/signed-download-urls-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/signed-download-urls-cli.md"
+        }
+      },
+      "etag": "s256:N2UL-Hk2cw54SSIxTta6d4",
+      "source": {
+        "human_url": "https://example.com/recipes/security/signed-download-urls-cli/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/signed-download-urls-sdk-node",
+      "type": "recipe",
+      "title": "Signed download urls sdk node (Security)",
+      "summary": "Signed download urls sdk node — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/signed-download-urls-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/signed-download-urls-sdk-node.md"
+        }
+      },
+      "etag": "s256:HYcsRwCRodsG_pZHCVaLCx",
+      "source": {
+        "human_url": "https://example.com/recipes/security/signed-download-urls-sdk-node/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/signed-download-urls-sdk-python",
+      "type": "recipe",
+      "title": "Signed download urls sdk python (Security)",
+      "summary": "Signed download urls sdk python — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/signed-download-urls-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/signed-download-urls-sdk-python.md"
+        }
+      },
+      "etag": "s256:66TrFh6nC7C0zrqsbGUfmj",
+      "source": {
+        "human_url": "https://example.com/recipes/security/signed-download-urls-sdk-python/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/ip-allowlists-overview",
+      "type": "recipe",
+      "title": "Ip allowlists overview (Security)",
+      "summary": "Ip allowlists overview — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/ip-allowlists-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/ip-allowlists-overview.md"
+        }
+      },
+      "etag": "s256:7Sr3ZHomfelL1rv8xHw3hq",
+      "source": {
+        "human_url": "https://example.com/recipes/security/ip-allowlists-overview/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/ip-allowlists-cli",
+      "type": "recipe",
+      "title": "Ip allowlists cli (Security)",
+      "summary": "Ip allowlists cli — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/ip-allowlists-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/ip-allowlists-cli.md"
+        }
+      },
+      "etag": "s256:dF62nSuk_BPMShg2_U3bLR",
+      "source": {
+        "human_url": "https://example.com/recipes/security/ip-allowlists-cli/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/ip-allowlists-sdk-node",
+      "type": "recipe",
+      "title": "Ip allowlists sdk node (Security)",
+      "summary": "Ip allowlists sdk node — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/ip-allowlists-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/ip-allowlists-sdk-node.md"
+        }
+      },
+      "etag": "s256:VmVCEOpayZ43MyZtVp9q6o",
+      "source": {
+        "human_url": "https://example.com/recipes/security/ip-allowlists-sdk-node/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/ip-allowlists-sdk-python",
+      "type": "recipe",
+      "title": "Ip allowlists sdk python (Security)",
+      "summary": "Ip allowlists sdk python — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/ip-allowlists-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/ip-allowlists-sdk-python.md"
+        }
+      },
+      "etag": "s256:O7OMG_CKxLHTDdccKdlE7X",
+      "source": {
+        "human_url": "https://example.com/recipes/security/ip-allowlists-sdk-python/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/vpc-peering-overview",
+      "type": "recipe",
+      "title": "Vpc peering overview (Security)",
+      "summary": "Vpc peering overview — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/vpc-peering-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/vpc-peering-overview.md"
+        }
+      },
+      "etag": "s256:hX584FoYXfokcNzvou7Qxu",
+      "source": {
+        "human_url": "https://example.com/recipes/security/vpc-peering-overview/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/vpc-peering-cli",
+      "type": "recipe",
+      "title": "Vpc peering cli (Security)",
+      "summary": "Vpc peering cli — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 7,
+        "body": 46
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/vpc-peering-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/vpc-peering-cli.md"
+        }
+      },
+      "etag": "s256:THXhBTJOQCVgrvKoIyh3oS",
+      "source": {
+        "human_url": "https://example.com/recipes/security/vpc-peering-cli/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/vpc-peering-sdk-node",
+      "type": "recipe",
+      "title": "Vpc peering sdk node (Security)",
+      "summary": "Vpc peering sdk node — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/vpc-peering-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/vpc-peering-sdk-node.md"
+        }
+      },
+      "etag": "s256:hpEvwiMTcWSeO67MjUHxC7",
+      "source": {
+        "human_url": "https://example.com/recipes/security/vpc-peering-sdk-node/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/vpc-peering-sdk-python",
+      "type": "recipe",
+      "title": "Vpc peering sdk python (Security)",
+      "summary": "Vpc peering sdk python — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/vpc-peering-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/vpc-peering-sdk-python.md"
+        }
+      },
+      "etag": "s256:7QqdH2lWi93SCVKT5Ip3yI",
+      "source": {
+        "human_url": "https://example.com/recipes/security/vpc-peering-sdk-python/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/mfa-protected-deletes-overview",
+      "type": "recipe",
+      "title": "Mfa protected deletes overview (Security)",
+      "summary": "Mfa protected deletes overview — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/mfa-protected-deletes-overview.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/mfa-protected-deletes-overview.md"
+        }
+      },
+      "etag": "s256:nO1RT8WQQ-ER_yeoVNEz-p",
+      "source": {
+        "human_url": "https://example.com/recipes/security/mfa-protected-deletes-overview/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/mfa-protected-deletes-cli",
+      "type": "recipe",
+      "title": "Mfa protected deletes cli (Security)",
+      "summary": "Mfa protected deletes cli — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 8,
+        "body": 47
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/mfa-protected-deletes-cli.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/mfa-protected-deletes-cli.md"
+        }
+      },
+      "etag": "s256:5pvZA9kJanzbzfd1YZl0yk",
+      "source": {
+        "human_url": "https://example.com/recipes/security/mfa-protected-deletes-cli/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/mfa-protected-deletes-sdk-node",
+      "type": "recipe",
+      "title": "Mfa protected deletes sdk node (Security)",
+      "summary": "Mfa protected deletes sdk node — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/mfa-protected-deletes-sdk-node.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/mfa-protected-deletes-sdk-node.md"
+        }
+      },
+      "etag": "s256:MJeeKK5j_tkDuqnFiS4Sze",
+      "source": {
+        "human_url": "https://example.com/recipes/security/mfa-protected-deletes-sdk-node/"
+      },
+      "parent": "security"
+    },
+    {
+      "act_version": "0.1",
+      "id": "recipes/security/mfa-protected-deletes-sdk-python",
+      "type": "recipe",
+      "title": "Mfa protected deletes sdk python (Security)",
+      "summary": "Mfa protected deletes sdk python — security workflow walkthrough.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 48
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "recipes/security/mfa-protected-deletes-sdk-python.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/security/mfa-protected-deletes-sdk-python.md"
+        }
+      },
+      "etag": "s256:Ewf4jwIyHzt5AhNq6TC4C4",
+      "source": {
+        "human_url": "https://example.com/recipes/security/mfa-protected-deletes-sdk-python/"
+      },
+      "parent": "security"
+    }
+  ],
+  "etag": "s256:htTQ05EvnhJcaQOq144TmR"
+}

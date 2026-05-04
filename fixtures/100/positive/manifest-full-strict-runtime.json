@@ -1,0 +1,36 @@
+{
+  "act_version": "0.1",
+  "site": {
+    "name": "Acme Workspace",
+    "description": "Authenticated workspace content for Acme",
+    "canonical_url": "https://app.acme.com",
+    "locale": "en-US",
+    "license": "CC-BY-4.0"
+  },
+  "generated_at": "2026-05-01T12:00:00Z",
+  "generator": "act-runtime/0.1.0",
+  "index_url": "/act/index.json",
+  "index_ndjson_url": "/act/index.ndjson",
+  "node_url_template": "/act/n/{id}.json",
+  "subtree_url_template": "/act/sub/{id}.json",
+  "search_url_template": "/act/search?q={query}",
+  "root_id": "root",
+  "stats": {
+    "node_count": 247,
+    "total_tokens_full": 184320,
+    "total_tokens_summary": 5420
+  },
+  "capabilities": {
+    "etag": true,
+    "subtree": true,
+    "ndjson_index": true,
+    "search": { "template_advertised": true }
+  },
+  "conformance": { "level": "strict" },
+  "delivery": "runtime",
+  "policy": {
+    "robots_respected": true,
+    "rate_limit_per_minute": 600,
+    "contact": "agents@acme.com"
+  }
+}

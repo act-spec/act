@@ -1,0 +1,51 @@
+{
+  "$comment": "Positive fixture for PRD-101. A hybrid deployment: parent manifest at the apex origin declares two mounts. A consumer asking for the resource at /app/workspaces/42 walks the mounts array, picks the longest-prefix match (/app), follows manifest_url to the runtime mount manifest, and confirms its delivery declaration matches the discovery path used. Validates PRD-101-R10 (mount resolution algorithm), PRD-101-R11 (longest-prefix match), and PRD-101-R12 (delivery declaration consistency).",
+  "discovery_context": {
+    "request": {
+      "method": "GET",
+      "url": "https://acme.example/.well-known/act.json"
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "content-type": "application/act-manifest+json; profile=\"static\""
+      }
+    },
+    "target_resource_url": "https://acme.example/app/workspaces/42"
+  },
+  "parent_manifest": {
+    "act_version": "0.1",
+    "site": { "name": "Acme" },
+    "conformance": { "level": "standard" },
+    "delivery": "static",
+    "mounts": [
+      {
+        "prefix": "/marketing",
+        "delivery": "static",
+        "manifest_url": "/marketing/.well-known/act.json",
+        "conformance": { "level": "strict" }
+      },
+      {
+        "prefix": "/app",
+        "delivery": "runtime",
+        "manifest_url": "https://app.acme.example/.well-known/act.json",
+        "conformance": { "level": "standard" }
+      }
+    ]
+  },
+  "resolution_trace": [
+    { "step": 1, "action": "fetch parent manifest at /.well-known/act.json", "result": "200, delivery=static" },
+    { "step": 2, "action": "evaluate mounts against target /app/workspaces/42", "result": "longest-prefix match: '/app'" },
+    { "step": 3, "action": "follow mount manifest_url", "result": "https://app.acme.example/.well-known/act.json (cross-origin)" },
+    { "step": 4, "action": "evaluate origin trust per PRD-109", "result": "consumer accepts cross-origin per local policy" },
+    { "step": 5, "action": "fetch mount manifest", "result": "200, delivery=runtime, profile=runtime" },
+    { "step": 6, "action": "validate delivery consistency", "result": "OK — mount declares delivery=runtime; consumer reached it via parent's mounts array; PRD-101-R12 satisfied for the mount" }
+  ],
+  "expected": {
+    "discovered": true,
+    "selected_mount": "/app",
+    "selected_delivery": "runtime",
+    "selected_level": "standard",
+    "delivery_match": true
+  }
+}

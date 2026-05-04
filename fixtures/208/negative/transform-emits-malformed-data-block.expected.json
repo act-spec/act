@@ -1,0 +1,38 @@
+{
+  "_fixture": "PRD-208 negative — programmatic factory rejects pre-emit when transform returns a node whose `data` block is missing the required `text` field. Validates that PRD-208-R3's block-level validation (per amendment A3) catches malformed PRD-102-R4 blocks before they reach the framework.",
+  "_satisfies": ["PRD-208-R3", "PRD-208-R12", "PRD-102-R4"],
+  "_cites_amendment": "A3 (closed 2026-05-02)",
+  "_negative_reason": "violates PRD-102-R4 (data block missing required `text`); PRD-208-R3 (per amendment A3) requires the factory to validate every content block against its applicable PRD-102 block schema before passing the node to the framework; expected unrecoverable error per PRD-208-R12 with non-zero build exit.",
+  "_scenario": {
+    "user_supplied_transform_returns": {
+      "act_version": "0.1",
+      "id": "catalog/widget-foo",
+      "type": "product",
+      "title": "Widget Foo",
+      "etag": "s256:CtlgWdgFoMlfrm-A3xy0123",
+      "summary": "Catalog entry for the Widget Foo product line.",
+      "summary_source": "extracted",
+      "content": [
+        {
+          "type": "data",
+          "format": "json",
+          "value": { "sku": "WF-001", "price_cents": 1999 }
+        }
+      ],
+      "tokens": { "summary": 8, "body": 32 }
+    },
+    "factory_behavior": "transform-wrapper validates content[0] against schemas/102/block-data.schema.json; required field `text` is missing; factory throws per PRD-208-R12 citing node `id`, content-array index 0, and the JSON-Schema violation 'must have required property text'."
+  },
+  "expected_build_outcome": {
+    "exit_code": "non-zero",
+    "error": {
+      "code": "act.validate.block-shape",
+      "requirement": "PRD-208-R3",
+      "node_id": "catalog/widget-foo",
+      "block_index": 0,
+      "block_type": "data",
+      "violation": "must have required property 'text'",
+      "block_schema": "https://act-spec.org/schemas/0.1/block-data.schema.json"
+    }
+  }
+}

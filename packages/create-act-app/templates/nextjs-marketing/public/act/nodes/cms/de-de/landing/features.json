@@ -1,0 +1,98 @@
+{
+  "act_version": "0.1",
+  "id": "cms/de-de/landing/features",
+  "type": "landing",
+  "title": "Funktionen",
+  "etag": "s256:5X13ISonJXDVc2OnNCc8kD",
+  "summary": "Alles, was Sie für ACT brauchen.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "plain",
+      "text": "From source adapters to runtime SDKs, ACT covers the full producer surface."
+    },
+    {
+      "type": "marketing:hero",
+      "headline": "Everything you need",
+      "subhead": "A spec, adapters, generators, and runtime SDKs.",
+      "metadata": {
+        "extracted_via": "component-contract",
+        "extraction_method": "ssr-walk"
+      }
+    },
+    {
+      "type": "marketing:feature-grid",
+      "features": [
+        {
+          "title": "Source adapters",
+          "description": "Markdown, Contentful, Sanity, i18n…"
+        },
+        {
+          "title": "Generators",
+          "description": "Astro, Next.js, Eleventy, Docusaurus…"
+        },
+        {
+          "title": "Runtime SDKs",
+          "description": "Express, Fastify, Next.js (runtime)…"
+        },
+        {
+          "title": "Validator",
+          "description": "Conformance reporter with gap detection."
+        }
+      ],
+      "metadata": {
+        "extracted_via": "component-contract",
+        "extraction_method": "ssr-walk"
+      }
+    },
+    {
+      "type": "marketing:cta",
+      "headline": "Browse all packages",
+      "actions": [
+        {
+          "text": "View on npm",
+          "to": "https://npmjs.com"
+        }
+      ],
+      "metadata": {
+        "extracted_via": "component-contract",
+        "extraction_method": "ssr-walk"
+      }
+    }
+  ],
+  "tokens": {
+    "summary": 6,
+    "body": 12
+  },
+  "metadata": {
+    "locale": "de-DE",
+    "translations": [
+      {
+        "locale": "en-US",
+        "id": "cms/en-us/landing/features"
+      },
+      {
+        "locale": "es-ES",
+        "id": "cms/es-es/landing/features"
+      },
+      {
+        "locale": "ja-JP",
+        "id": "cms/ja-jp/landing/features"
+      }
+    ],
+    "source": {
+      "adapter": "act-contentful",
+      "source_id": "de-DE:landing/features",
+      "contributors": [
+        "act-contentful",
+        "act-react-extract",
+        "act-i18n"
+      ]
+    },
+    "translation_status": "complete"
+  },
+  "source": {
+    "human_url": "https://acme.example.com/de-DE/landing/features"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "act_version": "0.1",
+  "id": "api/buckets/list",
+  "type": "reference",
+  "title": "List buckets",
+  "summary": "List all buckets visible to the calling principal.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "GET /v1/buckets — paginates via ?cursor= query parameter; default page size 100."
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 12
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "api/buckets/list.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/api/buckets/list.md"
+    }
+  },
+  "etag": "s256:XXLMiIt26FKWChkQ97yncL",
+  "related": [
+    {
+      "id": "api/buckets/get",
+      "relation": "see-also"
+    }
+  ],
+  "source": {
+    "human_url": "https://example.com/api/buckets/list/"
+  },
+  "parent": "buckets"
+}

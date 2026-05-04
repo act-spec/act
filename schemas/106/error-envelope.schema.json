@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/106/error-envelope.schema.json",
+  "title": "ACT Runtime — error envelope (4xx/5xx body)",
+  "description": "Re-emitted from PRD-100 for self-containment. PRD-100 owns the canonical definition; PRD-106 cites this shape verbatim. The `code` enum is closed; adding a value is a MAJOR change per PRD-108.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["act_version", "error"],
+  "properties": {
+    "act_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$",
+      "description": "Per PRD-108-R1, present on every envelope including error envelopes."
+    },
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "message"],
+      "properties": {
+        "code": {
+          "type": "string",
+          "enum": ["auth_required", "not_found", "rate_limited", "internal", "validation"],
+          "description": "Closed enum per gap A4 / PRD-100. Adding a value is a MAJOR change per PRD-108-R5(4)."
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable. MUST NOT carry PII or auth-scoped identifiers (PRD-109)."
+        },
+        "details": {
+          "type": "object",
+          "description": "Optional, code-specific, stable shape per code. Producers MUST NOT embed request bodies, identity material, or other auth-scoped information."
+        }
+      }
+    }
+  }
+}

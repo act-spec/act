@@ -1,0 +1,3 @@
+# Eleventy ignore patterns honored by PRD-408-R3.
+# Lines starting with # are comments; blank lines are skipped.
+ignored/

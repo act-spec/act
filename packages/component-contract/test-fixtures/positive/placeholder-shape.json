@@ -1,0 +1,17 @@
+{
+  "id": "placeholder-shape",
+  "requirements": ["PRD-300-R22", "PRD-102-R22"],
+  "input": {
+    "error": "Cannot read properties of undefined (reading 'title')",
+    "component": "Hero"
+  },
+  "expected": {
+    "type": "marketing:placeholder",
+    "metadata": {
+      "extracted_via": "component-contract",
+      "extraction_status": "failed",
+      "error": "Cannot read properties of undefined (reading 'title')",
+      "component": "Hero"
+    }
+  }
+}

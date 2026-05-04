@@ -1,0 +1,19 @@
+{
+  "_comment": "Positive fixture for PRD-105-R1, R2, R6. Enumerates the minimum file set a Core static producer with three nodes MUST emit. Validator (PRD-600) checks that every listed path responds 200 with the expected MIME type and that no other ACT-shaped path is reachable.",
+  "manifest_path": "/.well-known/act.json",
+  "well_known_path": "/.well-known/act.json",
+  "index_path": "/act/index.json",
+  "index_ndjson_path": null,
+  "node_paths": [
+    "/act/n/intro.json",
+    "/act/n/install.json",
+    "/act/n/configuration.json"
+  ],
+  "search_path": null,
+  "conformance_level": "core",
+  "_index_entries": [
+    { "id": "intro", "etag": "s256:8Z0luYEDvPcDQKLimP55qC" },
+    { "id": "install", "etag": "s256:iH6ta82PUg0zi0lr_jpCLL" },
+    { "id": "configuration", "etag": "s256:KQp3RlbVm2nVsPmHfYxL9Q" }
+  ]
+}

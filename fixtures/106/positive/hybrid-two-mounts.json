@@ -1,0 +1,29 @@
+{
+  "scenario": "Parent manifest declaring two mounts: a static marketing tree and a runtime app tree",
+  "satisfies": ["PRD-106-R17", "PRD-106-R18", "PRD-106-R19", "PRD-106-R20", "PRD-106-R22"],
+  "manifest": {
+    "act_version": "0.1",
+    "site": { "name": "Acme" },
+    "conformance": { "level": "standard" },
+    "delivery": "static",
+    "mounts": [
+      {
+        "prefix": "/marketing",
+        "delivery": "static",
+        "manifest_url": "/marketing/.well-known/act.json",
+        "conformance": { "level": "strict" }
+      },
+      {
+        "prefix": "/app",
+        "delivery": "runtime",
+        "manifest_url": "https://app.acme.com/.well-known/act.json",
+        "conformance": { "level": "standard" }
+      }
+    ]
+  },
+  "longest_prefix_match_examples": [
+    { "request_path": "/marketing/pricing", "matched_mount": "/marketing" },
+    { "request_path": "/app/docs/123", "matched_mount": "/app" },
+    { "request_path": "/blog/post-1", "matched_mount": null, "note": "Falls through to parent manifest's index per PRD-106-R19." }
+  ]
+}

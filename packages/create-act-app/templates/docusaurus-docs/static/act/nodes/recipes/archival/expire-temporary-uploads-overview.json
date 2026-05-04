@@ -1,0 +1,51 @@
+{
+  "act_version": "0.1",
+  "id": "recipes/archival/expire-temporary-uploads-overview",
+  "type": "recipe",
+  "title": "Expire temporary uploads overview (Archival)",
+  "summary": "Expire temporary uploads overview — archival workflow walkthrough.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Goal"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Demonstrate \"expire temporary uploads (overview)\" against the Tinybox archival surface end to end."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Walkthrough"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "text": "# Step 1 — prepare a bucket for the archival workflow.\ntinybox buckets create my-bucket --region us-east-1"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Apply the recipe; verify with the API reference under API reference."
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 47
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "recipes/archival/expire-temporary-uploads-overview.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/archival/expire-temporary-uploads-overview.md"
+    }
+  },
+  "etag": "s256:2LCO2L-p2L-J0bOsjk5RlM",
+  "source": {
+    "human_url": "https://example.com/recipes/archival/expire-temporary-uploads-overview/"
+  },
+  "parent": "archival"
+}

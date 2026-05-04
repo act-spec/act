@@ -1,0 +1,14 @@
+{
+  "_comment": "Positive fixture for PRD-105-R3 — a manifest that declares delivery: \"static\" and contains no runtime-only fields (no `auth`, no `mounts` with delivery: runtime in isolation, no runtime-specific capability flags).",
+  "act_version": "0.1",
+  "site": { "name": "Acme Static Docs" },
+  "index_url": "/act/index.json",
+  "node_url_template": "/act/n/{id}.json",
+  "subtree_url_template": "/act/sub/{id}.json",
+  "conformance": { "level": "standard" },
+  "delivery": "static",
+  "capabilities": {
+    "etag": true,
+    "subtree": true
+  }
+}

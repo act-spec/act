@@ -1,0 +1,27 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-109",
+    "violates": ["PRD-109-R3", "PRD-109-R4"],
+    "describes": "A runtime 401 used to distinguish 'exists but auth needed' from 'does not exist'. The error.message confirms the resource exists; this is a verbatim existence-leak in the auth challenge. PRD-109-R3 forbids this — when an unauthenticated request is made for a resource the requester has no permission to know about, the server MUST return 404 (not 401).",
+    "rejection_reason": "401 reveals the resource exists. The correct response would be 404 with a generic body identical to the 'truly absent' case (see fixtures/109/positive/runtime-404-no-leak.json).",
+    "expected_error": {
+      "requirement": "PRD-109-R3",
+      "level": "core",
+      "missing": "401 used for an existence-confirmation case; expected 404 when the requester is unauthenticated and the scope is private."
+    }
+  },
+  "http_response": {
+    "status_code": 401,
+    "headers": {
+      "www_authenticate": "Bearer realm=\"acme\"",
+      "content_type": "application/act-error+json"
+    },
+    "body": {
+      "act_version": "0.1",
+      "error": {
+        "code": "auth_required",
+        "message": "Authentication required to access /act/n/secret-internal-roadmap.json (this resource exists but you are not signed in)."
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "@act-spec/example-nextjs-marketing",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Next.js + Contentful + next-intl + React marketing site demonstrating multi-source ACT generation with localized content and component-extracted blocks.",
+  "license": "Apache-2.0",
+  "author": "Jeremy Forsythe <jeremy@act-spec.org>",
+  "homepage": "https://act-spec.org",
+  "bugs": {
+    "url": "https://github.com/act-spec/act/issues"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-spec/act.git",
+    "directory": "examples/nextjs-marketing"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "tsx scripts/build.ts",
+    "build:site": "next build",
+    "start": "pnpm run build && node ../../scripts/serve-fixture.mjs public 3000",
+    "start:next": "next start",
+    "validate": "tsx scripts/validate.ts",
+    "conformance": "pnpm run build && pnpm run validate",
+    "test": "node -e \"console.log('@act-spec/example-nextjs-marketing: example exercises end-to-end via conformance')\"",
+    "lint": "node -e \"console.log('@act-spec/example-nextjs-marketing: lint covered by typecheck + conformance')\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@act-spec/adapter-framework": "workspace:*",
+    "@act-spec/component-react": "workspace:*",
+    "@act-spec/adapter-contentful": "workspace:*",
+    "@act-spec/generator-core": "workspace:*",
+    "@act-spec/adapter-i18n": "workspace:*",
+    "@act-spec/plugin-nextjs": "workspace:*",
+    "@act-spec/validator": "workspace:*",
+    "next": "14.2.18",
+    "next-intl": "^3.26.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

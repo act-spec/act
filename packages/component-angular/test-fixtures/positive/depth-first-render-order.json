@@ -1,0 +1,8 @@
+{
+  "id": "depth-first-render-order",
+  "requirements": ["PRD-303-R10"],
+  "description": "SSR walk aggregates descendant contracts in render order, top-to-bottom, depth-first per PRD-300-R9 / PRD-102-R24. The synthetic walker registers contracts in the order Angular's SSR pipeline would traverse the component tree (outer first, then siblings in source order).",
+  "expected": {
+    "blockTypes": ["outer", "inner:a", "inner:b", "inner:c"]
+  }
+}

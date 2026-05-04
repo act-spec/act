@@ -1,0 +1,30 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-100",
+    "violates": [
+      "PRD-100-R10"
+    ],
+    "expected_error": {
+      "level": "core",
+      "requirement": "PRD-100-R10",
+      "missing": "Node id contains uppercase characters; ID grammar admits lowercase ASCII alphanumeric only."
+    }
+  },
+  "_negative_reason": "Node `id` contains uppercase characters. Violates PRD-100 ID grammar (lowercase ASCII only, gap A3).",
+  "act_version": "0.1",
+  "id": "Intro/Getting-Started",
+  "type": "tutorial",
+  "title": "Getting started",
+  "etag": "s256:def4560000000000000000",
+  "summary": "Install the SDK and send your first request in 5 minutes.",
+  "content": [
+    {
+      "type": "markdown",
+      "text": "..."
+    }
+  ],
+  "tokens": {
+    "summary": 13,
+    "body": 920
+  }
+}

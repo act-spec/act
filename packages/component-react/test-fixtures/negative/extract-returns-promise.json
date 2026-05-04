@@ -1,0 +1,7 @@
+{
+  "id": "extract-returns-promise",
+  "requirements": ["PRD-301-R9", "PRD-300-R7"],
+  "description": "An extract function that returns a Promise produces a marketing:placeholder per PRD-300-R7 (synchronous extract only in v0.1).",
+  "expectedFirstBlockType": "marketing:placeholder",
+  "expectedErrorSubstring": "Promise"
+}

@@ -1,0 +1,52 @@
+{
+  "act_version": "0.1",
+  "id": "buckets-issues",
+  "type": "section",
+  "title": "Buckets issues",
+  "summary": "Buckets issues — section.",
+  "summary_source": "extracted",
+  "etag": "s256:cMJSbWq2gkMiFLkyg4uAuN",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# Buckets issues\n\nThis section groups related buckets issues documents.\n"
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 16
+  },
+  "children": [
+    "troubleshooting/buckets/bucket-name-conflict-symptom",
+    "troubleshooting/buckets/bucket-name-conflict-resolution",
+    "troubleshooting/buckets/bucket-name-conflict-reproduction",
+    "troubleshooting/buckets/bucket-not-empty-symptom",
+    "troubleshooting/buckets/bucket-not-empty-resolution",
+    "troubleshooting/buckets/bucket-not-empty-reproduction",
+    "troubleshooting/buckets/region-not-supported-symptom",
+    "troubleshooting/buckets/region-not-supported-resolution",
+    "troubleshooting/buckets/region-not-supported-reproduction",
+    "troubleshooting/buckets/create-rate-limited-symptom",
+    "troubleshooting/buckets/create-rate-limited-resolution",
+    "troubleshooting/buckets/create-rate-limited-reproduction",
+    "troubleshooting/buckets/replication-lag-symptom",
+    "troubleshooting/buckets/replication-lag-resolution",
+    "troubleshooting/buckets/replication-lag-reproduction",
+    "troubleshooting/buckets/lifecycle-not-applied-symptom",
+    "troubleshooting/buckets/lifecycle-not-applied-resolution",
+    "troubleshooting/buckets/lifecycle-not-applied-reproduction",
+    "troubleshooting/buckets/cross-account-access-denied-symptom",
+    "troubleshooting/buckets/cross-account-access-denied-resolution",
+    "troubleshooting/buckets/cross-account-access-denied-reproduction",
+    "troubleshooting/buckets/unexpected-versioning-state-symptom",
+    "troubleshooting/buckets/unexpected-versioning-state-resolution",
+    "troubleshooting/buckets/unexpected-versioning-state-reproduction"
+  ],
+  "parent": "troubleshooting",
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "sidebar-category:buckets-issues"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "act_version": "0.1",
+  "id": "concepts/widgets",
+  "type": "concept",
+  "title": "Widgets",
+  "etag": "sha256:abc123",
+  "summary": "Widgets are the unit of scheduled work in Acme.",
+  "summary_source": "author",
+  "abstract": "A widget is a versioned, retryable unit of scheduled work. Widgets carry a payload, a target queue, and an optional cron expression. The Acme runtime guarantees at-least-once delivery and exactly-once acknowledgement.",
+  "content": [
+    { "type": "markdown", "text": "## Overview\n\nWidgets are the unit of scheduled work in Acme..." }
+  ],
+  "tokens": { "summary": 11, "abstract": 52, "body": 220 }
+}

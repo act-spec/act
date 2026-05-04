@@ -1,0 +1,27 @@
+---
+// Three-tile feature row used on the homepage:
+//   1. Drop-in plugins
+//   2. Hosted MCP
+//   3. Spec + governance
+import FeatureTile from './FeatureTile.astro';
+---
+
+<section class="feature-row">
+  <FeatureTile title="Drop-in plugins" href="/quickstart/">
+    One config line in Astro / Next / Nuxt / VitePress / Eleventy /
+    Docusaurus and your site emits ACT alongside its normal output. No
+    bespoke pipeline, no extra hosting.
+  </FeatureTile>
+
+  <FeatureTile title="Hosted MCP" href="/why-act/#mcp">
+    Paste 5 lines into Claude Desktop or Cursor and your agent can browse
+    any ACT-emitting site through <code>mcp.act-spec.org</code>. ACT is
+    useful before AI vendors ship native support.
+  </FeatureTile>
+
+  <FeatureTile title="Spec + governance" href="/spec/v0.2/">
+    Wire format, conformance levels, JSON schemas — all open. Changes go
+    through the public ASP process. Apache-2.0 reference impl,
+    CC-BY-4.0 spec text, W3C Community Group filing in flight.
+  </FeatureTile>
+</section>

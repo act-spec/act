@@ -1,0 +1,31 @@
+{
+  "act_version": "0.1",
+  "id": "api/objects/delete",
+  "type": "reference",
+  "title": "Delete an object",
+  "summary": "Remove an object key from a bucket.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "DELETE /v1/buckets/{bucket}/objects/{key} — soft-deletes when versioning is on."
+    }
+  ],
+  "tokens": {
+    "summary": 7,
+    "body": 8
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "api/objects/delete.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/api/objects/delete.md"
+    }
+  },
+  "etag": "s256:fOaBIyvagp57FThmz63byL",
+  "source": {
+    "human_url": "https://example.com/api/objects/delete/"
+  },
+  "parent": "objects"
+}

@@ -1,0 +1,4 @@
+dist/
+.act-build-report.json
+node_modules/
+tsconfig.tsbuildinfo

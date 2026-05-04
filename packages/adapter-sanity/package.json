@@ -1,0 +1,61 @@
+{
+  "name": "@act-spec/adapter-sanity",
+  "version": "0.0.0",
+  "description": "PRD-203 Sanity adapter for the ACT (Agent Content Tree) v0.1 reference implementation. Consumes Sanity Content Lake (GROQ + Portable Text) and emits PRD-100/PRD-102 envelopes; supports content-type / field mapping, Portable Text → block conversion, reference resolution with cycle detection, locale fan-out, and Sanity transaction-ID delta. Implements the PRD-200 framework contract.",
+  "license": "Apache-2.0",
+  "author": "Jeremy Forsythe <jeremy@act-spec.org>",
+  "homepage": "https://act-spec.org",
+  "bugs": {
+    "url": "https://github.com/act-spec/act/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "src", "schema"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-spec/act.git",
+    "directory": "packages/adapter-sanity"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "conformance": "tsx conformance.ts"
+  },
+  "dependencies": {
+    "@act-spec/adapter-framework": "workspace:*",
+    "@act-spec/core": "workspace:*",
+    "@act-spec/validator": "workspace:*",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  },
+  "peerDependencies": {
+    "@portabletext/types": "^2.0.13",
+    "@sanity/client": "^6.22.0"
+  },
+  "peerDependenciesMeta": {
+    "@portabletext/types": { "optional": true },
+    "@sanity/client": { "optional": true }
+  },
+  "devDependencies": {
+    "@portabletext/types": "^2.0.13",
+    "@vitest/coverage-v8": "^2.1.9",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
+}

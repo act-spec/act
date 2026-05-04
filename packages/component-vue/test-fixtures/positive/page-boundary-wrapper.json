@@ -1,0 +1,9 @@
+{
+  "id": "page-boundary-wrapper",
+  "requirements": ["PRD-302-R5", "PRD-302-R6", "PRD-302-R10"],
+  "description": "<ActSection> wrapper component renders its slot under the surrounding installActProvider scope. Used for non-page contexts (a layout section declaring its own page scope) and for Options-API authors. Verifies the slot's component contracts are still collected.",
+  "expected": {
+    "draftCount": 1,
+    "blockTypes": ["marketing:pricing-table"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "act_version": "0.1",
+  "error": {
+    "code": "not_found",
+    "message": "Resource not found or not accessible",
+    "details": {}
+  }
+}

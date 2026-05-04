@@ -1,0 +1,44 @@
+name: Reusable package CI
+
+# Reusable workflow guarding against the "CI workflow drift" anti-pattern.
+# Every per-package CI shape calls into this; adding a new package = adding
+# one matrix entry in ci.yml.
+on:
+  workflow_call:
+    inputs:
+      node-version:
+        description: 'Node.js version to use'
+        required: true
+        type: string
+      pnpm-version:
+        description: 'pnpm version to use'
+        required: false
+        default: '10.17.1'
+        type: string
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: ${{ inputs.pnpm-version }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.node-version }}
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Generate @act-spec/core types from schemas/
+        run: pnpm -F @act-spec/core codegen
+      - name: Typecheck
+        run: pnpm -r typecheck
+      - name: Lint
+        run: pnpm -r lint
+      - name: Test
+        run: pnpm -r test
+      - name: Build
+        run: pnpm -r --filter "./packages/*" run build
+      - name: Conformance gate (per-package)
+        run: pnpm -r conformance

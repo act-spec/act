@@ -1,0 +1,665 @@
+{
+  "act_version": "0.1",
+  "root": "auth-issues",
+  "depth": 3,
+  "truncated": false,
+  "tokens": {
+    "body": 1084,
+    "summary": 236
+  },
+  "nodes": [
+    {
+      "act_version": "0.1",
+      "id": "auth-issues",
+      "type": "section",
+      "title": "Auth issues",
+      "summary": "Auth issues — section.",
+      "summary_source": "extracted",
+      "etag": "s256:Uyyxge__Vt-uFPqfbfRvsp",
+      "content": [
+        {
+          "type": "markdown",
+          "content": "# Auth issues\n\nThis section groups related auth issues documents.\n"
+        }
+      ],
+      "tokens": {
+        "summary": 8,
+        "body": 16
+      },
+      "children": [
+        "troubleshooting/auth/token-expired-symptom",
+        "troubleshooting/auth/token-expired-resolution",
+        "troubleshooting/auth/token-expired-reproduction",
+        "troubleshooting/auth/token-not-found-symptom",
+        "troubleshooting/auth/token-not-found-resolution",
+        "troubleshooting/auth/token-not-found-reproduction",
+        "troubleshooting/auth/permission-denied-symptom",
+        "troubleshooting/auth/permission-denied-resolution",
+        "troubleshooting/auth/permission-denied-reproduction",
+        "troubleshooting/auth/cross-project-token-symptom",
+        "troubleshooting/auth/cross-project-token-resolution",
+        "troubleshooting/auth/cross-project-token-reproduction",
+        "troubleshooting/auth/rotation-overlap-window-symptom",
+        "troubleshooting/auth/rotation-overlap-window-resolution",
+        "troubleshooting/auth/rotation-overlap-window-reproduction",
+        "troubleshooting/auth/mfa-required-symptom",
+        "troubleshooting/auth/mfa-required-resolution",
+        "troubleshooting/auth/mfa-required-reproduction",
+        "troubleshooting/auth/principal-disabled-symptom",
+        "troubleshooting/auth/principal-disabled-resolution",
+        "troubleshooting/auth/principal-disabled-reproduction",
+        "troubleshooting/auth/audit-log-missing-symptom",
+        "troubleshooting/auth/audit-log-missing-resolution",
+        "troubleshooting/auth/audit-log-missing-reproduction"
+      ],
+      "parent": "troubleshooting",
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "sidebar-category:auth-issues"
+        }
+      }
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/token-expired-symptom",
+      "type": "troubleshooting",
+      "title": "Token expired symptom (Auth)",
+      "summary": "Resolve \"token expired\" — symptom for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/token-expired-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/token-expired-symptom.md"
+        }
+      },
+      "etag": "s256:g0j2GqPA8-5bM0g_RXBpg1",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/token-expired-symptom/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/token-expired-resolution",
+      "type": "troubleshooting",
+      "title": "Token expired resolution (Auth)",
+      "summary": "Resolve \"token expired\" — resolution for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/token-expired-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/token-expired-resolution.md"
+        }
+      },
+      "etag": "s256:XxLqjwW9wT-i8UQ0W7NdDg",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/token-expired-resolution/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/token-expired-reproduction",
+      "type": "troubleshooting",
+      "title": "Token expired reproduction (Auth)",
+      "summary": "Resolve \"token expired\" — reproduction for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/token-expired-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/token-expired-reproduction.md"
+        }
+      },
+      "etag": "s256:7r1EZo7w_lImVTiYjoXWL5",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/token-expired-reproduction/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/token-not-found-symptom",
+      "type": "troubleshooting",
+      "title": "Token not found symptom (Auth)",
+      "summary": "Resolve \"token not found\" — symptom for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/token-not-found-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/token-not-found-symptom.md"
+        }
+      },
+      "etag": "s256:3Lp4qGDW5mUc-lbHq-VPah",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/token-not-found-symptom/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/token-not-found-resolution",
+      "type": "troubleshooting",
+      "title": "Token not found resolution (Auth)",
+      "summary": "Resolve \"token not found\" — resolution for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/token-not-found-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/token-not-found-resolution.md"
+        }
+      },
+      "etag": "s256:-yV72KdyF0f7OOCOxIR3sB",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/token-not-found-resolution/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/token-not-found-reproduction",
+      "type": "troubleshooting",
+      "title": "Token not found reproduction (Auth)",
+      "summary": "Resolve \"token not found\" — reproduction for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/token-not-found-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/token-not-found-reproduction.md"
+        }
+      },
+      "etag": "s256:9bCJhY2YC6J914UlLiapeY",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/token-not-found-reproduction/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/permission-denied-symptom",
+      "type": "troubleshooting",
+      "title": "Permission denied symptom (Auth)",
+      "summary": "Resolve \"permission denied\" — symptom for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/permission-denied-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/permission-denied-symptom.md"
+        }
+      },
+      "etag": "s256:bbrxAyb8MOxEu0JdgqREzd",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/permission-denied-symptom/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/permission-denied-resolution",
+      "type": "troubleshooting",
+      "title": "Permission denied resolution (Auth)",
+      "summary": "Resolve \"permission denied\" — resolution for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/permission-denied-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/permission-denied-resolution.md"
+        }
+      },
+      "etag": "s256:oKKhXM5OUjNhmLlqsM5cA8",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/permission-denied-resolution/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/permission-denied-reproduction",
+      "type": "troubleshooting",
+      "title": "Permission denied reproduction (Auth)",
+      "summary": "Resolve \"permission denied\" — reproduction for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/permission-denied-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/permission-denied-reproduction.md"
+        }
+      },
+      "etag": "s256:ne4VPrtcGn7bjGT8JIN2xa",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/permission-denied-reproduction/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/cross-project-token-symptom",
+      "type": "troubleshooting",
+      "title": "Cross project token symptom (Auth)",
+      "summary": "Resolve \"cross project token\" — symptom for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/cross-project-token-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/cross-project-token-symptom.md"
+        }
+      },
+      "etag": "s256:914p-YpKDD2ndJT6Oo9ZUB",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/cross-project-token-symptom/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/cross-project-token-resolution",
+      "type": "troubleshooting",
+      "title": "Cross project token resolution (Auth)",
+      "summary": "Resolve \"cross project token\" — resolution for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/cross-project-token-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/cross-project-token-resolution.md"
+        }
+      },
+      "etag": "s256:mijgMJc5RW-BGpHoEYW_F2",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/cross-project-token-resolution/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/cross-project-token-reproduction",
+      "type": "troubleshooting",
+      "title": "Cross project token reproduction (Auth)",
+      "summary": "Resolve \"cross project token\" — reproduction for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/cross-project-token-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/cross-project-token-reproduction.md"
+        }
+      },
+      "etag": "s256:74IZ8SsI07ahvIM1BWJ-xL",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/cross-project-token-reproduction/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/rotation-overlap-window-symptom",
+      "type": "troubleshooting",
+      "title": "Rotation overlap window symptom (Auth)",
+      "summary": "Resolve \"rotation overlap window\" — symptom for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/rotation-overlap-window-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/rotation-overlap-window-symptom.md"
+        }
+      },
+      "etag": "s256:hoiY-S9KouTYZJQ12cOHGl",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/rotation-overlap-window-symptom/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/rotation-overlap-window-resolution",
+      "type": "troubleshooting",
+      "title": "Rotation overlap window resolution (Auth)",
+      "summary": "Resolve \"rotation overlap window\" — resolution for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/rotation-overlap-window-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/rotation-overlap-window-resolution.md"
+        }
+      },
+      "etag": "s256:J82XQQ2m3kXTdCyYt5hwcr",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/rotation-overlap-window-resolution/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/rotation-overlap-window-reproduction",
+      "type": "troubleshooting",
+      "title": "Rotation overlap window reproduction (Auth)",
+      "summary": "Resolve \"rotation overlap window\" — reproduction for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/rotation-overlap-window-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/rotation-overlap-window-reproduction.md"
+        }
+      },
+      "etag": "s256:osARRLXAGO_unoFO-gqkhC",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/rotation-overlap-window-reproduction/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/mfa-required-symptom",
+      "type": "troubleshooting",
+      "title": "Mfa required symptom (Auth)",
+      "summary": "Resolve \"mfa required\" — symptom for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/mfa-required-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/mfa-required-symptom.md"
+        }
+      },
+      "etag": "s256:S86QAEcmyDLUVnRQji8Cx4",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/mfa-required-symptom/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/mfa-required-resolution",
+      "type": "troubleshooting",
+      "title": "Mfa required resolution (Auth)",
+      "summary": "Resolve \"mfa required\" — resolution for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/mfa-required-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/mfa-required-resolution.md"
+        }
+      },
+      "etag": "s256:pff25ryhUE197nlnm_wBFK",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/mfa-required-resolution/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/mfa-required-reproduction",
+      "type": "troubleshooting",
+      "title": "Mfa required reproduction (Auth)",
+      "summary": "Resolve \"mfa required\" — reproduction for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/mfa-required-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/mfa-required-reproduction.md"
+        }
+      },
+      "etag": "s256:gQLz6wLHRqHR97WQWg9BGI",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/mfa-required-reproduction/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/principal-disabled-symptom",
+      "type": "troubleshooting",
+      "title": "Principal disabled symptom (Auth)",
+      "summary": "Resolve \"principal disabled\" — symptom for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/principal-disabled-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/principal-disabled-symptom.md"
+        }
+      },
+      "etag": "s256:Ahbzht8LePBqFfTxKb5tli",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/principal-disabled-symptom/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/principal-disabled-resolution",
+      "type": "troubleshooting",
+      "title": "Principal disabled resolution (Auth)",
+      "summary": "Resolve \"principal disabled\" — resolution for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/principal-disabled-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/principal-disabled-resolution.md"
+        }
+      },
+      "etag": "s256:CSdUjsKG4yMR2wSpwgdLBH",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/principal-disabled-resolution/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/principal-disabled-reproduction",
+      "type": "troubleshooting",
+      "title": "Principal disabled reproduction (Auth)",
+      "summary": "Resolve \"principal disabled\" — reproduction for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 9,
+        "body": 44
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/principal-disabled-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/principal-disabled-reproduction.md"
+        }
+      },
+      "etag": "s256:hTLsgyWkYiefLKVsBMsNt_",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/principal-disabled-reproduction/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/audit-log-missing-symptom",
+      "type": "troubleshooting",
+      "title": "Audit log missing symptom (Auth)",
+      "summary": "Resolve \"audit log missing\" — symptom for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/audit-log-missing-symptom.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/audit-log-missing-symptom.md"
+        }
+      },
+      "etag": "s256:wuZAmUhyxrB5BQxyIm5Nvh",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/audit-log-missing-symptom/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/audit-log-missing-resolution",
+      "type": "troubleshooting",
+      "title": "Audit log missing resolution (Auth)",
+      "summary": "Resolve \"audit log missing\" — resolution for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/audit-log-missing-resolution.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/audit-log-missing-resolution.md"
+        }
+      },
+      "etag": "s256:L5R31Q6YWEuDz6DfYQ6bGk",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/audit-log-missing-resolution/"
+      },
+      "parent": "auth-issues"
+    },
+    {
+      "act_version": "0.1",
+      "id": "troubleshooting/auth/audit-log-missing-reproduction",
+      "type": "troubleshooting",
+      "title": "Audit log missing reproduction (Auth)",
+      "summary": "Resolve \"audit log missing\" — reproduction for the Auth surface.",
+      "summary_source": "author",
+      "content": [],
+      "tokens": {
+        "summary": 10,
+        "body": 45
+      },
+      "metadata": {
+        "source": {
+          "adapter": "act-docusaurus-sidebar-synthesizer",
+          "source_id": "troubleshooting/auth/audit-log-missing-reproduction.md",
+          "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/audit-log-missing-reproduction.md"
+        }
+      },
+      "etag": "s256:dzOCrG3fwV8DhsK_Xomu8a",
+      "source": {
+        "human_url": "https://example.com/troubleshooting/auth/audit-log-missing-reproduction/"
+      },
+      "parent": "auth-issues"
+    }
+  ],
+  "etag": "s256:105ZD3oKZB1g1ZgtZ4yn7N"
+}

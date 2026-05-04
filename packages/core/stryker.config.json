@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/stryker-mutator/stryker-js/master/packages/core/schema/stryker-schema.json",
+  "_comment": "Mutation testing for @act-spec/core (PRD-107 / PRD-600 reporter contract types). Surface is small (mostly types + one barrel); thresholds match validator (75% floor).",
+  "packageManager": "pnpm",
+  "testRunner": "vitest",
+  "plugins": ["@stryker-mutator/vitest-runner"],
+  "vitest": {
+    "configFile": "vitest.config.ts"
+  },
+  "reporters": ["progress", "clear-text"],
+  "coverageAnalysis": "perTest",
+  "mutate": ["src/conformance-reporter.ts", "src/index.ts"],
+  "thresholds": {
+    "high": 90,
+    "low": 75,
+    "break": 75
+  },
+  "timeoutMS": 30000,
+  "concurrency": 2,
+  "logLevel": "info",
+  "tempDirName": ".stryker-tmp",
+  "inPlace": true
+}

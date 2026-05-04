@@ -1,0 +1,68 @@
+{
+  "act_version": "0.1",
+  "id": "security",
+  "type": "section",
+  "title": "Security",
+  "summary": "Security — section.",
+  "summary_source": "extracted",
+  "etag": "s256:FF-5JIBtlXAvEOT3bxu12i",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# Security\n\nThis section groups related security documents.\n"
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 16
+  },
+  "children": [
+    "recipes/security/rotate-tokens-overview",
+    "recipes/security/rotate-tokens-cli",
+    "recipes/security/rotate-tokens-sdk-node",
+    "recipes/security/rotate-tokens-sdk-python",
+    "recipes/security/scope-tokens-per-project-overview",
+    "recipes/security/scope-tokens-per-project-cli",
+    "recipes/security/scope-tokens-per-project-sdk-node",
+    "recipes/security/scope-tokens-per-project-sdk-python",
+    "recipes/security/audit-access-logs-overview",
+    "recipes/security/audit-access-logs-cli",
+    "recipes/security/audit-access-logs-sdk-node",
+    "recipes/security/audit-access-logs-sdk-python",
+    "recipes/security/encrypt-at-rest-overview",
+    "recipes/security/encrypt-at-rest-cli",
+    "recipes/security/encrypt-at-rest-sdk-node",
+    "recipes/security/encrypt-at-rest-sdk-python",
+    "recipes/security/customer-managed-keys-overview",
+    "recipes/security/customer-managed-keys-cli",
+    "recipes/security/customer-managed-keys-sdk-node",
+    "recipes/security/customer-managed-keys-sdk-python",
+    "recipes/security/block-public-access-overview",
+    "recipes/security/block-public-access-cli",
+    "recipes/security/block-public-access-sdk-node",
+    "recipes/security/block-public-access-sdk-python",
+    "recipes/security/signed-download-urls-overview",
+    "recipes/security/signed-download-urls-cli",
+    "recipes/security/signed-download-urls-sdk-node",
+    "recipes/security/signed-download-urls-sdk-python",
+    "recipes/security/ip-allowlists-overview",
+    "recipes/security/ip-allowlists-cli",
+    "recipes/security/ip-allowlists-sdk-node",
+    "recipes/security/ip-allowlists-sdk-python",
+    "recipes/security/vpc-peering-overview",
+    "recipes/security/vpc-peering-cli",
+    "recipes/security/vpc-peering-sdk-node",
+    "recipes/security/vpc-peering-sdk-python",
+    "recipes/security/mfa-protected-deletes-overview",
+    "recipes/security/mfa-protected-deletes-cli",
+    "recipes/security/mfa-protected-deletes-sdk-node",
+    "recipes/security/mfa-protected-deletes-sdk-python"
+  ],
+  "parent": "recipes",
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "sidebar-category:security"
+    }
+  }
+}

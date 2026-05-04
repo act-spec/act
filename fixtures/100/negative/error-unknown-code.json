@@ -1,0 +1,19 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-100",
+    "violates": [
+      "PRD-100-R41"
+    ],
+    "expected_error": {
+      "level": "core",
+      "requirement": "PRD-100-R41",
+      "missing": "error.code outside the closed enum {auth_required, not_found, rate_limited, internal, validation}."
+    }
+  },
+  "_negative_reason": "`error.code` is outside the closed enum. PRD-100 closes the error code enum to {auth_required, not_found, rate_limited, internal, validation}; adding values is MAJOR per PRD-108-R5(4).",
+  "act_version": "0.1",
+  "error": {
+    "code": "teapot",
+    "message": "I'm a teapot"
+  }
+}

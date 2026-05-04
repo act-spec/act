@@ -1,0 +1,38 @@
+{
+  "act_version": "0.1",
+  "root": "intro",
+  "etag": "s256:sub1234567890abcdef0000",
+  "tokens": { "body": 1400, "summary": 27 },
+  "depth": 1,
+  "truncated": false,
+  "nodes": [
+    {
+      "act_version": "0.1",
+      "id": "intro",
+      "type": "article",
+      "title": "Introduction",
+      "etag": "s256:abc1230000000000000000",
+      "summary": "An overview of Acme widgets and what you can build with them.",
+      "content": [
+        { "type": "markdown", "text": "# Introduction\n\nAcme widgets are..." }
+      ],
+      "tokens": { "summary": 14, "body": 480 },
+      "parent": null,
+      "children": ["intro/getting-started"]
+    },
+    {
+      "act_version": "0.1",
+      "id": "intro/getting-started",
+      "type": "tutorial",
+      "title": "Getting started",
+      "etag": "s256:def4560000000000000000",
+      "summary": "Install the SDK and send your first request in 5 minutes.",
+      "content": [
+        { "type": "markdown", "text": "## Install\n\nFirst, install the SDK..." }
+      ],
+      "tokens": { "summary": 13, "body": 920 },
+      "parent": "intro",
+      "children": []
+    }
+  ]
+}

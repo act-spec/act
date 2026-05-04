@@ -1,0 +1,18 @@
+{
+  "_comment": "Negative fixture for PRD-103-R1. A node envelope that omits `etag` entirely. MUST be rejected as a wire-format error: every node and the index MUST carry an etag at all conformance levels.",
+  "envelope": {
+    "act_version": "0.1",
+    "id": "intro",
+    "type": "document",
+    "title": "Introduction",
+    "summary": "A simple introduction.",
+    "content": [
+      { "type": "prose", "text": "Hello." }
+    ],
+    "tokens": { "body": 2, "summary": 4 }
+  },
+  "expected_finding": {
+    "requirement": "PRD-103-R1",
+    "missing": "node envelope is missing the required `etag` field"
+  }
+}

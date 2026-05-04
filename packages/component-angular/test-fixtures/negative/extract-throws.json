@@ -1,0 +1,10 @@
+{
+  "id": "extract-throws",
+  "requirements": ["PRD-303-R16", "PRD-300-R22"],
+  "description": "An extract function that throws produces a marketing:placeholder block in the canonical draft, with metadata.extraction_status=failed; subsequent contracts still contribute (the binding's collector continues past the failure per PRD-303-R16).",
+  "expectedBlockTypes": ["marketing:placeholder", "marketing:pricing-table"],
+  "expectedFirstBlockMetadata": {
+    "extraction_status": "failed",
+    "extracted_via": "component-contract"
+  }
+}

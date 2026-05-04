@@ -1,0 +1,24 @@
+{"id":"cms/en-us/landing/about","type":"landing","title":"About Acme","summary":"Founded to make agent-content interchange a default.","etag":"s256:yUtd-lxDZOA3-DUBlppd7n","tokens":{"summary":7}}
+{"id":"cms/en-us/landing/contact","type":"landing","title":"Contact","summary":"Talk to sales, support, or community.","etag":"s256:QFF3KRNPGESJFLX6lVzLLm","tokens":{"summary":6}}
+{"id":"cms/en-us/landing/dpa","type":"landing","title":"Data Processing Addendum","summary":"Acme's data-processing terms for enterprise customers.","etag":"s256:yyQxEWxilNO4ywrrBzEcFC","tokens":{"summary":6}}
+{"id":"cms/en-us/landing/features","type":"landing","title":"Features","summary":"Everything you need to build with ACT.","etag":"s256:rKibX-VM7G_-6BayEPL-R6","tokens":{"summary":7}}
+{"id":"cms/en-us/landing/pricing","type":"landing","title":"Pricing","summary":"Simple, transparent pricing tiers and FAQ.","etag":"s256:RxCgzIH4xtvA1oBC46l02-","tokens":{"summary":6}}
+{"id":"cms/en-us/landing/privacy","type":"landing","title":"Privacy Policy","summary":"How Acme handles personal data.","etag":"s256:eTjvsHouIXTr7Ex5yPbJ30","tokens":{"summary":5}}
+{"id":"cms/es-es/landing/about","type":"landing","title":"Sobre Acme","summary":"Fundada para hacer del intercambio de contenidos de agentes una opción por defecto.","etag":"s256:bQz7Rv4rsQDMgCu5yp8je3","tokens":{"summary":13}}
+{"id":"cms/es-es/landing/contact","type":"landing","title":"Contacto","summary":"Contacta con ventas, soporte o la comunidad.","etag":"s256:vVoShzvDaxEZJ9OlwdmsDG","tokens":{"summary":7}}
+{"id":"cms/es-es/landing/dpa","type":"landing","title":"Data Processing Addendum","summary":"Acme's data-processing terms for enterprise customers.","etag":"s256:sWiYOYPjAM44X7aSe3fwwN","tokens":{"summary":6}}
+{"id":"cms/es-es/landing/features","type":"landing","title":"Funciones","summary":"Todo lo que necesitas para construir con ACT.","etag":"s256:BJr58XHG-QlJQSSkF9pycj","tokens":{"summary":8}}
+{"id":"cms/es-es/landing/pricing","type":"landing","title":"Precios","summary":"Precios simples y transparentes.","etag":"s256:VTx0VGpaZqRGwRPDCBc9Pg","tokens":{"summary":4}}
+{"id":"cms/es-es/landing/privacy","type":"landing","title":"Política de privacidad","summary":"Cómo Acme maneja los datos personales.","etag":"s256:jdR73nksd1s-e5qqlmYGSq","tokens":{"summary":6}}
+{"id":"cms/de-de/landing/about","type":"landing","title":"Über Acme","summary":"Gegründet, um Agenten-Inhaltsaustausch zur Standardoption zu machen.","etag":"s256:-uYjY0lBCRifl0TZTC5WS3","tokens":{"summary":7}}
+{"id":"cms/de-de/landing/contact","type":"landing","title":"Kontakt","summary":"Sprechen Sie mit Vertrieb, Support oder Community.","etag":"s256:_0JCK5UmEWPVkkpNi31B31","tokens":{"summary":7}}
+{"id":"cms/de-de/landing/dpa","type":"landing","title":"Data Processing Addendum","summary":"Acme's data-processing terms for enterprise customers.","etag":"s256:PwrW6GYpvbeSZWOy8pC1s7","tokens":{"summary":6}}
+{"id":"cms/de-de/landing/features","type":"landing","title":"Funktionen","summary":"Alles, was Sie für ACT brauchen.","etag":"s256:5X13ISonJXDVc2OnNCc8kD","tokens":{"summary":6}}
+{"id":"cms/de-de/landing/pricing","type":"landing","title":"Preise","summary":"Einfache, transparente Preise.","etag":"s256:bj5geuV4DssntOPQNt-LEi","tokens":{"summary":3}}
+{"id":"cms/de-de/landing/privacy","type":"landing","title":"Datenschutzerklärung","summary":"Wie Acme mit personenbezogenen Daten umgeht.","etag":"s256:_12nnkaUj8TjYQpae2ZUfb","tokens":{"summary":6}}
+{"id":"cms/ja-jp/landing/about","type":"landing","title":"Acme について","summary":"エージェント・コンテンツ交換を標準にするために設立。","etag":"s256:z_vU5yNoS4fUN8HnkJK8yf","tokens":{"summary":1}}
+{"id":"cms/ja-jp/landing/contact","type":"landing","title":"お問い合わせ","summary":"営業、サポート、コミュニティへのお問い合わせ。","etag":"s256:5-WErbd_ifPIxs4n5DCtHo","tokens":{"summary":1}}
+{"id":"cms/ja-jp/landing/dpa","type":"landing","title":"Data Processing Addendum","summary":"Acme's data-processing terms for enterprise customers.","etag":"s256:_hP9rUDsVvTXo6FTrLXFhE","tokens":{"summary":6}}
+{"id":"cms/ja-jp/landing/features","type":"landing","title":"機能","summary":"ACT で構築するために必要なすべて。","etag":"s256:7Thycnbi5zgkTFNtK0r27b","tokens":{"summary":2}}
+{"id":"cms/ja-jp/landing/pricing","type":"landing","title":"料金","summary":"シンプルで透明性のある料金体系。","etag":"s256:lsys0qzo37kNQhBUicYjSK","tokens":{"summary":1}}
+{"id":"cms/ja-jp/landing/privacy","type":"landing","title":"プライバシーポリシー","summary":"Acme が個人データを扱う方法。","etag":"s256:g_lqo8L1PQNfVwkQPSFV4w","tokens":{"summary":2}}

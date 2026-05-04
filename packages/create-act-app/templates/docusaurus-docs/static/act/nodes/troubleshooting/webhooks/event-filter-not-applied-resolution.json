@@ -1,0 +1,51 @@
+{
+  "act_version": "0.1",
+  "id": "troubleshooting/webhooks/event-filter-not-applied-resolution",
+  "type": "troubleshooting",
+  "title": "Event filter not applied resolution (Webhooks)",
+  "summary": "Resolve \"event filter not applied\" — resolution for the Webhooks surface.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Symptom"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "An operation against the Webhooks surface fails with an error matching \"event filter not applied (resolution)\"."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Resolution"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Inspect the error envelope.Re-issue with corrected parameters.Confirm via the audit log."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "See the Webhooks API reference for the exact field set."
+    }
+  ],
+  "tokens": {
+    "summary": 11,
+    "body": 46
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "troubleshooting/webhooks/event-filter-not-applied-resolution.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/webhooks/event-filter-not-applied-resolution.md"
+    }
+  },
+  "etag": "s256:i8GOFkjuGRoEimafvC5toU",
+  "source": {
+    "human_url": "https://example.com/troubleshooting/webhooks/event-filter-not-applied-resolution/"
+  },
+  "parent": "webhooks-issues"
+}

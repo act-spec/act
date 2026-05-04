@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/0.1/subtree.schema.json",
+  "title": "ACT Subtree envelope",
+  "description": "Per PRD-100-R32, PRD-100-R33, PRD-100-R34, PRD-100-R35, PRD-100-R35a. The load-bearing primitive for progressive disclosure: a node and its inlined descendants up to a documented depth. Default depth 3, max 8 (PRD-100-R33). Subtree is Standard-tier (PRD-107-R8). Depth-first pre-order with root first (PRD-100-R35) is not expressible in JSON Schema; PRD-600 enforces it programmatically. The root entry MUST be a full envelope; descendant entries MAY emit `content: []` to keep subtrees navigation-weight (PRD-100-R35), with bodies fetched lazily per-node. The recursive contract holds at any depth (PRD-100-R35a).",
+  "type": "object",
+  "required": ["act_version", "root", "etag", "depth", "nodes"],
+  "properties": {
+    "act_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$"
+    },
+    "root": {
+      "type": "string",
+      "pattern": "^[a-z0-9]([a-z0-9._\\-]|/)*[a-z0-9](@[a-z0-9-]+)?$",
+      "description": "Per PRD-100-R10, PRD-100-R32. ID of the root node of this subtree. Variant-ID extension per PRD-102-R29 (amendment A6)."
+    },
+    "etag": { "type": "string" },
+    "tokens": {
+      "type": "object",
+      "properties": {
+        "body": { "type": "integer", "minimum": 0 },
+        "summary": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "depth": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 8,
+      "description": "Number of generations included below root. 0 means root only."
+    },
+    "truncated": {
+      "type": "boolean",
+      "description": "True when descendants were elided because the documented max depth was reached. PRD-100 sets max depth to 8."
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "https://act-spec.org/schemas/0.1/node.schema.json"
+      },
+      "description": "Per PRD-100-R35: ordered depth-first pre-order with the root first. The root entry (index 0) MUST be a full envelope. Descendant entries (indices >= 1) MUST satisfy the node schema structurally but MAY emit `content: []` so the subtree stays navigation-weight; every navigation field (id, type, title, summary, parent, children, tokens, etag, source, metadata, related, tags) MUST be preserved verbatim. tokens.body on each descendant reflects the underlying body cost so agents can budget before drilling in. Consumers MUST tolerate both shapes (full bodies and elided bodies) per PRD-100-R35."
+    }
+  }
+}

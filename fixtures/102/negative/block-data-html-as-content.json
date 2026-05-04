@@ -1,0 +1,19 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-102",
+    "violates": [
+      "PRD-102-R28"
+    ],
+    "expected_error": {
+      "level": "core",
+      "requirement": "PRD-102-R28",
+      "missing": "data block whose text looks like script-bearing HTML; wire-format-legal but PRD-600 emits a warning. Producers SHOULD NOT use data blocks as a content channel.",
+      "kind": "warning"
+    }
+  },
+  "type": "data",
+  "format": "json",
+  "text": "<script>alert('xss')</script>",
+  "value": "<script>alert('xss')</script>",
+  "_note": "The serialized text is not parseable JSON. A producer that intends to convey HTML or scripts has used the wrong block type. PRD-102-R31 forbids consumers from rendering data-block contents as content."
+}

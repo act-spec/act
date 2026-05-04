@@ -1,0 +1,22 @@
+{
+  "scenario": "304 Not Modified on a node fetch when If-None-Match matches the resource's current ETag",
+  "satisfies": ["PRD-106-R3", "PRD-106-R12"],
+  "request": {
+    "method": "GET",
+    "url": "https://app.acme.com/act/n/doc%2Fproj-launch-2026.json",
+    "headers": {
+      "Accept": "application/act-node+json",
+      "Cookie": "session=alex-session-id",
+      "If-None-Match": "\"s256:8aBcDeFgHiJkLmNoPqRsTu\""
+    }
+  },
+  "response": {
+    "status": 304,
+    "headers": {
+      "ETag": "\"s256:8aBcDeFgHiJkLmNoPqRsTu\"",
+      "Cache-Control": "private, must-revalidate",
+      "Vary": "Cookie",
+      "Link": "</.well-known/act.json>; rel=\"act\"; type=\"application/act-manifest+json\"; profile=\"runtime\""
+    }
+  }
+}

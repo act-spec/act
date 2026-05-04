@@ -1,0 +1,10 @@
+{
+  "type": "marketing:placeholder",
+  "metadata": {
+    "extracted_via": "component-contract",
+    "extraction_status": "failed",
+    "error": "Hero.act.extract threw: Cannot read properties of undefined (reading 'tier')",
+    "component": "PricingHero",
+    "location": "src/marketing/PricingHero.tsx:42"
+  }
+}

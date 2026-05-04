@@ -1,0 +1,88 @@
+{
+  "posts": [
+    {
+      "id": 101,
+      "slug": "hello-act",
+      "link": "https://blog.example/hello-act",
+      "status": "publish",
+      "modified_gmt": "2026-04-01T12:00:00Z",
+      "title": { "rendered": "Hello, ACT" },
+      "excerpt": { "rendered": "<p>An introduction to the ACT spec.</p>" },
+      "content": {
+        "rendered": "<p>ACT (Agent Content Tree) is an open standard for publishing structured content for AI agents.</p><p>This blog post is served by the WordPress REST API and ingested by the <code>@act-spec/adapter-wordpress</code> package.</p>"
+      },
+      "author": 1,
+      "featured_media": 0,
+      "categories": [10],
+      "tags": [21]
+    },
+    {
+      "id": 102,
+      "slug": "shipping-v0-2",
+      "link": "https://blog.example/shipping-v0-2",
+      "status": "publish",
+      "modified_gmt": "2026-04-15T09:30:00Z",
+      "title": { "rendered": "Shipping v0.2" },
+      "excerpt": { "rendered": "<p>What changed since v0.1.</p>" },
+      "content": {
+        "rendered": "<p>v0.2 is the first public release.</p><p>Highlights include the WordPress and Notion adapters, the VitePress plugin, and the GTM-MCP bridge.</p>"
+      },
+      "author": 1,
+      "featured_media": 0,
+      "categories": [10],
+      "tags": [21, 22]
+    }
+  ],
+  "pages": [
+    {
+      "id": 200,
+      "slug": "about",
+      "link": "https://blog.example/about",
+      "status": "publish",
+      "title": { "rendered": "About" },
+      "excerpt": { "rendered": "<p>About this site.</p>" },
+      "content": {
+        "rendered": "<p>This is a test corpus for the @act-spec/adapter-wordpress package.</p>"
+      },
+      "parent": 0,
+      "menu_order": 1
+    }
+  ],
+  "categories": [
+    {
+      "id": 10,
+      "name": "Releases",
+      "slug": "releases",
+      "taxonomy": "category",
+      "description": "Release announcements.",
+      "count": 2,
+      "parent": 0
+    }
+  ],
+  "tags": [
+    {
+      "id": 21,
+      "name": "ACT",
+      "slug": "act",
+      "taxonomy": "post_tag",
+      "description": "Posts about the ACT spec.",
+      "count": 2
+    },
+    {
+      "id": 22,
+      "name": "Release",
+      "slug": "release",
+      "taxonomy": "post_tag",
+      "description": "",
+      "count": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Jeremy Forsythe",
+      "slug": "jeremy",
+      "description": "BDFL of the ACT spec."
+    }
+  ]
+}

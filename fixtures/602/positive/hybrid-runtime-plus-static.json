@@ -1,0 +1,131 @@
+{
+  "$comment": "PRD-602-R24 / amendment A4 multi-mount construction fixture. One runtime mount under /app (Standard with subtree) plus one static mount under /marketing (Core, no subtree). The MCP-side ListResources enumeration MUST surface the parent manifest at act://workspace.example.com/manifest, plus per-mount manifests at act://workspace.example.com/marketing/manifest and act://workspace.example.com/app/manifest, plus the union of static-emitted node URIs (under /marketing/) and runtime-served node URIs (under /app/). Subtree URIs MUST surface only under /app per PRD-602-R11 per-mount independence (the marketing manifest does not advertise subtree). Construction MUST succeed.",
+  "mcp": {
+    "name": "workspace",
+    "version": "1.0.0",
+    "host": "workspace.example.com"
+  },
+  "mounts": [
+    {
+      "prefix": "/marketing",
+      "kind": "static",
+      "manifest": {
+        "act_version": "0.1",
+        "site": { "name": "marketing.example" },
+        "delivery": "runtime",
+        "conformance": { "level": "core" },
+        "auth": { "schemes": [] },
+        "index_url": "/marketing/act/index.json",
+        "node_url_template": "/marketing/act/n/{id}"
+      },
+      "index": {
+        "act_version": "0.1",
+        "nodes": [
+          {
+            "id": "landing",
+            "type": "page",
+            "title": "Welcome to Workspace",
+            "summary": "Marketing landing page.",
+            "tokens": { "summary": 8 },
+            "etag": "abc111",
+            "updated_at": "2026-05-02T00:00:00Z"
+          },
+          {
+            "id": "pricing",
+            "type": "page",
+            "title": "Pricing",
+            "summary": "Plans and pricing.",
+            "tokens": { "summary": 8 },
+            "etag": "abc222",
+            "updated_at": "2026-05-02T00:00:00Z"
+          }
+        ]
+      },
+      "nodes": [
+        {
+          "act_version": "0.1",
+          "id": "landing",
+          "type": "page",
+          "title": "Welcome to Workspace",
+          "summary": "Marketing landing page.",
+          "content": [{ "type": "prose", "text": "Welcome." }],
+          "tokens": { "summary": 8, "body": 25 },
+          "etag": "abc111",
+          "updated_at": "2026-05-02T00:00:00Z"
+        },
+        {
+          "act_version": "0.1",
+          "id": "pricing",
+          "type": "page",
+          "title": "Pricing",
+          "summary": "Plans and pricing.",
+          "content": [{ "type": "prose", "text": "Plans." }],
+          "tokens": { "summary": 8, "body": 25 },
+          "etag": "abc222",
+          "updated_at": "2026-05-02T00:00:00Z"
+        }
+      ]
+    },
+    {
+      "prefix": "/app",
+      "kind": "runtime",
+      "manifest": {
+        "act_version": "0.1",
+        "site": { "name": "workspace.example" },
+        "delivery": "runtime",
+        "conformance": { "level": "standard" },
+        "auth": { "schemes": ["bearer"] },
+        "index_url": "/app/act/index.json",
+        "node_url_template": "/app/act/n/{id}",
+        "subtree_url_template": "/app/act/sub/{id}"
+      },
+      "index": {
+        "act_version": "0.1",
+        "nodes": [
+          {
+            "id": "doc/intro",
+            "type": "article",
+            "title": "Intro",
+            "summary": "Welcome to the workspace.",
+            "tokens": { "summary": 8 },
+            "etag": "def111",
+            "updated_at": "2026-05-02T00:00:00Z"
+          },
+          {
+            "id": "doc/setup",
+            "type": "article",
+            "title": "Setup",
+            "summary": "How to set up your account.",
+            "tokens": { "summary": 8 },
+            "etag": "def222",
+            "updated_at": "2026-05-02T00:00:00Z"
+          }
+        ]
+      },
+      "nodes": [
+        {
+          "act_version": "0.1",
+          "id": "doc/intro",
+          "type": "article",
+          "title": "Intro",
+          "summary": "Welcome to the workspace.",
+          "content": [{ "type": "prose", "text": "Body of intro." }],
+          "tokens": { "summary": 8, "body": 25 },
+          "etag": "def111",
+          "updated_at": "2026-05-02T00:00:00Z"
+        },
+        {
+          "act_version": "0.1",
+          "id": "doc/setup",
+          "type": "article",
+          "title": "Setup",
+          "summary": "How to set up your account.",
+          "content": [{ "type": "prose", "text": "Body of setup." }],
+          "tokens": { "summary": 8, "body": 25 },
+          "etag": "def222",
+          "updated_at": "2026-05-02T00:00:00Z"
+        }
+      ]
+    }
+  ]
+}

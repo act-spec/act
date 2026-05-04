@@ -1,0 +1,69 @@
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} — Acme Catalog</title>
+    <style>
+      :root {
+        --fg: #0f172a;
+        --muted: #64748b;
+        --bg: #f8fafc;
+        --card: #fff;
+        --line: #e2e8f0;
+        --accent: #0ea5e9;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+        color: var(--fg);
+        background: var(--bg);
+        line-height: 1.5;
+      }
+      header {
+        border-bottom: 1px solid var(--line);
+        background: var(--card);
+        padding: 14px 24px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      header strong { font-size: 18px; }
+      header nav { display: flex; gap: 16px; margin-left: auto; }
+      header a { color: var(--accent); text-decoration: none; font-size: 14px; }
+      main { max-width: 1100px; margin: 0 auto; padding: 32px 24px; }
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 20px 24px;
+        color: var(--muted);
+        font-size: 13px;
+        text-align: center;
+      }
+      footer code { background: var(--card); padding: 2px 6px; border-radius: 4px; }
+      a { color: var(--accent); }
+    </style>
+  </head>
+  <body>
+    <header>
+      <strong><a href="/" style="color: var(--fg); text-decoration: none;">Acme Catalog</a></strong>
+      <nav>
+        <a href="/">Catalog</a>
+        <a href="/.well-known/act.json">/.well-known/act.json</a>
+        <a href="/act/index.json">/act/index.json</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      ACT artifacts available at <code>/.well-known/act.json</code> and <code>/act/...</code>.
+    </footer>
+  </body>
+</html>

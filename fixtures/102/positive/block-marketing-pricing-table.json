@@ -1,0 +1,23 @@
+{
+  "type": "marketing:pricing-table",
+  "tiers": [
+    {
+      "name": "Starter",
+      "price": "$0/mo",
+      "features": ["Up to 1,000 requests/mo", "Community support"]
+    },
+    {
+      "name": "Pro",
+      "price": "$49/mo",
+      "features": ["Up to 100,000 requests/mo", "Email support", "99.9% SLA"]
+    },
+    {
+      "name": "Enterprise",
+      "price": "Contact sales",
+      "features": ["Unlimited requests", "Dedicated support", "Custom SLA"]
+    }
+  ],
+  "metadata": {
+    "extracted_via": "component-contract"
+  }
+}

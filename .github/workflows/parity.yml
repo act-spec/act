@@ -1,0 +1,58 @@
+name: Validator parity (TS ↔ Go)
+
+# Runs the conformance fixture corpus through both the TypeScript reference
+# validator (@act-spec/validator) and the Go reference validator
+# (go/pkg/validator). For every fixture the two implementations cover, the
+# `valid` verdicts must agree — otherwise the workflow fails.
+#
+# This is the parity matrix from runbook §5.2g.11. Skip-set lives in
+# scripts/parity-check.mjs and is documented inline there.
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+concurrency:
+  group: parity-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  parity:
+    name: TS ↔ Go validator parity
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: '10.17.1'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.23'
+          cache: true
+          cache-dependency-path: go/go.sum
+
+      - name: Install Node dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate @act-spec/core types from schemas/
+        run: pnpm -F @act-spec/core codegen
+
+      - name: Build @act-spec/validator
+        # The parity script imports the validator's compiled ESM directly
+        # (in-process) so it must be built before the sweep runs.
+        run: pnpm -F @act-spec/validator build
+
+      - name: Run parity sweep
+        run: bash scripts/parity-check.sh

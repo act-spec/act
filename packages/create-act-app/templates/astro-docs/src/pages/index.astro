@@ -1,0 +1,29 @@
+---
+// PRD-700-R9 — Astro page that renders the root index.
+// The HTML routing is non-normative for ACT (PRD-700 § Implementation notes);
+// the ACT artifacts under `dist/.well-known/` and `dist/act/` are derived
+// independently by the @act-spec/astro integration from `src/content/docs/`.
+import { getCollection } from 'astro:content';
+
+const docs = await getCollection('docs');
+docs.sort((a, b) => a.id.localeCompare(b.id));
+---
+
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tinybox API Documentation</title>
+    <link rel="canonical" href="https://example.com/" />
+  </head>
+  <body>
+    <h1>Tinybox API Documentation</h1>
+    <p>
+      Reference build for PRD-700 of the ACT (Agent Content Tree) v0.1
+      specification. The ACT artifact set lives at
+      <a href="/.well-known/act.json">/.well-known/act.json</a>.
+    </p>
+    <ul>
+      {docs.map((d) => <li><a href={`/${d.id}`}>{d.data.title}</a></li>)}
+    </ul>
+  </body>
+</html>

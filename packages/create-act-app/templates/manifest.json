@@ -1,0 +1,32 @@
+{
+  "templates": [
+    {
+      "name": "astro-docs",
+      "description": "Minimal Astro + markdown documentation site demonstrating zero-friction ACT generation via the @act-spec/plugin-astro integration."
+    },
+    {
+      "name": "docusaurus-docs",
+      "description": "Large Docusaurus 3.x documentation site demonstrating ACT generation across a deep sidebar hierarchy."
+    },
+    {
+      "name": "ecommerce-catalog",
+      "description": "Tiny Astro storefront fed by a 500-SKU catalog dataset, with ACT generated alongside via the programmatic adapter."
+    },
+    {
+      "name": "eleventy-blog",
+      "description": "Flat chronological Eleventy 2.x blog demonstrating ACT generation via the @act-spec/plugin-eleventy plugin."
+    },
+    {
+      "name": "hybrid-static-runtime-mcp",
+      "description": "Hybrid deployment combining a static ACT mount, a multi-tenant runtime mount, and an MCP bridge serving both to AI agents under one URI namespace."
+    },
+    {
+      "name": "nextjs-marketing",
+      "description": "Next.js + Contentful + next-intl + React marketing site demonstrating multi-source ACT generation with localized content and component-extracted blocks."
+    },
+    {
+      "name": "nextjs-saas-runtime",
+      "description": "Multi-tenant B2B SaaS workspace built on Next.js — serves ACT live from runtime route handlers, identity-scoped, cross-tenant safe."
+    }
+  ]
+}

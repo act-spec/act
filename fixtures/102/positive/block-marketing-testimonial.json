@@ -1,0 +1,10 @@
+{
+  "type": "marketing:testimonial",
+  "quote": "We cut our deploy time from 45 minutes to 90 seconds.",
+  "author": "Riley Chen",
+  "role": "VP Platform",
+  "org": "Globex",
+  "metadata": {
+    "extracted_via": "component-contract"
+  }
+}

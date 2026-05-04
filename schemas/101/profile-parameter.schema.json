@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/0.1/profile-parameter.schema.json",
+  "title": "ACT MIME `profile` parameter — closed enum",
+  "description": "Per PRD-101-R7. The MIME `profile` parameter (per RFC 6906) carried on `application/act-manifest+json` and on the HTTP Link header advertising the manifest. The enum is CLOSED: adding a value is a MAJOR change per PRD-108-R5(4). PRD-101 owns this enum; PRD-803 owns the MIME type registration that the parameter is attached to.",
+  "type": "string",
+  "enum": ["static", "runtime"]
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://act-spec.org/schemas/0.1/www-authenticate.schema.json",
+  "title": "ACT runtime WWW-Authenticate validation contract (PRD-109)",
+  "description": "Per PRD-109-R4, PRD-109-R5, PRD-109-R9. HTTP headers are not JSON, so this schema describes the structured shape PRD-600 (validator) and PRD-500 (consumer SDK) parse runtime 401 responses into. PRD-109-R5 mandates that a 401 response include one WWW-Authenticate header line per advertised scheme, in manifest auth.schemes order. The validator parses the headers and asserts this shape.",
+  "type": "object",
+  "required": ["status_code", "headers"],
+  "additionalProperties": false,
+  "properties": {
+    "status_code": {
+      "type": "integer",
+      "const": 401,
+      "description": "Per PRD-109-R4: 401 is reserved for 'authentication required to access this scope'. MUST NOT be used to distinguish 'exists but auth needed' from 'does not exist'."
+    },
+    "headers": {
+      "type": "object",
+      "required": ["www_authenticate"],
+      "additionalProperties": true,
+      "properties": {
+        "www_authenticate": {
+          "type": "array",
+          "minItems": 1,
+          "description": "One challenge per advertised scheme, in manifest auth.schemes order. Per RFC 9110 §11.6.1, multiple challenges MAY be sent as separate header lines or comma-separated within one line; either form satisfies PRD-109. The validator normalizes both into this array.",
+          "items": {
+            "type": "object",
+            "required": ["scheme"],
+            "additionalProperties": false,
+            "properties": {
+              "scheme": {
+                "type": "string",
+                "description": "RFC 9110 auth-scheme token (e.g., 'Basic', 'Bearer', 'OAuth'). MUST correspond 1:1 with one entry in manifest.auth.schemes."
+              },
+              "params": {
+                "type": "object",
+                "description": "auth-param tokens. For OAuth 2.0 challenges: 'realm' SHOULD be present; 'scope' SHOULD echo the scopes the resource requires. MUST NOT include user-identifying tokens, request-local nonces tied to a user, or any value that varies across identities for the same resource."
+              }
+            }
+          }
+        }
+      }
+    },
+    "body": {
+      "description": "If a body is sent, it MUST conform to the error envelope (owned by PRD-100). PRD-109 imposes the constraint that error.code == 'auth_required' and error.message MUST NOT contain PII."
+    }
+  }
+}

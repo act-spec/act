@@ -1,0 +1,50 @@
+{
+  "_comment": "landingPage entry with a `type=hero` discriminator that the user mapping promotes into a marketing:hero block (PRD-202-R8 + R10 + R11).",
+  "items": [
+    {
+      "sys": {
+        "id": "hero01",
+        "type": "Entry",
+        "contentType": { "sys": { "type": "Link", "linkType": "ContentType", "id": "landingPage" } }
+      },
+      "fields": {
+        "title": "ACT for the modern web",
+        "slug": "landing/home",
+        "subhead": "Composable, agent-friendly content trees.",
+        "type": "hero",
+        "headline": "ACT for the modern web",
+        "cta": "Read the spec",
+        "body": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [{ "nodeType": "text", "value": "Lead paragraph.", "marks": [], "data": {} }]
+            },
+            {
+              "nodeType": "embedded-asset-block",
+              "data": { "target": { "sys": { "type": "Link", "linkType": "Asset", "id": "asset-hero-bg" } } },
+              "content": []
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "assets": {
+    "asset-hero-bg": {
+      "sys": { "type": "Link", "linkType": "Asset", "id": "asset-hero-bg" },
+      "fields": {
+        "title": "Hero background",
+        "file": {
+          "url": "https://images.ctfassets.net/abc/asset-hero-bg.jpg",
+          "contentType": "image/jpeg",
+          "fileName": "hero-bg.jpg",
+          "details": { "size": 18432, "image": { "width": 1920, "height": 1080 } }
+        }
+      }
+    }
+  }
+}

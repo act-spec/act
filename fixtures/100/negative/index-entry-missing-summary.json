@@ -1,0 +1,27 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-100",
+    "violates": [
+      "PRD-100-R17"
+    ],
+    "expected_error": {
+      "level": "core",
+      "requirement": "PRD-100-R17",
+      "missing": "Index entry missing required `summary` field; also violates PRD-100-R19 / PRD-107-R6."
+    }
+  },
+  "_negative_reason": "Index entry omits required `summary`. Violates PRD-100 index-entry requirements and PRD-107-R6 (Core requires summary on every node).",
+  "act_version": "0.1",
+  "etag": "s256:0000000000000000000000",
+  "nodes": [
+    {
+      "id": "intro",
+      "type": "article",
+      "title": "Introduction",
+      "tokens": {
+        "summary": 0
+      },
+      "etag": "s256:abc1230000000000000000"
+    }
+  ]
+}

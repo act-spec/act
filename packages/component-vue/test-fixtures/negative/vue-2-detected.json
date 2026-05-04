@@ -1,0 +1,7 @@
+{
+  "id": "vue-2-detected",
+  "requirements": ["PRD-302-R2"],
+  "description": "Vue 2 is explicitly out of scope for v0.1; assertVue3Plus throws BuildError when probed against a Vue 2.x version string. Vue 2 reached EOL on 2024-12-31; the binding ships in 2026 and targets Vue 3 only.",
+  "input": { "version": "2.7.16" },
+  "expectedErrorSubstring": "Vue 2"
+}

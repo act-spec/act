@@ -1,0 +1,45 @@
+{
+  "name": "@act-spec/example-nextjs-saas-runtime",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Multi-tenant B2B SaaS workspace built on Next.js — serves ACT live from runtime route handlers, identity-scoped, cross-tenant safe.",
+  "license": "Apache-2.0",
+  "author": "Jeremy Forsythe <jeremy@act-spec.org>",
+  "homepage": "https://act-spec.org",
+  "bugs": {
+    "url": "https://github.com/act-spec/act/issues"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-spec/act.git",
+    "directory": "examples/nextjs-saas-runtime"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "start": "next start",
+    "build:site": "next build",
+    "probe": "tsx scripts/probe.ts",
+    "validate": "tsx scripts/validate.ts",
+    "conformance": "tsx scripts/conformance.ts",
+    "test": "node -e \"console.log('@act-spec/example-nextjs-saas-runtime: example exercises end-to-end via conformance')\"",
+    "lint": "node -e \"console.log('@act-spec/example-nextjs-saas-runtime: lint covered by typecheck + conformance')\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@act-spec/runtime-next": "workspace:*",
+    "@act-spec/runtime-core": "workspace:*",
+    "@act-spec/adapter-programmatic": "workspace:*",
+    "@act-spec/adapter-framework": "workspace:*",
+    "next": "14.2.18",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@act-spec/validator": "workspace:*",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

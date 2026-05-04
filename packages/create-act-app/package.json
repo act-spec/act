@@ -1,0 +1,53 @@
+{
+  "name": "create-act-app",
+  "version": "0.2.0",
+  "description": "Bootstrap an ACT-emitting site from an example template. Unscoped per npm-create convention (npm create act-app@latest).",
+  "author": "Jeremy Forsythe <jeremy@act-spec.org>",
+  "license": "Apache-2.0",
+  "homepage": "https://act-spec.org",
+  "bugs": {
+    "url": "https://github.com/act-spec/act/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "create-act-app": "./bin/create-act-app.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "bin",
+    "templates"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/act-spec/act.git",
+    "directory": "packages/create-act-app"
+  },
+  "scripts": {
+    "build:templates": "node scripts/build-templates.mjs",
+    "build:ts": "tsc -p tsconfig.json",
+    "build": "pnpm run build:templates && pnpm run build:ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepublishOnly": "pnpm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
+}

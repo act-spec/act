@@ -1,0 +1,13 @@
+{
+  "home.hero.headline": {
+    "defaultMessage": "Build with ACT",
+    "description": "Hero headline on the homepage"
+  },
+  "home.hero.subhead": {
+    "defaultMessage": "Open agent content tree",
+    "description": "Hero subhead"
+  },
+  "pricing.headline": {
+    "defaultMessage": "Simple, transparent pricing"
+  }
+}

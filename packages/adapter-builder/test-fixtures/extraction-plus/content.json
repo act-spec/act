@@ -1,0 +1,104 @@
+{
+  "_comment": "Recorded Builder.io v3 Content API response with locale fan-out (en+de) AND a componentMapping that promotes Builder `Hero` and `PricingTable` components to `marketing:hero` and `marketing:pricing-table`. Exercises PRD-206-R10 (no — that's pass-through), R11, R13, R17, R22.",
+  "authProbe": "ok",
+  "keyKindProbe": "public",
+  "contentByModel": {
+    "page": [
+      {
+        "id": "builder-content-pricing",
+        "name": "Pricing",
+        "modelName": "page",
+        "lastUpdated": 1745654400000,
+        "data": {
+          "url": "/pricing",
+          "description": "Acme pricing tiers and plan comparison.",
+          "blocks": [
+            {
+              "@type": "@builder.io/sdk:Element",
+              "component": {
+                "name": "Hero",
+                "options": {
+                  "headline": "Pricing that scales with you.",
+                  "subhead": "Start free. Pay as you grow.",
+                  "ctaLabel": "Start free trial",
+                  "ctaHref": "/signup"
+                }
+              }
+            },
+            {
+              "@type": "@builder.io/sdk:Element",
+              "component": {
+                "name": "PricingTable",
+                "options": {
+                  "tiers": [
+                    { "name": "Starter", "price": "$0/mo", "features": ["1,000 requests/mo"] },
+                    { "name": "Pro", "price": "$49/mo", "features": ["100,000 requests/mo", "99.9% SLA"] },
+                    { "name": "Ent", "price": "Contact us", "features": ["Unlimited requests", "Custom SLA"] }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "contentByLocale": {
+    "en": {
+      "page": [
+        {
+          "id": "builder-content-pricing",
+          "name": "Pricing",
+          "modelName": "page",
+          "lastUpdated": 1745654400000,
+          "data": {
+            "url": "/pricing",
+            "description": "Acme pricing tiers and plan comparison.",
+            "blocks": [
+              {
+                "@type": "@builder.io/sdk:Element",
+                "component": {
+                  "name": "Hero",
+                  "options": {
+                    "headline": "Pricing that scales with you.",
+                    "subhead": "Start free. Pay as you grow.",
+                    "ctaLabel": "Start free trial",
+                    "ctaHref": "/signup"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "de": {
+      "page": [
+        {
+          "id": "builder-content-pricing",
+          "name": "Preise",
+          "modelName": "page",
+          "lastUpdated": 1745654400000,
+          "data": {
+            "url": "/pricing",
+            "description": "Acme Preise und Plan-Vergleich.",
+            "blocks": [
+              {
+                "@type": "@builder.io/sdk:Element",
+                "component": {
+                  "name": "Hero",
+                  "options": {
+                    "headline": "Preise, die mit dir wachsen.",
+                    "subhead": "Starte kostenlos.",
+                    "ctaLabel": "Jetzt starten",
+                    "ctaHref": "/signup"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

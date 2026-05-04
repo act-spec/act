@@ -1,0 +1,136 @@
+name: Release Go binaries
+
+# Cross-compiles the actree CLI for the five supported target triples and
+# attaches the binaries (plus a SHA256SUMS manifest) to the GitHub Release
+# matching the pushed tag.
+#
+# This workflow is binary-only — it does NOT publish to npm (handled by
+# release.yml) and does NOT push container images (handled by docker.yml).
+# Each release pipeline is independent so a failure on one channel does
+# not block the others.
+#
+# Tag format: v<MAJOR>.<MINOR>.<PATCH>[-prerelease]
+#   - The leading "v" is stripped before the version is injected into the
+#     binary via -ldflags -X core.Version.
+#   - The same trigger pattern is used by release.yml and docker.yml.
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+      - 'v*.*.*-*'
+  workflow_dispatch:
+    # Manual dispatch builds the matrix but does NOT touch a Release.
+
+concurrency:
+  group: release-go-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build ${{ matrix.goos }}/${{ matrix.goarch }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - goos: darwin
+            goarch: amd64
+          - goos: darwin
+            goarch: arm64
+          - goos: linux
+            goarch: amd64
+          - goos: linux
+            goarch: arm64
+          - goos: windows
+            goarch: amd64
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.23'
+          cache: true
+          cache-dependency-path: go/go.sum
+
+      - name: Derive VERSION from tag
+        id: version
+        run: |
+          if [[ "${GITHUB_REF}" == refs/tags/v* ]]; then
+            echo "version=${GITHUB_REF#refs/tags/v}" >> "$GITHUB_OUTPUT"
+          else
+            # Manual dispatch: fall back to the bundled core.Version constant.
+            echo "version=$(grep -E '^const Version' go/pkg/core/types.go | sed -E 's/.*"([^"]+)".*/\1/')" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build
+        working-directory: go
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: bash scripts/build.sh ${{ matrix.goos }} ${{ matrix.goarch }}
+
+      - name: Compute per-artifact SHA-256
+        working-directory: go/dist
+        run: |
+          ext=""
+          if [[ "${{ matrix.goos }}" == "windows" ]]; then
+            ext=".exe"
+          fi
+          file="actree-${{ matrix.goos }}-${{ matrix.goarch }}${ext}"
+          sha256sum "${file}" > "${file}.sha256"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: actree-${{ matrix.goos }}-${{ matrix.goarch }}
+          path: go/dist/actree-${{ matrix.goos }}-${{ matrix.goarch }}*
+          if-no-files-found: error
+          retention-days: 7
+
+  release:
+    name: Attach binaries to GitHub Release
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          pattern: actree-*
+          merge-multiple: true
+
+      - name: Aggregate SHA256SUMS
+        working-directory: artifacts
+        run: |
+          # The per-arch jobs already wrote one .sha256 file each; concatenate
+          # them into a single canonical SHA256SUMS so users can verify the
+          # whole release with `sha256sum --check SHA256SUMS`.
+          rm -f SHA256SUMS
+          for f in *.sha256; do
+            cat "$f" >> SHA256SUMS
+          done
+          rm -f *.sha256
+          cat SHA256SUMS
+
+      - name: Create or update GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          # Treat anything with a hyphen in the tag (e.g. v0.2.0-rc.1) as a
+          # prerelease so it doesn't get marked latest.
+          prerelease: ${{ contains(github.ref, '-') }}
+          generate_release_notes: true
+          fail_on_unmatched_files: true
+          files: |
+            artifacts/actree-*
+            artifacts/SHA256SUMS
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

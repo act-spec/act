@@ -1,0 +1,8 @@
+{
+  "id": "variant-cap-allows-64",
+  "requirements": ["PRD-300-R17"],
+  "input": {},
+  "expected": {
+    "length": 64
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "allowImportingTsExtensions": false,
+    "jsx": "preserve",
+    "types": ["astro/client", "node"]
+  },
+  "include": ["src/**/*", "scripts/**/*", "astro.config.mjs"]
+}

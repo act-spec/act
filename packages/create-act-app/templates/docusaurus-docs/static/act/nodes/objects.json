@@ -1,0 +1,32 @@
+{
+  "act_version": "0.1",
+  "id": "objects",
+  "type": "section",
+  "title": "Objects",
+  "summary": "Objects — section.",
+  "summary_source": "extracted",
+  "etag": "s256:AeawaLa99fVX5uhTQFxwWj",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# Objects\n\nThis section groups related objects documents.\n"
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 16
+  },
+  "children": [
+    "api/objects/upload",
+    "api/objects/download",
+    "api/objects/list",
+    "api/objects/delete"
+  ],
+  "parent": "api-reference",
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "sidebar-category:objects"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "act_version": "0.1",
+  "id": "getting-started/quickstart",
+  "type": "doc",
+  "title": "Quickstart",
+  "summary": "Provision a bucket and upload your first object in under a minute.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Five minutes"
+    },
+    {
+      "type": "code",
+      "language": "ts",
+      "text": "import { Tinybox } from '@tinybox/sdk';\nconst tb = new Tinybox({ token: process.env.TINYBOX_TOKEN });\nawait tb.buckets.create({ name: 'my-bucket', region: 'us-east-1' });"
+    }
+  ],
+  "tokens": {
+    "summary": 12,
+    "body": 26
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "getting-started/quickstart.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/getting-started/quickstart.md"
+    }
+  },
+  "etag": "s256:Tz_Q4fWW5vFQ6gE17U8pmV",
+  "source": {
+    "human_url": "https://example.com/getting-started/quickstart/"
+  },
+  "parent": "getting-started"
+}

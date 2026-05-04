@@ -1,0 +1,86 @@
+{
+  "act_version": "0.1",
+  "root": "cms/de-de/landing/contact",
+  "depth": 3,
+  "truncated": false,
+  "tokens": {
+    "body": 6,
+    "summary": 7
+  },
+  "nodes": [
+    {
+      "act_version": "0.1",
+      "id": "cms/de-de/landing/contact",
+      "type": "landing",
+      "title": "Kontakt",
+      "etag": "s256:_0JCK5UmEWPVkkpNi31B31",
+      "summary": "Sprechen Sie mit Vertrieb, Support oder Community.",
+      "summary_source": "author",
+      "content": [
+        {
+          "type": "prose",
+          "format": "plain",
+          "text": "Reach out via the channels below."
+        },
+        {
+          "type": "marketing:hero",
+          "headline": "Get in touch",
+          "subhead": "Talk to sales, support, or community.",
+          "metadata": {
+            "extracted_via": "component-contract",
+            "extraction_method": "ssr-walk"
+          }
+        },
+        {
+          "type": "marketing:cta",
+          "headline": "Talk to sales",
+          "actions": [
+            {
+              "text": "Open ticket",
+              "to": "/support"
+            }
+          ],
+          "metadata": {
+            "extracted_via": "component-contract",
+            "extraction_method": "ssr-walk"
+          }
+        }
+      ],
+      "tokens": {
+        "summary": 7,
+        "body": 6
+      },
+      "metadata": {
+        "locale": "de-DE",
+        "translations": [
+          {
+            "locale": "en-US",
+            "id": "cms/en-us/landing/contact"
+          },
+          {
+            "locale": "es-ES",
+            "id": "cms/es-es/landing/contact"
+          },
+          {
+            "locale": "ja-JP",
+            "id": "cms/ja-jp/landing/contact"
+          }
+        ],
+        "source": {
+          "adapter": "act-contentful",
+          "source_id": "de-DE:landing/contact",
+          "contributors": [
+            "act-contentful",
+            "act-react-extract",
+            "act-i18n"
+          ]
+        },
+        "translation_status": "complete"
+      },
+      "source": {
+        "human_url": "https://acme.example.com/de-DE/landing/contact"
+      }
+    }
+  ],
+  "etag": "s256:J2Iogs3uyhyvCx657cRmoZ"
+}

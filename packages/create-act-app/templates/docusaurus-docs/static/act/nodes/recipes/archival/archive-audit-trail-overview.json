@@ -1,0 +1,51 @@
+{
+  "act_version": "0.1",
+  "id": "recipes/archival/archive-audit-trail-overview",
+  "type": "recipe",
+  "title": "Archive audit trail overview (Archival)",
+  "summary": "Archive audit trail overview — archival workflow walkthrough.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Goal"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Demonstrate \"archive audit trail (overview)\" against the Tinybox archival surface end to end."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Walkthrough"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "text": "# Step 1 — prepare a bucket for the archival workflow.\ntinybox buckets create my-bucket --region us-east-1"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Apply the recipe; verify with the API reference under API reference."
+    }
+  ],
+  "tokens": {
+    "summary": 8,
+    "body": 47
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "recipes/archival/archive-audit-trail-overview.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/recipes/archival/archive-audit-trail-overview.md"
+    }
+  },
+  "etag": "s256:Xi4VGXFRwBJuV6YGCId_38",
+  "source": {
+    "human_url": "https://example.com/recipes/archival/archive-audit-trail-overview/"
+  },
+  "parent": "archival"
+}

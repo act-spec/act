@@ -1,0 +1,1 @@
+{"act_version":"0.1","site":{"name":"Example Eleventy","canonical_url":"https://example.com"},"generated_at":"2026-05-03T21:06:21.160Z","generator":"@act-spec/plugin-eleventy@0.0.0","index_url":"/act/index.json","node_url_template":"/act/n/{id}.json","capabilities":{"etag":true},"conformance":{"level":"core"},"delivery":"static","stats":{"node_count":4}}

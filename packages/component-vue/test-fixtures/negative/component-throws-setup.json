@@ -1,0 +1,6 @@
+{
+  "id": "component-throws-setup",
+  "requirements": ["PRD-302-R16", "PRD-300-R22"],
+  "description": "A component that throws inside its setup() is captured by Vue's app.config.errorHandler installed by installActProvider. The binding records the error and surfaces it as a marketing:placeholder; Vue's render continues past the failed component so the surviving component still contributes its contract (PRD-302-R16: 'render MUST continue past the failed component').",
+  "expectedBlockTypesContain": ["marketing:placeholder", "marketing:pricing-table"]
+}

@@ -1,0 +1,29 @@
+{
+  "_fixture_meta": {
+    "prd": "PRD-100",
+    "violates": [
+      "PRD-100-R6"
+    ],
+    "expected_error": {
+      "level": "core",
+      "requirement": "PRD-100-R6",
+      "missing": "capabilities is the legacy v0.1-draft array form; the structured object form is required."
+    }
+  },
+  "_negative_reason": "`capabilities` is the legacy v0.1-draft array form. PRD-100 requires the structured object form. Violates PRD-100 capabilities-shape requirement.",
+  "act_version": "0.1",
+  "site": {
+    "name": "Acme"
+  },
+  "index_url": "/act/index.json",
+  "node_url_template": "/act/n/{id}.json",
+  "conformance": {
+    "level": "core"
+  },
+  "delivery": "static",
+  "capabilities": [
+    "subtree",
+    "ndjson_index",
+    "etag"
+  ]
+}

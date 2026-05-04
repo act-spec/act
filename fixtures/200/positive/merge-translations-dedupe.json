@@ -1,0 +1,54 @@
+{
+  "_fixture": "PRD-200 positive — multi-source merge dedupes metadata.translations by (locale, id); later-wins precedence on collisions per amendment A1.",
+  "_satisfies": ["PRD-200-R12", "PRD-200-R13"],
+  "_cites_amendment": "A1 (closed 2026-05-02)",
+  "_scenario": {
+    "first_adapter": {
+      "name": "act-contentful",
+      "emits_partial_translations": [
+        { "locale": "es-ES", "id": "precios" },
+        { "locale": "de-DE", "id": "preise" }
+      ]
+    },
+    "second_adapter": {
+      "name": "act-i18n",
+      "emits_partial_translations": [
+        { "locale": "de-DE", "id": "preise" },
+        { "locale": "ja-JP", "id": "kakaku" }
+      ]
+    },
+    "merge_step_behavior": "Concat per rule 3, then dedupe per rule 4 by (locale, id). The duplicate (de-DE, preise) collapses to one entry; later contributor (act-i18n) wins per rule 1's configuration order."
+  },
+  "act_version": "0.1",
+  "id": "pricing",
+  "type": "landing",
+  "title": "Pricing",
+  "etag": "s256:Mrg3dTrnsLtns-A1abc234",
+  "summary": "Acme pricing tiers, plan comparison, and frequently asked questions.",
+  "summary_source": "author",
+  "metadata": {
+    "locale": "en-US",
+    "translation_status": "complete",
+    "translations": [
+      { "locale": "es-ES", "id": "precios" },
+      { "locale": "de-DE", "id": "preise" },
+      { "locale": "ja-JP", "id": "kakaku" }
+    ],
+    "source": {
+      "adapter": "act-contentful",
+      "source_id": "entry/4G2zNlmK3pricing",
+      "contributors": [
+        { "adapter": "act-contentful", "source_id": "entry/4G2zNlmK3pricing" },
+        { "adapter": "act-i18n", "source_id": "messages/en-US/pricing.json" }
+      ]
+    }
+  },
+  "content": [
+    {
+      "type": "marketing:hero",
+      "headline": "Simple, transparent pricing",
+      "subhead": "No hidden fees. Cancel any time."
+    }
+  ],
+  "tokens": { "summary": 12, "body": 280 }
+}

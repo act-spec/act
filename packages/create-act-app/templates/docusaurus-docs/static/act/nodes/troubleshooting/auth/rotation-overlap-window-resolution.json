@@ -1,0 +1,51 @@
+{
+  "act_version": "0.1",
+  "id": "troubleshooting/auth/rotation-overlap-window-resolution",
+  "type": "troubleshooting",
+  "title": "Rotation overlap window resolution (Auth)",
+  "summary": "Resolve \"rotation overlap window\" — resolution for the Auth surface.",
+  "summary_source": "author",
+  "content": [
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Symptom"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "An operation against the Auth surface fails with an error matching \"rotation overlap window (resolution)\"."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Resolution"
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "Inspect the error envelope.Re-issue with corrected parameters.Confirm via the audit log."
+    },
+    {
+      "type": "prose",
+      "format": "markdown",
+      "text": "See the Auth API reference for the exact field set."
+    }
+  ],
+  "tokens": {
+    "summary": 10,
+    "body": 45
+  },
+  "metadata": {
+    "source": {
+      "adapter": "act-docusaurus-sidebar-synthesizer",
+      "source_id": "troubleshooting/auth/rotation-overlap-window-resolution.md",
+      "source_path": "/Users/jforsythe/dev/ai/act/examples/docusaurus-docs/docs/troubleshooting/auth/rotation-overlap-window-resolution.md"
+    }
+  },
+  "etag": "s256:J82XQQ2m3kXTdCyYt5hwcr",
+  "source": {
+    "human_url": "https://example.com/troubleshooting/auth/rotation-overlap-window-resolution/"
+  },
+  "parent": "auth-issues"
+}

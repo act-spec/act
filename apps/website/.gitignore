@@ -1,0 +1,15 @@
+# Astro build output
+dist/
+.astro/
+
+# Mirrored from `../../spec/v0.2/` by `scripts/sync-spec.mjs` at build time.
+# The spec source remains the single editable copy.
+src/content/docs/spec/
+
+# ACT artifacts emitted by `@act-spec/plugin-astro`.
+public/act/
+public/.well-known/
+public/.act-build-report.json
+
+# Node
+node_modules/

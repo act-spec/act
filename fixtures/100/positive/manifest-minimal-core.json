@@ -1,0 +1,9 @@
+{
+  "act_version": "0.1",
+  "site": { "name": "Acme Tiny Docs" },
+  "index_url": "/act/index.json",
+  "node_url_template": "/act/n/{id}.json",
+  "conformance": { "level": "core" },
+  "delivery": "static",
+  "capabilities": { "etag": true }
+}

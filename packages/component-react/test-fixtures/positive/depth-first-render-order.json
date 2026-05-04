@@ -1,0 +1,8 @@
+{
+  "id": "depth-first-render-order",
+  "requirements": ["PRD-301-R10", "PRD-300-R9"],
+  "description": "Render-order aggregation. Three nested components (Outer registers, then ChildA, then ChildB; ChildC at sibling level) MUST appear in depth-first order in NodeDraft.content.",
+  "expected": {
+    "blockTypes": ["outer", "inner:a", "inner:b", "inner:c"]
+  }
+}
