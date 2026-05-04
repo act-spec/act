@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/adapter-builder",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "PRD-206 Builder.io adapter for the ACT (Agent Content Tree) v0.1 reference implementation. Consumes the Builder.io Content API and emits PRD-100/PRD-102 envelopes; supports two emission modes (pass-through emits a single `marketing:builder-page` block carrying the raw Builder tree as `payload`; extraction walks Builder primitives `Text` / `Image` / `Button` / `CustomCode` / `Section` / `Symbol` into `prose` / `code` / `marketing:*` blocks per a configured mapping). Public-key kind validation, draft / published version, optional locale fan-out via Builder targeting, opt-in experiment / variant emission, reference resolution with cycle tolerance, Symbol recursion bound, lastUpdated delta marker, HMAC-SHA256 webhook signature verification. Implements the PRD-200 framework contract.",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",
@@ -18,7 +18,11 @@
       "default": "./dist/index.js"
     }
   },
-  "files": ["dist", "src", "schema"],
+  "files": [
+    "dist",
+    "src",
+    "schema"
+  ],
   "publishConfig": {
     "access": "public"
   },

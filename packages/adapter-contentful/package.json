@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/adapter-contentful",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "PRD-202 Contentful adapter for the ACT (Agent Content Tree) v0.1 reference implementation. Consumes Contentful Content Delivery API and emits PRD-100/PRD-102 envelopes; supports field-mapping DSL, Rich Text → block conversion, locale fan-out per PRD-104, sync-API delta, and PRD-200 framework conformance.",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",
@@ -18,7 +18,11 @@
       "default": "./dist/index.js"
     }
   },
-  "files": ["dist", "src", "schema"],
+  "files": [
+    "dist",
+    "src",
+    "schema"
+  ],
   "publishConfig": {
     "access": "public"
   },

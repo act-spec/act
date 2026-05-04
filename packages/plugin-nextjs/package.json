@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/plugin-nextjs",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "PRD-405 Next.js static-export generator for the ACT (Agent Content Tree) v0.1 reference implementation.",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",

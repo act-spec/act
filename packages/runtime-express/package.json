@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/runtime-express",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "PRD-502 Express runtime SDK for the ACT (Agent Content Tree) v0.1 reference implementation. Express Router + middleware factory consuming @act-spec/runtime-core (PRD-500).",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",
@@ -18,7 +18,10 @@
       "default": "./dist/index.js"
     }
   },
-  "files": ["dist", "src"],
+  "files": [
+    "dist",
+    "src"
+  ],
   "publishConfig": {
     "access": "public"
   },

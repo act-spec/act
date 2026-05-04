@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/adapter-i18n",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "PRD-207 i18n adapter (next-intl, react-intl, i18next) for the ACT (Agent Content Tree) v0.1 reference implementation. Reads message catalogs per the configured i18n library, emits PRD-200 partial nodes carrying PRD-104 i18n metadata (`metadata.locale`, `metadata.translations`, `metadata.translation_status`, `metadata.fallback_from`) keyed against IDs that a primary content adapter (PRD-201 markdown / PRD-202 Contentful / PRD-208 programmatic) emits. Declares `precedence: \"fallback\"` per PRD-200-R15 so scalar fields from the primary adapter survive the merge step. File-system fixtures only; no live i18n service calls.",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",
@@ -18,7 +18,11 @@
       "default": "./dist/index.js"
     }
   },
-  "files": ["dist", "src", "schema"],
+  "files": [
+    "dist",
+    "src",
+    "schema"
+  ],
   "publishConfig": {
     "access": "public"
   },

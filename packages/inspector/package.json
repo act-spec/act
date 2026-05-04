@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/inspector",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "PRD-601 inspector CLI + library for the ACT (Agent Content Tree) v0.1 wire format. Subcommands: fetch, walk, diff, token-budget. Reuses @act-spec/validator for parsing and structural checks (PRD-601-R1).",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",
@@ -21,7 +21,11 @@
       "default": "./dist/index.js"
     }
   },
-  "files": ["dist", "src", "bin"],
+  "files": [
+    "dist",
+    "src",
+    "bin"
+  ],
   "publishConfig": {
     "access": "public"
   },

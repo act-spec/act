@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/adapter-wordpress",
-  "version": "0.2.0",
+  "version": "0.2.0-rc.1",
   "description": "WordPress adapter for ACT (Agent Content Tree). Consumes the WordPress REST API (`wp/v2/{posts,pages,categories,tags,users,media}`) and emits ACT envelopes against the shared adapter framework. Maps posts to leaf nodes, categories and pages to branch nodes, detects Polylang and WPML for locale fan-out, and supports application-password Basic Auth for private content.",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",
@@ -18,7 +18,11 @@
       "default": "./dist/index.js"
     }
   },
-  "files": ["dist", "src", "schema"],
+  "files": [
+    "dist",
+    "src",
+    "schema"
+  ],
   "publishConfig": {
     "access": "public"
   },

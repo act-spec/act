@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/plugin-astro",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "PRD-401 Astro generator for the ACT (Agent Content Tree) v0.1 reference implementation.",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",

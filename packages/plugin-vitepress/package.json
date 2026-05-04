@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/plugin-vitepress",
-  "version": "0.2.0",
+  "version": "0.2.0-rc.1",
   "description": "VitePress plugin for the ACT (Agent Content Tree) reference implementation. Wraps the ACT generator pipeline against VitePress 1.x / 2.x via the transformPageData and buildEnd hooks.",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",

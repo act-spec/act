@@ -1,6 +1,6 @@
 {
   "name": "create-act-app",
-  "version": "0.2.0",
+  "version": "0.2.0-rc.1",
   "description": "Bootstrap an ACT-emitting site from an example template. Unscoped per npm-create convention (npm create act-app@latest).",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",
   "license": "Apache-2.0",

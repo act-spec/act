@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/adapter-storyblok",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "PRD-204 Storyblok adapter for the ACT (Agent Content Tree) v0.1 reference implementation. Consumes the Storyblok Content Delivery API (stories + TipTap-derived rich text + component blocks) and emits PRD-100/PRD-102 envelopes; supports content-type / field mapping, rich-text → block conversion, story-link resolution with cycle tolerance, locale fan-out (folder + field), `cv`-marker delta, and HMAC-SHA256 webhook signature verification. Implements the PRD-200 framework contract.",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",
@@ -18,7 +18,11 @@
       "default": "./dist/index.js"
     }
   },
-  "files": ["dist", "src", "schema"],
+  "files": [
+    "dist",
+    "src",
+    "schema"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -47,7 +51,9 @@
     "storyblok-js-client": "^6.0.0"
   },
   "peerDependenciesMeta": {
-    "storyblok-js-client": { "optional": true }
+    "storyblok-js-client": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^2.1.9",

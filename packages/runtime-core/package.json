@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/runtime-core",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "PRD-500 runtime SDK contract — resolver shape, identity context, capability negotiation, conditional GET helpers. Shared by every first-party runtime SDK leaf (PRD-501 Next.js, PRD-502 Express, PRD-505 generic fetch).",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",
@@ -22,7 +22,10 @@
       "import": "./dist/test-utils/index.js"
     }
   },
-  "files": ["dist", "src"],
+  "files": [
+    "dist",
+    "src"
+  ],
   "publishConfig": {
     "access": "public"
   },

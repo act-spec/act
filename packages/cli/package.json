@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/cli",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "PRD-409 standalone CLI (binary: actree) for the ACT (Agent Content Tree) v0.1 reference implementation. Framework-free generator orchestration: loads act.config.{ts,mts,mjs,cjs,js,json}, instantiates adapters + the PRD-400 pipeline (via @act-spec/generator-core), and writes the static file set per PRD-105.",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",
   "license": "Apache-2.0",
@@ -21,7 +21,11 @@
       "default": "./dist/index.js"
     }
   },
-  "files": ["dist", "src", "bin"],
+  "files": [
+    "dist",
+    "src",
+    "bin"
+  ],
   "publishConfig": {
     "access": "public"
   },

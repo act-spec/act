@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/component-react",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "PRD-301 React binding for the ACT (Agent Content Tree) v0.1 component contract (PRD-300). Implements the three React declaration patterns (static field `Component.act = {…}`, hook `useActContract({…})`, page-level boundary as exported `act` const or `<ActContractWrapper>`), an `<ActProvider>` collector for SSR-walk extraction via `react-dom/server`, the streaming completion rule (`onAllReady`), the React Server Components server-tree-only walk, the variant replay loop, the placeholder emission contract (truncated and secret-redacted error messages), the React 18+ peer-dependency floor, and the `BindingCapabilities` const with values pinned per PRD-301-R20. Bridges React component trees to the framework-agnostic `NodeDraft` shape from `@act-spec/component-contract`.",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",

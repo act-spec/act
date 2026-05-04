@@ -1,6 +1,6 @@
 {
   "name": "@act-spec/core",
-  "version": "0.0.0",
+  "version": "0.2.0-rc.1",
   "description": "Shared TypeScript types and reporter contracts for the ACT v0.1 reference implementation. Types are derived from schemas/ via codegen.",
   "license": "Apache-2.0",
   "author": "Jeremy Forsythe <jeremy@act-spec.org>",
