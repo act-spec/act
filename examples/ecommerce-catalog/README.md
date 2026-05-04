@@ -50,7 +50,7 @@ pnpm add @act-spec/plugin-astro @act-spec/adapter-programmatic @act-spec/generat
 
 **2. Write a tiny catalog adapter** — `src/act-catalog.ts`:
 
-> **Summaries are required on every node** (PRD-100-R21). The programmatic adapter doesn't have a body to extract from automatically — the user transform owns the field. Two patterns: (a) prefer an author-written `row.shortDescription` / similar; (b) fall back to `extractFirstSentence(row.description, 50)` from `@act-spec/adapter-programmatic` when no author summary exists. The example below uses both.
+> **Summaries are required on every node.** The programmatic adapter doesn't have a body to extract from automatically — the user transform owns the field. Two patterns: (a) prefer an author-written `row.shortDescription` / similar; (b) fall back to `extractFirstSentence(row.description, 50)` from `@act-spec/adapter-programmatic` when no author summary exists. The example below uses both.
 
 ```ts
 import { defineProgrammaticAdapter, extractFirstSentence } from '@act-spec/adapter-programmatic';

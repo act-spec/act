@@ -120,8 +120,8 @@ Returns `{ url, query, hits, truncated, findings }` where each hit is
 - It walks the entire index and fetches every node body that doesn't
   match on title or summary. On large sites this is slow.
 
-If your producer advertises a `search_url_template` (Strict-only per
-PRD-100), prefer their endpoint directly. A future release will route
+If your producer advertises a `search_url_template` (Strict conformance
+level), prefer their endpoint directly. A future release will route
 through it transparently when present.
 
 ## Self-hosting

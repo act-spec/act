@@ -24,7 +24,8 @@
   },
   "files": [
     "dist",
-    "src"
+    "src/conformance-reporter.ts",
+    "src/index.ts"
   ],
   "publishConfig": {
     "access": "public"

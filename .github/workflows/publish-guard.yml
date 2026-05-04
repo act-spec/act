@@ -1,0 +1,129 @@
+name: Publish Guard
+
+# Belt-and-suspenders check: pack every @act-spec/* package and verify the
+# resulting tarball contains no absolute developer paths or build artifacts
+# that must never ship to consumers.
+#
+# Catches regressions when a new emitter writes absolute paths into a tracked
+# file (e.g. a build report, a generated type header) that the .npmignore
+# or package.json "files" allowlist does not yet exclude.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  tarball-leak-check:
+    name: Tarball path-leak check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: '10.17.1'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate @act-spec/core types from schemas/
+        run: pnpm -F @act-spec/core codegen
+
+      - name: Build all packages
+        run: pnpm -r --filter "./packages/*" run build
+
+      - name: Pack and inspect each @act-spec/* tarball
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          FAIL=0
+
+          # Patterns that must never appear in a published tarball.
+          # - Absolute path prefixes (macOS, Linux, Windows)
+          # - The build-report artifact (gitignored; must not slip through)
+          FORBIDDEN_PATTERNS=(
+            '/Users/'
+            '/home/'
+            '/Volumes/'
+            '\\Users\\'
+            '.act-build-report.json'
+          )
+
+          for pkg_dir in packages/*/; do
+            pkg_json="${pkg_dir}package.json"
+            [[ -f "${pkg_json}" ]] || continue
+
+            # Skip private packages (they are never published).
+            is_private=$(node -e "
+              const p = require('./${pkg_json}');
+              process.stdout.write(p.private ? 'true' : 'false');
+            ")
+            [[ "${is_private}" == "true" ]] && continue
+
+            pkg_name=$(node -e "
+              const p = require('./${pkg_json}');
+              process.stdout.write(p.name ?? '');
+            ")
+            [[ -z "${pkg_name}" ]] && continue
+
+            echo "==> packing ${pkg_name} (${pkg_dir})"
+            tarball=$(cd "${pkg_dir}" && npm pack --dry-run --json 2>/dev/null \
+              | node -e "
+                const chunks = [];
+                process.stdin.on('data', c => chunks.push(c));
+                process.stdin.on('end', () => {
+                  try {
+                    const arr = JSON.parse(Buffer.concat(chunks).toString());
+                    const files = arr[0]?.files ?? [];
+                    files.forEach(f => process.stdout.write(f.path + '\n'));
+                  } catch { process.exit(1); }
+                });
+              ")
+
+            # Check each file path listed in the dry-run manifest.
+            while IFS= read -r file_path; do
+              [[ -z "${file_path}" ]] && continue
+              for pattern in "${FORBIDDEN_PATTERNS[@]}"; do
+                if [[ "${file_path}" == *"${pattern}"* ]]; then
+                  echo "::error::${pkg_name}: tarball contains forbidden pattern '${pattern}' in path: ${file_path}"
+                  FAIL=1
+                fi
+              done
+            done <<< "${tarball}"
+
+            # Also grep the actual content of packed text files for absolute paths.
+            # npm pack --dry-run only lists paths; pack to a real tarball to scan content.
+            tmp_dir=$(mktemp -d)
+            trap "rm -rf '${tmp_dir}'" EXIT
+            (cd "${pkg_dir}" && npm pack --pack-destination "${tmp_dir}" --quiet 2>/dev/null) || true
+            tgz=$(ls "${tmp_dir}"/*.tgz 2>/dev/null | head -1)
+            if [[ -n "${tgz}" ]]; then
+              content_hits=$(tar -xOf "${tgz}" 2>/dev/null \
+                | strings 2>/dev/null \
+                | grep -E '/(Users|home|Volumes)/|\\Users\\|\.act-build-report\.json' \
+                || true)
+              if [[ -n "${content_hits}" ]]; then
+                echo "::error::${pkg_name}: tarball content contains forbidden path patterns:"
+                echo "${content_hits}" | head -20 | while IFS= read -r hit; do
+                  echo "  ${hit}"
+                done
+                FAIL=1
+              fi
+            fi
+          done
+
+          if [[ "${FAIL}" -eq 1 ]]; then
+            echo ""
+            echo "FAIL: one or more tarballs contain absolute developer paths or build artifacts."
+            echo "      Add the offending file to .npmignore or the package's 'files' allowlist."
+            exit 1
+          fi
+
+          echo "PASS: no forbidden patterns found in any tarball."

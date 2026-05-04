@@ -1,8 +1,9 @@
 package core
 
-// Capabilities is the closed structured-flag object on a manifest, per
-// PRD-100-R6. The v0.1-draft array form is rejected; unknown keys are
-// tolerated per PRD-108-R7 (see Manifest.Extra for the round-trip channel).
+// Capabilities is the closed structured-flag object on a manifest. The
+// v0.1-draft array form is rejected; unknown keys are tolerated for
+// forward-compatible extensibility (see Manifest.Extra for the round-trip
+// channel).
 type Capabilities struct {
 	Etag        *bool             `json:"etag,omitempty"`
 	Subtree     *bool             `json:"subtree,omitempty"`
@@ -16,8 +17,8 @@ type SearchCapability struct {
 	TemplateAdvertised *bool `json:"template_advertised,omitempty"`
 }
 
-// Policy is the optional manifest sub-object per PRD-100. All fields are
-// optional and informational.
+// Policy is the optional manifest sub-object. All fields are optional and
+// informational.
 type Policy struct {
 	RobotsRespected *bool  `json:"robots_respected,omitempty"`
 	RateLimitPerMin *int   `json:"rate_limit_per_minute,omitempty"`

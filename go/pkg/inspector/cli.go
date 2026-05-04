@@ -13,8 +13,8 @@ import (
 )
 
 // RunInspect is the entry point for `actree inspect <url>`. It walks the
-// site at url, then writes a JSON report to out. Returns a process exit
-// code following the TS inspector's PRD-601-R22 convention:
+// site at url, then writes a JSON report to out. Returns a process exit code
+// matching the @act-spec/inspector convention:
 //
 //	0  walk completed; no error-severity findings.
 //	1  one or more error-severity findings (manifest missing, parse

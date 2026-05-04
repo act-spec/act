@@ -40,8 +40,8 @@ func readFixture(t *testing.T, rel string) []byte {
 // We normalise two semantically-equivalent shapes before comparing:
 //   - `parent: null` ≡ field absent (the schema allows either via oneOf)
 //   - `children: []` ≡ field absent (the schema does not distinguish empty
-//     from absent for round-trip purposes; PRD-100 carries no semantic
-//     difference between the two).
+//     from absent for round-trip purposes; the wire format carries no
+//     semantic difference between the two).
 //
 // This keeps the typed Go surface ergonomic (omitempty on optional fields
 // stays correct for emit) while still proving that no payload-bearing data

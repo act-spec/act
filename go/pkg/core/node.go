@@ -2,8 +2,8 @@ package core
 
 import "encoding/json"
 
-// ContentBlock is one entry in a node's `content` array per PRD-100-R28. The
-// schema requires only the `type` discriminator and leaves the rest open
+// ContentBlock is one entry in a node's `content` array. The schema requires
+// only the `type` discriminator and leaves the rest open
 // (additionalProperties: true). The Type field carries the discriminator;
 // Extra carries every remaining property so callers can introspect /
 // re-marshal without losing data.
@@ -24,7 +24,7 @@ func (b ContentBlock) MarshalJSON() ([]byte, error) {
 }
 
 // UnmarshalJSON pulls `type` into the typed field and stashes the rest
-// under Extra. Unknown keys are tolerated per PRD-108-R7.
+// under Extra. Unknown keys are tolerated (forward-compatible extensibility).
 func (b *ContentBlock) UnmarshalJSON(data []byte) error {
 	raw := map[string]any{}
 	if err := json.Unmarshal(data, &raw); err != nil {
@@ -38,8 +38,8 @@ func (b *ContentBlock) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-// Node mirrors /schemas/100/node.schema.json. Required fields per PRD-100-R21:
-// act_version, id, type, title, etag, summary, content, tokens.
+// Node mirrors /schemas/100/node.schema.json. Required fields: act_version,
+// id, type, title, etag, summary, content, tokens.
 //
 // Parent is modelled as a *string so the JSON `null` form (allowed by the
 // schema's oneOf) round-trips, matching IndexEntry.Parent.

@@ -4,8 +4,8 @@
 // at the repo root and exposes one entry point per top-level envelope:
 // ValidateManifest, ValidateIndex, ValidateNode.
 //
-// The schema bundle is the source of truth (per PRD-100-R0 / PRD-600-R1):
-// this validator does not embed schema copies. Cross-schema $ref resolution
+// The schema bundle is the source of truth: this validator does not embed
+// schema copies. Cross-schema $ref resolution
 // happens via canonical $id after every schema in the bundle is registered.
 //
 // The Go validator targets parity with the TS validator on shared fixtures

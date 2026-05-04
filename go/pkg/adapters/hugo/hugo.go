@@ -295,8 +295,8 @@ func buildNode(p *hugoPage, children []string) (*core.Node, string) {
 		Tokens:     tokens,
 		Metadata:   metadata,
 		// Etag is derived elsewhere (the generator owns ETag emission per
-		// PRD-103); placeholder here to satisfy the schema's "required"
-		// shape, mirroring the TS markdown adapter.
+		// spec/v0.2/wire-format/etag.md); placeholder here to satisfy the
+		// schema's "required" shape, mirroring the TS markdown adapter.
 		Etag: "placeholder",
 	}
 	if summarySource != "" {

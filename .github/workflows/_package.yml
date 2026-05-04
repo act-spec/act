@@ -42,6 +42,8 @@ jobs:
         run: pnpm -r test
       - name: Conformance gate (per-package)
         run: pnpm -r conformance
+      - name: Check PRD references are absent from user-visible surfaces
+        run: bash scripts/check-prd-refs.sh
       - name: Verify create-act-app templates are in sync with examples/
         # Run AFTER conformance so each example's gitignored static/act/,
         # public/act/, and `llms*.txt` outputs exist on disk before the

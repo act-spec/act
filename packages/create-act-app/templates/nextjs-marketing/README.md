@@ -116,7 +116,7 @@ Unlike the markdown examples, **component-driven pages don't have a body to extr
 Three places to put the summary depending on where the source of truth lives:
 
 1. **In the page contract** (shown above) — a short hand-authored string. Best for pages whose copy is owned by the codebase.
-2. **In the upstream CMS adapter** — Contentful (PRD-202), Sanity (PRD-203), Storyblok (PRD-204), and Strapi (PRD-205) read a `summary`/`subtitle`/`description` field from the entry and stamp `summary_source: "author"`. The adapter's primary-precedence merge wins over the React extract layer when both contribute.
+2. **In the upstream CMS adapter** — Contentful, Sanity, Storyblok, and Strapi adapters read a `summary`/`subtitle`/`description` field from the entry and stamp `summary_source: "author"`. The adapter's primary-precedence merge wins over the React extract layer when both contribute.
 3. **As a fallback via `extractFirstSentence`** — when the CMS lacks a dedicated summary field, pull from a description-like field at adapter wiring time:
 
    ```ts
@@ -133,7 +133,7 @@ Three places to put the summary depending on where the source of truth lives:
    },
    ```
 
-If a node ships without a `summary` the adapter framework's pre-emit validator (PRD-208-R3) rejects the build with a clear error pointing at the offending node id.
+If a node ships without a `summary` the adapter framework's pre-emit validator rejects the build with a clear error pointing at the offending node id.
 
 ## Run this example
 

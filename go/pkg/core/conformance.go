@@ -5,8 +5,8 @@ import (
 	"fmt"
 )
 
-// ConformanceLevel is the closed enum from PRD-107-R2. Wire form is the
-// lowercase string carried at `manifest.conformance.level`.
+// ConformanceLevel is the closed enum {core, standard, strict}. Wire form is
+// the lowercase string carried at `manifest.conformance.level`.
 type ConformanceLevel string
 
 const (
@@ -29,8 +29,8 @@ func (c ConformanceLevel) Valid() bool {
 
 // UnmarshalJSON enforces the closed enum at decode time so callers do not
 // have to re-validate after decode. The validator package still flags the
-// same condition with its full PRD-cited error report; this guard just keeps
-// the typed surface honest.
+// same condition with its full error report; this guard just keeps the typed
+// surface honest.
 func (c *ConformanceLevel) UnmarshalJSON(data []byte) error {
 	var s string
 	if err := json.Unmarshal(data, &s); err != nil {
@@ -38,13 +38,13 @@ func (c *ConformanceLevel) UnmarshalJSON(data []byte) error {
 	}
 	candidate := ConformanceLevel(s)
 	if !candidate.Valid() {
-		return fmt.Errorf("core: conformance.level %q outside the closed enum {core, standard, strict} (PRD-107-R2)", s)
+		return fmt.Errorf("core: conformance.level %q outside the closed enum {core, standard, strict}", s)
 	}
 	*c = candidate
 	return nil
 }
 
-// DeliveryMode is the closed enum from PRD-107-R3. Wire form lives at
+// DeliveryMode is the closed enum {static, runtime}. Wire form lives at
 // `manifest.delivery`.
 type DeliveryMode string
 
@@ -73,7 +73,7 @@ func (d *DeliveryMode) UnmarshalJSON(data []byte) error {
 	}
 	candidate := DeliveryMode(s)
 	if !candidate.Valid() {
-		return fmt.Errorf("core: delivery %q outside the closed enum {static, runtime} (PRD-107-R3)", s)
+		return fmt.Errorf("core: delivery %q outside the closed enum {static, runtime}", s)
 	}
 	*d = candidate
 	return nil
