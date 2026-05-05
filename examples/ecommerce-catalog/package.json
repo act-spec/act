@@ -22,7 +22,7 @@
     "build": "tsx scripts/build.ts",
     "start": "pnpm run build && node ../../scripts/serve-fixture.mjs public 4322",
     "validate": "tsx scripts/validate.ts",
-    "conformance": "pnpm run build && pnpm run validate",
+    "conformance": "pnpm run build && pnpm run build:site && pnpm run validate",
     "test": "node -e \"console.log('@act-spec/example-ecommerce-catalog: example exercises end-to-end via conformance')\"",
     "lint": "node -e \"console.log('@act-spec/example-ecommerce-catalog: lint covered by typecheck + conformance')\"",
     "typecheck": "tsc -p tsconfig.json --noEmit",

@@ -60,6 +60,7 @@ docs/.ephemeral/
 # Example build outputs
 examples/*/dist/
 examples/*/build/
+examples/*/out/
 examples/*/.next/
 examples/*/.nuxt/
 examples/*/.output/

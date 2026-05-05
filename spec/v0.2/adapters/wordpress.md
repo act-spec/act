@@ -15,13 +15,13 @@ last-updated: 2026-05-03
 > locales. A faithful implementation reaches Standard out of the box
 > and Strict when locales and `marketing:*` mappings are configured.
 
-> **Live example.** A built copy of the
+> **Reference example.** The
 > [`wordpress-blog`](https://github.com/act-spec/act/tree/main/examples/wordpress-blog)
-> example (sourced from a recorded REST fixture) is deployed at
-> [`/examples/wordpress-blog/`](/examples/wordpress-blog/).
-> Open it in the
-> [site browser](/browser/?site=%2Fexamples%2Fwordpress-blog%2F.well-known%2Fact.json)
-> to walk the post / category tree.
+> example (sourced from a recorded REST fixture) exercises this adapter
+> end-to-end in CI. It only emits ACT artefacts — no companion HTML
+> site — so it is not deployed; clone the repo and run
+> `pnpm -F @act-spec/example-wordpress-blog build` to walk the emitted
+> post / category tree locally.
 
 ## Status
 

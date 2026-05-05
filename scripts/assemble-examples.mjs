@@ -27,35 +27,39 @@ const repoRoot = path.resolve(here, '..');
 
 // Single source of truth for which examples ship to GitHub Pages.
 // `dist` is the example-relative folder containing `.well-known/act.json`
-// after `pnpm conformance` runs. `humanUrlStrategy` is forwarded to
-// `rebase-act-output.mjs` and selects how each node's `source.human_url`
-// is rewritten to point at the deployed location:
+// + the framework-rendered HTML site after `pnpm conformance` runs.
+// `humanUrlStrategy` is forwarded to `rebase-act-output.mjs` and selects
+// how each node's `source.human_url` is rewritten to point at the
+// deployed location:
 //
 //   `prefix`             — replace the placeholder origin with the public
 //                          origin + sub-path. Fits frameworks that emit
-//                          `<id>/index.html` (Astro, Starlight, Eleventy).
+//                          `<id>/index.html` (Astro, Starlight, Eleventy,
+//                          Next.js with trailingSlash).
 //   `prefix-strip-slash` — same, then strip the trailing `/`. Fits
 //                          frameworks that emit `<id>.html` and serve via
 //                          extension-less URLs (VitePress with cleanUrls
 //                          on GitHub Pages).
-//   `drop`               — strip `human_url` entirely. Fits examples that
-//                          only emit ACT artefacts and have no companion
-//                          HTML pages on disk; otherwise the site
-//                          browser's HTML budget feature 404s.
 //
-// Hybrid / runtime examples (`hybrid-static-runtime-mcp`,
-// `nextjs-saas-runtime`) are intentionally omitted — they require a live
-// Node process at request time and can't be served by GitHub Pages.
+// Only examples whose conformance build emits a real, runnable HTML site
+// appear here — we publish exactly what the example produces, never a
+// synthesized landing page. Excluded:
+//
+//   - notion-knowledge-base, wordpress-blog: pure-data examples, no
+//     companion HTML site.
+//   - docusaurus-docs: has a Docusaurus site but `docusaurus build`
+//     trips a `require.resolveWeak is not a function` SSG bug under
+//     Docusaurus 3.6.3 / Node 22; tracked for re-enable when upstream
+//     ships the fix.
+//   - hybrid-static-runtime-mcp, nextjs-saas-runtime: runtime-only,
+//     require a live Node process and can't be served by Pages.
 export const EXAMPLES = [
   { slug: 'astro-docs', dist: 'dist', humanUrlStrategy: 'prefix' },
-  { slug: 'docusaurus-docs', dist: 'static', humanUrlStrategy: 'drop' },
-  { slug: 'ecommerce-catalog', dist: 'public', humanUrlStrategy: 'drop' },
+  { slug: 'ecommerce-catalog', dist: 'dist', humanUrlStrategy: 'prefix' },
   { slug: 'eleventy-blog', dist: '_site', humanUrlStrategy: 'prefix' },
-  { slug: 'nextjs-marketing', dist: 'public', humanUrlStrategy: 'drop' },
-  { slug: 'notion-knowledge-base', dist: 'public', humanUrlStrategy: 'drop' },
+  { slug: 'nextjs-marketing', dist: 'out', humanUrlStrategy: 'prefix' },
   { slug: 'starlight-docs', dist: 'dist', humanUrlStrategy: 'prefix' },
   { slug: 'vitepress-docs', dist: 'docs/.vitepress/dist', humanUrlStrategy: 'prefix-strip-slash' },
-  { slug: 'wordpress-blog', dist: 'public', humanUrlStrategy: 'drop' },
 ];
 
 const PUBLIC_ORIGIN = process.env.ACT_PAGES_ORIGIN ?? 'https://act-spec.org';
@@ -109,6 +113,16 @@ async function main() {
     const dest = path.join(examplesOut, ex.slug);
     await fs.rm(dest, { recursive: true, force: true });
     await copyDir(distAbs, dest);
+    // Refuse to publish an example whose conformance build did not emit a
+    // landing page — we only deploy what the example actually produces, so
+    // a missing `index.html` here means the slug URL would 404. Either
+    // wire the example to emit an HTML site or drop it from EXAMPLES.
+    if (!(await exists(path.join(dest, 'index.html')))) {
+      console.error(
+        `assemble-examples: ${ex.slug} produced no index.html under ${ex.dist}/ — this example does not ship a runnable site, so it must not be in EXAMPLES.`,
+      );
+      process.exit(1);
+    }
     const prefix = `/examples/${ex.slug}`;
     const rebase = spawnSync(
       'node',

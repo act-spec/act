@@ -31,6 +31,7 @@ const EXCLUDED_NAMES = new Set([
   '.astro',
   '.docusaurus',
   'build',
+  'out',
   'coverage',
   '.tsbuildinfo',
   'tsconfig.tsbuildinfo',

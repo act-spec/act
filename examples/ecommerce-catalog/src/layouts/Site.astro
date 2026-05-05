@@ -3,6 +3,7 @@ interface Props {
   title: string;
 }
 const { title } = Astro.props;
+const base = (import.meta.env.BASE_URL ?? '/').replace(/\/+$/, '');
 ---
 <!doctype html>
 <html lang="en">
@@ -52,11 +53,11 @@ const { title } = Astro.props;
   </head>
   <body>
     <header>
-      <strong><a href="/" style="color: var(--fg); text-decoration: none;">Acme Catalog</a></strong>
+      <strong><a href={`${base}/`} style="color: var(--fg); text-decoration: none;">Acme Catalog</a></strong>
       <nav>
-        <a href="/">Catalog</a>
-        <a href="/.well-known/act.json">/.well-known/act.json</a>
-        <a href="/act/index.json">/act/index.json</a>
+        <a href={`${base}/`}>Catalog</a>
+        <a href={`${base}/.well-known/act.json`}>/.well-known/act.json</a>
+        <a href={`${base}/act/index.json`}>/act/index.json</a>
       </nav>
     </header>
     <main>

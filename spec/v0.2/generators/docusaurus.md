@@ -16,12 +16,15 @@ last-updated: 2026-05-03
 > defines the plugin shape, the lifecycle hook placement, the
 > sidebar-driven hierarchy, and the build-output contract.
 
-> **Live example.** A built copy of the
+> **Reference example.** The
 > [`docusaurus-docs`](https://github.com/act-spec/act/tree/main/examples/docusaurus-docs)
-> example is deployed at [`/examples/docusaurus-docs/`](/examples/docusaurus-docs/).
-> Open it in the
-> [site browser](/browser/?site=%2Fexamples%2Fdocusaurus-docs%2F.well-known%2Fact.json)
-> to walk its tree and inspect the sidebar-derived hierarchy.
+> example exercises this generator end-to-end in CI. The companion
+> `docusaurus build` step is currently blocked on an upstream
+> `require.resolveWeak` / aliased-import issue when Docusaurus's SSG
+> evaluator runs against Node 22, so the example is not deployed yet;
+> clone the repo and run `pnpm -F @act-spec/example-docusaurus-docs build`
+> to walk the emitted tree and inspect the sidebar-derived hierarchy
+> locally.
 
 ## Overview
 

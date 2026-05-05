@@ -19,18 +19,16 @@ const examplesDir = path.resolve(here, '..', '..', '..', '..', 'examples');
 
 // Slugs from `scripts/assemble-examples.mjs#EXAMPLES`. Kept in sync by
 // hand because Astro's build can't import from outside its own directory
-// graph cleanly. If a new example becomes deployable, add it both here
-// and in `assemble-examples.mjs`.
+// graph cleanly. Only examples whose conformance build emits a real
+// runnable HTML site are deployed; the rest still appear as cards but
+// link to source on GitHub rather than a (non-existent) hosted page.
 const DEPLOYED_SLUGS = new Set([
   'astro-docs',
-  'docusaurus-docs',
   'ecommerce-catalog',
   'eleventy-blog',
   'nextjs-marketing',
-  'notion-knowledge-base',
   'starlight-docs',
   'vitepress-docs',
-  'wordpress-blog',
 ]);
 
 interface ExampleEntry {
