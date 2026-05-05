@@ -14,10 +14,11 @@ const { category } = Astro.params;
 const cat = CATEGORIES.find((c) => c.id === category);
 if (!cat) return Astro.redirect('/');
 const products = await loadProductsInCategory(cat.id as CategoryId);
+const base = (import.meta.env.BASE_URL ?? '/').replace(/\/+$/, '');
 ---
 <Site title={`${cat.title} — Acme Catalog`}>
   <p style="margin:0;font-size:13px;">
-    <a href="/">← All categories</a>
+    <a href={`${base}/`}>← All categories</a>
   </p>
   <div style="font-family:ui-monospace,monospace;color:var(--muted);font-size:12px;margin-top:24px;">{cat.id}</div>
   <h1 style="margin:6px 0 8px;">{cat.title}</h1>
@@ -31,11 +32,11 @@ const products = await loadProductsInCategory(cat.id as CategoryId);
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;">
     {products.map((p) => (
       <a
-        href={`/p/${p.sku}/`}
+        href={`${base}/p/${p.sku}/`}
         style="background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:8px;"
       >
         <img
-          src="/thumb.svg"
+          src={`${base}/thumb.svg`}
           alt=""
           loading="lazy"
           style="width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:6px;border:1px solid var(--line);background:var(--bg);"

@@ -15,13 +15,13 @@ last-updated: 2026-05-03
 > per-page locale property as the canonical convention. A faithful
 > implementation reaches Standard out of the box.
 
-> **Live example.** A built copy of the
+> **Reference example.** The
 > [`notion-knowledge-base`](https://github.com/act-spec/act/tree/main/examples/notion-knowledge-base)
-> example (sourced from a recorded API fixture) is deployed at
-> [`/examples/notion-knowledge-base/`](/examples/notion-knowledge-base/).
-> Open it in the
-> [site browser](/browser/?site=%2Fexamples%2Fnotion-knowledge-base%2F.well-known%2Fact.json)
-> to walk the workspace tree.
+> example (sourced from a recorded API fixture) exercises this adapter
+> end-to-end in CI. It only emits ACT artefacts — no companion HTML
+> site — so it is not deployed; clone the repo and run
+> `pnpm -F @act-spec/example-notion-knowledge-base build` to walk the
+> emitted workspace tree locally.
 
 ## Status
 

@@ -46,31 +46,31 @@ jobs:
       - name: Build all packages
         run: pnpm -r --filter "./packages/*" run build
 
-      - name: Build static examples (conformance gate per example)
-        # Each example's `conformance` script chains setup (corpus generation
-        # for the docusaurus example) → build → static walk validation.
-        # Running it here ensures every example's `dist/` exists before the
-        # assembly step copies it into `_site/examples/<slug>/`.
+      - name: Build deployable examples (real HTML sites only)
+        # Only examples whose conformance build emits a real, runnable
+        # HTML site are deployed — we publish exactly what the example
+        # produces, never a synthesized landing page. The set in sync
+        # with `scripts/assemble-examples.mjs#EXAMPLES`. Pure-data
+        # examples (notion-knowledge-base, wordpress-blog), examples
+        # blocked on upstream framework bugs (docusaurus-docs), and
+        # runtime-only examples (hybrid-static-runtime-mcp,
+        # nextjs-saas-runtime) are exercised by `pnpm -r conformance` in
+        # ci.yml and intentionally not built here.
         #
-        # `ACT_PAGES_BASE` tells frameworks that emit HTML asset URLs
-        # (Astro, VitePress, Eleventy) to prefix every `/_astro/...`,
+        # `ACT_PAGES_BASE` tells frameworks (Astro `base`, Next.js
+        # `basePath`, etc.) to prefix every `/_astro/...`, `/_next/...`,
         # `/assets/...`, and internal `<a href>` with the deployed
         # sub-path so the published site loads its CSS / JS / fonts and
-        # in-page navigation works. Examples without HTML output (or
-        # without framework-managed asset URLs) ignore the env var.
-        # Runtime-only examples (`hybrid-static-runtime-mcp`,
-        # `nextjs-saas-runtime`) are excluded by
-        # `assemble-examples.mjs` itself.
+        # in-page navigation works. `ACT_CATALOG_SITE` does the same for
+        # the ecommerce example's manifest `canonical_url` (the
+        # programmatic adapter bakes it into `human_url`).
         run: |
           ACT_PAGES_BASE=/examples/astro-docs/ pnpm -F @act-spec/example-astro-docs conformance
-          pnpm -F @act-spec/example-docusaurus-docs conformance
-          pnpm -F @act-spec/example-ecommerce-catalog conformance
+          ACT_PAGES_BASE=/examples/ecommerce-catalog/ ACT_CATALOG_SITE=https://act-spec.org/examples/ecommerce-catalog pnpm -F @act-spec/example-ecommerce-catalog conformance
           ACT_PAGES_BASE=/examples/eleventy-blog/ pnpm -F @act-spec/example-eleventy-blog conformance
-          pnpm -F @act-spec/example-nextjs-marketing conformance
-          pnpm -F @act-spec/example-notion-knowledge-base conformance
+          ACT_PAGES_BASE=/examples/nextjs-marketing/ pnpm -F @act-spec/example-nextjs-marketing conformance
           ACT_PAGES_BASE=/examples/starlight-docs/ pnpm -F @act-spec/example-starlight-docs conformance
           ACT_PAGES_BASE=/examples/vitepress-docs/ pnpm -F @act-spec/example-vitepress-docs conformance
-          pnpm -F @act-spec/example-wordpress-blog conformance
 
       - name: Build website (Astro Starlight — act-spec.org root)
         run: pnpm -F @act-spec/website build

@@ -18,11 +18,14 @@ last-updated: 2026-05-03
 > **Live examples.** Most deployed examples exercise this adapter:
 > [astro-docs](/examples/astro-docs/),
 > [eleventy-blog](/examples/eleventy-blog/),
-> [starlight-docs](/examples/starlight-docs/),
-> [vitepress-docs](/examples/vitepress-docs/), and
-> [docusaurus-docs](/examples/docusaurus-docs/) all source their content
-> from `.md` files via this adapter. Pick any of them in the
-> [site browser](/browser/) to see the emitted ACT tree.
+> [starlight-docs](/examples/starlight-docs/), and
+> [vitepress-docs](/examples/vitepress-docs/) all source their content
+> from `.md` files via this adapter. The
+> [`docusaurus-docs`](https://github.com/act-spec/act/tree/main/examples/docusaurus-docs)
+> example uses it too but is exercised in CI only — Docusaurus's SSG
+> currently can't build under Node 22 in this repo. Pick any of the
+> deployed examples in the [site browser](/browser/) to see the emitted
+> ACT tree.
 
 ## Status
 

@@ -5,6 +5,7 @@ import { loadCategories, loadProducts } from '../lib/products.ts';
 const categories = await loadCategories();
 const products = await loadProducts();
 const total = products.length;
+const base = (import.meta.env.BASE_URL ?? '/').replace(/\/+$/, '');
 ---
 <Site title="Catalog">
   <h1 style="margin:0 0 8px;">Acme Catalog</h1>
@@ -22,7 +23,7 @@ const total = products.length;
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-bottom:32px;">
     {categories.map((cat) => (
       <a
-        href={`/c/${cat.id}/`}
+        href={`${base}/c/${cat.id}/`}
         style="background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;text-decoration:none;color:inherit;display:block;"
       >
         <div style="font-family:ui-monospace,monospace;color:var(--muted);font-size:12px;">{cat.id}</div>
@@ -43,11 +44,11 @@ const total = products.length;
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
     {products.slice(0, 60).map((p) => (
       <a
-        href={`/p/${p.sku}/`}
+        href={`${base}/p/${p.sku}/`}
         style="background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:8px;"
       >
         <img
-          src="/thumb.svg"
+          src={`${base}/thumb.svg`}
           alt=""
           loading="lazy"
           style="width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:6px;border:1px solid var(--line);background:var(--bg);"
