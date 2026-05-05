@@ -50,18 +50,26 @@ jobs:
         # Each example's `conformance` script chains setup (corpus generation
         # for the docusaurus example) → build → static walk validation.
         # Running it here ensures every example's `dist/` exists before the
-        # assembly step copies it into `_site/examples/<slug>/`. Runtime-only
-        # examples (`hybrid-static-runtime-mcp`, `nextjs-saas-runtime`) are
-        # excluded by `assemble-examples.mjs` itself.
+        # assembly step copies it into `_site/examples/<slug>/`.
+        #
+        # `ACT_PAGES_BASE` tells frameworks that emit HTML asset URLs
+        # (Astro, VitePress, Eleventy) to prefix every `/_astro/...`,
+        # `/assets/...`, and internal `<a href>` with the deployed
+        # sub-path so the published site loads its CSS / JS / fonts and
+        # in-page navigation works. Examples without HTML output (or
+        # without framework-managed asset URLs) ignore the env var.
+        # Runtime-only examples (`hybrid-static-runtime-mcp`,
+        # `nextjs-saas-runtime`) are excluded by
+        # `assemble-examples.mjs` itself.
         run: |
-          pnpm -F @act-spec/example-astro-docs conformance
+          ACT_PAGES_BASE=/examples/astro-docs/ pnpm -F @act-spec/example-astro-docs conformance
           pnpm -F @act-spec/example-docusaurus-docs conformance
           pnpm -F @act-spec/example-ecommerce-catalog conformance
-          pnpm -F @act-spec/example-eleventy-blog conformance
+          ACT_PAGES_BASE=/examples/eleventy-blog/ pnpm -F @act-spec/example-eleventy-blog conformance
           pnpm -F @act-spec/example-nextjs-marketing conformance
           pnpm -F @act-spec/example-notion-knowledge-base conformance
-          pnpm -F @act-spec/example-starlight-docs conformance
-          pnpm -F @act-spec/example-vitepress-docs conformance
+          ACT_PAGES_BASE=/examples/starlight-docs/ pnpm -F @act-spec/example-starlight-docs conformance
+          ACT_PAGES_BASE=/examples/vitepress-docs/ pnpm -F @act-spec/example-vitepress-docs conformance
           pnpm -F @act-spec/example-wordpress-blog conformance
 
       - name: Build website (Astro Starlight — act-spec.org root)

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ title }} — Tinybox Blog</title>
+<style>
+  body { font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         max-width: 44rem; margin: 0 auto; padding: 2rem 1.25rem; color: #0f172a; }
+  header { padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0; margin-bottom: 1.5rem; }
+  header a.brand { font-size: 1.25rem; font-weight: 700; color: #0f172a; text-decoration: none; }
+  nav { margin-top: 0.4rem; font-size: 0.92rem; }
+  nav a { color: #0369a1; text-decoration: none; margin-right: 1rem; }
+  nav a:hover { text-decoration: underline; }
+  h1 { font-size: 1.65rem; line-height: 1.25; margin-top: 0; }
+  article { margin-bottom: 2rem; }
+  ul.post-list { padding-left: 1rem; }
+  ul.post-list li { margin: 0.35rem 0; }
+  code { background: #f1f5f9; padding: 0.05em 0.3em; border-radius: 3px; font-size: 0.92em; }
+  pre code { display: block; padding: 0.75rem; overflow-x: auto; }
+  hr { border: 0; border-top: 1px solid #e2e8f0; margin: 2rem 0; }
+  footer { font-size: 0.85rem; color: #475569; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #0b1220; color: #e2e8f0; }
+    header { border-bottom-color: #1e293b; }
+    header a.brand { color: #e2e8f0; }
+    nav a { color: #38bdf8; }
+    code { background: #1e293b; }
+    hr { border-top-color: #1e293b; }
+    footer { color: #94a3b8; }
+  }
+</style>
+<header>
+  <a class="brand" href="{{ '/' | url }}">Tinybox Blog</a>
+  <nav>
+    <a href="{{ '/' | url }}">Home</a>
+    <a href="{{ '/posts/' | url }}">All posts</a>
+    <a href="{{ '/about/' | url }}">About</a>
+    <a href="{{ '/.well-known/act.json' | url }}">act.json</a>
+  </nav>
+</header>
+<article>
+  <h1>{{ title }}</h1>
+  {{ content | safe }}
+</article>
+<footer>
+  <p>Reference build for PRD-707 of the ACT (Agent Content Tree) v0.1 specification. ACT artefacts emitted at <a href="{{ '/.well-known/act.json' | url }}"><code>/.well-known/act.json</code></a>.</p>
+</footer>

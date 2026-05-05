@@ -29,9 +29,15 @@ const act = actPlugin({
   },
 });
 
+// Honor ACT_PAGES_BASE so the same example builds locally with `/` and
+// under `/examples/vitepress-docs/` for the hosted deploy. ACT artefacts
+// land under `dist/.well-known/` and `dist/act/` regardless.
+const PAGES_BASE = process.env['ACT_PAGES_BASE'] ?? '/';
+
 export default defineConfig({
   title: 'Tinybox Docs',
   description: 'Quickstart, configuration, and reference for the Tinybox storage SDK.',
+  base: PAGES_BASE,
   cleanUrls: true,
   lastUpdated: true,
   // Site-wide default locale; per-locale subtrees override below.

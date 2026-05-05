@@ -6,7 +6,10 @@
 import { getCollection } from 'astro:content';
 
 const docs = await getCollection('docs');
-docs.sort((a, b) => a.id.localeCompare(b.id));
+docs.sort((a, b) => a.slug.localeCompare(b.slug));
+// Strip trailing `/` from `Astro.url.base` then re-add per link to keep
+// hrefs root-relative under the deployed sub-path.
+const base = (import.meta.env.BASE_URL ?? '/').replace(/\/+$/, '');
 ---
 
 <html lang="en-US">
@@ -20,10 +23,14 @@ docs.sort((a, b) => a.id.localeCompare(b.id));
     <p>
       Reference build for PRD-700 of the ACT (Agent Content Tree) v0.1
       specification. The ACT artifact set lives at
-      <a href="/.well-known/act.json">/.well-known/act.json</a>.
+      <a href={`${base}/.well-known/act.json`}>{base}/.well-known/act.json</a>.
     </p>
     <ul>
-      {docs.map((d) => <li><a href={`/${d.id}`}>{d.data.title}</a></li>)}
+      {docs
+        .filter((d) => d.slug !== 'index')
+        .map((d) => (
+          <li><a href={`${base}/${d.slug}/`}>{d.data.title}</a></li>
+        ))}
     </ul>
   </body>
 </html>

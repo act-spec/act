@@ -49,3 +49,12 @@ order (newest first); PRD-408's pipeline emits a subtree at
 
 The `posts` ID is reserved by PRD-707-R6; no individual post is
 permitted to normalise to that ID.
+
+<ul class="post-list">
+{%- for post in collections.post | reverse -%}
+  <li>
+    <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+    <small>— {{ post.data.date | isoDate }}</small>
+  </li>
+{%- endfor -%}
+</ul>
