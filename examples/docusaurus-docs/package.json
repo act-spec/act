@@ -14,16 +14,15 @@
     "url": "git+https://github.com/act-spec/act.git",
     "directory": "examples/docusaurus-docs"
   },
-  "type": "module",
   "scripts": {
-    "generate-corpus": "tsx scripts/generate-corpus.ts",
+    "generate-corpus": "tsx scripts/generate-corpus.mts",
     "dev": "docusaurus start",
-    "build": "tsx scripts/build.ts",
+    "build": "tsx scripts/build.mts",
     "build:site": "docusaurus build",
     "serve": "docusaurus serve",
     "start": "pnpm run build && node ../../scripts/serve-fixture.mjs static 3001",
-    "validate": "tsx scripts/validate.ts",
-    "conformance": "tsx scripts/generate-corpus.ts && tsx scripts/build.ts && tsx scripts/validate.ts",
+    "validate": "tsx scripts/validate.mts",
+    "conformance": "tsx scripts/generate-corpus.mts && tsx scripts/build.mts && pnpm run build:site && tsx scripts/validate.mts",
     "test": "node -e \"console.log('@act-spec/example-docusaurus-docs: example exercises end-to-end via conformance')\"",
     "lint": "node -e \"console.log('@act-spec/example-docusaurus-docs: lint covered by typecheck + conformance')\"",
     "typecheck": "tsc -p tsconfig.json --noEmit"

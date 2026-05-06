@@ -63,7 +63,7 @@ jobs:
         # `assemble-examples.mjs` itself.
         run: |
           ACT_PAGES_BASE=/examples/astro-docs/ pnpm -F @act-spec/example-astro-docs conformance
-          pnpm -F @act-spec/example-docusaurus-docs conformance
+          ACT_PAGES_BASE=/examples/docusaurus-docs/ pnpm -F @act-spec/example-docusaurus-docs conformance
           pnpm -F @act-spec/example-ecommerce-catalog conformance
           ACT_PAGES_BASE=/examples/eleventy-blog/ pnpm -F @act-spec/example-eleventy-blog conformance
           pnpm -F @act-spec/example-nextjs-marketing conformance

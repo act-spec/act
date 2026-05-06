@@ -10,10 +10,14 @@
  *     here — the plugin is pure glue between Docusaurus's lifecycle and
  *     generator-core's pipeline (avoiding the "generator overreach"
  *     anti-pattern).
- *   - `@docusaurus/types` and `@docusaurus/core` are optional peer
- *     dependencies; the plugin is structurally typed against the slice
- *     declared in `./types.ts` so the package builds and tests without
- *     Docusaurus installed.
+ *   - The plugin is structurally typed against the slice declared in
+ *     `./types.ts` and does not import from `@docusaurus/core` or
+ *     `@docusaurus/types` at runtime. We deliberately do NOT declare them
+ *     as peer dependencies: with `auto-install-peers=true` (common in
+ *     pnpm workspaces) a peer entry would cause pnpm to install a
+ *     parallel `@docusaurus/core` under the plugin's `node_modules`,
+ *     creating a duplicate Docusaurus tree alongside the consumer's own.
+ *     Compatibility with Docusaurus 3.x is documented in the README.
  */
 import { promises as fs } from 'node:fs';
 import * as path from 'node:path';
