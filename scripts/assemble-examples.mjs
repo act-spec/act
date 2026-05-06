@@ -48,7 +48,7 @@ const repoRoot = path.resolve(here, '..');
 // Node process at request time and can't be served by GitHub Pages.
 export const EXAMPLES = [
   { slug: 'astro-docs', dist: 'dist', humanUrlStrategy: 'prefix' },
-  { slug: 'docusaurus-docs', dist: 'static', humanUrlStrategy: 'drop' },
+  { slug: 'docusaurus-docs', dist: 'build', humanUrlStrategy: 'prefix' },
   { slug: 'ecommerce-catalog', dist: 'public', humanUrlStrategy: 'drop' },
   { slug: 'eleventy-blog', dist: '_site', humanUrlStrategy: 'prefix' },
   { slug: 'nextjs-marketing', dist: 'public', humanUrlStrategy: 'drop' },

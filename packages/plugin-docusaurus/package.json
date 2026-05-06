@@ -39,26 +39,6 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "conformance": "tsx conformance.ts"
   },
-  "peerDependencies": {
-    "@docusaurus/core": "^3.0.0",
-    "@docusaurus/types": "^3.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
-  },
-  "peerDependenciesMeta": {
-    "@docusaurus/core": {
-      "optional": true
-    },
-    "@docusaurus/types": {
-      "optional": true
-    },
-    "react": {
-      "optional": true
-    },
-    "react-dom": {
-      "optional": true
-    }
-  },
   "dependencies": {
     "@act-spec/adapter-framework": "workspace:*",
     "@act-spec/core": "workspace:*",

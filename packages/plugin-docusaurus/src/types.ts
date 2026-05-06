@@ -1,12 +1,12 @@
 /**
  * PRD-404 Docusaurus plugin — public type surface.
  *
- * The package treats `@docusaurus/types` and `@docusaurus/core` as optional
- * peer dependencies (per PRD-404-R2 / package.json `peerDependenciesMeta`),
- * so we re-declare the structural slice of Docusaurus's plugin API the
- * factory consumes. The structural shape matches Docusaurus 3.x's
- * `Plugin<Content>` / `LoadContext` exports; consumers who have Docusaurus
- * installed pass the real values through unchanged.
+ * The package does not import from `@docusaurus/core` or `@docusaurus/types`
+ * at runtime and does not declare them as peer dependencies, so we
+ * re-declare the structural slice of Docusaurus's plugin API the factory
+ * consumes. The structural shape matches Docusaurus 3.x's `Plugin<Content>`
+ * / `LoadContext` exports; consumers who have Docusaurus installed pass
+ * the real values through unchanged.
  */
 import type { GeneratorConfig } from '@act-spec/generator-core';
 
